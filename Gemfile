@@ -11,8 +11,12 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
+
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
+# Recommended in SO to fix rails s "missing JS runtime" error
 gem 'therubyracer'
+# Gem for dumping and restoring data
+gem 'yaml_db'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

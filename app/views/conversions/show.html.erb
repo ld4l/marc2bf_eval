@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Marc:</strong>
+  <%= @conversion.marc %>
+</p>
+
+<p>
+  <strong>Bf:</strong>
+  <%= @conversion.bf %>
+</p>
+
+<%= link_to 'Edit', edit_conversion_path(@conversion) %> |
+<%= link_to 'Back', conversions_path %>
