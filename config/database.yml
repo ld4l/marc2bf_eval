@@ -15,7 +15,8 @@ default: &default
   pool: 5
   username: rails_user
   password:	morgen_mann
-  host: hlslibdata.law.harvard.edu
+  #host: hlslibdata.law.harvard.edu
+  host: 127.0.0.1
   port: 3306
   socket: /var/lib/mysql/mysql.sock
 

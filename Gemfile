@@ -14,7 +14,7 @@ gem 'coffee-rails', '~> 4.1.0'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # Recommended in SO to fix rails s "missing JS runtime" error
-gem 'therubyracer'
+#gem 'therubyracer'
 # Gem for dumping and restoring data
 gem 'yaml_db'
 
