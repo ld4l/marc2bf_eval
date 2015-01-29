@@ -11,15 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150128062957) do
+ActiveRecord::Schema.define(version: 20150128162330) do
 
   create_table "conversions", force: :cascade do |t|
-    t.text     "marc",       limit: 65535
-    t.text     "bf",         limit: 65535
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
-    t.string   "local_id",   limit: 255
-    t.string   "title",      limit: 255
+    t.text     "marc",            limit: 65535
+    t.text     "bf",              limit: 65535
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.string   "local_system_id", limit: 255
+    t.string   "title",           limit: 255
   end
 
 end
