@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150129165450) do
+ActiveRecord::Schema.define(version: 20150129223317) do
 
   create_table "conversions", force: :cascade do |t|
     t.text     "marc",            limit: 65535
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20150129165450) do
     t.datetime "updated_at",                    null: false
     t.string   "local_system_id", limit: 255
     t.string   "title",           limit: 255
+    t.string   "evaluator_id",    limit: 255
   end
 
   create_table "evaluators", force: :cascade do |t|
