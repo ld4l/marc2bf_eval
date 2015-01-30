@@ -5,8 +5,8 @@
 <table>
   <thead>
     <tr>
-      <th>Marc</th>
-      <th>Bf</th>
+      <th>Local System ID</th>
+      <th>Title</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,11 +14,11 @@
   <tbody>
     <% @conversions.each do |conversion| %>
       <tr>
-        <td><%= conversion.marc %></td>
-        <td><%= conversion.bf %></td>
+        <td><%= conversion.local_system_id %></td>
+        <td><%= conversion.title %></td>
         <td><%= link_to 'Show', conversion %></td>
         <td><%= link_to 'Edit', edit_conversion_path(conversion) %></td>
-        <td><%= link_to 'Destroy', conversion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <!-- <td><%= link_to 'Destroy', conversion, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
       </tr>
     <% end %>
   </tbody>

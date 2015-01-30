@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :conversion_issues
+
   resources :evaluators
 
   resources :issues

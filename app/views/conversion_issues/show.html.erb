@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Conversion:</strong>
+  <%= @conversion_issue.conversion_id %>
+</p>
+
+<p>
+  <strong>Issue:</strong>
+  <%= @conversion_issue.issue_id %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @conversion_issue.comment %>
+</p>
+
+<%= link_to 'Edit', edit_conversion_issue_path(@conversion_issue) %> |
+<%= link_to 'Back', conversion_issues_path %>

@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Conversion Issues</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Conversion</th>
+      <th>Issue</th>
+      <th>Comment</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @conversion_issues.each do |conversion_issue| %>
+      <tr>
+        <td><%= conversion_issue.conversion_id %></td>
+        <td><%= conversion_issue.issue_id %></td>
+        <td><%= conversion_issue.comment %></td>
+        <td><%= link_to 'Show', conversion_issue %></td>
+        <td><%= link_to 'Edit', edit_conversion_issue_path(conversion_issue) %></td>
+        <td><%= link_to 'Destroy', conversion_issue, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Conversion issue', new_conversion_issue_path %>
