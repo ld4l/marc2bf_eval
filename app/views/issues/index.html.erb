@@ -13,7 +13,7 @@
   <tbody>
     <% @issues.each do |issue| %>
       <tr>
-        <td><%= issue.issue %></td>
+        <td><%= issue.issue_tag %></td>
         <td><%= link_to 'Show', issue %></td>
         <td><%= link_to 'Edit', edit_issue_path(issue) %></td>
         <td><%= link_to 'Destroy', issue, method: :delete, data: { confirm: 'Are you sure?' } %></td>

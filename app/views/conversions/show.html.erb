@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<!-- <p>
   <strong>Local System ID:</strong>
   <%= @conversion.local_system_id %>
 </p>
@@ -19,6 +19,27 @@
   <strong>Bf:</strong>
   <%= @conversion.bf %>
 </p>
+ -->
+
+<div class="field">
+  <strong>Local System ID:</strong>
+  <%= @conversion.local_system_id %>
+</div>
+
+ <div class="field">  
+ 	<strong>Title:</strong>
+  <%= @conversion.title %>
+</div>
+
+<div class="field">  
+  <strong>Marc:</strong>
+  <%= @conversion.marc %>
+</div>
+
+<div class="field">  
+  <strong>Bf:</strong>
+  <%= @conversion.bf %>
+</div>
 
 <%= link_to 'Edit', edit_conversion_path(@conversion) %> |
 <%= link_to 'Back', conversions_path %>

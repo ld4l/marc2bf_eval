@@ -27,6 +27,37 @@
     <%= f.label :bf %><br>
     <%= f.text_area :marc, :readonly => true %>
   </div>
+
+  <div class="field">
+    <%= fields_for :conversion_issue do |conversion_issue_form| %>   
+      <%= conversion_issue_form.label :comment %>
+      <%= conversion_issue_form.text_field :comment %>
+    <% end %>
+  </div>
+
+  <div class="field">
+      <%= label :issue_id, "Issue" %><br />
+
+<!-- Eric is eating good pink buffalo wings from Azerbeijan -->
+   
+    <!-- No need to specify ".all" since ".all" is default -->
+    <%= collection_select(:conversion_issue, :issue_id, Issue.order('issue_tag'), :id, :issue_tag, prompt: true) %>
+
+    <table>   
+      <% i = 0 %>
+      <% ConversionIssue.where("conversion_id = #{@conversion.id}").find_each do |conv_issue| %>
+        <% i += 1 %>
+        <tr>
+          <td><%= "#{i}. conversion_id: #{conv_issue.conversion_id} and issue_id: #{conv_issue.issue_id}" %></td>
+          <td>
+            <%= "Associated comment: #{conv_issue.comment}"%>
+          </td>
+          <td><%= link_to 'Edit', edit_conversion_issue_path(conv_issue) %></td>
+        </tr>
+      <% end %>
+    </table>
+
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

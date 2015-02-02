@@ -4,6 +4,7 @@ class ConversionsController < ApplicationController
   # GET /conversions
   # GET /conversions.json
   def index
+    # @converions = Conversion.search(params[:search])
     @conversions = Conversion.all
   end
 
@@ -25,6 +26,7 @@ class ConversionsController < ApplicationController
   # POST /conversions.json
   def create
     @conversion = Conversion.new(conversion_params)
+    @conversion.conversion_issues.build(:issue_id => params[:conversion_issue][:issue_id])
 
     respond_to do |format|
       if @conversion.save
@@ -40,9 +42,12 @@ class ConversionsController < ApplicationController
   # PATCH/PUT /conversions/1
   # PATCH/PUT /conversions/1.json
   def update
+    @conversion.conversion_issues.build(:issue_id => params[:conversion_issue][:issue_id], :comment => params[:conversion_issue][:comment])
+
     respond_to do |format|
       if @conversion.update(conversion_params)
-        format.html { redirect_to @conversion, notice: 'Conversion was successfully updated.' }
+        # format.html { redirect_to @conversion, notice: 'Conversion was successfully updated.' }
+        format.html { redirect_to :action => 'edit', notice: 'Conversion was successfully updated.' }
         format.json { render :show, status: :ok, location: @conversion }
       else
         format.html { render :edit }
@@ -55,6 +60,13 @@ class ConversionsController < ApplicationController
   # DELETE /conversions/1.json
   def destroy
     @conversion.destroy
+
+    # Delete associated issue records
+    conversion_id = @@conversion.id
+    ConversionIssue.where(conversion_id: conversion_id).find_each do |associated_issue|
+      assocated_issue.destroy
+    end
+
     respond_to do |format|
       format.html { redirect_to conversions_url, notice: 'Conversion was successfully destroyed.' }
       format.json { head :no_content }
