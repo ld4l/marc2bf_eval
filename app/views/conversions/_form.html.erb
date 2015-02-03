@@ -1,49 +1,33 @@
-<%= form_for(@conversion) do |f| %>
-  <% if @conversion.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@conversion.errors.count, "error") %> prohibited this conversion from being saved:</h2>
 
-      <ul>
-      <% @conversion.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
 
-  <div class="field">
-    <%= f.label :local_system_id %><br>
-    <%= f.text_field :local_system_id, :readonly => true %>
-  </div>
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title, :readonly => true %>
-  </div>
-  <div class="field">
-    <%= f.label :marc %><br>
-    <%= f.text_area :marc, :readonly => true %>
-  </div>
-  <div class="field">
-    <%= f.label :bf %><br>
-    <%= f.text_area :marc, :readonly => true %>
-  </div>
-
-  <div class="field">
-    <%= fields_for :conversion_issue do |conversion_issue_form| %>   
-      <%= conversion_issue_form.label :comment %>
-      <%= conversion_issue_form.text_field :comment %>
-    <% end %>
-  </div>
-
-  <div class="field">
-      <%= label :issue_id, "Issue" %><br />
-
-<!-- Eric is eating good pink buffalo wings from Azerbeijan -->
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <%= "#{@conversion.local_system_id}" %>
+      </div>
+   </div>
    
-    <!-- No need to specify ".all" since ".all" is default -->
-    <%= collection_select(:conversion_issue, :issue_id, Issue.order('issue_tag'), :id, :issue_tag, prompt: true) %>
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <%= "#{@conversion.title}" %>
+      </div>
+   </div>
+   
+        <pre class="prettyprint linenums">
+          <%= "#{@conversion.marc}" %>
+        </pre>
+   
+        <pre class="prettyprint linenums">
+          <%= "#{@conversion.bf}" %>
+        </pre>
+   
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Panel heading</div>
+  <div class="panel-body">
+    <p>...</p>
+  </div>
 
-    <table>   
+    <table class="table">   
       <% i = 0 %>
       <% ConversionIssue.where("conversion_id = #{@conversion.id}").find_each do |conv_issue| %>
         <% i += 1 %>
@@ -58,7 +42,6 @@
     </table>
 
   </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+
+    <%= link_to 'New Conversion issue', new_conversion_issue_path %>
+
