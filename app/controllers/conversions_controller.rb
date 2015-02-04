@@ -1,4 +1,7 @@
 class ConversionsController < ApplicationController
+
+  before_filter :authenticate
+
   before_action :set_conversion, only: [:show, :edit, :update, :destroy]
 
   # GET /conversions
@@ -70,6 +73,14 @@ class ConversionsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to conversions_url, notice: 'Conversion was successfully destroyed.' }
       format.json { head :no_content }
+    end
+  end
+
+  protected
+
+  def authenticate
+    authenticate_or_request_with_http_basic do |username, password|
+      username == "bibframe" && password == "pioneer"
     end
   end
 
