@@ -2,6 +2,13 @@
 
 <h1>Listing Conversions</h1>
 
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Panel heading</div>
+  <div class="panel-body">
+    <p>...</p>
+  </div>
+
 <table class="table">
   <thead>
     <tr>
@@ -16,13 +23,15 @@
       <tr>
         <td><%= conversion.local_system_id %></td>
         <td><%= conversion.title %></td>
-        <!-- <td><%= link_to 'Show', conversion %></td> -->
-        <td><%= link_to 'Edit', edit_conversion_path(conversion) %></td>
+        <td><%= link_to 'Show', conversion %></td>
+        <!-- <td><%= link_to 'Edit', edit_conversion_path(conversion) %></td> -->
         <!-- <td><%= link_to 'Destroy', conversion, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
       </tr>
     <% end %>
   </tbody>
 </table>
+
+</div>
 
 <br>
 
