@@ -11,19 +11,15 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :initials %><br>
-    <%= f.text_field :initials %>
+  <br /><div class="field">
+    <%= f.label(:last_name, "Last Name") %><br>
+    <%= f.text_field :last_name, :class => "form-control-40" %>
   </div>
   <div class="field">
-    <%= f.label :last_name %><br>
-    <%= f.text_field :last_name %>
-  </div>
-  <div class="field">
-    <%= f.label :first_name %><br>
-    <%= f.text_field :first_name %>
-  </div>
+    <%= f.label(:first_name, "First Name") %><br>
+    <%= f.text_field :first_name, :class => "form-control-40" %>
+  </div><br />
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :value => "Submit", :class => "btn btn-default"  %>
   </div>
 <% end %>

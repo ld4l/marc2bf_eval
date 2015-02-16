@@ -14,7 +14,11 @@ class ConversionIssuesController < ApplicationController
 
   # GET /conversion_issues/new
   def new
+    # raise params.inspect
     @conversion_issue = ConversionIssue.new
+    # New conversion_issue items should always have a pre-configurued :conversion_id, as they
+    # should all be coming from a particular conversion page
+    @conversion_issue.conversion_id = params[:conversion_id]
   end
 
   # GET /conversion_issues/1/edit
@@ -28,7 +32,7 @@ class ConversionIssuesController < ApplicationController
 
     respond_to do |format|
       if @conversion_issue.save
-        format.html { redirect_to @conversion_issue, notice: 'Conversion issue was successfully created.' }
+        format.html { redirect_to @conversion_issue, notice: 'Comment was successfully created.' }
         format.json { render :show, status: :created, location: @conversion_issue }
       else
         format.html { render :new }
@@ -42,7 +46,7 @@ class ConversionIssuesController < ApplicationController
   def update
     respond_to do |format|
       if @conversion_issue.update(conversion_issue_params)
-        format.html { redirect_to @conversion_issue, notice: 'Conversion issue was successfully updated.' }
+        format.html { redirect_to @conversion_issue, notice: 'Comment was successfully updated.' }
         format.json { render :show, status: :ok, location: @conversion_issue }
       else
         format.html { render :edit }
@@ -56,7 +60,7 @@ class ConversionIssuesController < ApplicationController
   def destroy
     @conversion_issue.destroy
     respond_to do |format|
-      format.html { redirect_to conversion_issues_url, notice: 'Conversion issue was successfully destroyed.' }
+      format.html { redirect_to conversion_issues_url, notice: 'Comment was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -69,6 +73,6 @@ class ConversionIssuesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def conversion_issue_params
-      params.require(:conversion_issue).permit(:conversion_id, :issue_id, :comment)
+      params.require(:conversion_issue).permit(:conversion_id, :issue_id, :comment, :evaluator_id)
     end
 end

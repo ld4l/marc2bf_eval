@@ -80,7 +80,7 @@ class ConversionsController < ApplicationController
 
   def authenticate
     authenticate_or_request_with_http_basic do |username, password|
-      username == "bibframe" && password == "pioneer"
+      username == "bibframe" && password == "letsdoit"
     end
   end
 

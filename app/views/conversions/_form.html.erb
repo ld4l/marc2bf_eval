@@ -1,19 +1,20 @@
+<br /><h5 style="float:right"><%= link_to 'New Comment', new_conversion_issue_path(:conversion_id => @conversion.id) %></h5><br />
 
-<h5>Local System ID</h5>
+<h5><b>Local System ID</b></h5>
 <div class="panel panel-default">
   <div class="panel-body">
     <%= "#{@conversion.local_system_id}" %>
   </div>
 </div>
 
-<p>Title</h5>
+<h5><b>Title</b></h5>
 <div class="panel panel-default">
   <div class="panel-body">
     <%= "#{@conversion.title}" %>
   </div>
 </div>
 
-<h5>MARC/XML</h5>
+<h5><b>MARC/XML</b></h5>
 <div class="panel panel-default">
 <div class="panel-body" style="height:400px;overflow-y:scroll;width:100%;">
 <pre style="background-color:white;border-style:hidden" class="prettyprint linenums">
@@ -22,7 +23,7 @@
 </div>
 </div>
 
-<h5>BIBFRAME RDF/XML</h5>
+<h5><b>BIBFRAME RDF/XML</b></h5>
 <div class="panel panel-default">
 <div class="panel-body" style="height:400px;overflow-y:scroll;width:100%;">
 <pre style="background-color:white;border-style:hidden" class="prettyprint linenums">
@@ -32,26 +33,30 @@
 </div>
    
 <div class="panel panel-default">
-  <div class="panel-heading">Issues</div>
-  <div class="panel-body">
-    <p>...</h5>
-  </div>
 
-    <table class="table">   
-      <% i = 0 %>
-      <% ConversionIssue.where("conversion_id = #{@conversion.id}").find_each do |conv_issue| %>
-        <% i += 1 %>
-        <tr>
-          <td><%= "#{i}. conversion_id: #{conv_issue.conversion_id} and issue_id: #{conv_issue.issue_id}" %></td>
-          <td>
-            <%= "Associated comment: #{conv_issue.comment}"%>
-          </td>
-          <td><%= link_to 'Edit', edit_conversion_issue_path(conv_issue) %></td>
-        </tr>
-      <% end %>
-    </table>
+  <table class="table">  
+    <thead>
+      <tr>
+        <th style="padding:10px">Comment Tag</th>
+        <th style="padding:10px">Comment</th>
+        <th colspan="2"></th>
+      </tr>
+    </thead>
 
-  </div>
+    <% i = 0 %>
+    <% ConversionIssue.where("conversion_id = #{@conversion.id}").find_each do |conv_issue| %>
+      <% i += 1 %>
+      <tr>
+        <td style="padding:10px">
+        <% issue = Issue.find_by(id: conv_issue.issue_id) %>
+        <%= issue.issue_tag %>
+        </td>
+        <td style="padding:10px">
+          <%= conv_issue.comment %>
+        </td>
+        <td><%= link_to 'Edit', edit_conversion_issue_path(conv_issue) %></td>
+      </tr>
+    <% end %>
+  </table>
 
-    <%= link_to 'New Conversion issue', new_conversion_issue_path %>
-
+</div>

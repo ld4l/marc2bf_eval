@@ -11,11 +11,11 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :issue_tag %><br>
-    <%= f.text_field :issue_tag %>
+  <br /><div class="field">
+    <%= f.label(:issue_tag, "Comment Tag") %><br>
+    <%= f.text_field :issue_tag, :class => "form-control-40" %><br />
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :value => "Submit", :class => "btn btn-default" %>
   </div>
 <% end %>

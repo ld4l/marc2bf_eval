@@ -1,7 +1,7 @@
 <%= form_for(@conversion_issue) do |f| %>
   <% if @conversion_issue.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@conversion_issue.errors.count, "error") %> prohibited this conversion_issue from being saved:</h2>
+      <h2><%= pluralize(@conversion_issue.errors.count, "error") %> prohibited this comment from being saved:</h2>
 
       <ul>
       <% @conversion_issue.errors.full_messages.each do |message| %>
@@ -11,19 +11,48 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :conversion_id %><br>
-    <%= f.number_field :conversion_id %>
+<br /><h5><b>Title</b></h5>
+<%= collection_select(:conversion_issue, :conversion_id, Conversion.order('title'), :id, :title, {prompt: "Please select record"}, {:class => "dropdown"}) %><br /><br />
+
+<h5><b>Comment Tag</b></h5>
+<%= collection_select(:conversion_issue, :issue_id, Issue.order('issue_tag'), :id, :issue_tag, {prompt: "Please select comment tag"}, {:class => "dropdown"}) %><br /><br />
+
+<div class="field">
+  <%= f.label :comment %><br>
+  <%= f.text_area :comment, class: "form-control", :rows => "20"   %>
+</div>
+
+<h5><b>Evaluator</b></h5>
+<%= collection_select(:conversion_issue, :evaluator_id, Evaluator.order('last_name'), :id, :full_name, {prompt: "Please select evaluator"}, {:class => "dropdown"}) %><br /><br />
+
+<div class="actions">
+  <%= f.submit :value => "Submit", :class => "btn btn-default" %>
+</div><br />
+
+<% conv = Conversion.find_by(id: @conversion_issue.conversion_id) %>
+<% if conv.present? then %>
+
+  <h5><b>MARC/XML</b></h5>
+  <div class="panel panel-default">
+  <div class="panel-body" style="height:400px;overflow-y:scroll;width:100%;">
+  <pre style="background-color:white;border-style:hidden" class="prettyprint linenums">
+    <% conv = Conversion.find_by(id: @conversion_issue.conversion_id) %>
+    <%= conv.marc %>
+  </pre>
   </div>
-  <div class="field">
-    <%= f.label :issue_id %><br>
-    <%= f.number_field :issue_id %>
   </div>
-  <div class="field">
-    <%= f.label :comment %><br>
-    <%= f.text_area :comment %>
+
+  <h5><b>BIBFRAME RDF/XML</b></h5>
+  <div class="panel panel-default">
+  <div class="panel-body" style="height:400px;overflow-y:scroll;width:100%;">
+  <pre style="background-color:white;border-style:hidden" class="prettyprint linenums">
+    <%= conv.bf %>
+  </pre>
   </div>
-  <div class="actions">
-    <%= f.submit %>
   </div>
+
+<% else %>
+  <%= "" %>
+<% end %>
+
 <% end %>

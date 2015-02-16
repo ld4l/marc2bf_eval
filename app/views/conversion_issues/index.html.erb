@@ -1,12 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Conversion Issues</h1>
+<h1>Comments</h1><br />
 
-<table>
+<div class="panel panel-default">
+
+<table class="table">
   <thead>
     <tr>
-      <th>Conversion</th>
-      <th>Issue</th>
+      <th>Title</th>
+      <th>Comment Tag</th>
       <th>Comment</th>
       <th colspan="3"></th>
     </tr>
@@ -15,17 +17,20 @@
   <tbody>
     <% @conversion_issues.each do |conversion_issue| %>
       <tr>
-        <td><%= conversion_issue.conversion_id %></td>
-        <td><%= conversion_issue.issue_id %></td>
+        <% conv = Conversion.find_by(id: conversion_issue.conversion_id) %>
+        <% title = conv.title.truncate(40) %>
+        <td><%= title %></td>
+        <% issue = Issue.find_by(id: conversion_issue.issue_id) %>
+        <% issue_tag = issue.issue_tag.truncate(40) %>
+        <td><%= issue_tag %></td>
         <td><%= conversion_issue.comment %></td>
-        <td><%= link_to 'Show', conversion_issue %></td>
         <td><%= link_to 'Edit', edit_conversion_issue_path(conversion_issue) %></td>
-        <td><%= link_to 'Destroy', conversion_issue, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Delete', conversion_issue, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
+</div>
 
-<%= link_to 'New Conversion issue', new_conversion_issue_path %>
+<br>

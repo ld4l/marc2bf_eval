@@ -69,6 +69,6 @@ class EvaluatorsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def evaluator_params
-      params.require(:evaluator).permit(:initials, :last_name, :first_name)
+      params.require(:evaluator).permit(:last_name, :first_name)
     end
 end

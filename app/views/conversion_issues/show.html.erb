@@ -1,13 +1,17 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Conversion:</strong>
-  <%= @conversion_issue.conversion_id %>
+  <strong>Title:</strong>
+  <!-- <%= @conversion_issue.conversion_id %> -->
+  <% conversion = Conversion.find_by(:id => @conversion_issue.conversion_id) %>
+  <%= conversion.title %>
 </p>
 
 <p>
-  <strong>Issue:</strong>
-  <%= @conversion_issue.issue_id %>
+  <strong>Comment Tag:</strong>
+  <!-- <%= @conversion_issue.issue_id %> -->
+  <% issue = Issue.find_by(:id => @conversion_issue.issue_id) %>
+  <%= issue.issue_tag %> 
 </p>
 
 <p>
@@ -15,5 +19,12 @@
   <%= @conversion_issue.comment %>
 </p>
 
+<p>
+  <strong>Evaluator:</strong>
+  <!-- <%= @conversion_issue.evaluator_id %> -->
+  <% evaluator = Evaluator.find_by(:id => @conversion_issue.evaluator_id) %>
+  <%= evaluator.full_name %> 
+</p>
+
 <%= link_to 'Edit', edit_conversion_issue_path(@conversion_issue) %> |
-<%= link_to 'Back', conversion_issues_path %>
+<%= link_to 'Back', conversion %>

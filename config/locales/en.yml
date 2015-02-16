@@ -21,3 +21,16 @@
 
 en:
   hello: "Hello world"
+
+
+  en:
+  activerecord:
+    attributes:
+      conversion_issue:
+        issue_id: "Comment tag"
+    errors:
+      models:
+        conversion_issue:
+          attributes:
+            issue_id:
+              blank: "can't be blank"
