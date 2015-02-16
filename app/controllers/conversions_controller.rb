@@ -28,8 +28,10 @@ class ConversionsController < ApplicationController
   # POST /conversions
   # POST /conversions.json
   def create
-    @conversion = Conversion.new(conversion_params)
-    @conversion.conversion_issues.build(:issue_id => params[:conversion_issue][:issue_id])
+    # Parameters: {"utf8"=>"✓", "authenticity_token"=>"ef4sRGjgtt5FOSgGKqXhJeFyzzIk1mY1JgnU2EeIZfi6lnL/s8f6z3b88jUJIbsinIynmBuZKstpSX8nx3qiIQ==", "conversion_issue"=>{"conversion_id"=>"6", "issue_id"=>"7", "comment"=>"Some comment about 008 field in Halle's work.", "evaluator_id"=>"1"}, "commit"=>"Create Conversion issue"}
+    
+    # @conversion = Conversion.new(conversion_params)
+    # @conversion.conversion_issues.build(:issue_id => params[:conversion_issue][:issue_id])
 
     respond_to do |format|
       if @conversion.save

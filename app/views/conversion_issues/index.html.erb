@@ -23,7 +23,13 @@
         <% issue = Issue.find_by(id: conversion_issue.issue_id) %>
         <% issue_tag = issue.issue_tag.truncate(40) %>
         <td><%= issue_tag %></td>
-        <td><%= conversion_issue.comment %></td>
+        <td>
+          <div style="width:700px">
+            <pre>
+<%= conversion_issue.comment %>
+            </pre>
+          </div>
+        </td>
         <td><%= link_to 'Edit', edit_conversion_issue_path(conversion_issue) %></td>
         <td><%= link_to 'Delete', conversion_issue, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
