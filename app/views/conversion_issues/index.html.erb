@@ -25,9 +25,7 @@
         <td><%= issue_tag %></td>
         <td>
           <div style="width:700px">
-            <pre>
-<%= conversion_issue.comment %>
-            </pre>
+            <pre><span style="font-size:12px"><%= conversion_issue.comment %></span></pre>
           </div>
         </td>
         <td><%= link_to 'Edit', edit_conversion_issue_path(conversion_issue) %></td>
