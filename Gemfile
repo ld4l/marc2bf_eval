@@ -11,6 +11,10 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
 
+# Add following gem which was not accessing appropriate gem file from command line,
+# for some reason
+gem 'mysqltopostgres', git: "https://github.com/maxlapshin/mysql2postgres.git"
+
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # Recommended in SO to fix rails s "missing JS runtime" error
 #gem 'therubyracer'

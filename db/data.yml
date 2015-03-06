@@ -1,5 +1,24 @@
 
 ---
+conversion_issues:
+  columns:
+  - id
+  - conversion_id
+  - issue_id
+  - comment
+  - created_at
+  - updated_at
+  - evaluator_id
+  records: 
+  - - 1
+    - 8
+    - 2
+    - This is a test of yaml_db.
+    - 2015-03-02 12:08:36.000000000 -05:00
+    - 2015-03-02 12:08:36.000000000 -05:00
+    - '1'
+
+---
 conversions:
   columns:
   - id
@@ -15255,6 +15274,1065 @@ conversions:
     - 2015-02-17 02:30:14.000000000 -05:00
     - '014236724'
     - ' Myanmar 1:50,000 : [Mandalay, Naypyitaw, and Yangon regions] .'
+    - 20150116_c37c08d
+  - - 44
+    - |
+      <record xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim   http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+        <leader>02104ncm 2200193Ia 4500</leader>
+        <controlfield tag='001'>004924364-0</controlfield>
+        <controlfield tag='005'>20071212150105.0</controlfield>
+        <controlfield tag='008'>941031i18551888it^^^m|^^d^^^^^nn|^^ita^d</controlfield>
+        <datafield ind1='0' ind2=' ' tag='035'>
+          <subfield code='a'>ocn239229431</subfield>
+        </datafield>
+        <datafield ind1='0' ind2=' ' tag='035'>
+          <subfield code='a'>ocm79348254</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='040'>
+          <subfield code='a'>HLS</subfield>
+          <subfield code='c'>HLS</subfield>
+          <subfield code='d'>HMM</subfield>
+        </datafield>
+        <datafield ind1='1' ind2=' ' tag='041'>
+          <subfield code='a'>itafre</subfield>
+          <subfield code='h'>fre</subfield>
+        </datafield>
+        <datafield ind1='0' ind2='0' tag='245'>
+          <subfield code='a'>[House of Savoy collection of sheet music.</subfield>
+          <subfield code='n'>Part 1].</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='260'>
+          <subfield code='c'>[1855-1888]</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='300'>
+          <subfield code='a'>28 scores :</subfield>
+          <subfield code='b'>ill., ports. ;</subfield>
+          <subfield code='c'>32-38 cm.</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='500'>
+          <subfield code='a'>Songs and music composed in honor of various members of the House of Savoy.</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='546'>
+          <subfield code='a'>Lyrics in Italian; one song translated from the French.</subfield>
+        </datafield>
+        <datafield ind1='3' ind2='0' tag='600'>
+          <subfield code='a'>Savoy, House of</subfield>
+          <subfield code='v'>Songs and music.</subfield>
+        </datafield>
+        <datafield ind1='1' ind2='2' tag='700'>
+          <subfield code='a'>Colombo, Francesco.</subfield>
+        </datafield>
+        <datafield ind1='1' ind2='2' tag='700'>
+          <subfield code='a'>Rebora, Nino.</subfield>
+        </datafield>
+        <datafield ind1='1' ind2='2' tag='700'>
+          <subfield code='a'>Piacenza, P.</subfield>
+        </datafield>
+        <datafield ind1='1' ind2='2' tag='700'>
+          <subfield code='a'>Dall'Argine, Costantino,</subfield>
+          <subfield code='d'>1842-1877.</subfield>
+        </datafield>
+        <datafield ind1='1' ind2='2' tag='700'>
+          <subfield code='a'>Zignago, A.</subfield>
+        </datafield>
+        <datafield ind1='1' ind2='2' tag='700'>
+          <subfield code='a'>Fighiera, C.</subfield>
+        </datafield>
+        <datafield ind1='1' ind2='2' tag='700'>
+          <subfield code='a'>Perny, Pietro.</subfield>
+        </datafield>
+        <datafield ind1='1' ind2='2' tag='700'>
+          <subfield code='a'>Ruiz Muñoz, J.</subfield>
+        </datafield>
+        <datafield ind1='1' ind2='2' tag='700'>
+          <subfield code='a'>Fossati Reyneri, C. A.</subfield>
+        </datafield>
+        <datafield ind1='1' ind2='2' tag='700'>
+          <subfield code='a'>Onetto, L.</subfield>
+        </datafield>
+        <datafield ind1='1' ind2='2' tag='700'>
+          <subfield code='a'>Rossi, Luigi,</subfield>
+          <subfield code='c'>of Parma.</subfield>
+        </datafield>
+        <datafield ind1='1' ind2='2' tag='700'>
+          <subfield code='a'>Rossi, Filiberto.</subfield>
+        </datafield>
+        <datafield ind1='1' ind2='2' tag='700'>
+          <subfield code='a'>Truzzi, L.</subfield>
+          <subfield code='q'>(Luigi),</subfield>
+          <subfield code='d'>1799-1864.</subfield>
+        </datafield>
+        <datafield ind1='1' ind2='2' tag='700'>
+          <subfield code='a'>Filippi, Giuseppe.</subfield>
+        </datafield>
+        <datafield ind1='1' ind2='2' tag='700'>
+          <subfield code='a'>Luzzi, Luigi,</subfield>
+          <subfield code='d'>1828-1876.</subfield>
+        </datafield>
+        <datafield ind1='1' ind2='2' tag='700'>
+          <subfield code='a'>Hugo, Victor,</subfield>
+          <subfield code='d'>1802-1885.</subfield>
+        </datafield>
+        <datafield ind1='1' ind2='2' tag='700'>
+          <subfield code='a'>Trigona, Adro.</subfield>
+        </datafield>
+        <datafield ind1='1' ind2='2' tag='700'>
+          <subfield code='a'>Polizzi, F.</subfield>
+        </datafield>
+        <datafield ind1='1' ind2='2' tag='700'>
+          <subfield code='a'>Gioachino, Olearo.</subfield>
+        </datafield>
+        <datafield ind1='1' ind2='2' tag='700'>
+          <subfield code='a'>Serra, Gian Giacomo.</subfield>
+        </datafield>
+        <datafield ind1='1' ind2='2' tag='700'>
+          <subfield code='a'>Boniforti, Luigi,</subfield>
+          <subfield code='d'>1817-</subfield>
+        </datafield>
+        <datafield ind1='1' ind2='2' tag='700'>
+          <subfield code='a'>Tosi, Annibale.</subfield>
+        </datafield>
+        <datafield ind1='1' ind2='2' tag='700'>
+          <subfield code='a'>Petrella, Errico,</subfield>
+          <subfield code='d'>1813-1877.</subfield>
+        </datafield>
+        <datafield ind1='1' ind2='2' tag='700'>
+          <subfield code='a'>Corradi, Federico.</subfield>
+        </datafield>
+        <datafield ind1='1' ind2='2' tag='700'>
+          <subfield code='a'>Fossati Reyneri, C. A.</subfield>
+        </datafield>
+        <datafield ind1='1' ind2='2' tag='700'>
+          <subfield code='a'>Fusella, Francesco.</subfield>
+        </datafield>
+        <datafield ind1='1' ind2='2' tag='700'>
+          <subfield code='a'>De Giosa, Nicola,</subfield>
+          <subfield code='d'>1819-1885.</subfield>
+        </datafield>
+        <datafield ind1='1' ind2='2' tag='700'>
+          <subfield code='a'>De Ferrariis, Carlo,</subfield>
+          <subfield code='d'>1820-1885.</subfield>
+        </datafield>
+        <datafield ind1='1' ind2='2' tag='700'>
+          <subfield code='a'>Mariani, Angelo,</subfield>
+          <subfield code='d'>1821-1873.</subfield>
+        </datafield>
+        <datafield ind1='1' ind2='2' tag='700'>
+          <subfield code='a'>Cerruti Veiluva, Giuseppina.</subfield>
+        </datafield>
+        <datafield ind1='1' ind2='2' tag='700'>
+          <subfield code='a'>Lamberti, Giuseppe,</subfield>
+          <subfield code='d'>1820-1894.</subfield>
+        </datafield>
+        <datafield ind1='1' ind2='2' tag='700'>
+          <subfield code='a'>Berninzone, Raffaello,</subfield>
+          <subfield code='d'>1828-1904.</subfield>
+        </datafield>
+        <datafield ind1='1' ind2='2' tag='700'>
+          <subfield code='a'>Ducci, Carlo.</subfield>
+        </datafield>
+        <datafield ind1='1' ind2='2' tag='700'>
+          <subfield code='a'>De Macchi, Luigi Davide.</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2='0' tag='830'>
+          <subfield code='a'>Harvard College Library preservation microfilm program 2002 ;</subfield>
+          <subfield code='v'>08627.</subfield>
+          <subfield code='5'>mmf</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='H48'>
+          <subfield code='a'>ORK0160ASWID2Box01389</subfield>
+          <subfield code='b'>19941101</subfield>
+          <subfield code='c'>19941102</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='H48'>
+          <subfield code='a'>ORK0160ASWID2Box01389</subfield>
+          <subfield code='b'>19941101</subfield>
+          <subfield code='c'>19941102</subfield>
+        </datafield>
+        <datafield ind1='3' ind2=' ' tag='H01'>
+          <subfield code='a'>AYO4386</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='H03'>
+          <subfield code='a'>MHAYO43863HU</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='OWN'>
+          <subfield code='a'>WID</subfield>
+        </datafield>
+        <datafield ind1='0' ind2=' ' tag='079'>
+          <subfield code='a'>ocm79348254</subfield>
+        </datafield>
+        <datafield ind1='2' ind2=' ' tag='079'>
+          <subfield code='a'>ocn237904816</subfield>
+        </datafield>
+        <datafield ind1='7' ind2=' ' tag='852'>
+          <subfield code='2'>ZHCL</subfield>
+          <subfield code='b'>WID</subfield>
+          <subfield code='c'>HD</subfield>
+          <subfield code='h'>Ital 520.812.5</subfield>
+          <subfield code='m'>F = vol.1</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='H08'>
+          <subfield code='a'>c</subfield>
+          <subfield code='b'>20020630</subfield>
+        </datafield>
+        <datafield ind1='3' ind2=' ' tag='H01'>
+          <subfield code='a'>AYO4386</subfield>
+          <subfield code='b'>001</subfield>
+          <subfield code='x'>01</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='H03'>
+          <subfield code='a'>MHAYO43863HU</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='OWN'>
+          <subfield code='a'>MIC</subfield>
+        </datafield>
+        <datafield ind1='0' ind2=' ' tag='079'>
+          <subfield code='a'>ocn239229431</subfield>
+        </datafield>
+        <datafield ind1='2' ind2=' ' tag='079'>
+          <subfield code='a'>ocn243244910</subfield>
+        </datafield>
+        <datafield ind1='8' ind2=' ' tag='852'>
+          <subfield code='b'>MIC</subfield>
+          <subfield code='c'>HD</subfield>
+          <subfield code='h'>Film W 17577</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='H08'>
+          <subfield code='a'>c</subfield>
+          <subfield code='b'>20020630</subfield>
+        </datafield>
+        <datafield ind1='3' ind2=' ' tag='H01'>
+          <subfield code='a'>AYO4386</subfield>
+          <subfield code='b'>003</subfield>
+          <subfield code='x'>03</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='H03'>
+          <subfield code='a'>MHAYO43863HU</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='843'>
+          <subfield code='a'>Microfilm.</subfield>
+          <subfield code='b'>Cambridge, Mass. :</subfield>
+          <subfield code='c'>Harvard College Library Imaging Services,</subfield>
+          <subfield code='d'>2002.</subfield>
+          <subfield code='e'>1 microfilm reel ; 35 mm.</subfield>
+          <subfield code='7'>s2002^^^^maun^a</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='OWN'>
+          <subfield code='a'>MMF</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='XPR'>
+          <subfield code='a'>OCLC</subfield>
+          <subfield code='b'>20040319</subfield>
+        </datafield>
+        <datafield ind1='8' ind2=' ' tag='852'>
+          <subfield code='b'>MMF</subfield>
+          <subfield code='c'>HD</subfield>
+          <subfield code='h'>Film Mas 32387</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='843'>
+          <subfield code='a'>Microfilm.</subfield>
+          <subfield code='b'>Cambridge, Mass. :</subfield>
+          <subfield code='c'>Harvard College Library Imaging Services,</subfield>
+          <subfield code='d'>2002.</subfield>
+          <subfield code='e'>1 microfilm reel ; 35 mm.</subfield>
+          <subfield code='7'>s2002^^^^maun^a</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='H08'>
+          <subfield code='a'>c</subfield>
+          <subfield code='b'>20020630</subfield>
+        </datafield>
+        <datafield ind1='3' ind2=' ' tag='H01'>
+          <subfield code='a'>AYO4386</subfield>
+          <subfield code='b'>004</subfield>
+          <subfield code='x'>04</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='H03'>
+          <subfield code='a'>MHAYO43863HU</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='H09'>
+          <subfield code='k'>phcl02</subfield>
+        </datafield>
+      </record>
+    - |-
+      <?xml version="1.0" encoding="UTF-8"?>
+      <rdf:RDF xmlns:relators="http://id.loc.gov/vocabulary/relators/"
+               xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#"
+               xmlns:bf="http://bibframe.org/vocab/"
+               xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+               xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+         <bf:Work rdf:about="http://ld4l.harvard.edu/004924364-0">
+            <rdf:type rdf:resource="http://bibframe.org/vocab/NotatedMusic"/>
+            <bf:authorizedAccessPoint>Colombo, Francesco. [House of Savoy collection of sheet musicPart 1</bf:authorizedAccessPoint>
+            <bf:workTitle rdf:resource="http://ld4l.harvard.edu/004924364-0title5"/>
+            <bf:contributor rdf:resource="http://ld4l.harvard.edu/004924364-0person6"/>
+            <bf:contributor rdf:resource="http://ld4l.harvard.edu/004924364-0person7"/>
+            <bf:contributor rdf:resource="http://ld4l.harvard.edu/004924364-0person8"/>
+            <bf:contributor rdf:resource="http://ld4l.harvard.edu/004924364-0person9"/>
+            <bf:contributor rdf:resource="http://ld4l.harvard.edu/004924364-0person10"/>
+            <bf:contributor rdf:resource="http://ld4l.harvard.edu/004924364-0person11"/>
+            <bf:contributor rdf:resource="http://ld4l.harvard.edu/004924364-0person12"/>
+            <bf:contributor rdf:resource="http://ld4l.harvard.edu/004924364-0person13"/>
+            <bf:contributor rdf:resource="http://ld4l.harvard.edu/004924364-0person14"/>
+            <bf:contributor rdf:resource="http://ld4l.harvard.edu/004924364-0person15"/>
+            <bf:contributor rdf:resource="http://ld4l.harvard.edu/004924364-0person16"/>
+            <bf:contributor rdf:resource="http://ld4l.harvard.edu/004924364-0person17"/>
+            <bf:contributor rdf:resource="http://ld4l.harvard.edu/004924364-0person18"/>
+            <bf:contributor rdf:resource="http://ld4l.harvard.edu/004924364-0person19"/>
+            <bf:contributor rdf:resource="http://ld4l.harvard.edu/004924364-0person20"/>
+            <bf:contributor rdf:resource="http://ld4l.harvard.edu/004924364-0person21"/>
+            <bf:contributor rdf:resource="http://ld4l.harvard.edu/004924364-0person22"/>
+            <bf:contributor rdf:resource="http://ld4l.harvard.edu/004924364-0person23"/>
+            <bf:contributor rdf:resource="http://ld4l.harvard.edu/004924364-0person24"/>
+            <bf:contributor rdf:resource="http://ld4l.harvard.edu/004924364-0person25"/>
+            <bf:contributor rdf:resource="http://ld4l.harvard.edu/004924364-0person26"/>
+            <bf:contributor rdf:resource="http://ld4l.harvard.edu/004924364-0person27"/>
+            <bf:contributor rdf:resource="http://ld4l.harvard.edu/004924364-0person28"/>
+            <bf:contributor rdf:resource="http://ld4l.harvard.edu/004924364-0person29"/>
+            <bf:contributor rdf:resource="http://ld4l.harvard.edu/004924364-0person30"/>
+            <bf:contributor rdf:resource="http://ld4l.harvard.edu/004924364-0person31"/>
+            <bf:contributor rdf:resource="http://ld4l.harvard.edu/004924364-0person32"/>
+            <bf:contributor rdf:resource="http://ld4l.harvard.edu/004924364-0person33"/>
+            <bf:contributor rdf:resource="http://ld4l.harvard.edu/004924364-0person34"/>
+            <bf:contributor rdf:resource="http://ld4l.harvard.edu/004924364-0person35"/>
+            <bf:contributor rdf:resource="http://ld4l.harvard.edu/004924364-0person36"/>
+            <bf:contributor rdf:resource="http://ld4l.harvard.edu/004924364-0person37"/>
+            <bf:contributor rdf:resource="http://ld4l.harvard.edu/004924364-0person38"/>
+            <bf:contributor rdf:resource="http://ld4l.harvard.edu/004924364-0person39"/>
+            <bf:language rdf:resource="http://id.loc.gov/vocabulary/languages/ita"/>
+            <bf:language rdf:resource="http://id.loc.gov/vocabulary/languages/fre"/>
+            <bf:language rdf:resource="http://ld4l.harvard.edu/004924364-0language42"/>
+            <bf:subject rdf:resource="http://ld4l.harvard.edu/004924364-0person43"/>
+            <bf:derivedFrom rdf:resource="http://ld4l.harvard.edu/004924364-0.marcxml.xml"/>
+            <bf:authorizedAccessPoint xml:lang="x-bf-hash">colombofrancescoreboraninopiacenzapdallarginecostantino18421877zignagoafighieracpernypietroruizmuñozjfossatireynericaonettolrossiluigiofparmarossifilibertotruzzil17991864filippigiuseppeluzziluigi18281876hugovictor18021885trigonaadropolizzifgioachinoolearoserragiangiacomobonifortiluigi1817tosiannibalepetrellaerrico18131877corradifedericofossatireynericafusellafrancescodegiosanicola18191885deferrariiscarlo18201885marianiangelo18211873cerrutiveiluvagiuseppinalambertigiuseppe18201894berninzoneraffaello18281904duccicarlodemacchiluigidavidehouseofsavoycollectionofsheetmusicitaworknotatedmusic</bf:authorizedAccessPoint>
+         </bf:Work>
+         <bf:Instance rdf:about="http://ld4l.harvard.edu/004924364-0instance47">
+            <rdf:type rdf:resource="http://bibframe.org/vocab/Monograph"/>
+            <bf:instanceTitle rdf:resource="http://ld4l.harvard.edu/004924364-0title50"/>
+            <bf:publication>
+               <bf:Provider>
+                  <bf:copyrightDate>[1855-1888]</bf:copyrightDate>
+               </bf:Provider>
+            </bf:publication>
+            <bf:extent>28 scores :</bf:extent>
+            <bf:dimensions>32-38 cm.</bf:dimensions>
+            <bf:illustrationNote>ill., ports. ;</bf:illustrationNote>
+            <bf:titleStatement>House of Savoy collection of sheet music.</bf:titleStatement>
+            <bf:providerStatement>1855-1888</bf:providerStatement>
+            <bf:languageNote>Lyrics in Italian; one song translated from the French.</bf:languageNote>
+            <bf:note>Songs and music composed in honor of various members of the House of Savoy.</bf:note>
+            <bf:systemNumber>
+               <bf:Identifier>
+                  <bf:identifierValue>ocn239229431</bf:identifierValue>
+                  <bf:identifierScheme rdf:resource="http://id.loc.gov/vocabulary/identifiers/systemNumber"/>
+               </bf:Identifier>
+            </bf:systemNumber>
+            <bf:systemNumber>
+               <bf:Identifier>
+                  <bf:identifierValue>ocm79348254</bf:identifierValue>
+                  <bf:identifierScheme rdf:resource="http://id.loc.gov/vocabulary/identifiers/systemNumber"/>
+               </bf:Identifier>
+            </bf:systemNumber>
+            <bf:derivedFrom rdf:resource="http://ld4l.harvard.edu/004924364-0.marcxml.xml"/>
+            <bf:instanceOf rdf:resource="http://ld4l.harvard.edu/004924364-0"/>
+         </bf:Instance>
+         <bf:Annotation rdf:about="http://ld4l.harvard.edu/004924364-0annotation46">
+            <bf:derivedFrom rdf:resource="http://ld4l.harvard.edu/004924364-0.marcxml.xml"/>
+            <bf:descriptionSource rdf:resource="http://id.loc.gov/vocabulary/organizations/hls"/>
+            <bf:descriptionModifier rdf:resource="http://id.loc.gov/vocabulary/organizations/hmm"/>
+            <bf:descriptionConventions rdf:resource="http://id.loc.gov/vocabulary/descriptionConventions/nonisbd"/>
+            <bf:generationProcess>DLC transform-tool:2015-01-16-T11:00:00</bf:generationProcess>
+            <bf:changeDate>2007-12-12T15:01</bf:changeDate>
+            <bf:annotates rdf:resource="http://ld4l.harvard.edu/004924364-0"/>
+         </bf:Annotation>
+         <bf:HeldItem rdf:about="http://ld4l.harvard.edu/004924364-0helditem63">
+            <bf:label/>
+            <bf:subLocation>WID</bf:subLocation>
+            <bf:shelfMark>Ital 520.812.5 F = vol.1</bf:shelfMark>
+            <bf:subLocation>MIC</bf:subLocation>
+            <bf:shelfMark>Film W 17577</bf:shelfMark>
+            <bf:subLocation>MMF</bf:subLocation>
+            <bf:shelfMark>Film Mas 32387</bf:shelfMark>
+            <bf:holdingFor rdf:resource="http://ld4l.harvard.edu/004924364-0instance47"/>
+         </bf:HeldItem>
+         <bf:Title rdf:about="http://ld4l.harvard.edu/004924364-0title5">
+            <bf:titleValue>[House of Savoy collection of sheet music</bf:titleValue>
+            <bf:partNumber>Part 1.</bf:partNumber>
+         </bf:Title>
+         <bf:Person rdf:about="http://ld4l.harvard.edu/004924364-0person6">
+            <bf:label>Colombo, Francesco.</bf:label>
+            <bf:authorizedAccessPoint>Colombo, Francesco.</bf:authorizedAccessPoint>
+            <bf:hasAuthority>
+               <madsrdf:Authority>
+                  <madsrdf:authoritativeLabel>Colombo, Francesco.</madsrdf:authoritativeLabel>
+               </madsrdf:Authority>
+            </bf:hasAuthority>
+         </bf:Person>
+         <bf:Person rdf:about="http://ld4l.harvard.edu/004924364-0person7">
+            <bf:label>Rebora, Nino.</bf:label>
+            <bf:authorizedAccessPoint>Rebora, Nino.</bf:authorizedAccessPoint>
+            <bf:hasAuthority>
+               <madsrdf:Authority>
+                  <madsrdf:authoritativeLabel>Rebora, Nino.</madsrdf:authoritativeLabel>
+               </madsrdf:Authority>
+            </bf:hasAuthority>
+         </bf:Person>
+         <bf:Person rdf:about="http://ld4l.harvard.edu/004924364-0person8">
+            <bf:label>Piacenza, P.</bf:label>
+            <bf:authorizedAccessPoint>Piacenza, P.</bf:authorizedAccessPoint>
+            <bf:hasAuthority>
+               <madsrdf:Authority>
+                  <madsrdf:authoritativeLabel>Piacenza, P.</madsrdf:authoritativeLabel>
+               </madsrdf:Authority>
+            </bf:hasAuthority>
+         </bf:Person>
+         <bf:Person rdf:about="http://ld4l.harvard.edu/004924364-0person9">
+            <bf:label>Dall'Argine, Costantino, 1842-1877.</bf:label>
+            <bf:authorizedAccessPoint>Dall'Argine, Costantino, 1842-1877.</bf:authorizedAccessPoint>
+            <bf:hasAuthority>
+               <madsrdf:Authority>
+                  <madsrdf:authoritativeLabel>Dall'Argine, Costantino, 1842-1877.</madsrdf:authoritativeLabel>
+               </madsrdf:Authority>
+            </bf:hasAuthority>
+         </bf:Person>
+         <bf:Person rdf:about="http://ld4l.harvard.edu/004924364-0person10">
+            <bf:label>Zignago, A.</bf:label>
+            <bf:authorizedAccessPoint>Zignago, A.</bf:authorizedAccessPoint>
+            <bf:hasAuthority>
+               <madsrdf:Authority>
+                  <madsrdf:authoritativeLabel>Zignago, A.</madsrdf:authoritativeLabel>
+               </madsrdf:Authority>
+            </bf:hasAuthority>
+         </bf:Person>
+         <bf:Person rdf:about="http://ld4l.harvard.edu/004924364-0person11">
+            <bf:label>Fighiera, C.</bf:label>
+            <bf:authorizedAccessPoint>Fighiera, C.</bf:authorizedAccessPoint>
+            <bf:hasAuthority>
+               <madsrdf:Authority>
+                  <madsrdf:authoritativeLabel>Fighiera, C.</madsrdf:authoritativeLabel>
+               </madsrdf:Authority>
+            </bf:hasAuthority>
+         </bf:Person>
+         <bf:Person rdf:about="http://ld4l.harvard.edu/004924364-0person12">
+            <bf:label>Perny, Pietro.</bf:label>
+            <bf:authorizedAccessPoint>Perny, Pietro.</bf:authorizedAccessPoint>
+            <bf:hasAuthority>
+               <madsrdf:Authority>
+                  <madsrdf:authoritativeLabel>Perny, Pietro.</madsrdf:authoritativeLabel>
+               </madsrdf:Authority>
+            </bf:hasAuthority>
+         </bf:Person>
+         <bf:Person rdf:about="http://ld4l.harvard.edu/004924364-0person13">
+            <bf:label>Ruiz Muñoz, J.</bf:label>
+            <bf:authorizedAccessPoint>Ruiz Muñoz, J.</bf:authorizedAccessPoint>
+            <bf:hasAuthority>
+               <madsrdf:Authority>
+                  <madsrdf:authoritativeLabel>Ruiz Muñoz, J.</madsrdf:authoritativeLabel>
+               </madsrdf:Authority>
+            </bf:hasAuthority>
+         </bf:Person>
+         <bf:Person rdf:about="http://ld4l.harvard.edu/004924364-0person14">
+            <bf:label>Fossati Reyneri, C. A.</bf:label>
+            <bf:authorizedAccessPoint>Fossati Reyneri, C. A.</bf:authorizedAccessPoint>
+            <bf:hasAuthority>
+               <madsrdf:Authority>
+                  <madsrdf:authoritativeLabel>Fossati Reyneri, C. A.</madsrdf:authoritativeLabel>
+               </madsrdf:Authority>
+            </bf:hasAuthority>
+         </bf:Person>
+         <bf:Person rdf:about="http://ld4l.harvard.edu/004924364-0person15">
+            <bf:label>Onetto, L.</bf:label>
+            <bf:authorizedAccessPoint>Onetto, L.</bf:authorizedAccessPoint>
+            <bf:hasAuthority>
+               <madsrdf:Authority>
+                  <madsrdf:authoritativeLabel>Onetto, L.</madsrdf:authoritativeLabel>
+               </madsrdf:Authority>
+            </bf:hasAuthority>
+         </bf:Person>
+         <bf:Person rdf:about="http://ld4l.harvard.edu/004924364-0person16">
+            <bf:label>Rossi, Luigi, of Parma.</bf:label>
+            <bf:authorizedAccessPoint>Rossi, Luigi, of Parma.</bf:authorizedAccessPoint>
+            <bf:hasAuthority>
+               <madsrdf:Authority>
+                  <madsrdf:authoritativeLabel>Rossi, Luigi, of Parma.</madsrdf:authoritativeLabel>
+               </madsrdf:Authority>
+            </bf:hasAuthority>
+         </bf:Person>
+         <bf:Person rdf:about="http://ld4l.harvard.edu/004924364-0person17">
+            <bf:label>Rossi, Filiberto.</bf:label>
+            <bf:authorizedAccessPoint>Rossi, Filiberto.</bf:authorizedAccessPoint>
+            <bf:hasAuthority>
+               <madsrdf:Authority>
+                  <madsrdf:authoritativeLabel>Rossi, Filiberto.</madsrdf:authoritativeLabel>
+               </madsrdf:Authority>
+            </bf:hasAuthority>
+         </bf:Person>
+         <bf:Person rdf:about="http://ld4l.harvard.edu/004924364-0person18">
+            <bf:label>Truzzi, L. (Luigi), 1799-1864.</bf:label>
+            <bf:authorizedAccessPoint>Truzzi, L. (Luigi), 1799-1864.</bf:authorizedAccessPoint>
+            <bf:hasAuthority>
+               <madsrdf:Authority>
+                  <madsrdf:authoritativeLabel>Truzzi, L. (Luigi), 1799-1864.</madsrdf:authoritativeLabel>
+               </madsrdf:Authority>
+            </bf:hasAuthority>
+         </bf:Person>
+         <bf:Person rdf:about="http://ld4l.harvard.edu/004924364-0person19">
+            <bf:label>Filippi, Giuseppe.</bf:label>
+            <bf:authorizedAccessPoint>Filippi, Giuseppe.</bf:authorizedAccessPoint>
+            <bf:hasAuthority>
+               <madsrdf:Authority>
+                  <madsrdf:authoritativeLabel>Filippi, Giuseppe.</madsrdf:authoritativeLabel>
+               </madsrdf:Authority>
+            </bf:hasAuthority>
+         </bf:Person>
+         <bf:Person rdf:about="http://ld4l.harvard.edu/004924364-0person20">
+            <bf:label>Luzzi, Luigi, 1828-1876.</bf:label>
+            <bf:authorizedAccessPoint>Luzzi, Luigi, 1828-1876.</bf:authorizedAccessPoint>
+            <bf:hasAuthority>
+               <madsrdf:Authority>
+                  <madsrdf:authoritativeLabel>Luzzi, Luigi, 1828-1876.</madsrdf:authoritativeLabel>
+               </madsrdf:Authority>
+            </bf:hasAuthority>
+         </bf:Person>
+         <bf:Person rdf:about="http://ld4l.harvard.edu/004924364-0person21">
+            <bf:label>Hugo, Victor, 1802-1885.</bf:label>
+            <bf:authorizedAccessPoint>Hugo, Victor, 1802-1885.</bf:authorizedAccessPoint>
+            <bf:hasAuthority>
+               <madsrdf:Authority>
+                  <madsrdf:authoritativeLabel>Hugo, Victor, 1802-1885.</madsrdf:authoritativeLabel>
+               </madsrdf:Authority>
+            </bf:hasAuthority>
+         </bf:Person>
+         <bf:Person rdf:about="http://ld4l.harvard.edu/004924364-0person22">
+            <bf:label>Trigona, Adro.</bf:label>
+            <bf:authorizedAccessPoint>Trigona, Adro.</bf:authorizedAccessPoint>
+            <bf:hasAuthority>
+               <madsrdf:Authority>
+                  <madsrdf:authoritativeLabel>Trigona, Adro.</madsrdf:authoritativeLabel>
+               </madsrdf:Authority>
+            </bf:hasAuthority>
+         </bf:Person>
+         <bf:Person rdf:about="http://ld4l.harvard.edu/004924364-0person23">
+            <bf:label>Polizzi, F.</bf:label>
+            <bf:authorizedAccessPoint>Polizzi, F.</bf:authorizedAccessPoint>
+            <bf:hasAuthority>
+               <madsrdf:Authority>
+                  <madsrdf:authoritativeLabel>Polizzi, F.</madsrdf:authoritativeLabel>
+               </madsrdf:Authority>
+            </bf:hasAuthority>
+         </bf:Person>
+         <bf:Person rdf:about="http://ld4l.harvard.edu/004924364-0person24">
+            <bf:label>Gioachino, Olearo.</bf:label>
+            <bf:authorizedAccessPoint>Gioachino, Olearo.</bf:authorizedAccessPoint>
+            <bf:hasAuthority>
+               <madsrdf:Authority>
+                  <madsrdf:authoritativeLabel>Gioachino, Olearo.</madsrdf:authoritativeLabel>
+               </madsrdf:Authority>
+            </bf:hasAuthority>
+         </bf:Person>
+         <bf:Person rdf:about="http://ld4l.harvard.edu/004924364-0person25">
+            <bf:label>Serra, Gian Giacomo.</bf:label>
+            <bf:authorizedAccessPoint>Serra, Gian Giacomo.</bf:authorizedAccessPoint>
+            <bf:hasAuthority>
+               <madsrdf:Authority>
+                  <madsrdf:authoritativeLabel>Serra, Gian Giacomo.</madsrdf:authoritativeLabel>
+               </madsrdf:Authority>
+            </bf:hasAuthority>
+         </bf:Person>
+         <bf:Person rdf:about="http://ld4l.harvard.edu/004924364-0person26">
+            <bf:label>Boniforti, Luigi, 1817-</bf:label>
+            <bf:authorizedAccessPoint>Boniforti, Luigi, 1817-</bf:authorizedAccessPoint>
+            <bf:hasAuthority>
+               <madsrdf:Authority>
+                  <madsrdf:authoritativeLabel>Boniforti, Luigi, 1817-</madsrdf:authoritativeLabel>
+               </madsrdf:Authority>
+            </bf:hasAuthority>
+         </bf:Person>
+         <bf:Person rdf:about="http://ld4l.harvard.edu/004924364-0person27">
+            <bf:label>Tosi, Annibale.</bf:label>
+            <bf:authorizedAccessPoint>Tosi, Annibale.</bf:authorizedAccessPoint>
+            <bf:hasAuthority>
+               <madsrdf:Authority>
+                  <madsrdf:authoritativeLabel>Tosi, Annibale.</madsrdf:authoritativeLabel>
+               </madsrdf:Authority>
+            </bf:hasAuthority>
+         </bf:Person>
+         <bf:Person rdf:about="http://ld4l.harvard.edu/004924364-0person28">
+            <bf:label>Petrella, Errico, 1813-1877.</bf:label>
+            <bf:authorizedAccessPoint>Petrella, Errico, 1813-1877.</bf:authorizedAccessPoint>
+            <bf:hasAuthority>
+               <madsrdf:Authority>
+                  <madsrdf:authoritativeLabel>Petrella, Errico, 1813-1877.</madsrdf:authoritativeLabel>
+               </madsrdf:Authority>
+            </bf:hasAuthority>
+         </bf:Person>
+         <bf:Person rdf:about="http://ld4l.harvard.edu/004924364-0person29">
+            <bf:label>Corradi, Federico.</bf:label>
+            <bf:authorizedAccessPoint>Corradi, Federico.</bf:authorizedAccessPoint>
+            <bf:hasAuthority>
+               <madsrdf:Authority>
+                  <madsrdf:authoritativeLabel>Corradi, Federico.</madsrdf:authoritativeLabel>
+               </madsrdf:Authority>
+            </bf:hasAuthority>
+         </bf:Person>
+         <bf:Person rdf:about="http://ld4l.harvard.edu/004924364-0person30">
+            <bf:label>Fossati Reyneri, C. A.</bf:label>
+            <bf:authorizedAccessPoint>Fossati Reyneri, C. A.</bf:authorizedAccessPoint>
+            <bf:hasAuthority>
+               <madsrdf:Authority>
+                  <madsrdf:authoritativeLabel>Fossati Reyneri, C. A.</madsrdf:authoritativeLabel>
+               </madsrdf:Authority>
+            </bf:hasAuthority>
+         </bf:Person>
+         <bf:Person rdf:about="http://ld4l.harvard.edu/004924364-0person31">
+            <bf:label>Fusella, Francesco.</bf:label>
+            <bf:authorizedAccessPoint>Fusella, Francesco.</bf:authorizedAccessPoint>
+            <bf:hasAuthority>
+               <madsrdf:Authority>
+                  <madsrdf:authoritativeLabel>Fusella, Francesco.</madsrdf:authoritativeLabel>
+               </madsrdf:Authority>
+            </bf:hasAuthority>
+         </bf:Person>
+         <bf:Person rdf:about="http://ld4l.harvard.edu/004924364-0person32">
+            <bf:label>De Giosa, Nicola, 1819-1885.</bf:label>
+            <bf:authorizedAccessPoint>De Giosa, Nicola, 1819-1885.</bf:authorizedAccessPoint>
+            <bf:hasAuthority>
+               <madsrdf:Authority>
+                  <madsrdf:authoritativeLabel>De Giosa, Nicola, 1819-1885.</madsrdf:authoritativeLabel>
+               </madsrdf:Authority>
+            </bf:hasAuthority>
+         </bf:Person>
+         <bf:Person rdf:about="http://ld4l.harvard.edu/004924364-0person33">
+            <bf:label>De Ferrariis, Carlo, 1820-1885.</bf:label>
+            <bf:authorizedAccessPoint>De Ferrariis, Carlo, 1820-1885.</bf:authorizedAccessPoint>
+            <bf:hasAuthority>
+               <madsrdf:Authority>
+                  <madsrdf:authoritativeLabel>De Ferrariis, Carlo, 1820-1885.</madsrdf:authoritativeLabel>
+               </madsrdf:Authority>
+            </bf:hasAuthority>
+         </bf:Person>
+         <bf:Person rdf:about="http://ld4l.harvard.edu/004924364-0person34">
+            <bf:label>Mariani, Angelo, 1821-1873.</bf:label>
+            <bf:authorizedAccessPoint>Mariani, Angelo, 1821-1873.</bf:authorizedAccessPoint>
+            <bf:hasAuthority>
+               <madsrdf:Authority>
+                  <madsrdf:authoritativeLabel>Mariani, Angelo, 1821-1873.</madsrdf:authoritativeLabel>
+               </madsrdf:Authority>
+            </bf:hasAuthority>
+         </bf:Person>
+         <bf:Person rdf:about="http://ld4l.harvard.edu/004924364-0person35">
+            <bf:label>Cerruti Veiluva, Giuseppina.</bf:label>
+            <bf:authorizedAccessPoint>Cerruti Veiluva, Giuseppina.</bf:authorizedAccessPoint>
+            <bf:hasAuthority>
+               <madsrdf:Authority>
+                  <madsrdf:authoritativeLabel>Cerruti Veiluva, Giuseppina.</madsrdf:authoritativeLabel>
+               </madsrdf:Authority>
+            </bf:hasAuthority>
+         </bf:Person>
+         <bf:Person rdf:about="http://ld4l.harvard.edu/004924364-0person36">
+            <bf:label>Lamberti, Giuseppe, 1820-1894.</bf:label>
+            <bf:authorizedAccessPoint>Lamberti, Giuseppe, 1820-1894.</bf:authorizedAccessPoint>
+            <bf:hasAuthority>
+               <madsrdf:Authority>
+                  <madsrdf:authoritativeLabel>Lamberti, Giuseppe, 1820-1894.</madsrdf:authoritativeLabel>
+               </madsrdf:Authority>
+            </bf:hasAuthority>
+         </bf:Person>
+         <bf:Person rdf:about="http://ld4l.harvard.edu/004924364-0person37">
+            <bf:label>Berninzone, Raffaello, 1828-1904.</bf:label>
+            <bf:authorizedAccessPoint>Berninzone, Raffaello, 1828-1904.</bf:authorizedAccessPoint>
+            <bf:hasAuthority>
+               <madsrdf:Authority>
+                  <madsrdf:authoritativeLabel>Berninzone, Raffaello, 1828-1904.</madsrdf:authoritativeLabel>
+               </madsrdf:Authority>
+            </bf:hasAuthority>
+         </bf:Person>
+         <bf:Person rdf:about="http://ld4l.harvard.edu/004924364-0person38">
+            <bf:label>Ducci, Carlo.</bf:label>
+            <bf:authorizedAccessPoint>Ducci, Carlo.</bf:authorizedAccessPoint>
+            <bf:hasAuthority>
+               <madsrdf:Authority>
+                  <madsrdf:authoritativeLabel>Ducci, Carlo.</madsrdf:authoritativeLabel>
+               </madsrdf:Authority>
+            </bf:hasAuthority>
+         </bf:Person>
+         <bf:Person rdf:about="http://ld4l.harvard.edu/004924364-0person39">
+            <bf:label>De Macchi, Luigi Davide.</bf:label>
+            <bf:authorizedAccessPoint>De Macchi, Luigi Davide.</bf:authorizedAccessPoint>
+            <bf:hasAuthority>
+               <madsrdf:Authority>
+                  <madsrdf:authoritativeLabel>De Macchi, Luigi Davide.</madsrdf:authoritativeLabel>
+               </madsrdf:Authority>
+            </bf:hasAuthority>
+         </bf:Person>
+         <bf:Language rdf:about="http://ld4l.harvard.edu/004924364-0language42">
+            <bf:resourcePart>original</bf:resourcePart>
+            <bf:languageOfPartUri rdf:resource="http://id.loc.gov/vocabulary/languages/fre"/>
+         </bf:Language>
+         <bf:Person rdf:about="http://ld4l.harvard.edu/004924364-0person43">
+            <bf:authorizedAccessPoint>Savoy, House of--Songs and music.</bf:authorizedAccessPoint>
+            <bf:label>Savoy, House of--Songs and music.</bf:label>
+            <bf:hasAuthority>
+               <madsrdf:Authority>
+                  <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+                  <madsrdf:authoritativeLabel>Savoy, House of--Songs and music.</madsrdf:authoritativeLabel>
+                  <madsrdf:isMemberOfMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+               </madsrdf:Authority>
+            </bf:hasAuthority>
+         </bf:Person>
+         <bf:Title rdf:about="http://ld4l.harvard.edu/004924364-0title50">
+            <bf:titleValue>[House of Savoy collection of sheet music</bf:titleValue>
+            <bf:partNumber>Part 1.</bf:partNumber>
+         </bf:Title>
+      </rdf:RDF>
+    - 2015-03-02 15:16:35.000000000 -05:00
+    - 2015-03-02 15:16:35.000000000 -05:00
+    - 004924364
+    - ' [House of Savoy collection of sheet music. Part 1].'
+    - 20150116_c37c08d
+  - - 45
+    - |
+      <record xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim   http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+        <leader> ccm 2200193Ia 4500</leader>
+        <controlfield tag='001'>014301848-5</controlfield>
+        <controlfield tag='005'>20150302101415.0</controlfield>
+        <controlfield tag='008'>150123t20122012sp^uub^^^^^^^^^n^^^^zxx^d</controlfield>
+        <datafield ind1=' ' ind2=' ' tag='020'>
+          <subfield code='a'>9781780387284</subfield>
+          <subfield code='q'>(sewn)</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='020'>
+          <subfield code='a'>1780387288</subfield>
+          <subfield code='q'>(sewn)</subfield>
+        </datafield>
+        <datafield ind1='3' ind2='0' tag='028'>
+          <subfield code='a'>UME28314</subfield>
+          <subfield code='b'>Unión Musical Ediciones</subfield>
+        </datafield>
+        <datafield ind1='0' ind2=' ' tag='035'>
+          <subfield code='a'>ocn900721286</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='040'>
+          <subfield code='a'>OHX</subfield>
+          <subfield code='b'>eng</subfield>
+          <subfield code='c'>OHX</subfield>
+          <subfield code='d'>OCLCQ</subfield>
+          <subfield code='d'>HMU</subfield>
+        </datafield>
+        <datafield ind1='0' ind2=' ' tag='041'>
+          <subfield code='g'>eng</subfield>
+          <subfield code='g'>spa</subfield>
+        </datafield>
+        <datafield ind1='0' ind2=' ' tag='045'>
+          <subfield code='b'>d2008</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2='7' tag='072'>
+          <subfield code='a'>M</subfield>
+          <subfield code='2'>lcco</subfield>
+        </datafield>
+        <datafield ind1='1' ind2=' ' tag='100'>
+          <subfield code='a'>Casablancas, Benet,</subfield>
+          <subfield code='e'>composer.</subfield>
+        </datafield>
+        <datafield ind1='1' ind2='0' tag='245'>
+          <subfield code='a'>Darkness visible :</subfield>
+          <subfield code='b'>nocturne for orchestra /</subfield>
+          <subfield code='c'>Benet Casablancas.</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2='1' tag='264'>
+          <subfield code='a'>Madrid :</subfield>
+          <subfield code='b'>Unión Musical Ediciones,</subfield>
+          <subfield code='c'>[2012]</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2='2' tag='264'>
+          <subfield code='a'>Suffolk, England :</subfield>
+          <subfield code='b'>Music Sales Limited</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2='4' tag='264'>
+          <subfield code='c'>©2012</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='300'>
+          <subfield code='a'>1 score (53 pages) ;</subfield>
+          <subfield code='c'>40 cm</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='306'>
+          <subfield code='a'>001730</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='336'>
+          <subfield code='a'>notated music</subfield>
+          <subfield code='b'>ntm</subfield>
+          <subfield code='2'>rdacontent</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='337'>
+          <subfield code='a'>unmediated</subfield>
+          <subfield code='b'>n</subfield>
+          <subfield code='2'>rdamedia</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='338'>
+          <subfield code='a'>volume</subfield>
+          <subfield code='b'>nc</subfield>
+          <subfield code='2'>rdacarrier</subfield>
+        </datafield>
+        <datafield ind1='0' ind2='1' tag='382'>
+          <subfield code='a'>orchestra</subfield>
+          <subfield code='2'>lcmpt</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='500'>
+          <subfield code='a'>Preface in English and Spanish.</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='500'>
+          <subfield code='a'>Preface written by Yvan Nommick, translated by Miguel Schmid.</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='500'>
+          <subfield code='a'>Composed in 2008--caption.</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='500'>
+          <subfield code='a'>Duration: approximately 17 min., 30 sec.</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2='0' tag='650'>
+          <subfield code='a'>Orchestral music</subfield>
+          <subfield code='v'>Scores.</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2='7' tag='655'>
+          <subfield code='a'>Art music.</subfield>
+          <subfield code='2'>lcgft</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2='7' tag='655'>
+          <subfield code='a'>Scores.</subfield>
+          <subfield code='2'>lcgft</subfield>
+        </datafield>
+        <datafield ind1='1' ind2=' ' tag='700'>
+          <subfield code='a'>Nommick, Yvan,</subfield>
+          <subfield code='e'>writer of preface.</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='049'>
+          <subfield code='a'>HMUU</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='OWN'>
+          <subfield code='a'>MUS</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='337'>
+          <subfield code='a'>unmediated</subfield>
+          <subfield code='b'>n</subfield>
+          <subfield code='2'>rdamedia</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='338'>
+          <subfield code='a'>volume</subfield>
+          <subfield code='b'>nc</subfield>
+          <subfield code='2'>rdacarrier</subfield>
+        </datafield>
+        <datafield ind1='7' ind2=' ' tag='852'>
+          <subfield code='2'>ZHCL</subfield>
+          <subfield code='b'>MUS</subfield>
+          <subfield code='c'>GEN</subfield>
+          <subfield code='h'>Mus 635.773.231 PF</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='H08'>
+          <subfield code='a'>c</subfield>
+          <subfield code='b'>20150302</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='H09'>
+          <subfield code='k'>aa oc 2015</subfield>
+        </datafield>
+        <datafield ind1='1' ind2='1' tag='H20'>
+          <subfield code='a'>o</subfield>
+          <subfield code='b'>s</subfield>
+          <subfield code='d'>20150302</subfield>
+          <subfield code='e'>CA</subfield>
+          <subfield code='f'>624</subfield>
+          <subfield code='g'>I</subfield>
+        </datafield>
+        <datafield ind1='1' ind2='1' tag='H21'>
+          <subfield code='a'>1</subfield>
+          <subfield code='b'>s</subfield>
+          <subfield code='d'>20150302</subfield>
+          <subfield code='e'>CA</subfield>
+          <subfield code='f'>624</subfield>
+        </datafield>
+      </record>
+    - |-
+      <?xml version="1.0" encoding="UTF-8"?>
+      <rdf:RDF xmlns:relators="http://id.loc.gov/vocabulary/relators/"
+               xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#"
+               xmlns:bf="http://bibframe.org/vocab/"
+               xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+               xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+         <bf:Work rdf:about="http://ld4l.harvard.edu/014301848-5">
+            <rdf:type rdf:resource="http://bibframe.org/vocab/NotatedMusic"/>
+            <bf:authorizedAccessPoint>Casablancas, Benet Darkness visible :nocturne for orchestra</bf:authorizedAccessPoint>
+            <bf:workTitle rdf:resource="http://ld4l.harvard.edu/014301848-5title5"/>
+            <relators:cmp rdf:resource="http://ld4l.harvard.edu/014301848-5person6"/>
+            <relators:wpr rdf:resource="http://ld4l.harvard.edu/014301848-5person7"/>
+            <bf:duration>001730</bf:duration>
+            <bf:musicMediumNote>orchestra</bf:musicMediumNote>
+            <bf:contentCategory rdf:resource="http://id.loc.gov/vocabulary/contentTypes/ntm"/>
+            <bf:language rdf:resource="http://id.loc.gov/vocabulary/languages/zxx"/>
+            <bf:language rdf:resource="http://ld4l.harvard.edu/014301848-5language12"/>
+            <bf:language rdf:resource="http://ld4l.harvard.edu/014301848-5language13"/>
+            <bf:subject rdf:resource="http://ld4l.harvard.edu/014301848-5topic14"/>
+            <bf:subject rdf:resource="http://ld4l.harvard.edu/014301848-5topic15"/>
+            <bf:subject rdf:resource="http://ld4l.harvard.edu/014301848-5topic16"/>
+            <bf:derivedFrom rdf:resource="http://ld4l.harvard.edu/014301848-5.marcxml.xml"/>
+            <bf:authorizedAccessPoint xml:lang="x-bf-hash">casablancasbenetnommickyvandarknessvisiblenocturnefororchestrazxxworknotatedmusic</bf:authorizedAccessPoint>
+         </bf:Work>
+         <bf:Instance rdf:about="http://ld4l.harvard.edu/014301848-5instance20">
+            <bf:isbn10 rdf:resource="http://isbn.example.org/1780387288"/>
+            <bf:isbn13 rdf:resource="http://isbn.example.org/9781780387284"/>
+            <bf:instanceTitle rdf:resource="http://ld4l.harvard.edu/014301848-5title24"/>
+            <bf:publication>
+               <bf:Provider>
+                  <bf:providerName>
+                     <bf:Organization>
+                        <bf:label>Unión Musical Ediciones</bf:label>
+                     </bf:Organization>
+                  </bf:providerName>
+                  <bf:providerPlace>
+                     <bf:Place>
+                        <bf:label>Madrid </bf:label>
+                     </bf:Place>
+                  </bf:providerPlace>
+                  <bf:providerDate>[2012]</bf:providerDate>
+               </bf:Provider>
+            </bf:publication>
+            <bf:distribution>
+               <bf:Provider>
+                  <bf:providerName>
+                     <bf:Organization>
+                        <bf:label>Music Sales Limited</bf:label>
+                     </bf:Organization>
+                  </bf:providerName>
+                  <bf:providerPlace>
+                     <bf:Place>
+                        <bf:label>Suffolk, England </bf:label>
+                     </bf:Place>
+                  </bf:providerPlace>
+               </bf:Provider>
+            </bf:distribution>
+            <bf:publication>
+               <bf:Provider>
+                  <bf:copyrightDate>©2012</bf:copyrightDate>
+               </bf:Provider>
+            </bf:publication>
+            <bf:extent>1 score (53 pages) ;</bf:extent>
+            <bf:dimensions>40 cm</bf:dimensions>
+            <bf:titleStatement>Darkness visible : nocturne for orchestra</bf:titleStatement>
+            <bf:providerStatement>Madrid : Unión Musical Ediciones, 2012</bf:providerStatement>
+            <bf:providerStatement>Suffolk, England : Music Sales Limited</bf:providerStatement>
+            <bf:providerStatement>©2012</bf:providerStatement>
+            <bf:copyrightDate>©2012</bf:copyrightDate>
+            <bf:note>Preface in English and Spanish.</bf:note>
+            <bf:note>Preface written by Yvan Nommick, translated by Miguel Schmid.</bf:note>
+            <bf:note>Composed in 2008--caption.</bf:note>
+            <bf:note>Duration: approximately 17 min., 30 sec.</bf:note>
+            <bf:systemNumber>
+               <bf:Identifier>
+                  <bf:identifierValue>ocn900721286</bf:identifierValue>
+                  <bf:identifierScheme rdf:resource="http://id.loc.gov/vocabulary/identifiers/systemNumber"/>
+               </bf:Identifier>
+            </bf:systemNumber>
+            <bf:musicPublisherNumber>
+               <bf:Identifier>
+                  <bf:identifierScheme rdf:resource="http://id.loc.gov/vocabulary/identifiers/musicPublisherNumber"/>
+                  <bf:identifierValue>UME28314</bf:identifierValue>
+                  <bf:identifierAssigner>Unión Musical Ediciones</bf:identifierAssigner>
+               </bf:Identifier>
+            </bf:musicPublisherNumber>
+            <bf:mediaCategory rdf:resource="http://id.loc.gov/vocabulary/mediaTypes/n"/>
+            <bf:mediaCategory rdf:resource="http://id.loc.gov/vocabulary/mediaTypes/n"/>
+            <bf:carrierCategory rdf:resource="http://id.loc.gov/vocabulary/carriers/nc"/>
+            <bf:carrierCategory rdf:resource="http://id.loc.gov/vocabulary/carriers/nc"/>
+            <bf:derivedFrom rdf:resource="http://ld4l.harvard.edu/014301848-5.marcxml.xml"/>
+            <bf:instanceOf rdf:resource="http://ld4l.harvard.edu/014301848-5"/>
+         </bf:Instance>
+         <bf:Annotation rdf:about="http://ld4l.harvard.edu/014301848-5annotation19">
+            <bf:derivedFrom rdf:resource="http://ld4l.harvard.edu/014301848-5.marcxml.xml"/>
+            <bf:descriptionSource rdf:resource="http://id.loc.gov/vocabulary/organizations/ohx"/>
+            <bf:descriptionModifier rdf:resource="http://id.loc.gov/vocabulary/organizations/oclcq"/>
+            <bf:descriptionModifier rdf:resource="http://id.loc.gov/vocabulary/organizations/hmu"/>
+            <bf:descriptionLanguage rdf:resource="http://id.loc.gov/vocabulary/languages/eng"/>
+            <bf:generationProcess>DLC transform-tool:2015-01-16-T11:00:00</bf:generationProcess>
+            <bf:changeDate>2015-03-02T10:14</bf:changeDate>
+            <bf:annotates rdf:resource="http://ld4l.harvard.edu/014301848-5"/>
+         </bf:Annotation>
+         <bf:HeldItem rdf:about="http://ld4l.harvard.edu/014301848-5helditem47">
+            <bf:label/>
+            <bf:subLocation>MUS</bf:subLocation>
+            <bf:shelfMark>Mus 635.773.231 PF</bf:shelfMark>
+            <bf:holdingFor rdf:resource="http://ld4l.harvard.edu/014301848-5instance20"/>
+         </bf:HeldItem>
+         <bf:Title rdf:about="http://ld4l.harvard.edu/014301848-5title5">
+            <bf:titleValue>Darkness visible :</bf:titleValue>
+            <bf:subtitle>nocturne for orchestra </bf:subtitle>
+         </bf:Title>
+         <bf:Person rdf:about="http://ld4l.harvard.edu/014301848-5person6">
+            <bf:label>Casablancas, Benet</bf:label>
+            <bf:authorizedAccessPoint>Casablancas, Benet</bf:authorizedAccessPoint>
+            <bf:hasAuthority>
+               <madsrdf:Authority>
+                  <madsrdf:authoritativeLabel>Casablancas, Benet</madsrdf:authoritativeLabel>
+               </madsrdf:Authority>
+            </bf:hasAuthority>
+         </bf:Person>
+         <bf:Person rdf:about="http://ld4l.harvard.edu/014301848-5person7">
+            <bf:label>Nommick, Yvan</bf:label>
+            <bf:authorizedAccessPoint>Nommick, Yvan</bf:authorizedAccessPoint>
+            <bf:hasAuthority>
+               <madsrdf:Authority>
+                  <madsrdf:authoritativeLabel>Nommick, Yvan</madsrdf:authoritativeLabel>
+               </madsrdf:Authority>
+            </bf:hasAuthority>
+         </bf:Person>
+         <bf:Language rdf:about="http://ld4l.harvard.edu/014301848-5language12">
+            <bf:resourcePart>accompanying material other than librettos</bf:resourcePart>
+            <bf:languageOfPartUri rdf:resource="http://id.loc.gov/vocabulary/languages/eng"/>
+         </bf:Language>
+         <bf:Language rdf:about="http://ld4l.harvard.edu/014301848-5language13">
+            <bf:resourcePart>accompanying material other than librettos</bf:resourcePart>
+            <bf:languageOfPartUri rdf:resource="http://id.loc.gov/vocabulary/languages/spa"/>
+         </bf:Language>
+         <bf:Topic rdf:about="http://ld4l.harvard.edu/014301848-5topic14">
+            <bf:authorizedAccessPoint>Orchestral music--Scores</bf:authorizedAccessPoint>
+            <bf:label>Orchestral music--Scores</bf:label>
+            <bf:hasAuthority>
+               <madsrdf:Authority>
+                  <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+                  <madsrdf:authoritativeLabel>Orchestral music--Scores</madsrdf:authoritativeLabel>
+                  <madsrdf:isMemberOfMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+               </madsrdf:Authority>
+            </bf:hasAuthority>
+         </bf:Topic>
+         <bf:Topic rdf:about="http://ld4l.harvard.edu/014301848-5topic15">
+            <bf:authorizedAccessPoint>Art music</bf:authorizedAccessPoint>
+            <bf:label>Art music</bf:label>
+            <bf:hasAuthority>
+               <madsrdf:Authority>
+                  <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#GenreForm"/>
+                  <madsrdf:authoritativeLabel>Art music</madsrdf:authoritativeLabel>
+                  <madsrdf:isMemberOfMADSScheme rdf:resource="http://id.loc.gov/vocabulary/subjectSchemes/lcgft"/>
+               </madsrdf:Authority>
+            </bf:hasAuthority>
+            <bf:authoritySource>http://id.loc.gov/vocabulary/subjectSchemes/lcgft</bf:authoritySource>
+         </bf:Topic>
+         <bf:Topic rdf:about="http://ld4l.harvard.edu/014301848-5topic16">
+            <bf:authorizedAccessPoint>Scores</bf:authorizedAccessPoint>
+            <bf:label>Scores</bf:label>
+            <bf:hasAuthority>
+               <madsrdf:Authority>
+                  <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#GenreForm"/>
+                  <madsrdf:authoritativeLabel>Scores</madsrdf:authoritativeLabel>
+                  <madsrdf:isMemberOfMADSScheme rdf:resource="http://id.loc.gov/vocabulary/subjectSchemes/lcgft"/>
+               </madsrdf:Authority>
+            </bf:hasAuthority>
+            <bf:authoritySource>http://id.loc.gov/vocabulary/subjectSchemes/lcgft</bf:authoritySource>
+         </bf:Topic>
+         <bf:Title rdf:about="http://ld4l.harvard.edu/014301848-5title24">
+            <bf:titleValue>Darkness visible :</bf:titleValue>
+            <bf:subtitle>nocturne for orchestra </bf:subtitle>
+         </bf:Title>
+      </rdf:RDF>
+    - 2015-03-02 15:16:41.000000000 -05:00
+    - 2015-03-02 15:16:41.000000000 -05:00
+    - 014301848
+    - ' Darkness visible : nocturne for orchestra / Benet Casablancas.'
     - 20150116_c37c08d
 
 ---
