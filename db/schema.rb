@@ -13,20 +13,23 @@
 
 ActiveRecord::Schema.define(version: 20150212204520) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "conversion_issues", force: :cascade do |t|
-    t.integer  "conversion_id", limit: 4
-    t.integer  "issue_id",      limit: 4
-    t.text     "comment",       limit: 65535
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
+    t.integer  "conversion_id"
+    t.integer  "issue_id"
+    t.text     "comment"
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
     t.string   "evaluator_id",  limit: 255
   end
 
   create_table "conversions", force: :cascade do |t|
-    t.text     "marc",              limit: 65535
-    t.text     "bf",                limit: 65535
-    t.datetime "created_at",                      null: false
-    t.datetime "updated_at",                      null: false
+    t.text     "marc"
+    t.text     "bf"
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
     t.string   "local_system_id",   limit: 255
     t.string   "title",             limit: 255
     t.string   "converter_version", limit: 255

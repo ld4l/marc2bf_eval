@@ -10,13 +10,106 @@ conversion_issues:
   - updated_at
   - evaluator_id
   records: 
-  - - 1
-    - 8
-    - 2
-    - This is a test of yaml_db.
-    - 2015-03-02 12:08:36.000000000 -05:00
-    - 2015-03-02 12:08:36.000000000 -05:00
+  - - '1'
+    - '25'
+    - '138'
+    - Just a test
+    - '2015-02-18 14:50:50.010516'
+    - '2015-02-18 14:50:50.010516'
+    - '7'
+  - - '2'
+    - '3'
+    - '138'
+    - Just a test
+    - '2015-02-18 14:51:41.840832'
+    - '2015-02-18 14:51:41.840832'
+    - '7'
+  - - '3'
+    - '27'
+    - '32'
+    - Looks like the Bibframe conversion has converted the 040 data more fully this
+      time through, although, it has left out the value of subfield code |c "CIN"
+      (transcribing agency)
+    - '2015-02-20 00:28:25.606538'
+    - '2015-02-20 00:28:49.501963'
+    - '4'
+  - - '4'
+    - '27'
+    - '245'
+    - The series statement has still not converted. Could this be related to the fact
+      that there is a subfield |5 net in the original MARC record?
+    - '2015-02-20 00:32:50.673736'
+    - '2015-02-20 00:34:35.313316'
+    - '4'
+  - - '5'
+    - '27'
+    - '32'
+    - 'General question about the MARCXML: Any reason why the "ind" attributes for
+      the MARC tags precede the "tag" attributes? They didn''t do that in the earlier
+      version of the MARCXML records we had looked at. It makes sense for "tag" to
+      precede "ind". Thanks'
+    - '2015-02-23 17:33:54.38592'
+    - '2015-02-23 17:33:54.38592'
+    - '4'
+  - - '6'
+    - '32'
     - '1'
+    - "\r\nthe only values preserved from MARC record are:  bytes 5-7 ;  (17(K), 18(i)
+      \ > I, a ; conversion default?) "
+    - '2015-02-26 00:04:15.434797'
+    - '2015-02-26 00:04:15.434797'
+    - '3'
+  - - '7'
+    - '13'
+    - '80'
+    - "In the bf:Instance, data from the 034 / 255 are converted to the same bibframe
+      property\r\n\r\n034 |a = <bf:cartographicScale>Linear scale</bf:cartographicScale>
+      [machine readable]\r\n034 |b = <bf:cartographicScale>2851200</bf:cartographicScale>
+      [machine readable]\r\n255 |a = <bf:cartographicScale>Scale 1:2,851,200. 45 miles
+      to the inch ;</bf:cartographicScale>  [human readable]\r\n\r\nShould probably
+      have different elements for human readable version vs. machine readable version
+      of Statement of Scale"
+    - '2015-02-26 19:26:58.035705'
+    - '2015-02-26 19:26:58.035705'
+    - '10'
+  - - '8'
+    - '23'
+    - '80'
+    - "In the bf:Instance, data from the 034 / 255 are converted to the same bibframe
+      property\r\n\r\n034 |a = <bf:cartographicScale>Linear scale</bf:cartographicScale>
+      [machine readable]\r\n034 |b = <bf:cartographicScale>1004000</bf:cartographicScale>
+      [machine readable]\r\n255 |a = <bf:cartographicScale>Scale 1:1,004,000 (1mm
+      = 1.004 km) at 350⁰ latitudes ;</bf:cartographicScale>  [human readable]\r\n\r\nShould
+      probably have different elements for human readable version vs. machine readable
+      version of Statement of Scale"
+    - '2015-02-26 19:31:33.895497'
+    - '2015-02-26 19:31:33.895497'
+    - '10'
+  - - '9'
+    - '39'
+    - '27'
+    - "In the bf:Instance, data from the 034 / 255 are converted to the same bibframe
+      property\r\n\r\n255 |c = <bf:cartographicCoordinates>(E 92°10ʹ00ʺ--E 101°10ʹ00ʺ/N
+      28°32ʹ00ʺ--N 9°35ʹ00ʺ).</bf:cartographicCoordinates> [human readable]\r\n034
+      |d |e |f |g =<bf:cartographicCoordinates>E0921000° E1011000° N0283200° N0093500°</bf:cartographicCoordinates>
+      [machine readable]\r\n\r\nShould probably have different elements for human
+      readable version vs. machine readable version of Coordinate data, and machine
+      readable should have 4 separate elements, showing western most, eastern most,
+      northern most, and southernmost coordinates.\r\n\r\nAlso would be interesting
+      to have marc to bibframe converter convert all machine readable coordinate data
+      to decimal degrees ... here it's in Hemisphere, Degrees, Minutes, Seconds format,
+      whereas most online mapping services use decimal degrees."
+    - '2015-02-26 19:40:16.082943'
+    - '2015-02-26 19:40:16.082943'
+    - '10'
+  - - '10'
+    - '26'
+    - '43'
+    - "geographic classification codes (MARC 052s) missing in BF \r\n[Not sure how
+      important this really is; but it does represent some data loss]"
+    - '2015-02-26 19:47:36.2006'
+    - '2015-02-26 19:47:36.2006'
+    - '10'
 
 ---
 conversions:
@@ -30,7 +123,7 @@ conversions:
   - title
   - converter_version
   records: 
-  - - 1
+  - - '1'
     - |
       <record xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim   http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
         <leader>00869nam 2200193Ia 4500</leader>
@@ -232,12 +325,12 @@ conversions:
             <bf:subtitle>a review </bf:subtitle>
          </bf:Title>
       </rdf:RDF>
-    - 2015-02-17 02:26:55.000000000 -05:00
-    - 2015-02-17 02:26:55.000000000 -05:00
+    - '2015-02-17 07:26:55'
+    - '2015-02-17 07:26:55'
     - 000085947
     - ' Theory of internal migration : a review / [by] Lisbet de Castro Lopo.'
     - 20150116_c37c08d
-  - - 2
+  - - '2'
     - |
       <record xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim   http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
         <leader>01292cas 2200193Ia 4500</leader>
@@ -601,12 +694,12 @@ conversions:
             <bf:titleValue>Foundations of language</bf:titleValue>
          </bf:Title>
       </rdf:RDF>
-    - 2015-02-17 02:27:00.000000000 -05:00
-    - 2015-02-17 02:27:00.000000000 -05:00
+    - '2015-02-17 07:27:00'
+    - '2015-02-17 07:27:00'
     - 000126874
     - ' Foundations of language.'
     - 20150116_c37c08d
-  - - 3
+  - - '3'
     - |
       <record xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim   http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
         <leader>00668nam 2200193Ia 4500</leader>
@@ -833,13 +926,13 @@ conversions:
             <bf:titleValue>Beowulf, the oldest English epic</bf:titleValue>
          </bf:Title>
       </rdf:RDF>
-    - 2015-02-17 02:27:05.000000000 -05:00
-    - 2015-02-17 02:27:05.000000000 -05:00
+    - '2015-02-17 07:27:05'
+    - '2015-02-17 07:27:05'
     - 000334952
     - ' Beowulf, the oldest English epic / translated into alliterative verse with
       a critical introduction by Charles W. Kennedy.'
     - 20150116_c37c08d
-  - - 4
+  - - '4'
     - |
       <record xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim   http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
         <leader>03866cpc 2200193Ia 4500</leader>
@@ -1610,12 +1703,12 @@ conversions:
             <bf:materialOrganization>Organized into the following series: I. bMS Am 1092.9: Correspondence; II. bMS Am 1092.9: Compositions; III. bMS Am 1092.10: Papers concerning William James; IV. bMS Am 1092.11: Letters from Alice Howe (Gibbens) James; V. bMS Am 1092.11: Other letters; and VI. bMS Am 1092.12: Mary Temple letters to John Chipman Gray.</bf:materialOrganization>
          </bf:Arrangement>
       </rdf:RDF>
-    - 2015-02-17 02:27:11.000000000 -05:00
-    - 2015-02-17 02:27:11.000000000 -05:00
+    - '2015-02-17 07:27:11'
+    - '2015-02-17 07:27:11'
     - '000602466'
     - ' William James papers, 1803-1941 (inclusive) 1862-1910 (bulk).'
     - 20150116_c37c08d
-  - - 5
+  - - '5'
     - |
       <record xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim   http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
         <leader>00764cam 2200193Ia 4500</leader>
@@ -1908,13 +2001,13 @@ conversions:
             <bf:titleValue>Physics for students of science and engineering</bf:titleValue>
          </bf:Title>
       </rdf:RDF>
-    - 2015-02-17 02:27:15.000000000 -05:00
-    - 2015-02-17 02:27:15.000000000 -05:00
+    - '2015-02-17 07:27:15'
+    - '2015-02-17 07:27:15'
     - '000675224'
     - ' Physics for students of science and engineering [by] David Halliday [and]
       Robert Resnick.'
     - 20150116_c37c08d
-  - - 6
+  - - '6'
     - |
       <record xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim   http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
         <leader>00968nam 2200193Ia 4500</leader>
@@ -2598,12 +2691,12 @@ conversions:
             <bf:titleValue>A Festschrift for Morris Halle</bf:titleValue>
          </bf:Title>
       </rdf:RDF>
-    - 2015-02-17 02:27:21.000000000 -05:00
-    - 2015-02-17 02:27:21.000000000 -05:00
+    - '2015-02-17 07:27:21'
+    - '2015-02-17 07:27:21'
     - 000680686
     - ' A Festschrift for Morris Halle. Edited by Stephen R. Anderson and Paul Kiparsky.'
     - 20150116_c37c08d
-  - - 7
+  - - '7'
     - |
       <record xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim   http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
         <leader>00864cam 2200193Ia 4500</leader>
@@ -2902,13 +2995,13 @@ conversions:
             <bf:titleValue>Origin of species.</bf:titleValue>
          </bf:Title>
       </rdf:RDF>
-    - 2015-02-17 02:27:26.000000000 -05:00
-    - 2015-02-17 02:27:26.000000000 -05:00
+    - '2015-02-17 07:27:26'
+    - '2015-02-17 07:27:26'
     - 000824182
     - ' The illustrated origin of species / by Charles Darwin ; abridged & introduced
       by Richard E. Leakey ; consultants, W. F. Bynum, J. A. Barrett.'
     - 20150116_c37c08d
-  - - 8
+  - - '8'
     - |
       <record xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim   http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
         <leader>00808nam 2200193Ia 4500</leader>
@@ -3147,13 +3240,13 @@ conversions:
             <bf:titleValue>On the origin of species</bf:titleValue>
          </bf:Title>
       </rdf:RDF>
-    - 2015-02-17 02:27:31.000000000 -05:00
-    - 2015-02-17 02:27:31.000000000 -05:00
+    - '2015-02-17 07:27:31'
+    - '2015-02-17 07:27:31'
     - 000906014
     - ' On the origin of species / by Charles Darwin ; with an introduction by Ernst
       Mayr.'
     - 20150116_c37c08d
-  - - 9
+  - - '9'
     - |
       <record xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim   http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
         <leader>00873cam 2200193Ia 4500</leader>
@@ -3621,12 +3714,12 @@ conversions:
             <bf:titleValue>Huckleberry Finn; text, sources, and criticism</bf:titleValue>
          </bf:Title>
       </rdf:RDF>
-    - 2015-02-17 02:27:36.000000000 -05:00
-    - 2015-02-17 02:27:36.000000000 -05:00
+    - '2015-02-17 07:27:36'
+    - '2015-02-17 07:27:36'
     - 000964154
     - ' Huckleberry Finn; text, sources, and criticism. [Edited by] Kenneth S. Lynn.'
     - 20150116_c37c08d
-  - - 10
+  - - '10'
     - |
       <record xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim   http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
         <leader>01203ncm 2200193Ia 4500</leader>
@@ -3929,13 +4022,13 @@ conversions:
             <bf:titleType>parallel</bf:titleType>
          </bf:Title>
       </rdf:RDF>
-    - 2015-02-17 02:27:42.000000000 -05:00
-    - 2015-02-17 02:27:42.000000000 -05:00
+    - '2015-02-17 07:27:42'
+    - '2015-02-17 07:27:42'
     - 000995241
     - ' Die Kunst der Fuge = The art of fugue : BWV 1080 / Johann Sebastian Bach ;
       herausgegeben von Christoph Wolff.'
     - 20150116_c37c08d
-  - - 11
+  - - '11'
     - |
       <record xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim   http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
         <leader>00700cam 2200193Ia 4500</leader>
@@ -4166,12 +4259,12 @@ conversions:
             <bf:titleValue>Clinical cardiopulmonary physiology</bf:titleValue>
          </bf:Title>
       </rdf:RDF>
-    - 2015-02-17 02:27:47.000000000 -05:00
-    - 2015-02-17 02:27:47.000000000 -05:00
+    - '2015-02-17 07:27:47'
+    - '2015-02-17 07:27:47'
     - 002484582
     - ' Clinical cardiopulmonary physiology.'
     - 20150116_c37c08d
-  - - 12
+  - - '12'
     - |
       <record xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim   http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
         <leader>01538cam 2200193Ia 4500</leader>
@@ -4546,14 +4639,14 @@ conversions:
             <bf:subtitle>The half-free press </bf:subtitle>
          </bf:Title>
       </rdf:RDF>
-    - 2015-02-17 02:27:53.000000000 -05:00
-    - 2015-02-17 02:27:53.000000000 -05:00
+    - '2015-02-17 07:27:53'
+    - '2015-02-17 07:27:53'
     - 003309285
     - ' The Freedom of the press : The half-free press / by Harold Evans ; Government
       and the media by Lord Windlesham ; The freedom of the American press / by Katharine
       Graham ; with an introd. by the chairman, Sir William Haley.'
     - 20150116_c37c08d
-  - - 13
+  - - '13'
     - |
       <record xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim   http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
         <leader>01313cem 2200193Ia 4500</leader>
@@ -4803,14 +4896,14 @@ conversions:
             <bf:titleValue>Civil War.</bf:titleValue>
          </bf:Title>
       </rdf:RDF>
-    - 2015-02-17 02:27:57.000000000 -05:00
-    - 2015-02-17 02:27:57.000000000 -05:00
+    - '2015-02-17 07:27:57'
+    - '2015-02-17 07:27:57'
     - 004686630
     - ' Battlefields of the Civil War with descriptive notes / compiled and drawn
       in the Cartographic Division of the National Geographic Division ; James M.
       Darley, chief cartographer.'
     - 20150116_c37c08d
-  - - 14
+  - - '14'
     - |
       <record xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim   http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
         <leader>01030nam 2200193Ia 4500</leader>
@@ -5091,13 +5184,13 @@ conversions:
             <bf:subtitle>a phenomenological essay on ontology </bf:subtitle>
          </bf:Title>
       </rdf:RDF>
-    - 2015-02-17 02:28:02.000000000 -05:00
-    - 2015-02-17 02:28:02.000000000 -05:00
+    - '2015-02-17 07:28:02'
+    - '2015-02-17 07:28:02'
     - '007242702'
     - ' Being and nothingness : a phenomenological essay on ontology / Jean-Paul Sartre
       ; translated and with an introduction by Hazel E. Barnes.'
     - 20150116_c37c08d
-  - - 15
+  - - '15'
     - |
       <record xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim   http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
         <leader>00900cjm 2200193Ia 4500</leader>
@@ -5314,12 +5407,12 @@ conversions:
             <bf:subtitle>op. 36.</bf:subtitle>
          </bf:Title>
       </rdf:RDF>
-    - 2015-02-17 02:28:07.000000000 -05:00
-    - 2015-02-17 02:28:07.000000000 -05:00
+    - '2015-02-17 07:28:07'
+    - '2015-02-17 07:28:07'
     - 008458056
     - ' Symphony no. 2 in D major, op. 36. [Sound recording]'
     - 20150116_c37c08d
-  - - 16
+  - - '16'
     - |
       <record xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim   http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
         <leader>01917cgm 2200193Ia 4500</leader>
@@ -5830,14 +5923,14 @@ conversions:
             <bf:titleValue>Lolita</bf:titleValue>
          </bf:Title>
       </rdf:RDF>
-    - 2015-02-17 02:28:13.000000000 -05:00
-    - 2015-02-17 02:28:13.000000000 -05:00
+    - '2015-02-17 07:28:13'
+    - '2015-02-17 07:28:13'
     - 009094842
     - ' Lolita [videorecording] / a Showtime release, a Pathé production ; produced
       by Mario Kassar and Joel B. Michaels ; directed by Adrian Lyne ; screenplay
       by Stephen Schiff.'
     - 20150116_c37c08d
-  - - 17
+  - - '17'
     - |
       <record xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim   http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
         <leader>01215pam 2200193Ia 4500</leader>
@@ -6258,13 +6351,13 @@ conversions:
             <bf:titleValue>Hamlet</bf:titleValue>
          </bf:Title>
       </rdf:RDF>
-    - 2015-02-17 02:28:19.000000000 -05:00
-    - 2015-02-17 02:28:19.000000000 -05:00
+    - '2015-02-17 07:28:19'
+    - '2015-02-17 07:28:19'
     - 009192543
     - ' Hamlet / William Shakespeare ; fully annotated, with an introduction by Burton
       Raffel ; with an essay by Harold Bloom.'
     - 20150116_c37c08d
-  - - 18
+  - - '18'
     - |
       <record xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim   http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
         <leader> cam 2200193Ia 4500</leader>
@@ -6553,15 +6646,15 @@ conversions:
             <bf:titleValue>Erhaltung der begünstigten Rassen im Kampfe ums Dasein</bf:titleValue>
          </bf:Title>
       </rdf:RDF>
-    - 2015-02-17 02:28:24.000000000 -05:00
-    - 2015-02-17 02:28:24.000000000 -05:00
+    - '2015-02-17 07:28:24'
+    - '2015-02-17 07:28:24'
     - 009577343
     - ' Die Entstehung der Arten durch natürliche Zuchtwahl, oder, Die Erhaltung der
       begünstigten Rassen im Kampfe ums Dasein / von Charles Darwin ; nach der Übersetzung
       von J.V. Carus und der letzten englischen Ausgabe bearbeitet von Dr. Heinrich
       Schmidt.'
     - 20150116_c37c08d
-  - - 19
+  - - '19'
     - |
       <record xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim   http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
         <leader> nam 2200193Ia 4500</leader>
@@ -6749,13 +6842,13 @@ conversions:
             <bf:titleValue>A letter from Frederick Douglass to his old master, written on the anniversary of his liberation from slavery.</bf:titleValue>
          </bf:Title>
       </rdf:RDF>
-    - 2015-02-17 02:28:29.000000000 -05:00
-    - 2015-02-17 02:28:29.000000000 -05:00
+    - '2015-02-17 07:28:29'
+    - '2015-02-17 07:28:29'
     - 010334955
     - ' A letter from Frederick Douglass to his old master, written on the anniversary
       of his liberation from slavery.'
     - 20150116_c37c08d
-  - - 20
+  - - '20'
     - |
       <record xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim   http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
         <leader> nkc 2200193Ia 4500</leader>
@@ -7205,13 +7298,13 @@ conversions:
             <bf:titleValue>The Thomas Jacoby photographic archive of early Christian churches of Syria in the Fine Arts Library, Harvard University</bf:titleValue>
          </bf:Title>
       </rdf:RDF>
-    - 2015-02-17 02:28:34.000000000 -05:00
-    - 2015-02-17 02:28:34.000000000 -05:00
+    - '2015-02-17 07:28:34'
+    - '2015-02-17 07:28:34'
     - 011494895
     - ' The Thomas Jacoby photographic archive of early Christian churches of Syria
       in the Fine Arts Library, Harvard University [graphic].'
     - 20150116_c37c08d
-  - - 21
+  - - '21'
     - |
       <record xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim   http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
         <leader> cam 2200193Ia 4500</leader>
@@ -7691,13 +7784,13 @@ conversions:
             <bf:subtitle>a festschrift in honour of Lars-Göran Nilsson </bf:subtitle>
          </bf:Title>
       </rdf:RDF>
-    - 2015-02-17 02:28:39.000000000 -05:00
-    - 2015-02-17 02:28:39.000000000 -05:00
+    - '2015-02-17 07:28:39'
+    - '2015-02-17 07:28:39'
     - '012257620'
     - ' Memory, aging, and the brain : a festschrift in honour of Lars-Göran Nilsson
       / edited by Lars Bäckman and Lars Nyberg.'
     - 20150116_c37c08d
-  - - 22
+  - - '22'
     - |
       <record xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim   http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
         <leader> npc 2200193Ia 4500</leader>
@@ -8363,12 +8456,12 @@ conversions:
             <bf:titleValue>The Kay Kaufman Shelemay Syrian-Jewish collection</bf:titleValue>
          </bf:Title>
       </rdf:RDF>
-    - 2015-02-17 02:28:44.000000000 -05:00
-    - 2015-02-17 02:28:44.000000000 -05:00
+    - '2015-02-17 07:28:44'
+    - '2015-02-17 07:28:44'
     - 012514396
     - ' [The Kay Kaufman Shelemay Syrian-Jewish collection, 1984-1995].'
     - 20150116_c37c08d
-  - - 23
+  - - '23'
     - |
       <record xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim   http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
         <leader> cem 2200193Ia 4500</leader>
@@ -8694,15 +8787,15 @@ conversions:
             <bf:titleValue>Atlas of Mars: MTM 35337, 40337, and 45337 quadrangles</bf:titleValue>
          </bf:Title>
       </rdf:RDF>
-    - 2015-02-17 02:28:50.000000000 -05:00
-    - 2015-02-17 02:28:50.000000000 -05:00
+    - '2015-02-17 07:28:50'
+    - '2015-02-17 07:28:50'
     - 012709292
     - ' Geologic map of MTM 35337, 40337, and 45337 quadrangles, Deuteronilus Mensae
       region of Mars / by Frank C. Chuang and David A. Crown ; U.S. Department of
       the Interior, U.S. Geological Survey ; prepared for National Aeronautics and
       Space Administration.'
     - 20150116_c37c08d
-  - - 24
+  - - '24'
     - |
       <record xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim   http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
         <leader> cjm 2200193Ia 4500</leader>
@@ -9558,12 +9651,12 @@ conversions:
             <bf:titleValue>The bold arch of undreamt bridges</bf:titleValue>
          </bf:Title>
       </rdf:RDF>
-    - 2015-02-17 02:28:54.000000000 -05:00
-    - 2015-02-17 02:28:54.000000000 -05:00
+    - '2015-02-17 07:28:54'
+    - '2015-02-17 07:28:54'
     - '012755724'
     - ' The bold arch of undreamt bridges / Peter Gilbert.'
     - 20150116_c37c08d
-  - - 25
+  - - '25'
     - |
       <record xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim   http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
         <leader> cam 2200193Ia 4500</leader>
@@ -9918,12 +10011,12 @@ conversions:
             <bf:titleValue>Leo Tolstoy's Anna Karenina</bf:titleValue>
          </bf:Title>
       </rdf:RDF>
-    - 2015-02-17 02:28:59.000000000 -05:00
-    - 2015-02-17 02:28:59.000000000 -05:00
+    - '2015-02-17 07:28:59'
+    - '2015-02-17 07:28:59'
     - '013146054'
     - ' Leo Tolstoy''s Anna Karenina / a stage adaptation by Helen Edmundson.'
     - 20150116_c37c08d
-  - - 26
+  - - '26'
     - |
       <record xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim   http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
         <leader> nem 2200193Ia 4500</leader>
@@ -10270,13 +10363,13 @@ conversions:
             <bf:titleValue>Watershed boundary dataset for Mississippi</bf:titleValue>
          </bf:Title>
       </rdf:RDF>
-    - 2015-02-17 02:29:04.000000000 -05:00
-    - 2015-02-17 02:29:04.000000000 -05:00
+    - '2015-02-17 07:29:04'
+    - '2015-02-17 07:29:04'
     - '013233474'
     - ' Watershed boundary dataset for Mississippi [electronic resource] / K. Van
       Wilson, Jr. ... [et al.]'
     - 20150116_c37c08d
-  - - 27
+  - - '27'
     - |
       <record xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim   http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
         <leader> cjm 2200193Ia 4500</leader>
@@ -10569,12 +10662,12 @@ conversions:
             <bf:titleValue>The English suites</bf:titleValue>
          </bf:Title>
       </rdf:RDF>
-    - 2015-02-17 02:29:09.000000000 -05:00
-    - 2015-02-17 02:29:09.000000000 -05:00
+    - '2015-02-17 07:29:09'
+    - '2015-02-17 07:29:09'
     - 013298672
     - ' The English suites [electronic resource] / Johann Sebastian Bach.'
     - 20150116_c37c08d
-  - - 28
+  - - '28'
     - |
       <record xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim   http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
         <leader> cam 2200193Ia 4500</leader>
@@ -10816,13 +10909,13 @@ conversions:
             <bf:subtitle>Iris Murdoch's hybrid novels </bf:subtitle>
          </bf:Title>
       </rdf:RDF>
-    - 2015-02-17 02:29:15.000000000 -05:00
-    - 2015-02-17 02:29:15.000000000 -05:00
+    - '2015-02-17 07:29:15'
+    - '2015-02-17 07:29:15'
     - '013600455'
     - ' Novel writing and moral philosophy as aspects of a single struggle : Iris
       Murdoch''s hybrid novels / Anna Victoria Hallberg.'
     - 20150116_c37c08d
-  - - 29
+  - - '29'
     - |
       <record xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim   http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
         <leader> nam 2200193Ia 4500</leader>
@@ -11564,13 +11657,13 @@ conversions:
             <bf:titleValue>Mythologies</bf:titleValue>
          </bf:Title>
       </rdf:RDF>
-    - 2015-02-17 02:29:19.000000000 -05:00
-    - 2015-02-17 02:29:19.000000000 -05:00
+    - '2015-02-17 07:29:19'
+    - '2015-02-17 07:29:19'
     - 013703648
     - ' Mythologies / Fulgence ; traduit, présenté et annoté par Étienne Wolff et
       Philippe Dain.'
     - 20150116_c37c08d
-  - - 30
+  - - '30'
     - |
       <record xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim   http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
         <leader> nam 2200193Ia 4500</leader>
@@ -12318,14 +12411,14 @@ conversions:
             <bf:subtitle>16th International Conference, TSD 2013, Pilsen, Czech Republic, September 1-5, 2013. Proceedings </bf:subtitle>
          </bf:Title>
       </rdf:RDF>
-    - 2015-02-17 02:29:25.000000000 -05:00
-    - 2015-02-17 02:29:25.000000000 -05:00
+    - '2015-02-17 07:29:25'
+    - '2015-02-17 07:29:25'
     - 013770109
     - ' Text, Speech, and Dialogue : 16th International Conference, TSD 2013, Pilsen,
       Czech Republic, September 1-5, 2013. Proceedings / edited by Ivan Habernal,
       Václav Matoušek.'
     - 20150116_c37c08d
-  - - 31
+  - - '31'
     - |
       <record xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim   http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
         <leader> cam 2200193Ia 4500</leader>
@@ -12580,13 +12673,13 @@ conversions:
             <bf:subtitle>opere poetiche </bf:subtitle>
          </bf:Title>
       </rdf:RDF>
-    - 2015-02-17 02:29:30.000000000 -05:00
-    - 2015-02-17 02:29:30.000000000 -05:00
+    - '2015-02-17 07:29:30'
+    - '2015-02-17 07:29:30'
     - '013775657'
     - ' La rosa del punto : opere poetiche / Giovanni Dotoli ; introduzione di Pasquale
       Guaragnella.'
     - 20150116_c37c08d
-  - - 32
+  - - '32'
     - |
       <record xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim   http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
         <leader> cam 2200193Ia 4500</leader>
@@ -12885,12 +12978,12 @@ conversions:
             <bf:titleValue>La bella Milano</bf:titleValue>
          </bf:Title>
       </rdf:RDF>
-    - 2015-02-17 02:29:36.000000000 -05:00
-    - 2015-02-17 02:29:36.000000000 -05:00
+    - '2015-02-17 07:29:36'
+    - '2015-02-17 07:29:36'
     - 013854598
     - ' La bella Milano / Delio Tessa ; a cura di Paolo Mauri.'
     - 20150116_c37c08d
-  - - 33
+  - - '33'
     - |
       <record xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim   http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
         <leader> cam 2200193Ia 4500</leader>
@@ -13174,12 +13267,12 @@ conversions:
             <bf:subtitle>come la pensiamo e come è </bf:subtitle>
          </bf:Title>
       </rdf:RDF>
-    - 2015-02-17 02:29:41.000000000 -05:00
-    - 2015-02-17 02:29:41.000000000 -05:00
+    - '2015-02-17 07:29:41'
+    - '2015-02-17 07:29:41'
     - 013860878
     - ' Le strane idee della scienza : come la pensiamo e come è / Graziano Cavallini.'
     - 20150116_c37c08d
-  - - 34
+  - - '34'
     - |
       <record xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim   http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
         <leader> cim 2200193Ia 4500</leader>
@@ -13542,13 +13635,13 @@ conversions:
             <bf:titleValue>Intelligence briefings of presidential candidates, 1952-2004</bf:titleValue>
          </bf:Title>
       </rdf:RDF>
-    - 2015-02-17 02:29:47.000000000 -05:00
-    - 2015-02-17 02:29:47.000000000 -05:00
+    - '2015-02-17 07:29:47'
+    - '2015-02-17 07:29:47'
     - 013869975
     - ' Getting to know the president : intelligence briefings of presidential candidates,
       1952-2004 / by John Helgerson.'
     - 20150116_c37c08d
-  - - 35
+  - - '35'
     - |
       <record xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim   http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
         <leader> cam 2200193Ia 4500</leader>
@@ -13853,14 +13946,14 @@ conversions:
             <bf:titleType>parallel</bf:titleType>
          </bf:Title>
       </rdf:RDF>
-    - 2015-02-17 02:29:52.000000000 -05:00
-    - 2015-02-17 02:29:52.000000000 -05:00
+    - '2015-02-17 07:29:52'
+    - '2015-02-17 07:29:52'
     - 013915257
     - ' Garfagnana : where time stands still : una terra dalle origini lontane dove
       il tempo scorre piano / fotografie di=photos by Gabriele Caproni ; testi di=
       text by Cristoforo Feliciano Ravera.'
     - 20150116_c37c08d
-  - - 36
+  - - '36'
     - |
       <record xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim   http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
         <leader> ccm 2200193Ia 4500</leader>
@@ -14177,13 +14270,13 @@ conversions:
             <bf:titleValue>Incantation for kantele and koto</bf:titleValue>
          </bf:Title>
       </rdf:RDF>
-    - 2015-02-17 02:29:58.000000000 -05:00
-    - 2015-02-17 02:29:58.000000000 -05:00
+    - '2015-02-17 07:29:58'
+    - '2015-02-17 07:29:58'
     - 013982287
     - ' Loviatar : loitsu kanteleelle ja kotolle = incantation for kantele and koto,
       2013 / Pekka Jalkanen.'
     - 20150116_c37c08d
-  - - 37
+  - - '37'
     - |
       <record xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim   http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
         <leader> cam 2200193Ia 4500</leader>
@@ -14477,13 +14570,13 @@ conversions:
             <bf:subtitle>enjeux et perspectives </bf:subtitle>
          </bf:Title>
       </rdf:RDF>
-    - 2015-02-17 02:30:03.000000000 -05:00
-    - 2015-02-17 02:30:03.000000000 -05:00
+    - '2015-02-17 07:30:03'
+    - '2015-02-17 07:30:03'
     - '014126752'
     - ' Lectures de Michel Henry : enjeux et perspectives / Grégori Jean et Jean Leclercq
       (éd.).'
     - 20150116_c37c08d
-  - - 38
+  - - '38'
     - |
       <record xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim   http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
         <leader> cam 2200193Ia 4500</leader>
@@ -14801,13 +14894,13 @@ conversions:
             <bf:subtitle>le vol de 198 tonnes d'or belge par les Nazis </bf:subtitle>
          </bf:Title>
       </rdf:RDF>
-    - 2015-02-17 02:30:08.000000000 -05:00
-    - 2015-02-17 02:30:08.000000000 -05:00
+    - '2015-02-17 07:30:08'
+    - '2015-02-17 07:30:08'
     - '014132402'
     - ' L''or à la dérive : le vol de 198 tonnes d''or belge par les Nazis / Walter
       Pluym ; trauction française Walter Pluym et Frans Lambeau.'
     - 20150116_c37c08d
-  - - 39
+  - - '39'
     - |
       <record xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim   http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
         <leader> nem 2200193Ia 4500</leader>
@@ -15270,12 +15363,12 @@ conversions:
             <bf:categoryType>media category</bf:categoryType>
          </bf:Category>
       </rdf:RDF>
-    - 2015-02-17 02:30:14.000000000 -05:00
-    - 2015-02-17 02:30:14.000000000 -05:00
+    - '2015-02-17 07:30:14'
+    - '2015-02-17 07:30:14'
     - '014236724'
     - ' Myanmar 1:50,000 : [Mandalay, Naypyitaw, and Yangon regions] .'
     - 20150116_c37c08d
-  - - 44
+  - - '40'
     - |
       <record xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim   http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
         <leader>02104ncm 2200193Ia 4500</leader>
@@ -15984,12 +16077,12 @@ conversions:
             <bf:partNumber>Part 1.</bf:partNumber>
          </bf:Title>
       </rdf:RDF>
-    - 2015-03-02 15:16:35.000000000 -05:00
-    - 2015-03-02 15:16:35.000000000 -05:00
+    - '2015-03-05 19:50:36'
+    - '2015-03-05 19:50:36'
     - 004924364
     - ' [House of Savoy collection of sheet music. Part 1].'
     - 20150116_c37c08d
-  - - 45
+  - - '41'
     - |
       <record xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim   http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
         <leader> ccm 2200193Ia 4500</leader>
@@ -16329,8 +16422,8 @@ conversions:
             <bf:subtitle>nocturne for orchestra </bf:subtitle>
          </bf:Title>
       </rdf:RDF>
-    - 2015-03-02 15:16:41.000000000 -05:00
-    - 2015-03-02 15:16:41.000000000 -05:00
+    - '2015-03-05 19:50:43'
+    - '2015-03-05 19:50:43'
     - 014301848
     - ' Darkness visible : nocturne for orchestra / Benet Casablancas.'
     - 20150116_c37c08d
@@ -16344,96 +16437,96 @@ evaluators:
   - created_at
   - updated_at
   records: 
-  - - 1
+  - - '1'
     - Deschner
     - Paul
-    - 2015-02-12 15:40:05.000000000 -05:00
-    - 2015-02-12 15:40:05.000000000 -05:00
-  - - 2
+    - '2015-02-12 20:40:05'
+    - '2015-02-12 20:40:05'
+  - - '2'
     - Durocher
     - Michelle
-    - 2015-02-12 11:26:33.000000000 -05:00
-    - 2015-02-12 11:26:33.000000000 -05:00
-  - - 3
+    - '2015-02-12 16:26:33'
+    - '2015-02-12 16:26:33'
+  - - '3'
     - Terrizzi
     - Anthony
-    - 2015-02-12 11:26:51.000000000 -05:00
-    - 2015-02-12 11:26:51.000000000 -05:00
-  - - 4
+    - '2015-02-12 16:26:51'
+    - '2015-02-12 16:26:51'
+  - - '4'
     - Thomas
     - Craig
-    - 2015-02-12 11:27:12.000000000 -05:00
-    - 2015-02-12 11:27:12.000000000 -05:00
-  - - 5
+    - '2015-02-12 16:27:12'
+    - '2015-02-12 16:27:12'
+  - - '5'
     - Campbell
     - Robert
-    - 2015-02-12 11:27:30.000000000 -05:00
-    - 2015-02-12 11:27:30.000000000 -05:00
-  - - 6
+    - '2015-02-12 16:27:30'
+    - '2015-02-12 16:27:30'
+  - - '6'
     - Trumble
     - Bruce
-    - 2015-02-12 11:27:44.000000000 -05:00
-    - 2015-02-12 11:27:44.000000000 -05:00
-  - - 7
+    - '2015-02-12 16:27:44'
+    - '2015-02-12 16:27:44'
+  - - '7'
     - Ma
     - Thomas
-    - 2015-02-12 11:27:59.000000000 -05:00
-    - 2015-02-12 11:27:59.000000000 -05:00
-  - - 8
+    - '2015-02-12 16:27:59'
+    - '2015-02-12 16:27:59'
+  - - '8'
     - Linda
     - Takata
-    - 2015-02-12 11:28:12.000000000 -05:00
-    - 2015-02-12 11:28:12.000000000 -05:00
-  - - 9
+    - '2015-02-12 16:28:12'
+    - '2015-02-12 16:28:12'
+  - - '9'
     - Isabel
     - Quintana
-    - 2015-02-12 11:28:30.000000000 -05:00
-    - 2015-02-12 11:28:30.000000000 -05:00
-  - - 10
+    - '2015-02-12 16:28:30'
+    - '2015-02-12 16:28:30'
+  - - '10'
     - Marc
     - McGee
-    - 2015-02-12 11:28:44.000000000 -05:00
-    - 2015-02-12 11:28:44.000000000 -05:00
-  - - 11
+    - '2015-02-12 16:28:44'
+    - '2015-02-12 16:28:44'
+  - - '11'
     - Viscuglia
     - Donna
-    - 2015-02-12 11:28:58.000000000 -05:00
-    - 2015-02-12 11:28:58.000000000 -05:00
-  - - 12
+    - '2015-02-12 16:28:58'
+    - '2015-02-12 16:28:58'
+  - - '12'
     - Riel
     - Steven
-    - 2015-02-12 11:29:18.000000000 -05:00
-    - 2015-02-12 11:29:18.000000000 -05:00
-  - - 13
+    - '2015-02-12 16:29:18'
+    - '2015-02-12 16:29:18'
+  - - '13'
     - Cuneo
     - Mary Jane
-    - 2015-02-12 11:29:35.000000000 -05:00
-    - 2015-02-12 11:29:35.000000000 -05:00
-  - - 14
+    - '2015-02-12 16:29:35'
+    - '2015-02-12 16:29:35'
+  - - '14'
     - Iseminger
     - Beth
-    - 2015-02-12 11:29:53.000000000 -05:00
-    - 2015-02-12 11:29:53.000000000 -05:00
-  - - 15
+    - '2015-02-12 16:29:53'
+    - '2015-02-12 16:29:53'
+  - - '15'
     - Adams
     - Anne
-    - 2015-02-12 11:30:05.000000000 -05:00
-    - 2015-02-12 11:53:47.000000000 -05:00
-  - - 16
+    - '2015-02-12 16:30:05'
+    - '2015-02-12 16:53:47'
+  - - '16'
     - Nipps
     - Karen
-    - 2015-02-12 11:30:15.000000000 -05:00
-    - 2015-02-12 11:30:15.000000000 -05:00
-  - - 17
+    - '2015-02-12 16:30:15'
+    - '2015-02-12 16:30:15'
+  - - '17'
     - Wheeler
     - Ryan
-    - 2015-02-12 11:30:37.000000000 -05:00
-    - 2015-02-12 11:30:37.000000000 -05:00
-  - - 18
+    - '2015-02-12 16:30:37'
+    - '2015-02-12 16:30:37'
+  - - '18'
     - Thornton
     - Alison
-    - 2015-02-12 11:30:53.000000000 -05:00
-    - 2015-02-12 11:30:53.000000000 -05:00
+    - '2015-02-12 16:30:53'
+    - '2015-02-12 16:30:53'
 
 ---
 issues:
@@ -16443,1113 +16536,1113 @@ issues:
   - created_at
   - updated_at
   records: 
-  - - 1
+  - - '1'
     - LEADER
-    - 2015-01-29 12:43:53.000000000 -05:00
-    - 2015-01-29 12:43:53.000000000 -05:00
-  - - 2
+    - '2015-01-29 17:43:53'
+    - '2015-01-29 17:43:53'
+  - - '2'
     - 001 - CONTROL NUMBER (NR)
-    - 2015-01-29 12:43:53.000000000 -05:00
-    - 2015-01-29 12:43:53.000000000 -05:00
-  - - 3
+    - '2015-01-29 17:43:53'
+    - '2015-01-29 17:43:53'
+  - - '3'
     - 003 - CONTROL NUMBER IDENTIFIER (NR)
-    - 2015-01-29 12:43:53.000000000 -05:00
-    - 2015-01-29 12:43:53.000000000 -05:00
-  - - 4
+    - '2015-01-29 17:43:53'
+    - '2015-01-29 17:43:53'
+  - - '4'
     - 005 - DATE AND TIME OF LATEST TRANSACTION (NR)
-    - 2015-01-29 12:43:53.000000000 -05:00
-    - 2015-01-29 12:43:53.000000000 -05:00
-  - - 5
+    - '2015-01-29 17:43:53'
+    - '2015-01-29 17:43:53'
+  - - '5'
     - 006 - FIXED-LENGTH DATA ELEMENTS--ADDITIONAL MATERIAL CHARACTERISTICS--GENERAL
       INFORMATION (R)
-    - 2015-01-29 12:43:53.000000000 -05:00
-    - 2015-01-29 12:43:53.000000000 -05:00
-  - - 6
+    - '2015-01-29 17:43:53'
+    - '2015-01-29 17:43:53'
+  - - '6'
     - 007 - PHYSICAL DESCRIPTION FIXED FIELD--GENERAL INFORMATION (R)
-    - 2015-01-29 12:43:53.000000000 -05:00
-    - 2015-01-29 12:43:53.000000000 -05:00
-  - - 7
+    - '2015-01-29 17:43:53'
+    - '2015-01-29 17:43:53'
+  - - '7'
     - 008 - FIXED-LENGTH DATA ELEMENTS--GENERAL INFORMATION (NR)
-    - 2015-01-29 12:43:53.000000000 -05:00
-    - 2015-01-29 12:43:53.000000000 -05:00
-  - - 8
+    - '2015-01-29 17:43:53'
+    - '2015-01-29 17:43:53'
+  - - '8'
     - 009 - PHYSICAL DESCRIPTION FIXED-FIELD FOR ARCHIVAL COLLECTION (VM) - [OBSOLETE]
-    - 2015-01-29 12:43:53.000000000 -05:00
-    - 2015-01-29 12:43:53.000000000 -05:00
-  - - 9
+    - '2015-01-29 17:43:53'
+    - '2015-01-29 17:43:53'
+  - - '9'
     - 010 - LIBRARY OF CONGRESS CONTROL NUMBER (NR)
-    - 2015-01-29 12:43:53.000000000 -05:00
-    - 2015-01-29 12:43:53.000000000 -05:00
-  - - 10
+    - '2015-01-29 17:43:53'
+    - '2015-01-29 17:43:53'
+  - - '10'
     - 011 - LINKING LIBRARY OF CONGRESS CONTROL NUMBER (NR) [OBSOLETE]
-    - 2015-01-29 12:43:54.000000000 -05:00
-    - 2015-01-29 12:43:54.000000000 -05:00
-  - - 11
+    - '2015-01-29 17:43:54'
+    - '2015-01-29 17:43:54'
+  - - '11'
     - 013 - PATENT CONTROL INFORMATION (R)
-    - 2015-01-29 12:43:54.000000000 -05:00
-    - 2015-01-29 12:43:54.000000000 -05:00
-  - - 12
+    - '2015-01-29 17:43:54'
+    - '2015-01-29 17:43:54'
+  - - '12'
     - 015 - NATIONAL BIBLIOGRAPHY NUMBER (R)
-    - 2015-01-29 12:43:54.000000000 -05:00
-    - 2015-01-29 12:43:54.000000000 -05:00
-  - - 13
+    - '2015-01-29 17:43:54'
+    - '2015-01-29 17:43:54'
+  - - '13'
     - 016 - NATIONAL BIBLIOGRAPHIC AGENCY CONTROL NUMBER (R)
-    - 2015-01-29 12:43:54.000000000 -05:00
-    - 2015-01-29 12:43:54.000000000 -05:00
-  - - 14
+    - '2015-01-29 17:43:54'
+    - '2015-01-29 17:43:54'
+  - - '14'
     - 017 - COPYRIGHT OR LEGAL DEPOSIT NUMBER (R)
-    - 2015-01-29 12:43:54.000000000 -05:00
-    - 2015-01-29 12:43:54.000000000 -05:00
-  - - 15
+    - '2015-01-29 17:43:54'
+    - '2015-01-29 17:43:54'
+  - - '15'
     - 018 - COPYRIGHT ARTICLE-FEE CODE (NR)
-    - 2015-01-29 12:43:54.000000000 -05:00
-    - 2015-01-29 12:43:54.000000000 -05:00
-  - - 16
+    - '2015-01-29 17:43:54'
+    - '2015-01-29 17:43:54'
+  - - '16'
     - 020 - INTERNATIONAL STANDARD BOOK NUMBER (R)
-    - 2015-01-29 12:43:54.000000000 -05:00
-    - 2015-01-29 12:43:54.000000000 -05:00
-  - - 17
+    - '2015-01-29 17:43:54'
+    - '2015-01-29 17:43:54'
+  - - '17'
     - 022 - INTERNATIONAL STANDARD SERIAL NUMBER (R)
-    - 2015-01-29 12:43:54.000000000 -05:00
-    - 2015-01-29 12:43:54.000000000 -05:00
-  - - 18
+    - '2015-01-29 17:43:54'
+    - '2015-01-29 17:43:54'
+  - - '18'
     - 024 - OTHER STANDARD IDENTIFIER (R)
-    - 2015-01-29 12:43:54.000000000 -05:00
-    - 2015-01-29 12:43:54.000000000 -05:00
-  - - 19
+    - '2015-01-29 17:43:54'
+    - '2015-01-29 17:43:54'
+  - - '19'
     - 025 - OVERSEAS ACQUISITION NUMBER (R)
-    - 2015-01-29 12:43:54.000000000 -05:00
-    - 2015-01-29 12:43:54.000000000 -05:00
-  - - 20
+    - '2015-01-29 17:43:54'
+    - '2015-01-29 17:43:54'
+  - - '20'
     - 026 - FINGERPRINT IDENTIFIER (R)
-    - 2015-01-29 12:43:54.000000000 -05:00
-    - 2015-01-29 12:43:54.000000000 -05:00
-  - - 21
+    - '2015-01-29 17:43:54'
+    - '2015-01-29 17:43:54'
+  - - '21'
     - 027 - STANDARD TECHNICAL REPORT NUMBER (R)
-    - 2015-01-29 12:43:55.000000000 -05:00
-    - 2015-01-29 12:43:55.000000000 -05:00
-  - - 22
+    - '2015-01-29 17:43:55'
+    - '2015-01-29 17:43:55'
+  - - '22'
     - 028 - PUBLISHER NUMBER (R)
-    - 2015-01-29 12:43:55.000000000 -05:00
-    - 2015-01-29 12:43:55.000000000 -05:00
-  - - 23
+    - '2015-01-29 17:43:55'
+    - '2015-01-29 17:43:55'
+  - - '23'
     - '030 - CODEN DESIGNATION (R) '
-    - 2015-01-29 12:43:55.000000000 -05:00
-    - 2015-01-29 12:43:55.000000000 -05:00
-  - - 24
+    - '2015-01-29 17:43:55'
+    - '2015-01-29 17:43:55'
+  - - '24'
     - '031 - MUSICAL INCIPITS INFORMATION (R) '
-    - 2015-01-29 12:43:55.000000000 -05:00
-    - 2015-01-29 12:43:55.000000000 -05:00
-  - - 25
+    - '2015-01-29 17:43:55'
+    - '2015-01-29 17:43:55'
+  - - '25'
     - 032 - POSTAL REGISTRATION NUMBER (R)
-    - 2015-01-29 12:43:55.000000000 -05:00
-    - 2015-01-29 12:43:55.000000000 -05:00
-  - - 26
+    - '2015-01-29 17:43:55'
+    - '2015-01-29 17:43:55'
+  - - '26'
     - 033 - DATE/TIME AND PLACE OF AN EVENT (R)
-    - 2015-01-29 12:43:55.000000000 -05:00
-    - 2015-01-29 12:43:55.000000000 -05:00
-  - - 27
+    - '2015-01-29 17:43:55'
+    - '2015-01-29 17:43:55'
+  - - '27'
     - 034 - CODED CARTOGRAPHIC MATHEMATICAL DATA (R)
-    - 2015-01-29 12:43:55.000000000 -05:00
-    - 2015-01-29 12:43:55.000000000 -05:00
-  - - 28
+    - '2015-01-29 17:43:55'
+    - '2015-01-29 17:43:55'
+  - - '28'
     - 035 - SYSTEM CONTROL NUMBER (R)
-    - 2015-01-29 12:43:55.000000000 -05:00
-    - 2015-01-29 12:43:55.000000000 -05:00
-  - - 29
+    - '2015-01-29 17:43:55'
+    - '2015-01-29 17:43:55'
+  - - '29'
     - 036 - ORIGINAL STUDY NUMBER FOR COMPUTER DATA FILES (NR)
-    - 2015-01-29 12:43:55.000000000 -05:00
-    - 2015-01-29 12:43:55.000000000 -05:00
-  - - 30
+    - '2015-01-29 17:43:55'
+    - '2015-01-29 17:43:55'
+  - - '30'
     - 037 - SOURCE OF ACQUISITION (R)
-    - 2015-01-29 12:43:55.000000000 -05:00
-    - 2015-01-29 12:43:55.000000000 -05:00
-  - - 31
+    - '2015-01-29 17:43:55'
+    - '2015-01-29 17:43:55'
+  - - '31'
     - 038 - RECORD CONTENT LICENSOR (NR)
-    - 2015-01-29 12:43:56.000000000 -05:00
-    - 2015-01-29 12:43:56.000000000 -05:00
-  - - 32
+    - '2015-01-29 17:43:56'
+    - '2015-01-29 17:43:56'
+  - - '32'
     - 040 - CATALOGING SOURCE (NR)
-    - 2015-01-29 12:43:56.000000000 -05:00
-    - 2015-01-29 12:43:56.000000000 -05:00
-  - - 33
+    - '2015-01-29 17:43:56'
+    - '2015-01-29 17:43:56'
+  - - '33'
     - 041 - LANGUAGE CODE (R)
-    - 2015-01-29 12:43:56.000000000 -05:00
-    - 2015-01-29 12:43:56.000000000 -05:00
-  - - 34
+    - '2015-01-29 17:43:56'
+    - '2015-01-29 17:43:56'
+  - - '34'
     - 042 - AUTHENTICATION CODE (NR)
-    - 2015-01-29 12:43:56.000000000 -05:00
-    - 2015-01-29 12:43:56.000000000 -05:00
-  - - 35
+    - '2015-01-29 17:43:56'
+    - '2015-01-29 17:43:56'
+  - - '35'
     - 043 - GEOGRAPHIC AREA CODE (NR)
-    - 2015-01-29 12:43:56.000000000 -05:00
-    - 2015-01-29 12:43:56.000000000 -05:00
-  - - 36
+    - '2015-01-29 17:43:56'
+    - '2015-01-29 17:43:56'
+  - - '36'
     - 044 - COUNTRY OF PUBLISHING/PRODUCING ENTITY CODE (NR)
-    - 2015-01-29 12:43:56.000000000 -05:00
-    - 2015-01-29 12:43:56.000000000 -05:00
-  - - 37
+    - '2015-01-29 17:43:56'
+    - '2015-01-29 17:43:56'
+  - - '37'
     - 045 - TIME PERIOD OF CONTENT (NR)
-    - 2015-01-29 12:43:56.000000000 -05:00
-    - 2015-01-29 12:43:56.000000000 -05:00
-  - - 38
+    - '2015-01-29 17:43:56'
+    - '2015-01-29 17:43:56'
+  - - '38'
     - 046 - SPECIAL CODED DATES (R)
-    - 2015-01-29 12:43:56.000000000 -05:00
-    - 2015-01-29 12:43:56.000000000 -05:00
-  - - 39
+    - '2015-01-29 17:43:56'
+    - '2015-01-29 17:43:56'
+  - - '39'
     - 047 - FORM OF MUSICAL COMPOSITION CODE (R)
-    - 2015-01-29 12:43:56.000000000 -05:00
-    - 2015-01-29 12:43:56.000000000 -05:00
-  - - 40
+    - '2015-01-29 17:43:56'
+    - '2015-01-29 17:43:56'
+  - - '40'
     - 048 - NUMBER OF MUSICAL INSTRUMENTS OR VOICES CODE (R)
-    - 2015-01-29 12:43:56.000000000 -05:00
-    - 2015-01-29 12:43:56.000000000 -05:00
-  - - 41
+    - '2015-01-29 17:43:56'
+    - '2015-01-29 17:43:56'
+  - - '41'
     - 050 - LIBRARY OF CONGRESS CALL NUMBER (R)
-    - 2015-01-29 12:43:56.000000000 -05:00
-    - 2015-01-29 12:43:56.000000000 -05:00
-  - - 42
+    - '2015-01-29 17:43:56'
+    - '2015-01-29 17:43:56'
+  - - '42'
     - 051 - LIBRARY OF CONGRESS COPY, ISSUE, OFFPRINT STATEMENT (R)
-    - 2015-01-29 12:43:57.000000000 -05:00
-    - 2015-01-29 12:43:57.000000000 -05:00
-  - - 43
+    - '2015-01-29 17:43:57'
+    - '2015-01-29 17:43:57'
+  - - '43'
     - 052 - GEOGRAPHIC CLASSIFICATION (R)
-    - 2015-01-29 12:43:57.000000000 -05:00
-    - 2015-01-29 12:43:57.000000000 -05:00
-  - - 44
+    - '2015-01-29 17:43:57'
+    - '2015-01-29 17:43:57'
+  - - '44'
     - 055 - CLASSIFICATION NUMBERS ASSIGNED IN CANADA (R)
-    - 2015-01-29 12:43:57.000000000 -05:00
-    - 2015-01-29 12:43:57.000000000 -05:00
-  - - 45
+    - '2015-01-29 17:43:57'
+    - '2015-01-29 17:43:57'
+  - - '45'
     - 060 - NATIONAL LIBRARY OF MEDICINE CALL NUMBER (R)
-    - 2015-01-29 12:43:57.000000000 -05:00
-    - 2015-01-29 12:43:57.000000000 -05:00
-  - - 46
+    - '2015-01-29 17:43:57'
+    - '2015-01-29 17:43:57'
+  - - '46'
     - 061 - NATIONAL LIBRARY OF MEDICINE COPY STATEMENT (R)
-    - 2015-01-29 12:43:57.000000000 -05:00
-    - 2015-01-29 12:43:57.000000000 -05:00
-  - - 47
+    - '2015-01-29 17:43:57'
+    - '2015-01-29 17:43:57'
+  - - '47'
     - 066 - CHARACTER SETS PRESENT (NR)
-    - 2015-01-29 12:43:57.000000000 -05:00
-    - 2015-01-29 12:43:57.000000000 -05:00
-  - - 48
+    - '2015-01-29 17:43:57'
+    - '2015-01-29 17:43:57'
+  - - '48'
     - 070 - NATIONAL AGRICULTURAL LIBRARY CALL NUMBER (R)
-    - 2015-01-29 12:43:57.000000000 -05:00
-    - 2015-01-29 12:43:57.000000000 -05:00
-  - - 49
+    - '2015-01-29 17:43:57'
+    - '2015-01-29 17:43:57'
+  - - '49'
     - 071 - NATIONAL AGRICULTURAL LIBRARY COPY STATEMENT (R)
-    - 2015-01-29 12:43:57.000000000 -05:00
-    - 2015-01-29 12:43:57.000000000 -05:00
-  - - 50
+    - '2015-01-29 17:43:57'
+    - '2015-01-29 17:43:57'
+  - - '50'
     - 072 - SUBJECT CATEGORY CODE (R)
-    - 2015-01-29 12:43:57.000000000 -05:00
-    - 2015-01-29 12:43:57.000000000 -05:00
-  - - 51
+    - '2015-01-29 17:43:57'
+    - '2015-01-29 17:43:57'
+  - - '51'
     - 074 - GPO ITEM NUMBER (R)
-    - 2015-01-29 12:43:57.000000000 -05:00
-    - 2015-01-29 12:43:57.000000000 -05:00
-  - - 52
+    - '2015-01-29 17:43:57'
+    - '2015-01-29 17:43:57'
+  - - '52'
     - 080 - UNIVERSAL DECIMAL CLASSIFICATION NUMBER (R)
-    - 2015-01-29 12:43:58.000000000 -05:00
-    - 2015-01-29 12:43:58.000000000 -05:00
-  - - 53
+    - '2015-01-29 17:43:58'
+    - '2015-01-29 17:43:58'
+  - - '53'
     - 082 - DEWEY DECIMAL CLASSIFICATION NUMBER (R)
-    - 2015-01-29 12:43:58.000000000 -05:00
-    - 2015-01-29 12:43:58.000000000 -05:00
-  - - 54
+    - '2015-01-29 17:43:58'
+    - '2015-01-29 17:43:58'
+  - - '54'
     - 083 - ADDITIONAL DEWEY DECIMAL CLASSIFICATION NUMBER (R)
-    - 2015-01-29 12:43:58.000000000 -05:00
-    - 2015-01-29 12:43:58.000000000 -05:00
-  - - 55
+    - '2015-01-29 17:43:58'
+    - '2015-01-29 17:43:58'
+  - - '55'
     - 084 - OTHER CLASSIFICATION NUMBER (R)
-    - 2015-01-29 12:43:58.000000000 -05:00
-    - 2015-01-29 12:43:58.000000000 -05:00
-  - - 56
+    - '2015-01-29 17:43:58'
+    - '2015-01-29 17:43:58'
+  - - '56'
     - 085 - SYNTHESIZED CLASSIFICATION NUMBER COMPONENTS (R)
-    - 2015-01-29 12:43:58.000000000 -05:00
-    - 2015-01-29 12:43:58.000000000 -05:00
-  - - 57
+    - '2015-01-29 17:43:58'
+    - '2015-01-29 17:43:58'
+  - - '57'
     - 086 - GOVERNMENT DOCUMENT CLASSIFICATION NUMBER (R)
-    - 2015-01-29 12:43:58.000000000 -05:00
-    - 2015-01-29 12:43:58.000000000 -05:00
-  - - 58
+    - '2015-01-29 17:43:58'
+    - '2015-01-29 17:43:58'
+  - - '58'
     - 088 - REPORT NUMBER (R)
-    - 2015-01-29 12:43:58.000000000 -05:00
-    - 2015-01-29 12:43:58.000000000 -05:00
-  - - 59
+    - '2015-01-29 17:43:58'
+    - '2015-01-29 17:43:58'
+  - - '59'
     - 090 - LOCAL CALL NUMBER (BK AM CF MP MU VM SE) [OBSOLETE]
-    - 2015-01-29 12:43:58.000000000 -05:00
-    - 2015-01-29 12:43:58.000000000 -05:00
-  - - 60
+    - '2015-01-29 17:43:58'
+    - '2015-01-29 17:43:58'
+  - - '60'
     - 090 - SHELF LOCATION (AM)[OBSOLETE]
-    - 2015-01-29 12:43:58.000000000 -05:00
-    - 2015-01-29 12:43:58.000000000 -05:00
-  - - 61
+    - '2015-01-29 17:43:58'
+    - '2015-01-29 17:43:58'
+  - - '61'
     - 091 - MICROFILM SHELF LOCATION (AM) [OBSOLETE]
-    - 2015-01-29 12:43:58.000000000 -05:00
-    - 2015-01-29 12:43:58.000000000 -05:00
-  - - 62
+    - '2015-01-29 17:43:58'
+    - '2015-01-29 17:43:58'
+  - - '62'
     - 100 - MAIN ENTRY--PERSONAL NAME (NR)
-    - 2015-01-29 12:43:58.000000000 -05:00
-    - 2015-01-29 12:43:58.000000000 -05:00
-  - - 63
+    - '2015-01-29 17:43:58'
+    - '2015-01-29 17:43:58'
+  - - '63'
     - 110 - MAIN ENTRY--CORPORATE NAME (NR)
-    - 2015-01-29 12:43:59.000000000 -05:00
-    - 2015-01-29 12:43:59.000000000 -05:00
-  - - 64
+    - '2015-01-29 17:43:59'
+    - '2015-01-29 17:43:59'
+  - - '64'
     - 111 - MAIN ENTRY--MEETING NAME (NR)
-    - 2015-01-29 12:43:59.000000000 -05:00
-    - 2015-01-29 12:43:59.000000000 -05:00
-  - - 65
+    - '2015-01-29 17:43:59'
+    - '2015-01-29 17:43:59'
+  - - '65'
     - 130 - MAIN ENTRY--UNIFORM TITLE (NR)
-    - 2015-01-29 12:43:59.000000000 -05:00
-    - 2015-01-29 12:43:59.000000000 -05:00
-  - - 66
+    - '2015-01-29 17:43:59'
+    - '2015-01-29 17:43:59'
+  - - '66'
     - 210 - ABBREVIATED TITLE (R)
-    - 2015-01-29 12:43:59.000000000 -05:00
-    - 2015-01-29 12:43:59.000000000 -05:00
-  - - 67
+    - '2015-01-29 17:43:59'
+    - '2015-01-29 17:43:59'
+  - - '67'
     - 211 - ACRONYM OR SHORTENED TITLE (R) [OBSOLETE]
-    - 2015-01-29 12:43:59.000000000 -05:00
-    - 2015-01-29 12:43:59.000000000 -05:00
-  - - 68
+    - '2015-01-29 17:43:59'
+    - '2015-01-29 17:43:59'
+  - - '68'
     - 212 - VARIANT ACCESS TITLE (R) [OBSOLETE]
-    - 2015-01-29 12:43:59.000000000 -05:00
-    - 2015-01-29 12:43:59.000000000 -05:00
-  - - 69
+    - '2015-01-29 17:43:59'
+    - '2015-01-29 17:43:59'
+  - - '69'
     - 214 - AUGMENTED TITLE (R) [OBSOLETE]
-    - 2015-01-29 12:43:59.000000000 -05:00
-    - 2015-01-29 12:43:59.000000000 -05:00
-  - - 70
+    - '2015-01-29 17:43:59'
+    - '2015-01-29 17:43:59'
+  - - '70'
     - 222 - KEY TITLE (R)
-    - 2015-01-29 12:43:59.000000000 -05:00
-    - 2015-01-29 12:43:59.000000000 -05:00
-  - - 71
+    - '2015-01-29 17:43:59'
+    - '2015-01-29 17:43:59'
+  - - '71'
     - 240 - UNIFORM TITLE (NR)
-    - 2015-01-29 12:43:59.000000000 -05:00
-    - 2015-01-29 12:43:59.000000000 -05:00
-  - - 72
+    - '2015-01-29 17:43:59'
+    - '2015-01-29 17:43:59'
+  - - '72'
     - 241 - ROMANIZED TITLE (BK AM CF MP MU VM) (NR) [OBSOLETE]
-    - 2015-01-29 12:43:59.000000000 -05:00
-    - 2015-01-29 12:43:59.000000000 -05:00
-  - - 73
+    - '2015-01-29 17:43:59'
+    - '2015-01-29 17:43:59'
+  - - '73'
     - 242 - TRANSLATION OF TITLE BY CATALOGING AGENCY (R)
-    - 2015-01-29 12:43:59.000000000 -05:00
-    - 2015-01-29 12:43:59.000000000 -05:00
-  - - 74
+    - '2015-01-29 17:43:59'
+    - '2015-01-29 17:43:59'
+  - - '74'
     - 243 - COLLECTIVE UNIFORM TITLE (NR)
-    - 2015-01-29 12:44:00.000000000 -05:00
-    - 2015-01-29 12:44:00.000000000 -05:00
-  - - 75
+    - '2015-01-29 17:44:00'
+    - '2015-01-29 17:44:00'
+  - - '75'
     - 245 - TITLE STATEMENT (NR)
-    - 2015-01-29 12:44:00.000000000 -05:00
-    - 2015-01-29 12:44:00.000000000 -05:00
-  - - 76
+    - '2015-01-29 17:44:00'
+    - '2015-01-29 17:44:00'
+  - - '76'
     - 246 - VARYING FORM OF TITLE (R)
-    - 2015-01-29 12:44:00.000000000 -05:00
-    - 2015-01-29 12:44:00.000000000 -05:00
-  - - 77
+    - '2015-01-29 17:44:00'
+    - '2015-01-29 17:44:00'
+  - - '77'
     - 247 - FORMER TITLE (R)
-    - 2015-01-29 12:44:00.000000000 -05:00
-    - 2015-01-29 12:44:00.000000000 -05:00
-  - - 78
+    - '2015-01-29 17:44:00'
+    - '2015-01-29 17:44:00'
+  - - '78'
     - 250 - EDITION STATEMENT (R)
-    - 2015-01-29 12:44:00.000000000 -05:00
-    - 2015-01-29 12:44:00.000000000 -05:00
-  - - 79
+    - '2015-01-29 17:44:00'
+    - '2015-01-29 17:44:00'
+  - - '79'
     - 254 - MUSICAL PRESENTATION STATEMENT (NR)
-    - 2015-01-29 12:44:00.000000000 -05:00
-    - 2015-01-29 12:44:00.000000000 -05:00
-  - - 80
+    - '2015-01-29 17:44:00'
+    - '2015-01-29 17:44:00'
+  - - '80'
     - 255 - CARTOGRAPHIC MATHEMATICAL DATA (R)
-    - 2015-01-29 12:44:00.000000000 -05:00
-    - 2015-01-29 12:44:00.000000000 -05:00
-  - - 81
+    - '2015-01-29 17:44:00'
+    - '2015-01-29 17:44:00'
+  - - '81'
     - 256 - COMPUTER FILE CHARACTERISTICS (NR)
-    - 2015-01-29 12:44:00.000000000 -05:00
-    - 2015-01-29 12:44:00.000000000 -05:00
-  - - 82
+    - '2015-01-29 17:44:00'
+    - '2015-01-29 17:44:00'
+  - - '82'
     - 257 - COUNTRY OF PRODUCING ENTITY (R)
-    - 2015-01-29 12:44:00.000000000 -05:00
-    - 2015-01-29 12:44:00.000000000 -05:00
-  - - 83
+    - '2015-01-29 17:44:00'
+    - '2015-01-29 17:44:00'
+  - - '83'
     - 258 - PHILATELIC ISSUE DATE (R)
-    - 2015-01-29 12:44:00.000000000 -05:00
-    - 2015-01-29 12:44:00.000000000 -05:00
-  - - 84
+    - '2015-01-29 17:44:00'
+    - '2015-01-29 17:44:00'
+  - - '84'
     - 260 - PUBLICATION, DISTRIBUTION, ETC. (IMPRINT) (R)
-    - 2015-01-29 12:44:00.000000000 -05:00
-    - 2015-01-29 12:44:00.000000000 -05:00
-  - - 85
+    - '2015-01-29 17:44:00'
+    - '2015-01-29 17:44:00'
+  - - '85'
     - 261 - IMPRINT STATEMENT FOR FILMS (Pre-AACR 1 Revised) (NR) [LOCAL]
-    - 2015-01-29 12:44:01.000000000 -05:00
-    - 2015-01-29 12:44:01.000000000 -05:00
-  - - 86
+    - '2015-01-29 17:44:01'
+    - '2015-01-29 17:44:01'
+  - - '86'
     - 262 - IMPRINT STATEMENT FOR SOUND RECORDINGS (Pre-AACR 2) (NR) [LOCAL]
-    - 2015-01-29 12:44:01.000000000 -05:00
-    - 2015-01-29 12:44:01.000000000 -05:00
-  - - 87
+    - '2015-01-29 17:44:01'
+    - '2015-01-29 17:44:01'
+  - - '87'
     - 263 - PROJECTED PUBLICATION DATE (NR)
-    - 2015-01-29 12:44:01.000000000 -05:00
-    - 2015-01-29 12:44:01.000000000 -05:00
-  - - 88
+    - '2015-01-29 17:44:01'
+    - '2015-01-29 17:44:01'
+  - - '88'
     - 264 - PRODUCTION, PUBLICATION, DISTRIBUTION, MANUFACTURE, AND COPYRIGHT NOTICE
       (R)
-    - 2015-01-29 12:44:01.000000000 -05:00
-    - 2015-01-29 12:44:01.000000000 -05:00
-  - - 89
+    - '2015-01-29 17:44:01'
+    - '2015-01-29 17:44:01'
+  - - '89'
     - 265 - SOURCE FOR ACQUISITION/SUBSCRIPTION ADDRESS (NR) [OBSOLETE]
-    - 2015-01-29 12:44:01.000000000 -05:00
-    - 2015-01-29 12:44:01.000000000 -05:00
-  - - 90
+    - '2015-01-29 17:44:01'
+    - '2015-01-29 17:44:01'
+  - - '90'
     - 270 - ADDRESS (R)
-    - 2015-01-29 12:44:01.000000000 -05:00
-    - 2015-01-29 12:44:01.000000000 -05:00
-  - - 91
+    - '2015-01-29 17:44:01'
+    - '2015-01-29 17:44:01'
+  - - '91'
     - 300 - PHYSICAL DESCRIPTION (R)
-    - 2015-01-29 12:44:01.000000000 -05:00
-    - 2015-01-29 12:44:01.000000000 -05:00
-  - - 92
+    - '2015-01-29 17:44:01'
+    - '2015-01-29 17:44:01'
+  - - '92'
     - 301 - PHYSICAL DESCRIPTION FOR FILMS (PRE-AACR 2) (VM) [OBSOLETE]
-    - 2015-01-29 12:44:01.000000000 -05:00
-    - 2015-01-29 12:44:01.000000000 -05:00
-  - - 93
+    - '2015-01-29 17:44:01'
+    - '2015-01-29 17:44:01'
+  - - '93'
     - 302 - PAGE OR ITEM COUNT (BK AM) [OBSOLETE]
-    - 2015-01-29 12:44:01.000000000 -05:00
-    - 2015-01-29 12:44:01.000000000 -05:00
-  - - 94
+    - '2015-01-29 17:44:01'
+    - '2015-01-29 17:44:01'
+  - - '94'
     - 303 - UNIT COUNT (AM) [OBSOLETE]
-    - 2015-01-29 12:44:01.000000000 -05:00
-    - 2015-01-29 12:44:01.000000000 -05:00
-  - - 95
+    - '2015-01-29 17:44:01'
+    - '2015-01-29 17:44:01'
+  - - '95'
     - 304 - LINEAR FOOTAGE (AM) [OBSOLETE]
-    - 2015-01-29 12:44:02.000000000 -05:00
-    - 2015-01-29 12:44:02.000000000 -05:00
-  - - 96
+    - '2015-01-29 17:44:02'
+    - '2015-01-29 17:44:02'
+  - - '96'
     - 305 - PHYSICAL DESCRIPTION FOR SOUND RECORDINGS (Pre-AACR 2) (MU) [OBSOLETE]
-    - 2015-01-29 12:44:02.000000000 -05:00
-    - 2015-01-29 12:44:02.000000000 -05:00
-  - - 97
+    - '2015-01-29 17:44:02'
+    - '2015-01-29 17:44:02'
+  - - '97'
     - 306 - PLAYING TIME (NR)
-    - 2015-01-29 12:44:02.000000000 -05:00
-    - 2015-01-29 12:44:02.000000000 -05:00
-  - - 98
+    - '2015-01-29 17:44:02'
+    - '2015-01-29 17:44:02'
+  - - '98'
     - 307 - HOURS, ETC. (R)
-    - 2015-01-29 12:44:02.000000000 -05:00
-    - 2015-01-29 12:44:02.000000000 -05:00
-  - - 99
+    - '2015-01-29 17:44:02'
+    - '2015-01-29 17:44:02'
+  - - '99'
     - 308 - PHYSICAL DESCRIPTION FOR FILMS (ARCHIVAL) (VM) [OBSOLETE]
-    - 2015-01-29 12:44:02.000000000 -05:00
-    - 2015-01-29 12:44:02.000000000 -05:00
-  - - 100
+    - '2015-01-29 17:44:02'
+    - '2015-01-29 17:44:02'
+  - - '100'
     - 310 - CURRENT PUBLICATION FREQUENCY (NR)
-    - 2015-01-29 12:44:02.000000000 -05:00
-    - 2015-01-29 12:44:02.000000000 -05:00
-  - - 101
+    - '2015-01-29 17:44:02'
+    - '2015-01-29 17:44:02'
+  - - '101'
     - 315 - FREQUENCY (NR) (CF MP) [OBSOLETE]
-    - 2015-01-29 12:44:02.000000000 -05:00
-    - 2015-01-29 12:44:02.000000000 -05:00
-  - - 102
+    - '2015-01-29 17:44:02'
+    - '2015-01-29 17:44:02'
+  - - '102'
     - 321 - FORMER PUBLICATION FREQUENCY (R)
-    - 2015-01-29 12:44:02.000000000 -05:00
-    - 2015-01-29 12:44:02.000000000 -05:00
-  - - 103
+    - '2015-01-29 17:44:02'
+    - '2015-01-29 17:44:02'
+  - - '103'
     - 336 - CONTENT TYPE (R)
-    - 2015-01-29 12:44:02.000000000 -05:00
-    - 2015-01-29 12:44:02.000000000 -05:00
-  - - 104
+    - '2015-01-29 17:44:02'
+    - '2015-01-29 17:44:02'
+  - - '104'
     - 337 - MEDIA TYPE (R)
-    - 2015-01-29 12:44:03.000000000 -05:00
-    - 2015-01-29 12:44:03.000000000 -05:00
-  - - 105
+    - '2015-01-29 17:44:03'
+    - '2015-01-29 17:44:03'
+  - - '105'
     - 338 - CARRIER TYPE (R)
-    - 2015-01-29 12:44:03.000000000 -05:00
-    - 2015-01-29 12:44:03.000000000 -05:00
-  - - 106
+    - '2015-01-29 17:44:03'
+    - '2015-01-29 17:44:03'
+  - - '106'
     - 340 - PHYSICAL MEDIUM (R)
-    - 2015-01-29 12:44:03.000000000 -05:00
-    - 2015-01-29 12:44:03.000000000 -05:00
-  - - 107
+    - '2015-01-29 17:44:03'
+    - '2015-01-29 17:44:03'
+  - - '107'
     - 342 - GEOSPATIAL REFERENCE DATA (R)
-    - 2015-01-29 12:44:03.000000000 -05:00
-    - 2015-01-29 12:44:03.000000000 -05:00
-  - - 108
+    - '2015-01-29 17:44:03'
+    - '2015-01-29 17:44:03'
+  - - '108'
     - 343 - PLANAR COORDINATE DATA (R)
-    - 2015-01-29 12:44:03.000000000 -05:00
-    - 2015-01-29 12:44:03.000000000 -05:00
-  - - 109
+    - '2015-01-29 17:44:03'
+    - '2015-01-29 17:44:03'
+  - - '109'
     - 344 - SOUND CHARACTERISTICS (R)
-    - 2015-01-29 12:44:03.000000000 -05:00
-    - 2015-01-29 12:44:03.000000000 -05:00
-  - - 110
+    - '2015-01-29 17:44:03'
+    - '2015-01-29 17:44:03'
+  - - '110'
     - 345 - PROJECTION CHARACTERISTICS OF MOVING IMAGE (R)
-    - 2015-01-29 12:44:03.000000000 -05:00
-    - 2015-01-29 12:44:03.000000000 -05:00
-  - - 111
+    - '2015-01-29 17:44:03'
+    - '2015-01-29 17:44:03'
+  - - '111'
     - 346 - VIDEO CHARACTERISTICS (R)
-    - 2015-01-29 12:44:03.000000000 -05:00
-    - 2015-01-29 12:44:03.000000000 -05:00
-  - - 112
+    - '2015-01-29 17:44:03'
+    - '2015-01-29 17:44:03'
+  - - '112'
     - 347 - DIGITAL FILE CHARACTERISTICS (R)
-    - 2015-01-29 12:44:03.000000000 -05:00
-    - 2015-01-29 12:44:03.000000000 -05:00
-  - - 113
+    - '2015-01-29 17:44:03'
+    - '2015-01-29 17:44:03'
+  - - '113'
     - '350 - PRICE (NR) (BK AM CF MU VM SE) [OBSOLETE] '
-    - 2015-01-29 12:44:03.000000000 -05:00
-    - 2015-01-29 12:44:03.000000000 -05:00
-  - - 114
+    - '2015-01-29 17:44:03'
+    - '2015-01-29 17:44:03'
+  - - '114'
     - 351 - ORGANIZATION AND ARRANGEMENT OF MATERIALS (R)
-    - 2015-01-29 12:44:03.000000000 -05:00
-    - 2015-01-29 12:44:03.000000000 -05:00
-  - - 115
+    - '2015-01-29 17:44:03'
+    - '2015-01-29 17:44:03'
+  - - '115'
     - 352 - DIGITAL GRAPHIC REPRESENTATION (R)
-    - 2015-01-29 12:44:04.000000000 -05:00
-    - 2015-01-29 12:44:04.000000000 -05:00
-  - - 116
+    - '2015-01-29 17:44:04'
+    - '2015-01-29 17:44:04'
+  - - '116'
     - 355 - SECURITY CLASSIFICATION CONTROL (R)
-    - 2015-01-29 12:44:04.000000000 -05:00
-    - 2015-01-29 12:44:04.000000000 -05:00
-  - - 117
+    - '2015-01-29 17:44:04'
+    - '2015-01-29 17:44:04'
+  - - '117'
     - 357 - ORIGINATOR DISSEMINATION CONTROL (NR)
-    - 2015-01-29 12:44:04.000000000 -05:00
-    - 2015-01-29 12:44:04.000000000 -05:00
-  - - 118
+    - '2015-01-29 17:44:04'
+    - '2015-01-29 17:44:04'
+  - - '118'
     - 359 - RENTAL PRICE (VM) [OBSOLETE]
-    - 2015-01-29 12:44:04.000000000 -05:00
-    - 2015-01-29 12:44:04.000000000 -05:00
-  - - 119
+    - '2015-01-29 17:44:04'
+    - '2015-01-29 17:44:04'
+  - - '119'
     - 362 - DATES OF PUBLICATION AND/OR SEQUENTIAL DESIGNATION (R)
-    - 2015-01-29 12:44:04.000000000 -05:00
-    - 2015-01-29 12:44:04.000000000 -05:00
-  - - 120
+    - '2015-01-29 17:44:04'
+    - '2015-01-29 17:44:04'
+  - - '120'
     - 363 - NORMALIZED DATE AND SEQUENTIAL DESIGNATION (R)
-    - 2015-01-29 12:44:04.000000000 -05:00
-    - 2015-01-29 12:44:04.000000000 -05:00
-  - - 121
+    - '2015-01-29 17:44:04'
+    - '2015-01-29 17:44:04'
+  - - '121'
     - 365 - TRADE PRICE (R)
-    - 2015-01-29 12:44:04.000000000 -05:00
-    - 2015-01-29 12:44:04.000000000 -05:00
-  - - 122
+    - '2015-01-29 17:44:04'
+    - '2015-01-29 17:44:04'
+  - - '122'
     - 366 - TRADE AVAILABILITY INFORMATION (R)
-    - 2015-01-29 12:44:04.000000000 -05:00
-    - 2015-01-29 12:44:04.000000000 -05:00
-  - - 123
+    - '2015-01-29 17:44:04'
+    - '2015-01-29 17:44:04'
+  - - '123'
     - 370 - ASSOCIATED PLACE (R)
-    - 2015-01-29 12:44:04.000000000 -05:00
-    - 2015-01-29 12:44:04.000000000 -05:00
-  - - 124
+    - '2015-01-29 17:44:04'
+    - '2015-01-29 17:44:04'
+  - - '124'
     - 377 - ASSOCIATED LANGUAGE (R)
-    - 2015-01-29 12:44:04.000000000 -05:00
-    - 2015-01-29 12:44:04.000000000 -05:00
-  - - 125
+    - '2015-01-29 17:44:04'
+    - '2015-01-29 17:44:04'
+  - - '125'
     - 380 - FORM OF WORK (R)
-    - 2015-01-29 12:44:05.000000000 -05:00
-    - 2015-01-29 12:44:05.000000000 -05:00
-  - - 126
+    - '2015-01-29 17:44:05'
+    - '2015-01-29 17:44:05'
+  - - '126'
     - 381 - OTHER DISTINGUISHING CHARACTERISTICS OF WORK OR EXPRESSION (R)
-    - 2015-01-29 12:44:05.000000000 -05:00
-    - 2015-01-29 12:44:05.000000000 -05:00
-  - - 127
+    - '2015-01-29 17:44:05'
+    - '2015-01-29 17:44:05'
+  - - '127'
     - 382 - MEDIUM OF PERFORMANCE (R)
-    - 2015-01-29 12:44:05.000000000 -05:00
-    - 2015-01-29 12:44:05.000000000 -05:00
-  - - 128
+    - '2015-01-29 17:44:05'
+    - '2015-01-29 17:44:05'
+  - - '128'
     - 383 - NUMERIC DESIGNATION OF MUSICAL WORK (R)
-    - 2015-01-29 12:44:05.000000000 -05:00
-    - 2015-01-29 12:44:05.000000000 -05:00
-  - - 129
+    - '2015-01-29 17:44:05'
+    - '2015-01-29 17:44:05'
+  - - '129'
     - 384 - KEY (NR)
-    - 2015-01-29 12:44:05.000000000 -05:00
-    - 2015-01-29 12:44:05.000000000 -05:00
-  - - 130
+    - '2015-01-29 17:44:05'
+    - '2015-01-29 17:44:05'
+  - - '130'
     - 385 - AUDIENCE CHARACTERISTICS (R)
-    - 2015-01-29 12:44:05.000000000 -05:00
-    - 2015-01-29 12:44:05.000000000 -05:00
-  - - 131
+    - '2015-01-29 17:44:05'
+    - '2015-01-29 17:44:05'
+  - - '131'
     - 386 - CREATOR/CONTRIBUTOR CHARACTERISTICS (R)
-    - 2015-01-29 12:44:05.000000000 -05:00
-    - 2015-01-29 12:44:05.000000000 -05:00
-  - - 132
+    - '2015-01-29 17:44:05'
+    - '2015-01-29 17:44:05'
+  - - '132'
     - 388 - TIME PERIOD OF CREATION (R)
-    - 2015-01-29 12:44:05.000000000 -05:00
-    - 2015-01-29 12:44:05.000000000 -05:00
-  - - 133
+    - '2015-01-29 17:44:05'
+    - '2015-01-29 17:44:05'
+  - - '133'
     - 400 - SERIES STATEMENT/ADDED ENTRY--PERSONAL NAME  (R) [US-LOCAL]
-    - 2015-01-29 12:44:05.000000000 -05:00
-    - 2015-01-29 12:44:05.000000000 -05:00
-  - - 134
+    - '2015-01-29 17:44:05'
+    - '2015-01-29 17:44:05'
+  - - '134'
     - 410 - SERIES STATEMENT/ADDED ENTRY--CORPORATE NAME (R) [US-LOCAL]
-    - 2015-01-29 12:44:06.000000000 -05:00
-    - 2015-01-29 12:44:06.000000000 -05:00
-  - - 135
+    - '2015-01-29 17:44:06'
+    - '2015-01-29 17:44:06'
+  - - '135'
     - 411 - SERIES STATEMENT/ADDED ENTRY--MEETING NAME (R) [US-LOCAL]
-    - 2015-01-29 12:44:06.000000000 -05:00
-    - 2015-01-29 12:44:06.000000000 -05:00
-  - - 136
+    - '2015-01-29 17:44:06'
+    - '2015-01-29 17:44:06'
+  - - '136'
     - 440 - SERIES STATEMENT/ADDED ENTRY--TITLE (R) [OBSOLETE]
-    - 2015-01-29 12:44:06.000000000 -05:00
-    - 2015-01-29 12:44:06.000000000 -05:00
-  - - 137
+    - '2015-01-29 17:44:06'
+    - '2015-01-29 17:44:06'
+  - - '137'
     - 490 - SERIES STATEMENT (R)
-    - 2015-01-29 12:44:06.000000000 -05:00
-    - 2015-01-29 12:44:06.000000000 -05:00
-  - - 138
+    - '2015-01-29 17:44:06'
+    - '2015-01-29 17:44:06'
+  - - '138'
     - 500 - GENERAL NOTE (R)
-    - 2015-01-29 12:44:06.000000000 -05:00
-    - 2015-01-29 12:44:06.000000000 -05:00
-  - - 139
+    - '2015-01-29 17:44:06'
+    - '2015-01-29 17:44:06'
+  - - '139'
     - 501 - WITH NOTE (R)
-    - 2015-01-29 12:44:06.000000000 -05:00
-    - 2015-01-29 12:44:06.000000000 -05:00
-  - - 140
+    - '2015-01-29 17:44:06'
+    - '2015-01-29 17:44:06'
+  - - '140'
     - 502 - DISSERTATION NOTE (R)
-    - 2015-01-29 12:44:06.000000000 -05:00
-    - 2015-01-29 12:44:06.000000000 -05:00
-  - - 141
+    - '2015-01-29 17:44:06'
+    - '2015-01-29 17:44:06'
+  - - '141'
     - 503 - BIBLIOGRAPHIC HISTORY NOTE (R) (BK CF MU) [OBSOLETE]
-    - 2015-01-29 12:44:06.000000000 -05:00
-    - 2015-01-29 12:44:06.000000000 -05:00
-  - - 142
+    - '2015-01-29 17:44:06'
+    - '2015-01-29 17:44:06'
+  - - '142'
     - 504 - BIBLIOGRAPHY, ETC. NOTE (R)
-    - 2015-01-29 12:44:06.000000000 -05:00
-    - 2015-01-29 12:44:06.000000000 -05:00
-  - - 143
+    - '2015-01-29 17:44:06'
+    - '2015-01-29 17:44:06'
+  - - '143'
     - 505 - FORMATTED CONTENTS NOTE (R)
-    - 2015-01-29 12:44:07.000000000 -05:00
-    - 2015-01-29 12:44:07.000000000 -05:00
-  - - 144
+    - '2015-01-29 17:44:07'
+    - '2015-01-29 17:44:07'
+  - - '144'
     - 506 - RESTRICTIONS ON ACCESS NOTE (R)
-    - 2015-01-29 12:44:07.000000000 -05:00
-    - 2015-01-29 12:44:07.000000000 -05:00
-  - - 145
+    - '2015-01-29 17:44:07'
+    - '2015-01-29 17:44:07'
+  - - '145'
     - 507 - SCALE NOTE FOR GRAPHIC MATERIAL (NR)
-    - 2015-01-29 12:44:07.000000000 -05:00
-    - 2015-01-29 12:44:07.000000000 -05:00
-  - - 146
+    - '2015-01-29 17:44:07'
+    - '2015-01-29 17:44:07'
+  - - '146'
     - 508 - CREATION/PRODUCTION CREDITS NOTE (R)
-    - 2015-01-29 12:44:07.000000000 -05:00
-    - 2015-01-29 12:44:07.000000000 -05:00
-  - - 147
+    - '2015-01-29 17:44:07'
+    - '2015-01-29 17:44:07'
+  - - '147'
     - 510 - CITATION/REFERENCES NOTE (R)
-    - 2015-01-29 12:44:07.000000000 -05:00
-    - 2015-01-29 12:44:07.000000000 -05:00
-  - - 148
+    - '2015-01-29 17:44:07'
+    - '2015-01-29 17:44:07'
+  - - '148'
     - 511 - PARTICIPANT OR PERFORMER NOTE (R)
-    - 2015-01-29 12:44:07.000000000 -05:00
-    - 2015-01-29 12:44:07.000000000 -05:00
-  - - 149
+    - '2015-01-29 17:44:07'
+    - '2015-01-29 17:44:07'
+  - - '149'
     - 512 - EARLIER OR LATER VOLUMES SEPARATELY CATALOGED NOTE (SE) (R) [OBSOLETE]
-    - 2015-01-29 12:44:07.000000000 -05:00
-    - 2015-01-29 12:44:07.000000000 -05:00
-  - - 150
+    - '2015-01-29 17:44:07'
+    - '2015-01-29 17:44:07'
+  - - '150'
     - 513 - TYPE OF REPORT AND PERIOD COVERED NOTE (R)
-    - 2015-01-29 12:44:07.000000000 -05:00
-    - 2015-01-29 12:44:07.000000000 -05:00
-  - - 151
+    - '2015-01-29 17:44:07'
+    - '2015-01-29 17:44:07'
+  - - '151'
     - 514 - DATA QUALITY NOTE (NR)
-    - 2015-01-29 12:44:07.000000000 -05:00
-    - 2015-01-29 12:44:07.000000000 -05:00
-  - - 152
+    - '2015-01-29 17:44:07'
+    - '2015-01-29 17:44:07'
+  - - '152'
     - 515 - NUMBERING PECULIARITIES NOTE (R)
-    - 2015-01-29 12:44:07.000000000 -05:00
-    - 2015-01-29 12:44:07.000000000 -05:00
-  - - 153
+    - '2015-01-29 17:44:07'
+    - '2015-01-29 17:44:07'
+  - - '153'
     - 516 - TYPE OF COMPUTER FILE OR DATA NOTE (R)
-    - 2015-01-29 12:44:08.000000000 -05:00
-    - 2015-01-29 12:44:08.000000000 -05:00
-  - - 154
+    - '2015-01-29 17:44:08'
+    - '2015-01-29 17:44:08'
+  - - '154'
     - 517 - CATEGORIES OF FILMS NOTE (ARCHIVAL) (VM) (NR) [OBSOLETE]
-    - 2015-01-29 12:44:08.000000000 -05:00
-    - 2015-01-29 12:44:08.000000000 -05:00
-  - - 155
+    - '2015-01-29 17:44:08'
+    - '2015-01-29 17:44:08'
+  - - '155'
     - 518 - DATE/TIME AND PLACE OF AN EVENT NOTE (R)
-    - 2015-01-29 12:44:08.000000000 -05:00
-    - 2015-01-29 12:44:08.000000000 -05:00
-  - - 156
+    - '2015-01-29 17:44:08'
+    - '2015-01-29 17:44:08'
+  - - '156'
     - 520 - SUMMARY, ETC. (R)
-    - 2015-01-29 12:44:08.000000000 -05:00
-    - 2015-01-29 12:44:08.000000000 -05:00
-  - - 157
+    - '2015-01-29 17:44:08'
+    - '2015-01-29 17:44:08'
+  - - '157'
     - 521 - TARGET AUDIENCE NOTE (R)
-    - 2015-01-29 12:44:08.000000000 -05:00
-    - 2015-01-29 12:44:08.000000000 -05:00
-  - - 158
+    - '2015-01-29 17:44:08'
+    - '2015-01-29 17:44:08'
+  - - '158'
     - 522 - GEOGRAPHIC COVERAGE NOTE (R)
-    - 2015-01-29 12:44:08.000000000 -05:00
-    - 2015-01-29 12:44:08.000000000 -05:00
-  - - 159
+    - '2015-01-29 17:44:08'
+    - '2015-01-29 17:44:08'
+  - - '159'
     - 523 - TIME PERIOD OF CONTENT NOTE (NR) (CF) [OBSOLETE]
-    - 2015-01-29 12:44:08.000000000 -05:00
-    - 2015-01-29 12:44:08.000000000 -05:00
-  - - 160
+    - '2015-01-29 17:44:08'
+    - '2015-01-29 17:44:08'
+  - - '160'
     - 524 - PREFERRED CITATION OF DESCRIBED MATERIALS NOTE (R)
-    - 2015-01-29 12:44:08.000000000 -05:00
-    - 2015-01-29 12:44:08.000000000 -05:00
-  - - 161
+    - '2015-01-29 17:44:08'
+    - '2015-01-29 17:44:08'
+  - - '161'
     - 525 - SUPPLEMENT NOTE (R)
-    - 2015-01-29 12:44:08.000000000 -05:00
-    - 2015-01-29 12:44:08.000000000 -05:00
-  - - 162
+    - '2015-01-29 17:44:08'
+    - '2015-01-29 17:44:08'
+  - - '162'
     - 526 - STUDY PROGRAM INFORMATION NOTE (R)
-    - 2015-01-29 12:44:08.000000000 -05:00
-    - 2015-01-29 12:44:08.000000000 -05:00
-  - - 163
+    - '2015-01-29 17:44:08'
+    - '2015-01-29 17:44:08'
+  - - '163'
     - 527 - CENSORSHIP NOTE (VM) (R) [OBSOLETE]
-    - 2015-01-29 12:44:08.000000000 -05:00
-    - 2015-01-29 12:44:08.000000000 -05:00
-  - - 164
+    - '2015-01-29 17:44:08'
+    - '2015-01-29 17:44:08'
+  - - '164'
     - 530 - ADDITIONAL PHYSICAL FORM AVAILABLE NOTE (R)
-    - 2015-01-29 12:44:09.000000000 -05:00
-    - 2015-01-29 12:44:09.000000000 -05:00
-  - - 165
+    - '2015-01-29 17:44:09'
+    - '2015-01-29 17:44:09'
+  - - '165'
     - 533 - REPRODUCTION NOTE (R)
-    - 2015-01-29 12:44:09.000000000 -05:00
-    - 2015-01-29 12:44:09.000000000 -05:00
-  - - 166
+    - '2015-01-29 17:44:09'
+    - '2015-01-29 17:44:09'
+  - - '166'
     - 534 - ORIGINAL VERSION NOTE (R)
-    - 2015-01-29 12:44:09.000000000 -05:00
-    - 2015-01-29 12:44:09.000000000 -05:00
-  - - 167
+    - '2015-01-29 17:44:09'
+    - '2015-01-29 17:44:09'
+  - - '167'
     - 535 - LOCATION OF ORIGINALS/DUPLICATES NOTE (R)
-    - 2015-01-29 12:44:09.000000000 -05:00
-    - 2015-01-29 12:44:09.000000000 -05:00
-  - - 168
+    - '2015-01-29 17:44:09'
+    - '2015-01-29 17:44:09'
+  - - '168'
     - 536 - FUNDING INFORMATION NOTE (R)
-    - 2015-01-29 12:44:09.000000000 -05:00
-    - 2015-01-29 12:44:09.000000000 -05:00
-  - - 169
+    - '2015-01-29 17:44:09'
+    - '2015-01-29 17:44:09'
+  - - '169'
     - 537 - SOURCE OF DATA NOTE (NR) (CF) [OBSOLETE]
-    - 2015-01-29 12:44:09.000000000 -05:00
-    - 2015-01-29 12:44:09.000000000 -05:00
-  - - 170
+    - '2015-01-29 17:44:09'
+    - '2015-01-29 17:44:09'
+  - - '170'
     - 538 - SYSTEM DETAILS NOTE (R)
-    - 2015-01-29 12:44:09.000000000 -05:00
-    - 2015-01-29 12:44:09.000000000 -05:00
-  - - 171
+    - '2015-01-29 17:44:09'
+    - '2015-01-29 17:44:09'
+  - - '171'
     - 540 - TERMS GOVERNING USE AND REPRODUCTION NOTE (R)
-    - 2015-01-29 12:44:09.000000000 -05:00
-    - 2015-01-29 12:44:09.000000000 -05:00
-  - - 172
+    - '2015-01-29 17:44:09'
+    - '2015-01-29 17:44:09'
+  - - '172'
     - 541 - IMMEDIATE SOURCE OF ACQUISITION NOTE (R)
-    - 2015-01-29 12:44:09.000000000 -05:00
-    - 2015-01-29 12:44:09.000000000 -05:00
-  - - 173
+    - '2015-01-29 17:44:09'
+    - '2015-01-29 17:44:09'
+  - - '173'
     - 542 - INFORMATION RELATING TO COPYRIGHT STATUS (R)
-    - 2015-01-29 12:44:09.000000000 -05:00
-    - 2015-01-29 12:44:09.000000000 -05:00
-  - - 174
+    - '2015-01-29 17:44:09'
+    - '2015-01-29 17:44:09'
+  - - '174'
     - 543 - SOLICITATION INFORMATION NOTE (AM) (R) [OBSOLETE]
-    - 2015-01-29 12:44:10.000000000 -05:00
-    - 2015-01-29 12:44:10.000000000 -05:00
-  - - 175
+    - '2015-01-29 17:44:10'
+    - '2015-01-29 17:44:10'
+  - - '175'
     - 544 - LOCATION OF OTHER ARCHIVAL MATERIALS NOTE (R)
-    - 2015-01-29 12:44:10.000000000 -05:00
-    - 2015-01-29 12:44:10.000000000 -05:00
-  - - 176
+    - '2015-01-29 17:44:10'
+    - '2015-01-29 17:44:10'
+  - - '176'
     - 545 - BIOGRAPHICAL OR HISTORICAL DATA (R)
-    - 2015-01-29 12:44:10.000000000 -05:00
-    - 2015-01-29 12:44:10.000000000 -05:00
-  - - 177
+    - '2015-01-29 17:44:10'
+    - '2015-01-29 17:44:10'
+  - - '177'
     - 546 - LANGUAGE NOTE (R)
-    - 2015-01-29 12:44:10.000000000 -05:00
-    - 2015-01-29 12:44:10.000000000 -05:00
-  - - 178
+    - '2015-01-29 17:44:10'
+    - '2015-01-29 17:44:10'
+  - - '178'
     - 547 - FORMER TITLE COMPLEXITY NOTE (R)
-    - 2015-01-29 12:44:10.000000000 -05:00
-    - 2015-01-29 12:44:10.000000000 -05:00
-  - - 179
+    - '2015-01-29 17:44:10'
+    - '2015-01-29 17:44:10'
+  - - '179'
     - 550 - ISSUING BODY NOTE (R)
-    - 2015-01-29 12:44:10.000000000 -05:00
-    - 2015-01-29 12:44:10.000000000 -05:00
-  - - 180
+    - '2015-01-29 17:44:10'
+    - '2015-01-29 17:44:10'
+  - - '180'
     - 552 - ENTITY AND ATTRIBUTE INFORMATION NOTE (R)
-    - 2015-01-29 12:44:10.000000000 -05:00
-    - 2015-01-29 12:44:10.000000000 -05:00
-  - - 181
+    - '2015-01-29 17:44:10'
+    - '2015-01-29 17:44:10'
+  - - '181'
     - 555 - CUMULATIVE INDEX/FINDING AIDS NOTE (R)
-    - 2015-01-29 12:44:10.000000000 -05:00
-    - 2015-01-29 12:44:10.000000000 -05:00
-  - - 182
+    - '2015-01-29 17:44:10'
+    - '2015-01-29 17:44:10'
+  - - '182'
     - 556 - INFORMATION ABOUT DOCUMENTATION NOTE (R)
-    - 2015-01-29 12:44:10.000000000 -05:00
-    - 2015-01-29 12:44:10.000000000 -05:00
-  - - 183
+    - '2015-01-29 17:44:10'
+    - '2015-01-29 17:44:10'
+  - - '183'
     - 561 - OWNERSHIP AND CUSTODIAL HISTORY (R)
-    - 2015-01-29 12:44:10.000000000 -05:00
-    - 2015-01-29 12:44:10.000000000 -05:00
-  - - 184
+    - '2015-01-29 17:44:10'
+    - '2015-01-29 17:44:10'
+  - - '184'
     - 562 - COPY AND VERSION IDENTIFICATION NOTE (R)
-    - 2015-01-29 12:44:10.000000000 -05:00
-    - 2015-01-29 12:44:10.000000000 -05:00
-  - - 185
+    - '2015-01-29 17:44:10'
+    - '2015-01-29 17:44:10'
+  - - '185'
     - 563 - BINDING INFORMATION (R)
-    - 2015-01-29 12:44:11.000000000 -05:00
-    - 2015-01-29 12:44:11.000000000 -05:00
-  - - 186
+    - '2015-01-29 17:44:11'
+    - '2015-01-29 17:44:11'
+  - - '186'
     - 565 - CASE FILE CHARACTERISTICS NOTE (R)
-    - 2015-01-29 12:44:11.000000000 -05:00
-    - 2015-01-29 12:44:11.000000000 -05:00
-  - - 187
+    - '2015-01-29 17:44:11'
+    - '2015-01-29 17:44:11'
+  - - '187'
     - 567 - METHODOLOGY NOTE (R)
-    - 2015-01-29 12:44:11.000000000 -05:00
-    - 2015-01-29 12:44:11.000000000 -05:00
-  - - 188
+    - '2015-01-29 17:44:11'
+    - '2015-01-29 17:44:11'
+  - - '188'
     - 570 - EDITOR NOTE (SE) (R) [OBSOLETE]
-    - 2015-01-29 12:44:11.000000000 -05:00
-    - 2015-01-29 12:44:11.000000000 -05:00
-  - - 189
+    - '2015-01-29 17:44:11'
+    - '2015-01-29 17:44:11'
+  - - '189'
     - 580 - LINKING ENTRY COMPLEXITY NOTE (R)
-    - 2015-01-29 12:44:11.000000000 -05:00
-    - 2015-01-29 12:44:11.000000000 -05:00
-  - - 190
+    - '2015-01-29 17:44:11'
+    - '2015-01-29 17:44:11'
+  - - '190'
     - 581 - PUBLICATIONS ABOUT DESCRIBED MATERIALS NOTE (R)
-    - 2015-01-29 12:44:11.000000000 -05:00
-    - 2015-01-29 12:44:11.000000000 -05:00
-  - - 191
+    - '2015-01-29 17:44:11'
+    - '2015-01-29 17:44:11'
+  - - '191'
     - 582 - RELATED COMPUTER FILES NOTE (R) (CF) [OBSOLETE]
-    - 2015-01-29 12:44:11.000000000 -05:00
-    - 2015-01-29 12:44:11.000000000 -05:00
-  - - 192
+    - '2015-01-29 17:44:11'
+    - '2015-01-29 17:44:11'
+  - - '192'
     - 583 - ACTION NOTE (R)
-    - 2015-01-29 12:44:11.000000000 -05:00
-    - 2015-01-29 12:44:11.000000000 -05:00
-  - - 193
+    - '2015-01-29 17:44:11'
+    - '2015-01-29 17:44:11'
+  - - '193'
     - 584 - ACCUMULATION AND FREQUENCY OF USE NOTE (R)
-    - 2015-01-29 12:44:11.000000000 -05:00
-    - 2015-01-29 12:44:11.000000000 -05:00
-  - - 194
+    - '2015-01-29 17:44:11'
+    - '2015-01-29 17:44:11'
+  - - '194'
     - 585 - EXHIBITIONS NOTE (R)
-    - 2015-01-29 12:44:11.000000000 -05:00
-    - 2015-01-29 12:44:11.000000000 -05:00
-  - - 195
+    - '2015-01-29 17:44:11'
+    - '2015-01-29 17:44:11'
+  - - '195'
     - 586 - AWARDS NOTE (R)
-    - 2015-01-29 12:44:11.000000000 -05:00
-    - 2015-01-29 12:44:11.000000000 -05:00
-  - - 196
+    - '2015-01-29 17:44:11'
+    - '2015-01-29 17:44:11'
+  - - '196'
     - 588 - SOURCE OF DESCRIPTION NOTE (R)
-    - 2015-01-29 12:44:12.000000000 -05:00
-    - 2015-01-29 12:44:12.000000000 -05:00
-  - - 197
+    - '2015-01-29 17:44:12'
+    - '2015-01-29 17:44:12'
+  - - '197'
     - 590 - LOCAL NOTE (BK CF MP MU SE VM MX) [OBSOLETE]
-    - 2015-01-29 12:44:12.000000000 -05:00
-    - 2015-01-29 12:44:12.000000000 -05:00
-  - - 198
+    - '2015-01-29 17:44:12'
+    - '2015-01-29 17:44:12'
+  - - '198'
     - 590 - RECEIPT DATE NOTE (VM) [OBSOLETE]
-    - 2015-01-29 12:44:12.000000000 -05:00
-    - 2015-01-29 12:44:12.000000000 -05:00
-  - - 199
+    - '2015-01-29 17:44:12'
+    - '2015-01-29 17:44:12'
+  - - '199'
     - 600 - SUBJECT ADDED ENTRY--PERSONAL NAME (R)
-    - 2015-01-29 12:44:12.000000000 -05:00
-    - 2015-01-29 12:44:12.000000000 -05:00
-  - - 200
+    - '2015-01-29 17:44:12'
+    - '2015-01-29 17:44:12'
+  - - '200'
     - 610 - SUBJECT ADDED ENTRY--CORPORATE NAME (R)
-    - 2015-01-29 12:44:12.000000000 -05:00
-    - 2015-01-29 12:44:12.000000000 -05:00
-  - - 201
+    - '2015-01-29 17:44:12'
+    - '2015-01-29 17:44:12'
+  - - '201'
     - 611 - SUBJECT ADDED ENTRY--MEETING NAME (R)
-    - 2015-01-29 12:44:12.000000000 -05:00
-    - 2015-01-29 12:44:12.000000000 -05:00
-  - - 202
+    - '2015-01-29 17:44:12'
+    - '2015-01-29 17:44:12'
+  - - '202'
     - 630 - SUBJECT ADDED ENTRY--UNIFORM TITLE (R)
-    - 2015-01-29 12:44:12.000000000 -05:00
-    - 2015-01-29 12:44:12.000000000 -05:00
-  - - 203
+    - '2015-01-29 17:44:12'
+    - '2015-01-29 17:44:12'
+  - - '203'
     - 648 - SUBJECT ADDED ENTRY--CHRONOLOGICAL TERM (R)
-    - 2015-01-29 12:44:12.000000000 -05:00
-    - 2015-01-29 12:44:12.000000000 -05:00
-  - - 204
+    - '2015-01-29 17:44:12'
+    - '2015-01-29 17:44:12'
+  - - '204'
     - 650 - SUBJECT ADDED ENTRY--TOPICAL TERM (R)
-    - 2015-01-29 12:44:12.000000000 -05:00
-    - 2015-01-29 12:44:12.000000000 -05:00
-  - - 205
+    - '2015-01-29 17:44:12'
+    - '2015-01-29 17:44:12'
+  - - '205'
     - 651 - SUBJECT ADDED ENTRY--GEOGRAPHIC NAME (R)
-    - 2015-01-29 12:44:12.000000000 -05:00
-    - 2015-01-29 12:44:12.000000000 -05:00
-  - - 206
+    - '2015-01-29 17:44:12'
+    - '2015-01-29 17:44:12'
+  - - '206'
     - '652 - SUBJECT ADDED ENTRY--REVERSED GEOGRAPHIC (BK MP SE) [OBSOLETE] '
-    - 2015-01-29 12:44:13.000000000 -05:00
-    - 2015-01-29 12:44:13.000000000 -05:00
-  - - 207
+    - '2015-01-29 17:44:13'
+    - '2015-01-29 17:44:13'
+  - - '207'
     - 653 - INDEX TERM--UNCONTROLLED (R)
-    - 2015-01-29 12:44:13.000000000 -05:00
-    - 2015-01-29 12:44:13.000000000 -05:00
-  - - 208
+    - '2015-01-29 17:44:13'
+    - '2015-01-29 17:44:13'
+  - - '208'
     - 654 - SUBJECT ADDED ENTRY--FACETED TOPICAL TERMS (R)
-    - 2015-01-29 12:44:13.000000000 -05:00
-    - 2015-01-29 12:44:13.000000000 -05:00
-  - - 209
+    - '2015-01-29 17:44:13'
+    - '2015-01-29 17:44:13'
+  - - '209'
     - 655 - INDEX TERM--GENRE/FORM (R)
-    - 2015-01-29 12:44:13.000000000 -05:00
-    - 2015-01-29 12:44:13.000000000 -05:00
-  - - 210
+    - '2015-01-29 17:44:13'
+    - '2015-01-29 17:44:13'
+  - - '210'
     - 656 - INDEX TERM--OCCUPATION (R)
-    - 2015-01-29 12:44:13.000000000 -05:00
-    - 2015-01-29 12:44:13.000000000 -05:00
-  - - 211
+    - '2015-01-29 17:44:13'
+    - '2015-01-29 17:44:13'
+  - - '211'
     - 657 - INDEX TERM--FUNCTION (R)
-    - 2015-01-29 12:44:13.000000000 -05:00
-    - 2015-01-29 12:44:13.000000000 -05:00
-  - - 212
+    - '2015-01-29 17:44:13'
+    - '2015-01-29 17:44:13'
+  - - '212'
     - 658 - INDEX TERM--CURRICULUM OBJECTIVE (R)
-    - 2015-01-29 12:44:13.000000000 -05:00
-    - 2015-01-29 12:44:13.000000000 -05:00
-  - - 213
+    - '2015-01-29 17:44:13'
+    - '2015-01-29 17:44:13'
+  - - '213'
     - 662 - SUBJECT ADDED ENTRY--HIERARCHICAL PLACE NAME (R)
-    - 2015-01-29 12:44:13.000000000 -05:00
-    - 2015-01-29 12:44:13.000000000 -05:00
-  - - 214
+    - '2015-01-29 17:44:13'
+    - '2015-01-29 17:44:13'
+  - - '214'
     - 700 - ADDED ENTRY--PERSONAL NAME (R)
-    - 2015-01-29 12:44:13.000000000 -05:00
-    - 2015-01-29 12:44:13.000000000 -05:00
-  - - 215
+    - '2015-01-29 17:44:13'
+    - '2015-01-29 17:44:13'
+  - - '215'
     - 705 - ADDED ENTRY--PERSONAL NAME (PERFORMER) (MU) [OBSOLETE]
-    - 2015-01-29 12:44:13.000000000 -05:00
-    - 2015-01-29 12:44:13.000000000 -05:00
-  - - 216
+    - '2015-01-29 17:44:13'
+    - '2015-01-29 17:44:13'
+  - - '216'
     - 710 - ADDED ENTRY--CORPORATE NAME (R)
-    - 2015-01-29 12:44:13.000000000 -05:00
-    - 2015-01-29 12:44:13.000000000 -05:00
-  - - 217
+    - '2015-01-29 17:44:13'
+    - '2015-01-29 17:44:13'
+  - - '217'
     - 711 - ADDED ENTRY--MEETING NAME (R)
-    - 2015-01-29 12:44:14.000000000 -05:00
-    - 2015-01-29 12:44:14.000000000 -05:00
-  - - 218
+    - '2015-01-29 17:44:14'
+    - '2015-01-29 17:44:14'
+  - - '218'
     - 715 - ADDED ENTRY--CORPORATE NAME (PERFORMING GROUP) (MU) [OBSOLETE]
-    - 2015-01-29 12:44:14.000000000 -05:00
-    - 2015-01-29 12:44:14.000000000 -05:00
-  - - 219
+    - '2015-01-29 17:44:14'
+    - '2015-01-29 17:44:14'
+  - - '219'
     - 720 - ADDED ENTRY--UNCONTROLLED NAME (R)
-    - 2015-01-29 12:44:14.000000000 -05:00
-    - 2015-01-29 12:44:14.000000000 -05:00
-  - - 220
+    - '2015-01-29 17:44:14'
+    - '2015-01-29 17:44:14'
+  - - '220'
     - 730 - ADDED ENTRY--UNIFORM TITLE (R)
-    - 2015-01-29 12:44:14.000000000 -05:00
-    - 2015-01-29 12:44:14.000000000 -05:00
-  - - 221
+    - '2015-01-29 17:44:14'
+    - '2015-01-29 17:44:14'
+  - - '221'
     - 740 - ADDED ENTRY--UNCONTROLLED RELATED/ANALYTICAL TITLE (R)
-    - 2015-01-29 12:44:14.000000000 -05:00
-    - 2015-01-29 12:44:14.000000000 -05:00
-  - - 222
+    - '2015-01-29 17:44:14'
+    - '2015-01-29 17:44:14'
+  - - '222'
     - 751 - ADDED ENTRY--GEOGRAPHIC NAME (R)
-    - 2015-01-29 12:44:14.000000000 -05:00
-    - 2015-01-29 12:44:14.000000000 -05:00
-  - - 223
+    - '2015-01-29 17:44:14'
+    - '2015-01-29 17:44:14'
+  - - '223'
     - 752 - ADDED ENTRY--HIERARCHICAL PLACE NAME (R)
-    - 2015-01-29 12:44:14.000000000 -05:00
-    - 2015-01-29 12:44:14.000000000 -05:00
-  - - 224
+    - '2015-01-29 17:44:14'
+    - '2015-01-29 17:44:14'
+  - - '224'
     - 753 - SYSTEM DETAILS ACCESS TO COMPUTER FILES (R)
-    - 2015-01-29 12:44:14.000000000 -05:00
-    - 2015-01-29 12:44:14.000000000 -05:00
-  - - 225
+    - '2015-01-29 17:44:14'
+    - '2015-01-29 17:44:14'
+  - - '225'
     - 754 - ADDED ENTRY--TAXONOMIC IDENTIFICATION (R)
-    - 2015-01-29 12:44:14.000000000 -05:00
-    - 2015-01-29 12:44:14.000000000 -05:00
-  - - 226
+    - '2015-01-29 17:44:14'
+    - '2015-01-29 17:44:14'
+  - - '226'
     - 755 - ADDED ENTRY--PHYSICAL CHARACTERISTICS (R) [OBSOLETE]
-    - 2015-01-29 12:44:14.000000000 -05:00
-    - 2015-01-29 12:44:14.000000000 -05:00
-  - - 227
+    - '2015-01-29 17:44:14'
+    - '2015-01-29 17:44:14'
+  - - '227'
     - 760 - MAIN SERIES ENTRY (R)
-    - 2015-01-29 12:44:15.000000000 -05:00
-    - 2015-01-29 12:44:15.000000000 -05:00
-  - - 228
+    - '2015-01-29 17:44:15'
+    - '2015-01-29 17:44:15'
+  - - '228'
     - 762 - SUBSERIES ENTRY (R)
-    - 2015-01-29 12:44:15.000000000 -05:00
-    - 2015-01-29 12:44:15.000000000 -05:00
-  - - 229
+    - '2015-01-29 17:44:15'
+    - '2015-01-29 17:44:15'
+  - - '229'
     - 765 - ORIGINAL LANGUAGE ENTRY (R)
-    - 2015-01-29 12:44:15.000000000 -05:00
-    - 2015-01-29 12:44:15.000000000 -05:00
-  - - 230
+    - '2015-01-29 17:44:15'
+    - '2015-01-29 17:44:15'
+  - - '230'
     - 767 - TRANSLATION ENTRY (R)
-    - 2015-01-29 12:44:15.000000000 -05:00
-    - 2015-01-29 12:44:15.000000000 -05:00
-  - - 231
+    - '2015-01-29 17:44:15'
+    - '2015-01-29 17:44:15'
+  - - '231'
     - 770 - SUPPLEMENT/SPECIAL ISSUE ENTRY (R)
-    - 2015-01-29 12:44:15.000000000 -05:00
-    - 2015-01-29 12:44:15.000000000 -05:00
-  - - 232
+    - '2015-01-29 17:44:15'
+    - '2015-01-29 17:44:15'
+  - - '232'
     - 772 - SUPPLEMENT PARENT ENTRY (R)
-    - 2015-01-29 12:44:15.000000000 -05:00
-    - 2015-01-29 12:44:15.000000000 -05:00
-  - - 233
+    - '2015-01-29 17:44:15'
+    - '2015-01-29 17:44:15'
+  - - '233'
     - 773 - HOST ITEM ENTRY (R)
-    - 2015-01-29 12:44:15.000000000 -05:00
-    - 2015-01-29 12:44:15.000000000 -05:00
-  - - 234
+    - '2015-01-29 17:44:15'
+    - '2015-01-29 17:44:15'
+  - - '234'
     - 774 - CONSTITUENT UNIT ENTRY (R)
-    - 2015-01-29 12:44:15.000000000 -05:00
-    - 2015-01-29 12:44:15.000000000 -05:00
-  - - 235
+    - '2015-01-29 17:44:15'
+    - '2015-01-29 17:44:15'
+  - - '235'
     - 775 - OTHER EDITION ENTRY (R)
-    - 2015-01-29 12:44:15.000000000 -05:00
-    - 2015-01-29 12:44:15.000000000 -05:00
-  - - 236
+    - '2015-01-29 17:44:15'
+    - '2015-01-29 17:44:15'
+  - - '236'
     - 776 - ADDITIONAL PHYSICAL FORM ENTRY (R)
-    - 2015-01-29 12:44:15.000000000 -05:00
-    - 2015-01-29 12:44:15.000000000 -05:00
-  - - 237
+    - '2015-01-29 17:44:15'
+    - '2015-01-29 17:44:15'
+  - - '237'
     - 777 - ISSUED WITH ENTRY (R)
-    - 2015-01-29 12:44:15.000000000 -05:00
-    - 2015-01-29 12:44:15.000000000 -05:00
-  - - 238
+    - '2015-01-29 17:44:15'
+    - '2015-01-29 17:44:15'
+  - - '238'
     - 780 - PRECEDING ENTRY (R)
-    - 2015-01-29 12:44:16.000000000 -05:00
-    - 2015-01-29 12:44:16.000000000 -05:00
-  - - 239
+    - '2015-01-29 17:44:16'
+    - '2015-01-29 17:44:16'
+  - - '239'
     - 785 - SUCCEEDING ENTRY (R)
-    - 2015-01-29 12:44:16.000000000 -05:00
-    - 2015-01-29 12:44:16.000000000 -05:00
-  - - 240
+    - '2015-01-29 17:44:16'
+    - '2015-01-29 17:44:16'
+  - - '240'
     - 786 - DATA SOURCE ENTRY (R)
-    - 2015-01-29 12:44:16.000000000 -05:00
-    - 2015-01-29 12:44:16.000000000 -05:00
-  - - 241
+    - '2015-01-29 17:44:16'
+    - '2015-01-29 17:44:16'
+  - - '241'
     - 787 - OTHER RELATIONSHIP ENTRY (R)
-    - 2015-01-29 12:44:16.000000000 -05:00
-    - 2015-01-29 12:44:16.000000000 -05:00
-  - - 242
+    - '2015-01-29 17:44:16'
+    - '2015-01-29 17:44:16'
+  - - '242'
     - 800 - SERIES ADDED ENTRY--PERSONAL NAME (R)
-    - 2015-01-29 12:44:16.000000000 -05:00
-    - 2015-01-29 12:44:16.000000000 -05:00
-  - - 243
+    - '2015-01-29 17:44:16'
+    - '2015-01-29 17:44:16'
+  - - '243'
     - 810 - SERIES ADDED ENTRY--CORPORATE NAME (R)
-    - 2015-01-29 12:44:16.000000000 -05:00
-    - 2015-01-29 12:44:16.000000000 -05:00
-  - - 244
+    - '2015-01-29 17:44:16'
+    - '2015-01-29 17:44:16'
+  - - '244'
     - 811 - SERIES ADDED ENTRY--MEETING NAME (R)
-    - 2015-01-29 12:44:16.000000000 -05:00
-    - 2015-01-29 12:44:16.000000000 -05:00
-  - - 245
+    - '2015-01-29 17:44:16'
+    - '2015-01-29 17:44:16'
+  - - '245'
     - 830 - SERIES ADDED ENTRY--UNIFORM TITLE (R)
-    - 2015-01-29 12:44:16.000000000 -05:00
-    - 2015-01-29 12:44:16.000000000 -05:00
-  - - 246
+    - '2015-01-29 17:44:16'
+    - '2015-01-29 17:44:16'
+  - - '246'
     - 840 - SERIES ADDED ENTRY--TITLE (R) [OBSOLETE]
-    - 2015-01-29 12:44:16.000000000 -05:00
-    - 2015-01-29 12:44:16.000000000 -05:00
-  - - 247
+    - '2015-01-29 17:44:16'
+    - '2015-01-29 17:44:16'
+  - - '247'
     - 841 - HOLDINGS CODED DATA VALUES (NR)
-    - 2015-01-29 12:44:16.000000000 -05:00
-    - 2015-01-29 12:44:16.000000000 -05:00
-  - - 248
+    - '2015-01-29 17:44:16'
+    - '2015-01-29 17:44:16'
+  - - '248'
     - 842 - TEXTUAL PHYSICAL FORM DESIGNATOR (NR)
-    - 2015-01-29 12:44:17.000000000 -05:00
-    - 2015-01-29 12:44:17.000000000 -05:00
-  - - 249
+    - '2015-01-29 17:44:17'
+    - '2015-01-29 17:44:17'
+  - - '249'
     - 843 - REPRODUCTION NOTE (R)
-    - 2015-01-29 12:44:17.000000000 -05:00
-    - 2015-01-29 12:44:17.000000000 -05:00
-  - - 250
+    - '2015-01-29 17:44:17'
+    - '2015-01-29 17:44:17'
+  - - '250'
     - 844 - NAME OF UNIT (NR)
-    - 2015-01-29 12:44:17.000000000 -05:00
-    - 2015-01-29 12:44:17.000000000 -05:00
-  - - 251
+    - '2015-01-29 17:44:17'
+    - '2015-01-29 17:44:17'
+  - - '251'
     - 845 - TERMS GOVERNING USE AND REPRODUCTION NOTE (R)
-    - 2015-01-29 12:44:17.000000000 -05:00
-    - 2015-01-29 12:44:17.000000000 -05:00
-  - - 252
+    - '2015-01-29 17:44:17'
+    - '2015-01-29 17:44:17'
+  - - '252'
     - 850 - HOLDING INSTITUTION (R)
-    - 2015-01-29 12:44:17.000000000 -05:00
-    - 2015-01-29 12:44:17.000000000 -05:00
-  - - 253
+    - '2015-01-29 17:44:17'
+    - '2015-01-29 17:44:17'
+  - - '253'
     - 851 - LOCATION (R) [OBSOLETE]
-    - 2015-01-29 12:44:17.000000000 -05:00
-    - 2015-01-29 12:44:17.000000000 -05:00
-  - - 254
+    - '2015-01-29 17:44:17'
+    - '2015-01-29 17:44:17'
+  - - '254'
     - 852 - LOCATION (R)
-    - 2015-01-29 12:44:17.000000000 -05:00
-    - 2015-01-29 12:44:17.000000000 -05:00
-  - - 255
+    - '2015-01-29 17:44:17'
+    - '2015-01-29 17:44:17'
+  - - '255'
     - 853 - CAPTIONS AND PATTERN--BASIC BIBLIOGRAPHIC UNIT (R)
-    - 2015-01-29 12:44:17.000000000 -05:00
-    - 2015-01-29 12:44:17.000000000 -05:00
-  - - 256
+    - '2015-01-29 17:44:17'
+    - '2015-01-29 17:44:17'
+  - - '256'
     - 854 - CAPTIONS AND PATTERN--SUPPLEMENTARY MATERIAL (R)
-    - 2015-01-29 12:44:17.000000000 -05:00
-    - 2015-01-29 12:44:17.000000000 -05:00
-  - - 257
+    - '2015-01-29 17:44:17'
+    - '2015-01-29 17:44:17'
+  - - '257'
     - 855 - CAPTIONS AND PATTERN--INDEXES (R)
-    - 2015-01-29 12:44:17.000000000 -05:00
-    - 2015-01-29 12:44:17.000000000 -05:00
-  - - 258
+    - '2015-01-29 17:44:17'
+    - '2015-01-29 17:44:17'
+  - - '258'
     - 856 - ELECTRONIC LOCATION AND ACCESS (R)
-    - 2015-01-29 12:44:17.000000000 -05:00
-    - 2015-01-29 12:44:17.000000000 -05:00
-  - - 259
+    - '2015-01-29 17:44:17'
+    - '2015-01-29 17:44:17'
+  - - '259'
     - 863 - ENUMERATION AND CHRONOLOGY--BASIC BIBLIOGRAPHIC UNIT (R)
-    - 2015-01-29 12:44:18.000000000 -05:00
-    - 2015-01-29 12:44:18.000000000 -05:00
-  - - 260
+    - '2015-01-29 17:44:18'
+    - '2015-01-29 17:44:18'
+  - - '260'
     - 864 - ENUMERATION AND CHRONOLOGY--SUPPLEMENTARY MATERIAL (R)
-    - 2015-01-29 12:44:18.000000000 -05:00
-    - 2015-01-29 12:44:18.000000000 -05:00
-  - - 261
+    - '2015-01-29 17:44:18'
+    - '2015-01-29 17:44:18'
+  - - '261'
     - 865 - ENUMERATION AND CHRONOLOGY--INDEXES (R)
-    - 2015-01-29 12:44:18.000000000 -05:00
-    - 2015-01-29 12:44:18.000000000 -05:00
-  - - 262
+    - '2015-01-29 17:44:18'
+    - '2015-01-29 17:44:18'
+  - - '262'
     - 866 - TEXTUAL HOLDINGS--BASIC BIBLIOGRAPHIC UNIT (R)
-    - 2015-01-29 12:44:18.000000000 -05:00
-    - 2015-01-29 12:44:18.000000000 -05:00
-  - - 263
+    - '2015-01-29 17:44:18'
+    - '2015-01-29 17:44:18'
+  - - '263'
     - 867 - TEXTUAL HOLDINGS--SUPPLEMENTARY MATERIAL (R)
-    - 2015-01-29 12:44:18.000000000 -05:00
-    - 2015-01-29 12:44:18.000000000 -05:00
-  - - 264
+    - '2015-01-29 17:44:18'
+    - '2015-01-29 17:44:18'
+  - - '264'
     - 868 - TEXTUAL HOLDINGS--INDEXES (R)
-    - 2015-01-29 12:44:18.000000000 -05:00
-    - 2015-01-29 12:44:18.000000000 -05:00
-  - - 265
+    - '2015-01-29 17:44:18'
+    - '2015-01-29 17:44:18'
+  - - '265'
     - 870 - VARIANT PERSONAL NAME (SE) [OBSOLETE]
-    - 2015-01-29 12:44:18.000000000 -05:00
-    - 2015-01-29 12:44:18.000000000 -05:00
-  - - 266
+    - '2015-01-29 17:44:18'
+    - '2015-01-29 17:44:18'
+  - - '266'
     - 871 - VARIANT CORPORATE NAME (SE) [OBSOLETE]
-    - 2015-01-29 12:44:18.000000000 -05:00
-    - 2015-01-29 12:44:18.000000000 -05:00
-  - - 267
+    - '2015-01-29 17:44:18'
+    - '2015-01-29 17:44:18'
+  - - '267'
     - 872 - VARIANT CONFERENCE OR MEETING NAME (SE) [OBSOLETE]
-    - 2015-01-29 12:44:18.000000000 -05:00
-    - 2015-01-29 12:44:18.000000000 -05:00
-  - - 268
+    - '2015-01-29 17:44:18'
+    - '2015-01-29 17:44:18'
+  - - '268'
     - 873 - VARIANT UNIFORM TITLE HEADING (SE) [OBSOLETE]
-    - 2015-01-29 12:44:18.000000000 -05:00
-    - 2015-01-29 12:44:18.000000000 -05:00
-  - - 269
+    - '2015-01-29 17:44:18'
+    - '2015-01-29 17:44:18'
+  - - '269'
     - 876 - ITEM INFORMATION--BASIC BIBLIOGRAPHIC UNIT (R)
-    - 2015-01-29 12:44:18.000000000 -05:00
-    - 2015-01-29 12:44:18.000000000 -05:00
-  - - 270
+    - '2015-01-29 17:44:18'
+    - '2015-01-29 17:44:18'
+  - - '270'
     - 877 - ITEM INFORMATION--SUPPLEMENTARY MATERIAL (R)
-    - 2015-01-29 12:44:19.000000000 -05:00
-    - 2015-01-29 12:44:19.000000000 -05:00
-  - - 271
+    - '2015-01-29 17:44:19'
+    - '2015-01-29 17:44:19'
+  - - '271'
     - 878 - ITEM INFORMATION--INDEXES (R)
-    - 2015-01-29 12:44:19.000000000 -05:00
-    - 2015-01-29 12:44:19.000000000 -05:00
-  - - 272
+    - '2015-01-29 17:44:19'
+    - '2015-01-29 17:44:19'
+  - - '272'
     - 880 - ALTERNATE GRAPHIC REPRESENTATION (R)
-    - 2015-01-29 12:44:19.000000000 -05:00
-    - 2015-01-29 12:44:19.000000000 -05:00
-  - - 273
+    - '2015-01-29 17:44:19'
+    - '2015-01-29 17:44:19'
+  - - '273'
     - 882 - REPLACEMENT RECORD INFORMATION (NR)
-    - 2015-01-29 12:44:19.000000000 -05:00
-    - 2015-01-29 12:44:19.000000000 -05:00
-  - - 274
+    - '2015-01-29 17:44:19'
+    - '2015-01-29 17:44:19'
+  - - '274'
     - 883 - MACHINE-GENERATED METADATA PROVENANCE (R)
-    - 2015-01-29 12:44:19.000000000 -05:00
-    - 2015-01-29 12:44:19.000000000 -05:00
-  - - 275
+    - '2015-01-29 17:44:19'
+    - '2015-01-29 17:44:19'
+  - - '275'
     - 886 - FOREIGN MARC INFORMATION FIELD (R)
-    - 2015-01-29 12:44:19.000000000 -05:00
-    - 2015-01-29 12:44:19.000000000 -05:00
-  - - 276
+    - '2015-01-29 17:44:19'
+    - '2015-01-29 17:44:19'
+  - - '276'
     - 887 - NON-MARC INFORMATION FIELD (R)
-    - 2015-01-29 12:44:19.000000000 -05:00
-    - 2015-01-29 12:44:19.000000000 -05:00
-  - - 288
+    - '2015-01-29 17:44:19'
+    - '2015-01-29 17:44:19'
+  - - '288'
     - Conversion successful
-    - 2015-02-13 13:52:08.000000000 -05:00
-    - 2015-02-13 13:52:08.000000000 -05:00
+    - '2015-02-13 18:52:08'
+    - '2015-02-13 18:52:08'
