@@ -28,10 +28,10 @@ conversion_issues:
     - '27'
     - '32'
     - Looks like the Bibframe conversion has converted the 040 data more fully this
-      time through, although, it has left out the value of subfield code |c "CIN"
-      (transcribing agency)
+      time through, although, the distinctions between the various subfields have
+      not carried over (e.g., between subfields |a and |c for CIN.)
     - '2015-02-20 00:28:25.606538'
-    - '2015-02-20 00:28:49.501963'
+    - '2015-03-09 19:21:44.332444'
     - '4'
   - - '4'
     - '27'
@@ -110,6 +110,571 @@ conversion_issues:
     - '2015-02-26 19:47:36.2006'
     - '2015-02-26 19:47:36.2006'
     - '10'
+  - - '11'
+    - '40'
+    - '84'
+    - Publication dates in square brackets are coded as copyright dates.
+    - '2015-03-09 13:58:06.838063'
+    - '2015-03-09 13:58:06.838063'
+    - '15'
+  - - '12'
+    - '40'
+    - '245'
+    - Series not in BF record.
+    - '2015-03-09 14:03:43.577264'
+    - '2015-03-09 14:03:43.577264'
+    - '15'
+  - - '13'
+    - '27'
+    - '1'
+    - 'Another comment about the MARCXML: It''s interesting that the original Aleph
+      record was and is Encoding Level "2" with Descriptive Cataloging Form "i". The
+      MARCXML, respectively, gives "I" and "a". At what point was the record "upgraded"
+      in Encoding Level, and will the actual record in Aleph LMS01 see this upgrade?
+      p.s., this is a change in the MARCXML record since the first time around.'
+    - '2015-03-09 14:03:59.856858'
+    - '2015-03-09 14:06:57.33898'
+    - '4'
+  - - '14'
+    - '40'
+    - '249'
+    - Not present in BF record.
+    - '2015-03-09 14:04:16.340322'
+    - '2015-03-09 14:04:16.340322'
+    - '15'
+  - - '15'
+    - '40'
+    - '1'
+    - Leader not fully represented.
+    - '2015-03-09 14:07:40.525072'
+    - '2015-03-09 14:07:40.525072'
+    - '15'
+  - - '16'
+    - '27'
+    - '214'
+    - 'MARCXML: Mistake in the original MARC coding: 700 12 Hewitt, Angela. The 2nd
+      indicator needs to be corrected changed from "2" to blank. '
+    - '2015-03-09 14:11:40.372366'
+    - '2015-03-09 14:11:40.372366'
+    - '4'
+  - - '17'
+    - '27'
+    - '1'
+    - 'MARCXML: Holdings Leader did not convert to MARCXML.'
+    - '2015-03-09 14:17:01.591512'
+    - '2015-03-09 14:22:11.695998'
+    - '4'
+  - - '18'
+    - '41'
+    - '103'
+    - 33xs missing from BF record.
+    - '2015-03-09 14:17:36.342854'
+    - '2015-03-09 14:17:36.342854'
+    - '15'
+  - - '19'
+    - '41'
+    - '104'
+    - 33xs missing from BF record.
+    - '2015-03-09 14:18:05.52921'
+    - '2015-03-09 14:18:05.52921'
+    - '15'
+  - - '20'
+    - '41'
+    - '105'
+    - 33xs missing from BF record.
+    - '2015-03-09 14:18:31.523231'
+    - '2015-03-09 14:18:31.523231'
+    - '15'
+  - - '21'
+    - '27'
+    - '4'
+    - 'MARCXML: Holdings 005 did not convert to MARCXML. (Will this data matter in
+      BIBFRAME?)'
+    - '2015-03-09 14:19:12.530559'
+    - '2015-03-09 14:20:35.680421'
+    - '4'
+  - - '22'
+    - '41'
+    - '105'
+    - 33xs missing from BF record.
+    - '2015-03-09 14:19:50.112863'
+    - '2015-03-09 14:19:50.112863'
+    - '15'
+  - - '23'
+    - '27'
+    - '6'
+    - 'MARCXML: the two 007 holdings fields did not convert to MARCXML, so, of course,
+      this data won''t have converted to BIBFRAME'
+    - '2015-03-09 14:20:10.153757'
+    - '2015-03-10 13:45:12.960314'
+    - '4'
+  - - '24'
+    - '41'
+    - '1'
+    - Leader information does not seem to be present in BF record.
+    - '2015-03-09 14:20:21.043729'
+    - '2015-03-09 14:20:21.043729'
+    - '15'
+  - - '25'
+    - '27'
+    - '7'
+    - "MARCXML: the holdings 008 field did not convert to MARCXML\r\n\r\np.s. other
+      MARC holdings fields that did not convert to MARCXML: SYSID, FMT, LKR. Should
+      we preserve this legacy data in BIBFRAME?"
+    - '2015-03-09 14:21:30.650978'
+    - '2015-03-09 15:11:56.574864'
+    - '4'
+  - - '26'
+    - '27'
+    - '258'
+    - "The information in holdings 856 was placed within an Instance class (instance20).
+      Would it more properly belong with other institution-specific holdings information
+      in the HeldItem class? In general, this is true of other holdings data.\r\n\r\nThe
+      Zepheira editor also treats the 856 as instance-related information. It is a
+      local access point to an instance of the work. I can see that, but wonder if
+      local information that is currently in a holdings record still logically belongs
+      together (506, 852, 856, etc.). BIBFRAME seems to scatter this information.\r\n\r\n"
+    - '2015-03-09 19:25:46.764852'
+    - '2015-03-13 14:17:29.391515'
+    - '4'
+  - - '27'
+    - '27'
+    - '254'
+    - 'Subfield |b converted to BIBFRAME (HeldItem); however, subfield |c "ALEXS"
+      did not. '
+    - '2015-03-09 19:28:41.006339'
+    - '2015-03-13 14:15:52.181406'
+    - '4'
+  - - '28'
+    - '27'
+    - '144'
+    - "This holdings field was placed within the Instance class. It belongs within
+      the HeldItem class.\r\n\r\nThe Zepheira editor does this as well--treats local
+      notes about access to an instance of a resource as instance-related information.\r\n\r\nIn
+      general, I think it's helpful to retain the practice of keeping local information
+      that we would put in a holdings record in one place (506, 852, 856, etc.) than
+      scattering it between Instance, HeldItem, etc."
+    - '2015-03-09 19:34:17.373549'
+    - '2015-03-13 14:16:13.49788'
+    - '4'
+  - - '29'
+    - '27'
+    - '28'
+    - "holdings field 035 placed in instance19: <bf:Identifier>\r\n                <bf:identifierValue>(Alexs)ASP379864clmu</bf:identifierValue>\r\n
+      \               <bf:identifierScheme\r\n                    rdf:resource=\"http://id.loc.gov/vocabulary/identifiers/systemNumber\"/>\r\n
+      \           </bf:Identifier>\r\n\r\nThis relates specifically to the electronic
+      instance available through Alexander Street Press. As such, does it perhaps
+      belong in instance20, which seems to address the online instance rather than
+      the original recording? instance19 seems to represent the original recording.\r\n\r\n"
+    - '2015-03-09 19:45:04.488921'
+    - '2015-03-10 14:37:45.410307'
+    - '4'
+  - - '30'
+    - '27'
+    - '75'
+    - "I notice improvements in the treatment of 245 information in the new BIBFRAME
+      record. This Instance-related information has been removed from Works, so there
+      is less redundancy. Also, fewer redundant <bf:title> labels in the Instance
+      class. Good.\r\n\r\nOne thing I noticed in instance19:\r\n\r\nIn the earlier
+      BIBFRAME resource, we had:\r\n<bf:titleStatement>The English suites Johann Sebastian
+      Bach.</bf:titleStatement>\r\n      <bf:responsibilityStatement>Johann Sebastian
+      Bach.</bf:responsibilityStatement>\r\n      <bf:formDesignation>electronic resource
+      /</bf:formDesignation> \r\n\r\nIn the current BIBFRAME resource, we've lost
+      the statement of responsibility (245 subfield |c)\r\n<bf:titleStatement>The
+      English suites</bf:titleStatement>\r\n        <bf:formDesignation>electronic
+      resource</bf:formDesignation>\r\n\r\nDoes this have anything to do with an attempt
+      to rectify the punctuation problem caused by stripping out the GMD (\"electronic
+      resource\")? i.e. MARC: \"245 |a The English suites |h [electronic resource]
+      / |c Johann Sebastian Bach\" became: <bf:titleStatement>The English suites Johann
+      Sebastian Bach.</bf:titleStatement> and <bf:formDesignation>electronic resource
+      /</bf:formDesignation> [note placement of slash after \"electronic resource\"
+      that should precede Johann Sebastian Bach]\r\n\r\n"
+    - '2015-03-09 20:08:46.858791'
+    - '2015-03-10 14:40:15.446556'
+    - '4'
+  - - '31'
+    - '27'
+    - '84'
+    - 'Does it matter that <bf:providerStatement>London : Hyperion Records, p2003.</bf:providerStatement>
+      is separated by a few lines of code from the <bf:publication>...</bf:Provider>.
+      Does this have implications for display?'
+    - '2015-03-09 20:11:35.032942'
+    - '2015-03-09 20:11:35.032942'
+    - '4'
+  - - '32'
+    - '27'
+    - '236'
+    - "Actually, a 245/776 question: Seems to have been a mashup between 245 and 776
+      field information in instance24:\r\n\r\n<bf:title>The English suitesOriginal</bf:title>\r\n
+      \       <bf:systemNumber>\r\n            <bf:Identifier>\r\n                <bf:identifierValue>^^2008641150</bf:identifierValue>\r\n
+      \               <bf:identifierScheme rdf:resource=\"http://id.loc.gov/vocabulary/identifiers/lccn\"/>\r\n
+      \           </bf:Identifier>\r\n        </bf:systemNumber>\r\n\r\nNote that
+      subfield |w (DLC) was transformed to BIBFRAME in the earlier iteration, but
+      this information was lost in the second transformation.\r\n\r\nOriginal MARC:\r\n\r\n245
+      14 The English suites.\r\n776 |c Original |w (DLC)^^2008641150.\r\n\r\nEarlier
+      BIBFRAME:\r\n\r\n<bf:title>The English suitesOriginal</bf:title>\r\n      <bf:systemNumber>\r\n
+      \        <bf:Identifier>\r\n            <bf:identifierValue>(DLC) 2008641150</bf:identifierValue>\r\n
+      \           <bf:identifierScheme>systemNumber</bf:identifierScheme>\r\n         </bf:Identifier>\r\n
+      \     </bf:systemNumber>\r\n\r\n\r\n\r\n\r\n"
+    - '2015-03-09 20:20:09.416931'
+    - '2015-03-09 20:20:09.416931'
+    - '4'
+  - - '33'
+    - '27'
+    - '62'
+    - "What purpose does this serve? Will it display to the public?\r\n<bf:authorizedAccessPoint
+      xml:lang=\"x-bf-hash\">bachjohannsebastian16851750bachjohannsebastian16851750bachjohannsebastian16851750hewittangelaenglischesuitenzxxwork</bf:authorizedAccessPoint>"
+    - '2015-03-09 20:23:40.235031'
+    - '2015-03-09 20:23:40.235031'
+    - '4'
+  - - '34'
+    - '27'
+    - '62'
+    - "Regarding person6 and other similar access points corresponding to 650 and
+      700 (person7, topic13, person18, person19): All of these make use of the following
+      three labels, all of which contain strings: <bf:label> <bf:authorizedAccessPoint>
+      <madsrdf:authoritativeLabel>  Is it necessary to repeat this data? Are these
+      labels serving different structural functions even if they contain the same
+      string data?\r\n\r\nAnother question I have concerning these Authority classes
+      is: Where is the actual linked data? Shouldn't there be links to the corresponding
+      LC name authority records or to VIAF?\r\n\r\n"
+    - '2015-03-09 20:44:38.238075'
+    - '2015-03-09 20:44:38.238075'
+    - '4'
+  - - '35'
+    - '27'
+    - '214'
+    - "This iteration of the BIBFRAME resource includes the analytic entries corresponding
+      to 700 12 in MARC--That's great!\r\n\r\nHowever, the suite numbers corresponding
+      to MARC field 700 subfield |n were duplicated in the transformation and incorrectly
+      follow the personal name directly. They need to be removed:\r\n\r\n<bf:Work
+      rdf:about=\"http://ld4l.harvard.edu/013298672-8work14\">\r\n        <bf:title>Englische
+      Suiten. Nr. 4-6.</bf:title>\r\n        <bf:authorizedAccessPoint>Bach, Johann
+      Sebastian, 1685-1750. Nr. 4-6. Englische Suiten. Nr. 4-6.</bf:authorizedAccessPoint>\r\n[change
+      to: <bf:authorizedAccessPoint>Bach, Johann Sebastian, 1685-1750. Englische Suiten.
+      Nr. 4-6.</bf:authorizedAccessPoint>]\r\n\r\n\r\n<bf:Work rdf:about=\"http://ld4l.harvard.edu/013298672-8work15\">\r\n
+      \       <bf:title>Englische Suiten. Nr. 1-3.</bf:title>\r\n        <bf:authorizedAccessPoint>Bach,
+      Johann Sebastian, 1685-1750. Nr. 1-3. Englische Suiten. Nr. 1-3.</bf:authorizedAccessPoint>\r\n[change
+      to: <bf:authorizedAccessPoint>Bach, Johann Sebastian, 1685-1750. Englische Suiten.
+      Nr. 1-3.</bf:authorizedAccessPoint>]\r\n\r\n\r\n<bf:Person rdf:about=\"http://ld4l.harvard.edu/013298672-8person18\">\r\n
+      \       <bf:label>Bach, Johann Sebastian, 1685-1750. Nr. 4-6.</bf:label>\r\n
+      \       <bf:authorizedAccessPoint>Bach, Johann Sebastian, 1685-1750. Nr. 4-6.</bf:authorizedAccessPoint>\r\n
+      \       <bf:hasAuthority>\r\n            <madsrdf:Authority>\r\n                <madsrdf:authoritativeLabel>Bach,
+      Johann Sebastian, 1685-1750. Nr. 4-6.</madsrdf:authoritativeLabel>\r\n            </madsrdf:Authority>\r\n
+      \       </bf:hasAuthority>\r\n    </bf:Person>\r\n[change to: <bf:authorizedAccessPoint>Bach,
+      Johann Sebastian, 1685-1750.</bf:authorizedAccessPoint> and <madsrdf:authoritativeLabel>Bach,
+      Johann Sebastian, 1685-1750.</madsrdf:authoritativeLabel>]\r\n\r\n<bf:Person
+      rdf:about=\"http://ld4l.harvard.edu/013298672-8person19\">\r\n        <bf:label>Bach,
+      Johann Sebastian, 1685-1750. Nr. 1-3.</bf:label>\r\n        <bf:authorizedAccessPoint>Bach,
+      Johann Sebastian, 1685-1750. Nr. 1-3.</bf:authorizedAccessPoint>\r\n        <bf:hasAuthority>\r\n
+      \           <madsrdf:Authority>\r\n                <madsrdf:authoritativeLabel>Bach,
+      Johann Sebastian, 1685-1750. Nr. 1-3.</madsrdf:authoritativeLabel>\r\n            </madsrdf:Authority>\r\n
+      \       </bf:hasAuthority>\r\n    </bf:Person>\r\n[change to: <bf:authorizedAccessPoint>Bach,
+      Johann Sebastian, 1685-1750.</bf:authorizedAccessPoint> and <madsrdf:authoritativeLabel>Bach,
+      Johann Sebastian, 1685-1750.</madsrdf:authoritativeLabel>]"
+    - '2015-03-09 20:56:43.656324'
+    - '2015-03-09 20:56:43.656324'
+    - '4'
+  - - '36'
+    - '8'
+    - '75'
+    - I'm glad the entire statement of responsibility is preserved in "bf:responsibilityStatement"
+      It's helpful, especially during the conversion.
+    - '2015-03-09 20:59:32.687633'
+    - '2015-03-09 20:59:32.687633'
+    - '9'
+  - - '37'
+    - '8'
+    - '7'
+    - 'Missing coded information from the 008: country of publication, date type,
+      etc.'
+    - '2015-03-09 21:00:35.92933'
+    - '2015-03-09 21:00:35.92933'
+    - '9'
+  - - '38'
+    - '8'
+    - '103'
+    - 336,337 and 338 missing
+    - '2015-03-09 21:01:47.980218'
+    - '2015-03-09 21:01:47.980218'
+    - '9'
+  - - '39'
+    - '8'
+    - '71'
+    - "Nowhere does it seem to link to the original, as an \"abridgement of.\" There
+      is no 7XX with |i as in RDA on the MARC record though.\r\nIt does identify the
+      100+240 as the AAP of the work, and the 245 as the \"instance\" title. Maybe
+      that will be enough."
+    - '2015-03-09 21:04:08.147018'
+    - '2015-03-09 21:04:08.147018'
+    - '9'
+  - - '40'
+    - '12'
+    - '75'
+    - 'The AAP (bf:authorizedAccessPoint) is the entire 245 |a and |b, but this is
+      a compilation, so this is wrong. '
+    - '2015-03-09 21:05:45.073383'
+    - '2015-03-09 21:05:45.073383'
+    - '9'
+  - - '41'
+    - '12'
+    - '16'
+    - The 020 is not in the orginal XML. So the conversion process added the "bf:isbn13
+      rdf:resource"
+    - '2015-03-09 21:06:43.044542'
+    - '2015-03-09 21:06:43.044542'
+    - '9'
+  - - '42'
+    - '12'
+    - '16'
+    - 'The conversion properly expanded "pbk." to "papberback" in the "bf:identifierQualifier."
+      Also it picked the right bf term even though it was not in the subfield q of
+      the 020. '
+    - '2015-03-09 21:08:50.408783'
+    - '2015-03-09 21:08:50.408783'
+    - '9'
+  - - '43'
+    - '12'
+    - '75'
+    - "The two field \"bf:title\" under \"bf:instance\" have the 245 |a and |b which
+      is wrong because this is a compilation. They also have the word \"papberback\"
+      added to the end of the title. I don't understand why.\r\nEx.: <bf:title>The
+      Freedom of the press : The half-free press (paperback)<bf:title>"
+    - '2015-03-09 21:10:56.191343'
+    - '2015-03-09 21:10:56.191343'
+    - '9'
+  - - '44'
+    - '12'
+    - '75'
+    - '"bf:responsibilityStatement" is wrong because the 245 |c includes other titles
+      in the compilation.'
+    - '2015-03-09 21:12:07.825002'
+    - '2015-03-09 21:12:07.825002'
+    - '9'
+  - - '45'
+    - '12'
+    - '28'
+    - The 035 |z for the cancelled/invalid number was not converted. They should be
+      as they can be helpful.
+    - '2015-03-09 21:12:49.384235'
+    - '2015-03-09 21:12:49.384235'
+    - '9'
+  - - '46'
+    - '12'
+    - '53'
+    - Information from the 082 0 subfield 2 not converted.
+    - '2015-03-09 21:13:47.093797'
+    - '2015-03-09 21:13:47.093797'
+    - '9'
+  - - '47'
+    - '12'
+    - '136'
+    - 440 not converted.
+    - '2015-03-09 21:14:19.578896'
+    - '2015-03-09 21:14:19.578896'
+    - '9'
+  - - '48'
+    - '12'
+    - '214'
+    - 700 tags not converted. These are important as they provide author/title access
+      to each work in the compilation. They are tagged correctly in MARC, so it would
+      be great if these could convert to the bf equivalent of "Container of (work)"
+      and have the AAP/link to each part of the compilation.
+    - '2015-03-09 21:29:24.677162'
+    - '2015-03-09 21:29:24.677162'
+    - '9'
+  - - '49'
+    - '21'
+    - '75'
+    - bf:AuthorizedAccessPoint includes 245 |a and |b. It should probably only include
+      |a, since the subtitle is not part of the AAP.
+    - '2015-03-09 21:30:48.177979'
+    - '2015-03-09 21:30:48.177979'
+    - '9'
+  - - '50'
+    - '21'
+    - '16'
+    - Did not convert "hardback" as the qualifier for the 020, but it does do this
+      for paperback on another record converted in this group.
+    - '2015-03-09 21:32:00.949406'
+    - '2015-03-09 21:32:00.949406'
+    - '9'
+  - - '51'
+    - '21'
+    - '84'
+    - The 260 |a is missing brackets, and the 2nd |a did not get converted.
+    - '2015-03-09 21:32:48.448726'
+    - '2015-03-09 21:32:48.448726'
+    - '9'
+  - - '52'
+    - '21'
+    - '84'
+    - The colon did not get converted, but the semicolon and comma did. So some of
+      the ISBD punctuation got converted and some did not.
+    - '2015-03-09 21:33:39.167022'
+    - '2015-03-09 21:33:39.167022'
+    - '9'
+  - - '53'
+    - '21'
+    - '41'
+    - The 050  has the tag "bf:HeldItem" Why not "bf:Classification" since the 050
+      is the LC classification information?
+    - '2015-03-09 21:34:57.015344'
+    - '2015-03-09 21:34:57.015344'
+    - '9'
+  - - '54'
+    - '21'
+    - '204'
+    - The conversion does not seem to differentiate between LCSH and MESH subject
+      headings. It should because these are two different, and sometimes conflicting,
+      thesauri.
+    - '2015-03-09 21:36:02.842422'
+    - '2015-03-09 21:36:02.842422'
+    - '9'
+  - - '55'
+    - '21'
+    - '137'
+    - 490 not converted.
+    - '2015-03-09 21:36:52.159398'
+    - '2015-03-09 21:36:52.159398'
+    - '9'
+  - - '56'
+    - '21'
+    - '34'
+    - 042 not converted.
+    - '2015-03-09 21:37:12.532915'
+    - '2015-03-09 21:37:12.532915'
+    - '9'
+  - - '57'
+    - '27'
+    - '1'
+    - "Regarding LDR/18 Descriptive cataloging form:\r\n\r\nIn the original BIBFRAME
+      resource in the Annotation class we had:\r\n\r\n<bf:identifierScheme>descriptionSource</bf:identifierScheme>\r\n
+      \        </bf:Identifier>\r\n      </bf:descriptionSource>\r\n      <bf:descriptionConventions
+      rdf:resource=\"http://id.loc.gov/vocabulary/descriptionConventions/isbd\"/>\r\n\r\nThis
+      disappeared in the current BIBFRAME resource, most likely, in connection with
+      the upgrade of the MARCXML record from ISBD to AACR2 in between versions of
+      this BIBFRAME document. Should this be reinstated with a \"http://id.loc.gov/vocabulary/descriptionConventions/aacr2\"
+      URI?\r\n"
+    - '2015-03-10 13:55:41.924366'
+    - '2015-03-10 13:55:41.924366'
+    - '4'
+  - - '58'
+    - '27'
+    - '138'
+    - Good that the duplicated 500 notes that had been in Works were deleted in favor
+      of the ones in Instance where they belong.
+    - '2015-03-10 13:58:46.2368'
+    - '2015-03-10 13:58:46.2368'
+    - '4'
+  - - '59'
+    - '27'
+    - '204'
+    - "In the original BIBFRAME resource:\r\n\r\n<madsrdf:Authority>\r\n            <rdf:type
+      rdf:resource=\"http://www.loc.gov/mads/rdf/v1#Topic\"/>\r\n            <madsrdf:authoritativeLabel
+      xml:lang=\"en\">Suites (Piano)</madsrdf:authoritativeLabel>\r\n         </madsrdf:Authority>\r\n\r\nIn
+      the current BIBFRAME resource:\r\n\r\n<madsrdf:Authority>\r\n                <rdf:type
+      rdf:resource=\"http://www.loc.gov/mads/rdf/v1#Topic\"/>\r\n                <madsrdf:authoritativeLabel>Suites
+      (Piano)</madsrdf:authoritativeLabel>\r\n                <madsrdf:isMemberOfMADSScheme
+      rdf:resource=\"http://id.loc.gov/authorities/subjects\"/>\r\n            </madsrdf:Authority>\r\n\r\nI
+      was just curious about the removal of the @xml:lang=\"en\" attribute from the
+      original. Is that because that information is now implicit in @rdf:resource=\"http://id.loc.gov/authorities/subjects\"
+      since LC subject headings are English language subject headings?\r\n\r\n"
+    - '2015-03-10 14:00:55.137416'
+    - '2015-03-10 14:06:31.38172'
+    - '4'
+  - - '60'
+    - '27'
+    - '249'
+    - The information in holdings field 843 concerning the electronic reproduction
+      of the original compact disc did not convert to BIBFRAME. This information belongs,
+      I think, in instance20.
+    - '2015-03-10 14:11:53.783539'
+    - '2015-03-10 14:11:53.783539'
+    - '4'
+  - - '61'
+    - '27'
+    - '1'
+    - "The following three lines of code in the original BIBFRAME resource were omitted
+      in the current version:\r\n\r\n<rdf:type rdf:resource=\"http://bibframe.org/vocab/Audio\"/>
+      \ in bf:Work\r\n\r\nThis line of code should be restored. I think the new version
+      makes clear that it is a description of an electronic resource, but it's not
+      clear that this electronic resource is an audio resource (let alone a musical
+      sound recording as opposed to a non-musical sound recording). We'll want to
+      be sure that the information in LDR/06 (type of sound recording) converts to
+      BIBFRAME (in this case \"j\" for musical sound recording)).\r\n\r\n\r\n\r\n<rdf:type
+      rdf:resource=\"http://bibframe.org/vocab/Monograph\"/> in the original instance25\r\n\r\n<bf:modeOfIssuance>monographic</bf:modeOfIssuance>
+      also in the original instance25\r\n\r\nThese two lines of code should also be
+      restored. They correspond to LDR/07 (bibliographic level--\"monograph/item\"))\r\n\r\n\r\n\r\n\r\n"
+    - '2015-03-10 14:24:00.768352'
+    - '2015-03-10 14:29:39.883479'
+    - '4'
+  - - '62'
+    - '27'
+    - '41'
+    - The 050 in the MARCXML did not convert. Perhaps, because this call number was
+      not used in holdings 852?
+    - '2015-03-10 14:31:20.359207'
+    - '2015-03-10 14:31:20.359207'
+    - '4'
+  - - '63'
+    - '27'
+    - '22'
+    - No 028 in this record, though there is publisher number note in the record.
+      This is the fault of the original MARC record, and just goes to illustrate that
+      the quality of a BIBFRAME record converted from MARCXML is dependent to some
+      extent on the quality of the original record. (The MARC record in OCLC has the
+      028 fields).
+    - '2015-03-10 14:34:05.04032'
+    - '2015-03-10 14:43:17.630056'
+    - '4'
+  - - '64'
+    - '2'
+    - '34'
+    - Not converted. Data is of interest to PCC CONSER Program and ISSN procedures
+    - '2015-03-10 16:02:08.198531'
+    - '2015-03-10 16:02:08.198531'
+    - '13'
+  - - '65'
+    - '2'
+    - '102'
+    - Not converted.  Community needs to discuss which/how much data to preserve.
+    - '2015-03-10 16:04:16.841919'
+    - '2015-03-10 16:04:16.841919'
+    - '13'
+  - - '66'
+    - '2'
+    - '147'
+    - Meaning carried by tag is lost; this becomes a generic note, and since its content
+      is simply a title, even the human reader cannot tell what the note means.
+    - '2015-03-10 16:06:54.050595'
+    - '2015-03-10 16:06:54.050595'
+    - '13'
+  - - '67'
+    - '2'
+    - '144'
+    - This is a local note, appearing in the Aleph holdings record; belongs at Item
+      (not Instance) level I think.
+    - '2015-03-10 16:10:18.91164'
+    - '2015-03-10 16:10:18.91164'
+    - '13'
+  - - '68'
+    - '2'
+    - '28'
+    - First occurrence of bf:systemNumber is an oclc number, but its bf:identifierScheme
+      is a url from id.loc.gov rather than oclc; can this be right?
+    - '2015-03-10 16:13:42.829254'
+    - '2015-03-10 16:13:42.829254'
+    - '13'
+  - - '69'
+    - '2'
+    - '254'
+    - Second instance of 852 (and all related holdings fields, for print version)
+      not converted; first instance of 852 (and related fields, for networked version)
+      was converted.
+    - '2015-03-10 16:17:43.059237'
+    - '2015-03-10 16:17:43.059237'
+    - '13'
 
 ---
 conversions:
@@ -16426,6 +16991,550 @@ conversions:
     - '2015-03-05 19:50:43'
     - 014301848
     - ' Darkness visible : nocturne for orchestra / Benet Casablancas.'
+    - 20150116_c37c08d
+  - - '42'
+    - |
+      <record xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim   http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+        <leader> cas 2200193Ia 4500</leader>
+        <controlfield tag='001'>009953935-7</controlfield>
+        <controlfield tag='005'>20141007193552.0</controlfield>
+        <controlfield tag='008'>771213c19749999ctufr^p^^^^^^^0^^^a0eng^c</controlfield>
+        <datafield ind1=' ' ind2=' ' tag='010'>
+          <subfield code='a'>^^^95640874^</subfield>
+          <subfield code='z'>sn 85006887^</subfield>
+        </datafield>
+        <datafield ind1='0' ind2=' ' tag='022'>
+          <subfield code='a'>0884-7177</subfield>
+          <subfield code='l'>0884-7177</subfield>
+          <subfield code='2'>1</subfield>
+        </datafield>
+        <datafield ind1='0' ind2=' ' tag='035'>
+          <subfield code='a'>ocm03488717</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='040'>
+          <subfield code='a'>COO</subfield>
+          <subfield code='b'>eng</subfield>
+          <subfield code='c'>COO</subfield>
+          <subfield code='d'>AIP</subfield>
+          <subfield code='d'>NSD</subfield>
+          <subfield code='d'>DLC</subfield>
+          <subfield code='d'>NSD</subfield>
+          <subfield code='d'>OCLCQ</subfield>
+          <subfield code='d'>CRL</subfield>
+          <subfield code='d'>OCLCQ</subfield>
+          <subfield code='d'>OCLCF</subfield>
+          <subfield code='d'>DLC</subfield>
+          <subfield code='d'>HUL</subfield>
+          <subfield code='d'>HLS</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='042'>
+          <subfield code='a'>nsdp</subfield>
+          <subfield code='a'>pcc</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='043'>
+          <subfield code='a'>n-us-ct</subfield>
+        </datafield>
+        <datafield ind1='0' ind2='0' tag='050'>
+          <subfield code='a'>F94</subfield>
+          <subfield code='b'>.C865</subfield>
+        </datafield>
+        <datafield ind1='0' ind2='0' tag='082'>
+          <subfield code='a'>974.6/005</subfield>
+          <subfield code='2'>20</subfield>
+        </datafield>
+        <datafield ind1='0' ind2=' ' tag='210'>
+          <subfield code='a'>Conn. hist.</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2='0' tag='222'>
+          <subfield code='a'>Connecticut history</subfield>
+        </datafield>
+        <datafield ind1='0' ind2='0' tag='245'>
+          <subfield code='a'>Connecticut history.</subfield>
+        </datafield>
+        <datafield ind1='1' ind2=' ' tag='246'>
+          <subfield code='i'>Vols. for Spring 2014- have title:</subfield>
+          <subfield code='a'>Connecticut history review</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='260'>
+          <subfield code='a'>Willimantic, Conn. :</subfield>
+          <subfield code='b'>The Center for Connecticut Studies of Eastern Connecticut State College,</subfield>
+          <subfield code='c'>[1974]-</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='300'>
+          <subfield code='a'>volumes ;</subfield>
+          <subfield code='c'>23 cm</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='310'>
+          <subfield code='a'>Semiannual,</subfield>
+          <subfield code='b'>&lt;2014-&gt;</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='321'>
+          <subfield code='a'>Three times a year</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='336'>
+          <subfield code='a'>text</subfield>
+          <subfield code='b'>txt</subfield>
+          <subfield code='2'>rdacontent</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='337'>
+          <subfield code='a'>unmediated</subfield>
+          <subfield code='b'>n</subfield>
+          <subfield code='2'>rdamedia</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='338'>
+          <subfield code='a'>volume</subfield>
+          <subfield code='b'>nc</subfield>
+          <subfield code='2'>rdacarrier</subfield>
+        </datafield>
+        <datafield ind1='1' ind2=' ' tag='362'>
+          <subfield code='a'>Began with no. 14 (June 1974).</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='550'>
+          <subfield code='a'>
+            Issued by the Center for Connecticut Studies of Eastern Connecticut State
+            College, no. 14-16 (1974-75); Department of History, Southern Connecticut
+            State College, no. 17 (1976)- ; by the Association for the Study of
+            Connecticut History, &lt;v. 41, no. 1 (spring 2002)-&gt; ; in cooperation
+            with Fairfield University &lt;2014-&gt;
+          </subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='515'>
+          <subfield code='a'>
+            Continuous numbering ends with No. 33 (Nov. 1992); spring 1993- called
+            Vol. 34, no. 1-
+          </subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='515'>
+          <subfield code='a'>
+            Issue for summer 1977 called no. 19; issue for October 1977 called no. 20,
+            Newsletter issue; issue for January 1979 called no. 20.
+          </subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='588'>
+          <subfield code='a'>Description based on: No. 14 (June 1974); title from cover.</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2='0' tag='651'>
+          <subfield code='a'>Connecticut</subfield>
+          <subfield code='x'>History</subfield>
+          <subfield code='v'>Periodicals.</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2='7' tag='651'>
+          <subfield code='a'>Connecticut.</subfield>
+          <subfield code='2'>fast</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2='7' tag='655'>
+          <subfield code='a'>History.</subfield>
+          <subfield code='2'>fast</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2='7' tag='655'>
+          <subfield code='a'>Periodicals.</subfield>
+          <subfield code='2'>fast</subfield>
+        </datafield>
+        <datafield ind1='2' ind2=' ' tag='710'>
+          <subfield code='a'>Fairfield University.</subfield>
+        </datafield>
+        <datafield ind1='2' ind2=' ' tag='710'>
+          <subfield code='a'>Association for the Study of Connecticut History.</subfield>
+        </datafield>
+        <datafield ind1='2' ind2=' ' tag='710'>
+          <subfield code='a'>Eastern Connecticut State College.</subfield>
+          <subfield code='b'>Center for Connecticut Studies.</subfield>
+        </datafield>
+        <datafield ind1='2' ind2=' ' tag='710'>
+          <subfield code='a'>Southern Connecticut State College.</subfield>
+          <subfield code='b'>Department of History.</subfield>
+        </datafield>
+        <datafield ind1='0' ind2='8' tag='776'>
+          <subfield code='i'>Online version:</subfield>
+          <subfield code='t'>Connecticut history</subfield>
+          <subfield code='w'>(OCoLC)754599577</subfield>
+        </datafield>
+        <datafield ind1='0' ind2='0' tag='780'>
+          <subfield code='t'>Connecticut history newsletter</subfield>
+          <subfield code='x'>0589-3933</subfield>
+          <subfield code='w'>(DLC)^^2014234984</subfield>
+          <subfield code='w'>(OCoLC)191715338</subfield>
+        </datafield>
+        <datafield ind1='0' ind2='1' tag='785'>
+          <subfield code='a'>Association for the Study of Connecticut History.</subfield>
+          <subfield code='t'>Newsletter - The Association for the Study of Connecticut History</subfield>
+          <subfield code='x'>0277-7606</subfield>
+          <subfield code='w'>(DLC)sc 79005184</subfield>
+          <subfield code='w'>(OCoLC)5291581</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='049'>
+          <subfield code='a'>HLSS</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='HBP'>
+          <subfield code='a'>415.37880..565689.655210.0400.00000</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='OWN'>
+          <subfield code='a'>NET</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='035'>
+          <subfield code='a'>(Mrcit)991042731662572</subfield>
+        </datafield>
+        <datafield ind1='0' ind2=' ' tag='852'>
+          <subfield code='b'>NET</subfield>
+          <subfield code='c'>MRCIT</subfield>
+          <subfield code='h'>F94</subfield>
+          <subfield code='i'>.C865</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='506'>
+          <subfield code='a'>This resource may be restricted to users with a valid Harvard ID.</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='H08'>
+          <subfield code='a'>c</subfield>
+          <subfield code='b'>20060502</subfield>
+        </datafield>
+        <datafield ind1='4' ind2=' ' tag='856'>
+          <subfield code='u'>http://nrs.harvard.edu/urn-3:HUL.ejournals:sfx991042731662572</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2='0' tag='866'>
+          <subfield code='b'>Networked Resource</subfield>
+          <subfield code='h'>F94</subfield>
+          <subfield code='i'>.C865</subfield>
+          <subfield code='a'>Available from 2004. Most recent 1 year(s) not available.</subfield>
+          <subfield code='z'>EBSCOhost America History and Life with Full Text:Full Text</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='OWN'>
+          <subfield code='a'>WID</subfield>
+        </datafield>
+        <datafield ind1='0' ind2=' ' tag='079'>
+          <subfield code='a'>ocm03488717</subfield>
+        </datafield>
+        <datafield ind1='2' ind2=' ' tag='079'>
+          <subfield code='a'>ocn890520013</subfield>
+        </datafield>
+        <datafield ind1='7' ind2=' ' tag='852'>
+          <subfield code='2'>ZHCL</subfield>
+          <subfield code='b'>WID</subfield>
+          <subfield code='c'>GEN</subfield>
+          <subfield code='h'>US 14505.20</subfield>
+          <subfield code='z'>Current Issues: Periodicals Reading Room Stacks</subfield>
+        </datafield>
+        <datafield ind1='0' ind2='3' tag='853'>
+          <subfield code='8'>1</subfield>
+          <subfield code='a'>no.</subfield>
+          <subfield code='i'>(year)</subfield>
+        </datafield>
+        <datafield ind1='4' ind2='0' tag='863'>
+          <subfield code='8'>1.1</subfield>
+          <subfield code='a'>14-33</subfield>
+          <subfield code='i'>1974-1992</subfield>
+          <subfield code='z'>
+            Issue for Oct. 1977 called no.20, Newsletter issue; issue for Jan. 1979
+            called no. 20.
+          </subfield>
+        </datafield>
+        <datafield ind1='2' ind2='0' tag='853'>
+          <subfield code='8'>2</subfield>
+          <subfield code='a'>v.</subfield>
+          <subfield code='b'>no.</subfield>
+          <subfield code='u'>2</subfield>
+          <subfield code='v'>r</subfield>
+          <subfield code='i'>(year)</subfield>
+          <subfield code='j'>(season)</subfield>
+          <subfield code='w'>f</subfield>
+          <subfield code='x'>21</subfield>
+          <subfield code='y'>ps21,23</subfield>
+        </datafield>
+        <datafield ind1='X' ind2=' ' tag='853'>
+          <subfield code='8'>2</subfield>
+          <subfield code='9'>00002</subfield>
+          <subfield code='a'>55</subfield>
+          <subfield code='b'>1</subfield>
+          <subfield code='i'>2016</subfield>
+          <subfield code='j'>21</subfield>
+          <subfield code='3'>20150830</subfield>
+        </datafield>
+        <datafield ind1='4' ind2='0' tag='863'>
+          <subfield code='8'>2.1</subfield>
+          <subfield code='a'>34-52</subfield>
+          <subfield code='i'>1993-2013</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='H08'>
+          <subfield code='a'>c</subfield>
+          <subfield code='b'>20140908</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='H09'>
+          <subfield code='k'>prs</subfield>
+        </datafield>
+        <datafield ind1='0' ind2=' ' tag='H77'>
+          <subfield code='t'>no. 14-16 (1974-1975): Connecticut history newsletter</subfield>
+          <subfield code='f'>014155565</subfield>
+        </datafield>
+      </record>
+    - |-
+      <?xml version="1.0" encoding="UTF-8"?>
+      <rdf:RDF xmlns:relators="http://id.loc.gov/vocabulary/relators/"
+               xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#"
+               xmlns:bf="http://bibframe.org/vocab/"
+               xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+               xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+         <bf:Work rdf:about="http://ld4l.harvard.edu/009953935-7">
+            <rdf:type rdf:resource="http://bibframe.org/vocab/Text"/>
+            <bf:authorizedAccessPoint>Fairfield University. Connecticut history</bf:authorizedAccessPoint>
+            <bf:workTitle rdf:resource="http://ld4l.harvard.edu/009953935-7title5"/>
+            <bf:contributor rdf:resource="http://ld4l.harvard.edu/009953935-7organization6"/>
+            <bf:contributor rdf:resource="http://ld4l.harvard.edu/009953935-7organization7"/>
+            <bf:contributor rdf:resource="http://ld4l.harvard.edu/009953935-7organization8"/>
+            <bf:contributor rdf:resource="http://ld4l.harvard.edu/009953935-7organization9"/>
+            <bf:issnL>
+               <bf:Identifier>
+                  <bf:identifierValue>0884-7177</bf:identifierValue>
+                  <bf:identifierScheme rdf:resource="http://id.loc.gov/vocabulary/identifiers/issnL"/>
+               </bf:Identifier>
+            </bf:issnL>
+            <bf:contentCategory rdf:resource="http://id.loc.gov/vocabulary/contentTypes/txt"/>
+            <bf:language rdf:resource="http://id.loc.gov/vocabulary/languages/eng"/>
+            <bf:subject rdf:resource="http://ld4l.harvard.edu/009953935-7topic13"/>
+            <bf:subject rdf:resource="http://ld4l.harvard.edu/009953935-7topic14"/>
+            <bf:subject rdf:resource="http://id.loc.gov/vocabulary/geographicAreas/n-us-ct"/>
+            <bf:classificationLcc rdf:resource="http://id.loc.gov/authorities/classification/F94"/>
+            <bf:classification rdf:resource="http://ld4l.harvard.edu/009953935-7classification17"/>
+            <bf:issnL>
+               <bf:Identifier>
+                  <bf:identifierScheme rdf:resource="http://id.loc.gov/vocabulary/identifiers/issnL"/>
+                  <bf:identifierValue>0884-7177</bf:identifierValue>
+                  <bf:identifierAssigner>1</bf:identifierAssigner>
+               </bf:Identifier>
+            </bf:issnL>
+            <bf:continues rdf:resource="http://ld4l.harvard.edu/009953935-7work19"/>
+            <bf:continuedInPartBy rdf:resource="http://ld4l.harvard.edu/009953935-7work20"/>
+            <bf:derivedFrom rdf:resource="http://ld4l.harvard.edu/009953935-7.marcxml.xml"/>
+            <bf:authorizedAccessPoint xml:lang="x-bf-hash">fairfielduniversityassociationforthestudyofconnecticuthistoryeasternconnecticutstatecollegecenterforconnecticutstudiessouthernconnecticutstatecollegedepartmentofhistoryconnecticuthistoryengworktext</bf:authorizedAccessPoint>
+         </bf:Work>
+         <bf:Work rdf:about="http://ld4l.harvard.edu/009953935-7work19">
+            <bf:title>Connecticut history newsletter</bf:title>
+            <bf:authorizedAccessPoint>Connecticut history newsletter</bf:authorizedAccessPoint>
+            <bf:issn rdf:resource="urn:issn:0589-3933"/>
+            <bf:lccn rdf:resource="http://id.loc.gov/authorities/test/identifiers/lccn/^^2014234984"/>
+            <bf:systemNumber rdf:resource="http://www.worldcat.org/oclc/191715338"/>
+         </bf:Work>
+         <bf:Work rdf:about="http://ld4l.harvard.edu/009953935-7work20">
+            <bf:title>Newsletter - The Association for the Study of Connecticut History</bf:title>
+            <bf:authorizedAccessPoint>Association for the Study of Connecticut History. Newsletter - The Association for the Study of Connecticut History</bf:authorizedAccessPoint>
+            <bf:issn rdf:resource="urn:issn:0277-7606"/>
+            <bf:lccn rdf:resource="http://id.loc.gov/authorities/test/identifiers/lccn/sc79005184"/>
+            <bf:systemNumber rdf:resource="http://www.worldcat.org/oclc/5291581"/>
+            <bf:contributor rdf:resource="http://ld4l.harvard.edu/009953935-7agent27"/>
+         </bf:Work>
+         <bf:Instance rdf:about="http://ld4l.harvard.edu/009953935-7instance24">
+            <bf:abbreviatedTitle rdf:resource="http://ld4l.harvard.edu/009953935-7title26"/>
+            <bf:keyTitle rdf:resource="http://ld4l.harvard.edu/009953935-7title27"/>
+            <bf:instanceTitle rdf:resource="http://ld4l.harvard.edu/009953935-7title28"/>
+            <bf:titleVariation rdf:resource="http://ld4l.harvard.edu/009953935-7title29"/>
+            <bf:publication>
+               <bf:Provider>
+                  <bf:providerName>
+                     <bf:Organization>
+                        <bf:label>The Center for Connecticut Studies of Eastern Connecticut State College</bf:label>
+                     </bf:Organization>
+                  </bf:providerName>
+                  <bf:providerPlace>
+                     <bf:Place>
+                        <bf:label>Willimantic, Conn. </bf:label>
+                     </bf:Place>
+                  </bf:providerPlace>
+                  <bf:providerDate>[1974]-</bf:providerDate>
+               </bf:Provider>
+            </bf:publication>
+            <bf:otherPhysicalFormat rdf:resource="http://ld4l.harvard.edu/009953935-7instance31"/>
+            <bf:extent>volumes ;</bf:extent>
+            <bf:dimensions>23 cm</bf:dimensions>
+            <bf:titleStatement>Connecticut history.</bf:titleStatement>
+            <bf:providerStatement>Willimantic, Conn. : The Center for Connecticut Studies of Eastern Connecticut State College, 1974-</bf:providerStatement>
+            <bf:frequencyNote>Semiannual, &lt;2014-&gt;</bf:frequencyNote>
+            <bf:accessCondition>This resource may be restricted to users with a valid Harvard ID.</bf:accessCondition>
+            <bf:note>
+            Issued by the Center for Connecticut Studies of Eastern Connecticut State
+            College, no. 14-16 (1974-75); Department of History, Southern Connecticut
+            State College, no. 17 (1976)- ; by the Association for the Study of
+            Connecticut History, &lt;v. 41, no. 1 (spring 2002)-&gt; ; in cooperation
+            with Fairfield University &lt;2014-&gt;
+          </bf:note>
+            <bf:note>
+            Continuous numbering ends with No. 33 (Nov. 1992); spring 1993- called
+            Vol. 34, no. 1-
+          </bf:note>
+            <bf:note>
+            Issue for summer 1977 called no. 19; issue for October 1977 called no. 20,
+            Newsletter issue; issue for January 1979 called no. 20.
+          </bf:note>
+            <bf:note>Description based on: No. 14 (June 1974); title from cover.</bf:note>
+            <bf:lccn>
+               <bf:Identifier>
+                  <bf:identifierValue>^^^95640874^</bf:identifierValue>
+                  <bf:identifierScheme rdf:resource="http://id.loc.gov/vocabulary/identifiers/lccn"/>
+               </bf:Identifier>
+            </bf:lccn>
+            <bf:lccn>
+               <bf:Identifier>
+                  <bf:identifierScheme rdf:resource="http://id.loc.gov/vocabulary/identifiers/lccn"/>
+                  <bf:identifierValue>sn 85006887^</bf:identifierValue>
+                  <bf:identifierStatus>canceled/invalid</bf:identifierStatus>
+               </bf:Identifier>
+            </bf:lccn>
+            <bf:issn>
+               <bf:Identifier>
+                  <bf:identifierScheme rdf:resource="http://id.loc.gov/vocabulary/identifiers/issn"/>
+                  <bf:identifierValue>0884-7177</bf:identifierValue>
+                  <bf:identifierAssigner>1</bf:identifierAssigner>
+               </bf:Identifier>
+            </bf:issn>
+            <bf:systemNumber>
+               <bf:Identifier>
+                  <bf:identifierValue>ocm03488717</bf:identifierValue>
+                  <bf:identifierScheme rdf:resource="http://id.loc.gov/vocabulary/identifiers/systemNumber"/>
+               </bf:Identifier>
+            </bf:systemNumber>
+            <bf:systemNumber>
+               <bf:Identifier>
+                  <bf:identifierValue>(Mrcit)991042731662572</bf:identifierValue>
+                  <bf:identifierScheme rdf:resource="http://id.loc.gov/vocabulary/identifiers/systemNumber"/>
+               </bf:Identifier>
+            </bf:systemNumber>
+            <bf:mediaCategory rdf:resource="http://id.loc.gov/vocabulary/mediaTypes/n"/>
+            <bf:carrierCategory rdf:resource="http://id.loc.gov/vocabulary/carriers/nc"/>
+            <bf:serialFirstIssue>Began with no. 14 (June 1974).</bf:serialFirstIssue>
+            <bf:derivedFrom rdf:resource="http://ld4l.harvard.edu/009953935-7.marcxml.xml"/>
+            <bf:instanceOf rdf:resource="http://ld4l.harvard.edu/009953935-7"/>
+         </bf:Instance>
+         <bf:Instance rdf:about="http://ld4l.harvard.edu/009953935-7instance31">
+            <bf:title>Connecticut history</bf:title>
+            <bf:systemNumber rdf:resource="http://www.worldcat.org/oclc/754599577"/>
+         </bf:Instance>
+         <bf:Annotation rdf:about="http://ld4l.harvard.edu/009953935-7annotation23">
+            <bf:derivedFrom rdf:resource="http://ld4l.harvard.edu/009953935-7.marcxml.xml"/>
+            <bf:descriptionSource rdf:resource="http://id.loc.gov/vocabulary/organizations/coo"/>
+            <bf:descriptionModifier rdf:resource="http://id.loc.gov/vocabulary/organizations/aip"/>
+            <bf:descriptionModifier rdf:resource="http://id.loc.gov/vocabulary/organizations/nsd"/>
+            <bf:descriptionModifier rdf:resource="http://id.loc.gov/vocabulary/organizations/dlc"/>
+            <bf:descriptionModifier rdf:resource="http://id.loc.gov/vocabulary/organizations/nsd"/>
+            <bf:descriptionModifier rdf:resource="http://id.loc.gov/vocabulary/organizations/oclcq"/>
+            <bf:descriptionModifier rdf:resource="http://id.loc.gov/vocabulary/organizations/crl"/>
+            <bf:descriptionModifier rdf:resource="http://id.loc.gov/vocabulary/organizations/oclcq"/>
+            <bf:descriptionModifier rdf:resource="http://id.loc.gov/vocabulary/organizations/oclcf"/>
+            <bf:descriptionModifier rdf:resource="http://id.loc.gov/vocabulary/organizations/dlc"/>
+            <bf:descriptionModifier rdf:resource="http://id.loc.gov/vocabulary/organizations/hul"/>
+            <bf:descriptionModifier rdf:resource="http://id.loc.gov/vocabulary/organizations/hls"/>
+            <bf:descriptionLanguage rdf:resource="http://id.loc.gov/vocabulary/languages/eng"/>
+            <bf:generationProcess>DLC transform-tool:2015-01-16-T11:00:00</bf:generationProcess>
+            <bf:changeDate>2014-10-07T19:35</bf:changeDate>
+            <bf:annotates rdf:resource="http://ld4l.harvard.edu/009953935-7"/>
+         </bf:Annotation>
+         <bf:Annotation rdf:about="http://ld4l.harvard.edu/009953935-7annotation25">
+            <bf:annotationBody rdf:resource="http://nrs.harvard.edu/urn-3:HUL.ejournals:sfx991042731662572"/>
+            <bf:annotates rdf:resource="http://ld4l.harvard.edu/009953935-7"/>
+         </bf:Annotation>
+         <bf:HeldItem rdf:about="http://ld4l.harvard.edu/009953935-7helditem52">
+            <bf:label>F94 .C865</bf:label>
+            <bf:shelfMarkLcc>F94 .C865</bf:shelfMarkLcc>
+            <bf:subLocation>NET</bf:subLocation>
+            <bf:shelfMark>F94 .C865</bf:shelfMark>
+            <bf:subLocation>WID</bf:subLocation>
+            <bf:shelfMark>US 14505.20</bf:shelfMark>
+            <bf:copyNote>Current Issues: Periodicals Reading Room Stacks</bf:copyNote>
+            <bf:holdingFor rdf:resource="http://ld4l.harvard.edu/009953935-7instance24"/>
+         </bf:HeldItem>
+         <bf:Title rdf:about="http://ld4l.harvard.edu/009953935-7title5">
+            <bf:titleValue>Connecticut history</bf:titleValue>
+         </bf:Title>
+         <bf:Organization rdf:about="http://ld4l.harvard.edu/009953935-7organization6">
+            <bf:label>Fairfield University.</bf:label>
+            <bf:authorizedAccessPoint>Fairfield University.</bf:authorizedAccessPoint>
+            <bf:hasAuthority>
+               <madsrdf:Authority>
+                  <madsrdf:authoritativeLabel>Fairfield University.</madsrdf:authoritativeLabel>
+               </madsrdf:Authority>
+            </bf:hasAuthority>
+         </bf:Organization>
+         <bf:Organization rdf:about="http://ld4l.harvard.edu/009953935-7organization7">
+            <bf:label>Association for the Study of Connecticut History.</bf:label>
+            <bf:authorizedAccessPoint>Association for the Study of Connecticut History.</bf:authorizedAccessPoint>
+            <bf:hasAuthority>
+               <madsrdf:Authority>
+                  <madsrdf:authoritativeLabel>Association for the Study of Connecticut History.</madsrdf:authoritativeLabel>
+               </madsrdf:Authority>
+            </bf:hasAuthority>
+         </bf:Organization>
+         <bf:Organization rdf:about="http://ld4l.harvard.edu/009953935-7organization8">
+            <bf:label>Eastern Connecticut State College. Center for Connecticut Studies.</bf:label>
+            <bf:authorizedAccessPoint>Eastern Connecticut State College. Center for Connecticut Studies.</bf:authorizedAccessPoint>
+            <bf:hasAuthority>
+               <madsrdf:Authority>
+                  <madsrdf:authoritativeLabel>Eastern Connecticut State College. Center for Connecticut Studies.</madsrdf:authoritativeLabel>
+               </madsrdf:Authority>
+            </bf:hasAuthority>
+         </bf:Organization>
+         <bf:Organization rdf:about="http://ld4l.harvard.edu/009953935-7organization9">
+            <bf:label>Southern Connecticut State College. Department of History.</bf:label>
+            <bf:authorizedAccessPoint>Southern Connecticut State College. Department of History.</bf:authorizedAccessPoint>
+            <bf:hasAuthority>
+               <madsrdf:Authority>
+                  <madsrdf:authoritativeLabel>Southern Connecticut State College. Department of History.</madsrdf:authoritativeLabel>
+               </madsrdf:Authority>
+            </bf:hasAuthority>
+         </bf:Organization>
+         <bf:Topic rdf:about="http://ld4l.harvard.edu/009953935-7topic13">
+            <bf:authorizedAccessPoint>History</bf:authorizedAccessPoint>
+            <bf:label>History</bf:label>
+            <bf:hasAuthority>
+               <madsrdf:Authority>
+                  <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#GenreForm"/>
+                  <madsrdf:authoritativeLabel>History</madsrdf:authoritativeLabel>
+                  <madsrdf:isMemberOfMADSScheme rdf:resource="http://id.loc.gov/vocabulary/subjectSchemes/fast"/>
+               </madsrdf:Authority>
+            </bf:hasAuthority>
+            <bf:authoritySource>http://id.loc.gov/vocabulary/subjectSchemes/fast</bf:authoritySource>
+         </bf:Topic>
+         <bf:Topic rdf:about="http://ld4l.harvard.edu/009953935-7topic14">
+            <bf:authorizedAccessPoint>Periodicals</bf:authorizedAccessPoint>
+            <bf:label>Periodicals</bf:label>
+            <bf:hasAuthority>
+               <madsrdf:Authority>
+                  <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#GenreForm"/>
+                  <madsrdf:authoritativeLabel>Periodicals</madsrdf:authoritativeLabel>
+                  <madsrdf:isMemberOfMADSScheme rdf:resource="http://id.loc.gov/vocabulary/subjectSchemes/fast"/>
+               </madsrdf:Authority>
+            </bf:hasAuthority>
+            <bf:authoritySource>http://id.loc.gov/vocabulary/subjectSchemes/fast</bf:authoritySource>
+         </bf:Topic>
+         <bf:Classification rdf:about="http://ld4l.harvard.edu/009953935-7classification17">
+            <bf:classificationScheme rdf:resource="http://id.loc.gov/authorities/classSchemes/ddc"/>
+            <bf:classificationNumber>974.6/005</bf:classificationNumber>
+            <bf:label>974.6/005</bf:label>
+            <bf:classificationEdition>full</bf:classificationEdition>
+            <bf:classificationEdition>20</bf:classificationEdition>
+         </bf:Classification>
+         <bf:Agent rdf:about="http://ld4l.harvard.edu/009953935-7agent27">
+            <bf:label>Association for the Study of Connecticut History.</bf:label>
+            <bf:authorizedAccessPoint>Association for the Study of Connecticut History.</bf:authorizedAccessPoint>
+            <bf:hasAuthority>
+               <madsrdf:Authority>
+                  <madsrdf:authoritativeLabel>Association for the Study of Connecticut History.</madsrdf:authoritativeLabel>
+               </madsrdf:Authority>
+            </bf:hasAuthority>
+         </bf:Agent>
+         <bf:Title rdf:about="http://ld4l.harvard.edu/009953935-7title26">
+            <bf:titleValue>Conn. hist.</bf:titleValue>
+         </bf:Title>
+         <bf:Title rdf:about="http://ld4l.harvard.edu/009953935-7title27">
+            <bf:titleValue>Connecticut history</bf:titleValue>
+         </bf:Title>
+         <bf:Title rdf:about="http://ld4l.harvard.edu/009953935-7title28">
+            <bf:titleValue>Connecticut history</bf:titleValue>
+         </bf:Title>
+         <bf:Title rdf:about="http://ld4l.harvard.edu/009953935-7title29">
+            <bf:titleType>Vols. for Spring 2014- have title:</bf:titleType>
+            <bf:titleValue>Connecticut history review</bf:titleValue>
+         </bf:Title>
+      </rdf:RDF>
+    - '2015-03-16 00:19:30'
+    - '2015-03-16 00:19:30'
+    - 009953935
+    - ' Connecticut history.'
     - 20150116_c37c08d
 
 ---
