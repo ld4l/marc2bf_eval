@@ -54,53 +54,54 @@ conversion_issues:
   - - '6'
     - '32'
     - '1'
-    - "\r\nthe only values preserved from MARC record are:  bytes 5-7 ;  (17(K), 18(i)
-      \ > I, a ; conversion default?) "
+    - "\r\nunclear if/how LDR values will be mapped to BIBFRAME ;  XML values do not
+      match those from the MARC record (with the exception of bytes 5-7, 19)\r\n"
     - '2015-02-26 00:04:15.434797'
-    - '2015-02-26 00:04:15.434797'
+    - '2015-03-23 18:02:46.316456'
     - '3'
   - - '7'
     - '13'
     - '80'
-    - "In the bf:Instance, data from the 034 / 255 are converted to the same bibframe
-      property\r\n\r\n034 |a = <bf:cartographicScale>Linear scale</bf:cartographicScale>
+    - "Scale: In the bf:Instance, data from the 034 / 255 are converted to the same
+      bibframe property\r\n\r\n034 |a = <bf:cartographicScale>Linear scale</bf:cartographicScale>
       [machine readable]\r\n034 |b = <bf:cartographicScale>2851200</bf:cartographicScale>
       [machine readable]\r\n255 |a = <bf:cartographicScale>Scale 1:2,851,200. 45 miles
       to the inch ;</bf:cartographicScale>  [human readable]\r\n\r\nShould probably
       have different elements for human readable version vs. machine readable version
       of Statement of Scale"
     - '2015-02-26 19:26:58.035705'
-    - '2015-02-26 19:26:58.035705'
+    - '2015-03-31 19:27:45.625606'
     - '10'
   - - '8'
     - '23'
     - '80'
-    - "In the bf:Instance, data from the 034 / 255 are converted to the same bibframe
-      property\r\n\r\n034 |a = <bf:cartographicScale>Linear scale</bf:cartographicScale>
+    - "Scale: In the bf:Instance, data from the 034 / 255 are converted to the same
+      bibframe property\r\n\r\n034 |a = <bf:cartographicScale>Linear scale</bf:cartographicScale>
       [machine readable]\r\n034 |b = <bf:cartographicScale>1004000</bf:cartographicScale>
       [machine readable]\r\n255 |a = <bf:cartographicScale>Scale 1:1,004,000 (1mm
       = 1.004 km) at 350⁰ latitudes ;</bf:cartographicScale>  [human readable]\r\n\r\nShould
       probably have different elements for human readable version vs. machine readable
       version of Statement of Scale"
     - '2015-02-26 19:31:33.895497'
-    - '2015-02-26 19:31:33.895497'
+    - '2015-03-31 19:28:39.503746'
     - '10'
   - - '9'
     - '39'
     - '27'
-    - "In the bf:Instance, data from the 034 / 255 are converted to the same bibframe
-      property\r\n\r\n255 |c = <bf:cartographicCoordinates>(E 92°10ʹ00ʺ--E 101°10ʹ00ʺ/N
-      28°32ʹ00ʺ--N 9°35ʹ00ʺ).</bf:cartographicCoordinates> [human readable]\r\n034
+    - "Coordinates: In the bf:Instance, data from the 034 / 255 are converted to the
+      same bibframe property\r\n\r\n255 |c = <bf:cartographicCoordinates>(E 92°10ʹ00ʺ--E
+      101°10ʹ00ʺ/N 28°32ʹ00ʺ--N 9°35ʹ00ʺ).</bf:cartographicCoordinates> [human readable]\r\n034
       |d |e |f |g =<bf:cartographicCoordinates>E0921000° E1011000° N0283200° N0093500°</bf:cartographicCoordinates>
       [machine readable]\r\n\r\nShould probably have different elements for human
       readable version vs. machine readable version of Coordinate data, and machine
-      readable should have 4 separate elements, showing western most, eastern most,
-      northern most, and southernmost coordinates.\r\n\r\nAlso would be interesting
-      to have marc to bibframe converter convert all machine readable coordinate data
-      to decimal degrees ... here it's in Hemisphere, Degrees, Minutes, Seconds format,
-      whereas most online mapping services use decimal degrees."
+      readable should have 4 separate elements (or standardized delimiting of) for
+      western most, eastern most, northern most, and southernmost coordinates. Also
+      for machine readable version the degrees symbols can be dropped in the conversion.\r\n\r\nAlso
+      would be interesting to have marc to bibframe converter convert all machine
+      readable coordinate data to decimal degrees ... here it's in Hemisphere, Degrees,
+      Minutes, Seconds format, whereas most online mapping services use decimal degrees."
     - '2015-02-26 19:40:16.082943'
-    - '2015-02-26 19:40:16.082943'
+    - '2015-04-02 13:59:47.312516'
     - '10'
   - - '10'
     - '26'
@@ -312,12 +313,12 @@ conversion_issues:
       subfield |w (DLC) was transformed to BIBFRAME in the earlier iteration, but
       this information was lost in the second transformation.\r\n\r\nOriginal MARC:\r\n\r\n245
       14 The English suites.\r\n776 |c Original |w (DLC)^^2008641150.\r\n\r\nEarlier
-      BIBFRAME:\r\n\r\n<bf:title>The English suitesOriginal</bf:title>\r\n      <bf:systemNumber>\r\n
-      \        <bf:Identifier>\r\n            <bf:identifierValue>(DLC) 2008641150</bf:identifierValue>\r\n
-      \           <bf:identifierScheme>systemNumber</bf:identifierScheme>\r\n         </bf:Identifier>\r\n
-      \     </bf:systemNumber>\r\n\r\n\r\n\r\n\r\n"
+      BIBFRAME iteration:\r\n\r\n<bf:title>The English suitesOriginal</bf:title>\r\n
+      \     <bf:systemNumber>\r\n         <bf:Identifier>\r\n            <bf:identifierValue>(DLC)
+      2008641150</bf:identifierValue>\r\n            <bf:identifierScheme>systemNumber</bf:identifierScheme>\r\n
+      \        </bf:Identifier>\r\n      </bf:systemNumber>\r\n\r\n\r\n\r\n\r\n"
     - '2015-03-09 20:20:09.416931'
-    - '2015-03-09 20:20:09.416931'
+    - '2015-04-22 15:13:58.9595'
     - '4'
   - - '33'
     - '27'
@@ -332,14 +333,15 @@ conversion_issues:
     - '62'
     - "Regarding person6 and other similar access points corresponding to 650 and
       700 (person7, topic13, person18, person19): All of these make use of the following
-      three labels, all of which contain strings: <bf:label> <bf:authorizedAccessPoint>
-      <madsrdf:authoritativeLabel>  Is it necessary to repeat this data? Are these
-      labels serving different structural functions even if they contain the same
-      string data?\r\n\r\nAnother question I have concerning these Authority classes
-      is: Where is the actual linked data? Shouldn't there be links to the corresponding
-      LC name authority records or to VIAF?\r\n\r\n"
+      three elements, all of which repeat the same string data: <bf:label> <bf:authorizedAccessPoint>
+      <madsrdf:authoritativeLabel>  Isn't this redundant? Are these labels serving
+      different structural functions?\r\n\r\nAnother question I have concerning these
+      Authority classes is: For legacy records that don't have linked data to authoritative
+      resources (LC authority file), what will be the mechanism for enriching these
+      records with linked data? The access points in converted records will naturally
+      convert to strings.\r\n\r\n"
     - '2015-03-09 20:44:38.238075'
-    - '2015-03-09 20:44:38.238075'
+    - '2015-04-22 15:18:27.070287'
     - '4'
   - - '35'
     - '27'
@@ -356,24 +358,24 @@ conversion_issues:
       \       <bf:title>Englische Suiten. Nr. 1-3.</bf:title>\r\n        <bf:authorizedAccessPoint>Bach,
       Johann Sebastian, 1685-1750. Nr. 1-3. Englische Suiten. Nr. 1-3.</bf:authorizedAccessPoint>\r\n[change
       to: <bf:authorizedAccessPoint>Bach, Johann Sebastian, 1685-1750. Englische Suiten.
-      Nr. 1-3.</bf:authorizedAccessPoint>]\r\n\r\n\r\n<bf:Person rdf:about=\"http://ld4l.harvard.edu/013298672-8person18\">\r\n
-      \       <bf:label>Bach, Johann Sebastian, 1685-1750. Nr. 4-6.</bf:label>\r\n
-      \       <bf:authorizedAccessPoint>Bach, Johann Sebastian, 1685-1750. Nr. 4-6.</bf:authorizedAccessPoint>\r\n
-      \       <bf:hasAuthority>\r\n            <madsrdf:Authority>\r\n                <madsrdf:authoritativeLabel>Bach,
-      Johann Sebastian, 1685-1750. Nr. 4-6.</madsrdf:authoritativeLabel>\r\n            </madsrdf:Authority>\r\n
-      \       </bf:hasAuthority>\r\n    </bf:Person>\r\n[change to: <bf:authorizedAccessPoint>Bach,
-      Johann Sebastian, 1685-1750.</bf:authorizedAccessPoint> and <madsrdf:authoritativeLabel>Bach,
-      Johann Sebastian, 1685-1750.</madsrdf:authoritativeLabel>]\r\n\r\n<bf:Person
-      rdf:about=\"http://ld4l.harvard.edu/013298672-8person19\">\r\n        <bf:label>Bach,
-      Johann Sebastian, 1685-1750. Nr. 1-3.</bf:label>\r\n        <bf:authorizedAccessPoint>Bach,
-      Johann Sebastian, 1685-1750. Nr. 1-3.</bf:authorizedAccessPoint>\r\n        <bf:hasAuthority>\r\n
+      Nr. 1-3.</bf:authorizedAccessPoint>]\r\n\r\nI'm not sure what the intention
+      is for \"person18\" and \"person19\" below. Nr. 4-6 and Nr. 1-3, respectively,
+      must either be preceded by \"Englische Suiten,\" or \"Nr. 4-6\" and Nr. 1-3\"
+      must be removed from <bf:label>, <bf:authorizedAccessPoint>, and <bf:madsrdf:authoritativeLabel>.
+      in which case the content of \"person18\" and \"person19\" will become identical.\r\n\r\n<bf:Person
+      rdf:about=\"http://ld4l.harvard.edu/013298672-8person18\">\r\n        <bf:label>Bach,
+      Johann Sebastian, 1685-1750. Nr. 4-6.</bf:label>\r\n        <bf:authorizedAccessPoint>Bach,
+      Johann Sebastian, 1685-1750. Nr. 4-6.</bf:authorizedAccessPoint>\r\n        <bf:hasAuthority>\r\n
       \           <madsrdf:Authority>\r\n                <madsrdf:authoritativeLabel>Bach,
+      Johann Sebastian, 1685-1750. Nr. 4-6.</madsrdf:authoritativeLabel>\r\n            </madsrdf:Authority>\r\n
+      \       </bf:hasAuthority>\r\n    </bf:Person>\r\n\r\n<bf:Person rdf:about=\"http://ld4l.harvard.edu/013298672-8person19\">\r\n
+      \       <bf:label>Bach, Johann Sebastian, 1685-1750. Nr. 1-3.</bf:label>\r\n
+      \       <bf:authorizedAccessPoint>Bach, Johann Sebastian, 1685-1750. Nr. 1-3.</bf:authorizedAccessPoint>\r\n
+      \       <bf:hasAuthority>\r\n            <madsrdf:Authority>\r\n                <madsrdf:authoritativeLabel>Bach,
       Johann Sebastian, 1685-1750. Nr. 1-3.</madsrdf:authoritativeLabel>\r\n            </madsrdf:Authority>\r\n
-      \       </bf:hasAuthority>\r\n    </bf:Person>\r\n[change to: <bf:authorizedAccessPoint>Bach,
-      Johann Sebastian, 1685-1750.</bf:authorizedAccessPoint> and <madsrdf:authoritativeLabel>Bach,
-      Johann Sebastian, 1685-1750.</madsrdf:authoritativeLabel>]"
+      \       </bf:hasAuthority>\r\n    </bf:Person>\r\n"
     - '2015-03-09 20:56:43.656324'
-    - '2015-03-09 20:56:43.656324'
+    - '2015-03-20 20:57:22.188381'
     - '4'
   - - '36'
     - '8'
@@ -675,6 +677,1604 @@ conversion_issues:
     - '2015-03-10 16:17:43.059237'
     - '2015-03-10 16:17:43.059237'
     - '13'
+  - - '70'
+    - '13'
+    - '27'
+    - "Coordinates: In the bf:Instance, data from the 034 / 255 are converted to the
+      same bibframe property\r\n\r\n255 |c = <bf:cartographicCoordinates>(W 94⁰--W
+      76⁰/N 40⁰--N 30⁰).</bf:cartographicCoordinates>[human readable]\r\n034 |d |e
+      |f |g =<bf:cartographicCoordinates>W0940000° W0760000° N0400000° N0300000°</bf:cartographicCoordinates>
+      [machine readable]\r\n\r\nShould probably have different elements for human
+      readable version vs. machine readable version of Coordinate data, and machine
+      readable should have 4 separate elements (or standardized delimiting of) for
+      western most, eastern most, northern most, and southernmost coordinates. Also
+      for machine readable version the degrees symbols can be dropped in the conversion.\r\n\r\nAlso
+      would be interesting to have marc to bibframe converter convert all machine
+      readable coordinate data to decimal degrees ... here it's in Hemisphere, Degrees,
+      Minutes, Seconds format, whereas most online mapping services use decimal degrees."
+    - '2015-03-31 18:41:45.687282'
+    - '2015-04-02 14:00:05.722376'
+    - '10'
+  - - '71'
+    - '13'
+    - '43'
+    - "geographic classification codes (MARC 052s) missing in BF \r\n[Not sure how
+      important this really is; but it does represent some data loss]\r\n\r\n"
+    - '2015-03-31 18:44:27.595475'
+    - '2015-03-31 18:44:27.595475'
+    - '10'
+  - - '72'
+    - '13'
+    - '27'
+    - The 034 for machine readable scale and bounding box coordinates appears in the
+      instance but not the work, while the 255 for human readable scale and bounding
+      box coordinates appears in both the instance and the work.  This doesn't make
+      sense to me since they represent the same thing.
+    - '2015-03-31 18:52:42.031758'
+    - '2015-03-31 18:52:42.031758'
+    - '10'
+  - - '73'
+    - '13'
+    - '205'
+    - It doesn't appear that the MARC 651 Geographic Subject heading has been converted
+      to bf:subject
+    - '2015-03-31 19:21:19.175181'
+    - '2015-03-31 19:21:19.175181'
+    - '10'
+  - - '74'
+    - '23'
+    - '43'
+    - "geographic classification codes (MARC 052s) missing in BF \r\n[Not sure how
+      important this really is; but it does represent some data loss]"
+    - '2015-03-31 19:31:31.109482'
+    - '2015-03-31 19:31:31.109482'
+    - '10'
+  - - '75'
+    - '23'
+    - '27'
+    - The 034 for machine readable scale appears in the instance but not the work,
+      while the 255 for human readable scale appears in both the instance and the
+      work.  This doesn't make sense to me since they represent the same thing.
+    - '2015-03-31 19:32:53.158077'
+    - '2015-03-31 19:32:53.158077'
+    - '10'
+  - - '76'
+    - '23'
+    - '205'
+    - It doesn't appear that the MARC 651 Geographic Subject heading has been converted
+      to bf:subject
+    - '2015-03-31 19:37:53.552308'
+    - '2015-03-31 19:37:53.552308'
+    - '10'
+  - - '77'
+    - '23'
+    - '236'
+    - Looks like the converter created a separate instance out of the 776 Other Physical
+      Form field but does not retain some of the associated data e.g. keeps title
+      but drops subfields a and h.  Not sure this is a problem though since the URI
+      is present. Why keep the title?  Also, within the bf model, shouldn't this be
+      part of a work with bf:hasInstance bf:otherPhysicalFormat properties and not
+      an instance property as represented in this record?
+    - '2015-03-31 19:57:40.918353'
+    - '2015-03-31 19:57:40.918353'
+    - '10'
+  - - '78'
+    - '23'
+    - '75'
+    - The 245 subfield c statement of responsibility data is not converted; I'm wondering
+      if it should be converted to bf:responsibilityStatement
+    - '2015-03-31 20:05:21.213602'
+    - '2015-03-31 20:05:21.213602'
+    - '10'
+  - - '79'
+    - '13'
+    - '75'
+    - The 245 subfield c statement of responsibility data is not converted; I'm wondering
+      if it should be converted to bf:responsibilityStatement
+    - '2015-03-31 20:05:37.284728'
+    - '2015-03-31 20:05:37.284728'
+    - '10'
+  - - '80'
+    - '39'
+    - '80'
+    - "Scale: In the bf:Instance, data from the 034 / 255 are converted to the same
+      bibframe property\r\n\r\n034 |a = <bf:cartographicScale>Linear scale</bf:cartographicScale>
+      [machine readable]\r\n034 |b = <bf:cartographicScale>50000</bf:cartographicScale>
+      [machine readable]\r\n255 |a = <bf:cartographicScale>Scale 1:50,000</bf:cartographicScale>
+      \ [human readable]\r\n\r\nShould probably have different elements for human
+      readable version vs. machine readable version of Statement of Scale"
+    - '2015-03-31 20:35:37.605645'
+    - '2015-03-31 20:35:37.605645'
+    - '10'
+  - - '81'
+    - '39'
+    - '43'
+    - "geographic classification codes (MARC 052s) missing in BF \r\n[Not sure how
+      important this really is; but it does represent some data loss]"
+    - '2015-03-31 20:37:11.153818'
+    - '2015-03-31 20:37:11.153818'
+    - '10'
+  - - '82'
+    - '39'
+    - '27'
+    - The 034 for machine readable scale and bounding box coordinates appears in the
+      instance but not the work, while the 255 for human readable scale and bounding
+      box coordinates appears in both the instance and the work.  This doesn't make
+      sense to me since they represent the same thing.
+    - '2015-03-31 20:38:03.924536'
+    - '2015-03-31 20:38:03.924536'
+    - '10'
+  - - '83'
+    - '39'
+    - '205'
+    - It doesn't appear that the MARC 651 Geographic Subject heading has been converted
+      to bf:subject
+    - '2015-03-31 20:39:50.476808'
+    - '2015-03-31 20:39:50.476808'
+    - '10'
+  - - '84'
+    - '39'
+    - '63'
+    - The relationship designator "cartographer" is not represented in the BF
+    - '2015-04-02 14:22:10.256474'
+    - '2015-04-02 14:22:10.256474'
+    - '10'
+  - - '85'
+    - '39'
+    - '75'
+    - In BF, the ISBD punctuation is dropped in from the subfield b data [] info enclosed
+      in brackets indicating information supplied by cataloger
+    - '2015-04-02 14:24:47.482481'
+    - '2015-04-02 14:24:47.482481'
+    - '10'
+  - - '86'
+    - '39'
+    - '107'
+    - Not converted. Could possibly fit cartographicProjection property but MARC data
+      is more granular than bf vocab
+    - '2015-04-02 14:34:26.260698'
+    - '2015-04-02 14:43:38.144883'
+    - '10'
+  - - '87'
+    - '39'
+    - '115'
+    - Not converted (x2).  In some ways covered by Genre/form topics but has file
+      type info in addition to general data type.
+    - '2015-04-02 14:35:46.839565'
+    - '2015-04-02 14:35:46.839565'
+    - '10'
+  - - '88'
+    - '39'
+    - '170'
+    - The 538 is converted as a general note.  I'm surprised there isn't a more appropriate
+      note property in the bf vocabulary... but I don't see one.
+    - '2015-04-02 14:42:10.688936'
+    - '2015-04-02 14:42:10.688936'
+    - '10'
+  - - '89'
+    - '39'
+    - '236'
+    - Looks like the 776 correctly converted to a separate instance but in the triples
+      it never identifies what work it is related to.
+    - '2015-04-02 14:50:58.84085'
+    - '2015-04-02 14:53:41.243169'
+    - '10'
+  - - '90'
+    - '13'
+    - '7'
+    - The 008 byte 22-23 'cp' is a coded field for map projection 'polyconic projection'
+      http://www.loc.gov/marc/bibliographic/bd008p.html  This codelist could be turned
+      into a vocabulary for linking.  There is also a LD vocabulary that already exists
+      for projections http://spatialreference.org/ which would require some vocabulary
+      mapping from the LC codes
+    - '2015-04-02 17:47:55.102378'
+    - '2015-04-02 17:47:55.102378'
+    - '10'
+  - - '91'
+    - '23'
+    - '7'
+    - The 008 byte 22-23 'bh' is a coded field for map projection 'transverse Mercator
+      projection' http://www.loc.gov/marc/bibliographic/bd008p.html  This codelist
+      could be turned into a vocabulary for linking.  There is also a LD vocabulary
+      that already exists for projections http://spatialreference.org/ which would
+      require some vocabulary mapping from the LC codes
+    - '2015-04-02 17:50:30.850463'
+    - '2015-04-02 17:50:30.850463'
+    - '10'
+  - - '92'
+    - '26'
+    - '27'
+    - "Coordinates: In the bf:Instance, data from the 034 / 255 are converted to the
+      same bibframe property\r\n\r\n255 |c = <bf:cartographicCoordinates>(W 91⁰38ʹ--W
+      88⁰07ʹ/N 35⁰00ʹ--N 30⁰00ʹ).</bf:cartographicCoordinates> [human readable]\r\n034
+      |d |e |f |g =<bf:cartographicCoordinates>W0913800° W0880700° N0350000° N0300000°</bf:cartographicCoordinates>
+      [machine readable]\r\n\r\nShould probably have different elements for human
+      readable version vs. machine readable version of Coordinate data, and machine
+      readable should have 4 separate elements (or standardized delimiting of) for
+      western most, eastern most, northern most, and southernmost coordinates. Also
+      for machine readable version the degrees symbols can be dropped in the conversion.\r\n\r\nAlso
+      would be interesting to have marc to bibframe converter convert all machine
+      readable coordinate data to decimal degrees ... here it's in Hemisphere, Degrees,
+      Minutes, Seconds format, whereas most online mapping services use decimal degrees."
+    - '2015-04-07 20:28:54.722061'
+    - '2015-04-07 20:28:54.722061'
+    - '10'
+  - - '93'
+    - '26'
+    - '80'
+    - "Scale: In the bf:Instance, data from the 034 / 255 are converted to the same
+      bibframe property\r\n\r\n034 |a = <bf:cartographicScale>Linear scale</bf:cartographicScale>
+      [machine readable]\r\n034 |b = <bf:cartographicScale>500000</bf:cartographicScale>
+      [machine readable]\r\n255 |a = <bf:cartographicScale>Scale 1:500,000.</bf:cartographicScale>
+      \ [human readable]\r\n\r\nShould probably have different properties for human
+      readable version vs. machine readable version of Statement of Scale"
+    - '2015-04-07 20:31:17.260601'
+    - '2015-04-07 20:31:17.260601'
+    - '10'
+  - - '94'
+    - '26'
+    - '27'
+    - The 034 for machine readable scale and bounding box coordinates appears in the
+      instance but not the work, while the 255 for human readable scale and bounding
+      box coordinates appears in both the instance and the work.  This doesn't make
+      sense to me since they represent the same thing.
+    - '2015-04-07 20:32:00.739578'
+    - '2015-04-07 20:32:00.739578'
+    - '10'
+  - - '95'
+    - '26'
+    - '75'
+    - The 245 subfield c statement of responsibility data is not converted; I'm wondering
+      if it should be converted to bf:responsibilityStatement
+    - '2015-04-07 20:33:31.729874'
+    - '2015-04-07 20:33:31.729874'
+    - '10'
+  - - '96'
+    - '26'
+    - '7'
+    - The 008 byte 22-23 'bh' is a coded field for map projection 'transverse Mercator'
+      http://www.loc.gov/marc/bibliographic/bd008p.html  This codelist could be turned
+      into a vocabulary for linking.  There is also a LD vocabulary that already exists
+      for projections http://spatialreference.org/ which would require some vocabulary
+      mapping from the LC codes
+    - '2015-04-07 20:34:56.824485'
+    - '2015-04-07 20:34:56.824485'
+    - '10'
+  - - '97'
+    - '26'
+    - '28'
+    - "(FDLP)ocn711147035\r\n035 field data converted twice, once from bib record,
+      once from holding"
+    - '2015-04-07 20:39:14.99642'
+    - '2015-04-07 20:39:14.99642'
+    - '10'
+  - - '98'
+    - '26'
+    - '51'
+    - Field did not convert
+    - '2015-04-07 20:40:46.476641'
+    - '2015-04-07 20:40:46.476641'
+    - '10'
+  - - '99'
+    - '37'
+    - '245'
+    - "\r\n490/830 conversion to MARC XML looks good, but series numbering included
+      in BF aap (see RDF/XML line 30):  \r\n\r\n\r\n<bf:authorizedAccessPoint>Empreintes
+      philosophiques ; 5</bf:authorizedAccessPoint>\r\n\r\n\r\nIs there a BF property
+      for series numbering?\r\n\r\n"
+    - '2015-04-20 14:19:15.809779'
+    - '2015-04-20 21:11:12.74671'
+    - '3'
+  - - '100'
+    - '32'
+    - '205'
+    - "\r\nconversion of both 650 and 651 to MARC XML looks good, but only 650 in
+      BF "
+    - '2015-04-20 14:41:02.198429'
+    - '2015-04-20 21:10:04.021752'
+    - '3'
+  - - '101'
+    - '31'
+    - '104'
+    - "\r\n<bf:mediaCategory> duplicated in BF (lines 57-58)\r\n\r\nIt looks like
+      the converter maps instances of 337 from both bib and holdings record."
+    - '2015-04-20 15:26:15.262976'
+    - '2015-04-20 21:30:08.052012'
+    - '3'
+  - - '102'
+    - '31'
+    - '105'
+    - "\r\n<bf:carrierCategory> duplicated in BF (lines 59-60)\r\n\r\nSame comment
+      as 337"
+    - '2015-04-20 15:28:15.532309'
+    - '2015-04-20 21:30:51.17499'
+    - '3'
+  - - '103'
+    - '32'
+    - '32'
+    - "\r\nBF conversion of 040 |e rda looks good (line 79): \r\n\r\n<bf:descriptionConventions
+      rdf:resource=\"http://id.loc.gov/vocabulary/descriptionConventions/rda\"/>\r\n\r\nDitto
+      for other RDA records evaluated\r\n\r\n--\r\n\r\nGeneral comment on Descriptive
+      conventions (LDR 18, 040 |e )\r\n\r\nAs mentioned above, LDR 18 has not converted
+      correctly in any of the records I've looked at, and it appears that the <bf:descriptionConventions>
+      element was mapped from the 040 |e.  The result is that all non-RDA (mostly
+      AACR2) records in this round have been converted as:\r\n\r\n<bf:descriptionConventions
+      rdf:resource=\"http://id.loc.gov/vocabulary/descriptionConventions/nonisbd\"/>\r\n\r\nrather
+      than \r\n\r\n<\" \"   = http://id.loc.gov/vocabulary/descriptionConventions/aacr2\"
+      >\r\n\r\nQuestion: how will the (numerous) descriptive conventions of legacy
+      resources be maintained in BF? What role will they have?\r\n\r\n(It is worth
+      pointing out that LDR 18 and 040 |e values overlap, but are not identical. For
+      example, a rare book cataloged according to AACR2 will have LDR 18=\"a\" and
+      040 |e \"dcrb\".)\r\n"
+    - '2015-04-20 15:37:13.355306'
+    - '2015-04-21 21:12:20.169706'
+    - '3'
+  - - '104'
+    - '10'
+    - '1'
+    - "Test comment--please disregard\r\n\r\n\r\n"
+    - '2015-04-22 18:15:12.252171'
+    - '2015-04-22 19:03:38.057663'
+    - '4'
+  - - '105'
+    - '10'
+    - '1'
+    - "LDR 07: Original BIBFRAME iteration had the following:\r\n<bf:modeOfIssuance>monographic</bf:modeOfIssuance>\r\n\r\nThis
+      has disappeared in the revised iteration. Corresponds to LDR 07 \"m\" (\"monograph/item\")\r\n\r\n"
+    - '2015-04-22 18:15:41.787456'
+    - '2015-04-22 18:15:41.787456'
+    - '4'
+  - - '106'
+    - '10'
+    - '1'
+    - "LDR 18: Original BIBFRAME iteration had the following:\r\n <bf:descriptionConventions
+      rdf:resource=\"http://id.loc.gov/vocabulary/descriptionConventions/aacr2\"/>\r\n--This
+      corresponds with LDR 18 (descriptive cataloging conventions \"a\" for aacr2)
+      and was accurate.\r\n\r\nThe revised iteration has changed the original coding
+      to:\r\n\r\n<bf:descriptionConventions rdf:resource=\"http://id.loc.gov/vocabulary/descriptionConventions/nonisbd\"/>\r\n--This
+      is not accurate.\r\n"
+    - '2015-04-22 18:18:50.111145'
+    - '2015-04-22 18:18:50.111145'
+    - '4'
+  - - '107'
+    - '10'
+    - '32'
+    - Subfields |a and |d from the original 040 field have converted in the second
+      round (in the original iteration it was just subfield |a). And, it was a string
+      before; now it's linked data--great! Subfield |d "MH-Mu" has yet to be converted
+      to BIBFRAME. Is there a BIBFRAME equivalent to "transcribing agency"?
+    - '2015-04-22 18:28:01.045707'
+    - '2015-04-22 18:28:01.045707'
+    - '4'
+  - - '108'
+    - '10'
+    - '75'
+    - "Original BIBFRAME iteration:\r\n<bf:titleStatement>Die Kunst der Fuge = The
+      art of fugue BWV 1080 / Johann Sebastian Bach ; herausgegeben von Christoph
+      Wolff.</bf:titleStatement>\r\n\r\nand:\r\n\r\n<bf:responsibilityStatement>Johann
+      Sebastian Bach ; herausgegeben von Christoph Wolff.</bf:responsibilityStatement>\r\n\r\nThese
+      are not in the revised BIBFRAME resource. Could one of them be restored?\r\n\r\n"
+    - '2015-04-22 18:32:47.799642'
+    - '2015-04-22 19:04:55.593054'
+    - '4'
+  - - '109'
+    - '10'
+    - '75'
+    - "245 subfield |b\r\n\r\nThe original 245 reads:\r\n    <subfield code='a'>Die
+      Kunst der Fuge =</subfield>\r\n    <subfield code='b'>The art of fugue : BWV
+      1080 /</subfield>\r\n\r\nWe have in the BIBFRAME resource:\r\n<bf:title xml:lang=\"x-bf-sort\">Kunst
+      der Fuge </bf:title> to account for the definite article.\r\n\r\nThe original
+      MARC record lacks a 246 31 for the parallel title, Art of fugue. But, if it
+      did have the 246 field, would that generate the following in BIBFRAME:\r\n<bf:title
+      xml:lang=\"x-bf-sort\">Art of fugue </bf:title>, which would also account for
+      the definite article in the English title? (or would it be coded as <bf:titleVariation/>?)\r\n\r\n\r\n\r\n\r\n"
+    - '2015-04-22 18:43:15.425376'
+    - '2015-04-22 18:43:15.425376'
+    - '4'
+  - - '110'
+    - '10'
+    - '254'
+    - "None of the information from the holdings record regarding the shelving location
+      (subfield |b GEN) or identification of the call number scheme (852 first indicator
+      7, subfield |2 ZHCL) made it into the BIBFRAME resource.\r\n\r\nThe entire contents
+      of the 852 field was present in the MARC/XML holdings record, but notice that
+      \ apart from OWN, 079, 852, H08, H012, and H03 fields, none of the other holdings
+      fields (DB, SYSID, FMT, LDR, LKR, 001, 005, 008, 866) converted to MARC/XML
+      (and from there to BIBFRAME)"
+    - '2015-04-22 18:53:44.878443'
+    - '2015-04-22 18:53:44.878443'
+    - '4'
+  - - '111'
+    - '10'
+    - '276'
+    - Not an 887 field, actually, but the H01, H03, and H05 fields in the MARC/XML
+      bib record. These did not convert to BIBFRAME. I would think that of the three
+      of them, it would be useful to have a record of the original HULPR number (H01).
+      It would probably be useful as well to have the aleph number of the source record
+      (000995241) somewhere in string form (or does <bf:Work rdf:about="http://ld4l.harvard.edu/000995241-1">
+      make that unnecessary?)
+    - '2015-04-22 19:01:06.65573'
+    - '2015-04-22 19:01:06.65573'
+    - '4'
+  - - '112'
+    - '4'
+    - '7'
+    - The dates from the fixed field appear not to have converted; as the 245 $f and
+      $g are also absent, the collection's date range only appears in the preferred-citation
+      note. The language code 'eng' appears in a bf:language tag, so at least part
+      of the field was converted.
+    - '2015-04-24 19:34:32.464935'
+    - '2015-04-24 19:34:32.464935'
+    - '17'
+  - - '113'
+    - '4'
+    - '75'
+    - Subfields $f and $g were omitted from the 245 in generating the bf:authorizedAccessPoint
+      and the bf:title.
+    - '2015-04-24 19:38:16.892813'
+    - '2015-04-24 19:38:16.892813'
+    - '17'
+  - - '114'
+    - '4'
+    - '138'
+    - 'There''s been some improvement in the granularity of note fields: 520 now converts
+      to bf:Summary. Some of the old issues reappear, however: the 555 0_ converts
+      to bf:authorizedAccessPoint, while the 555 8_ converts appropriately to bf:findingAidNote.
+      545 and 530, meanwhile, convert to generic notes.'
+    - '2015-04-24 19:42:43.675416'
+    - '2015-04-24 20:16:06.298851'
+    - '17'
+  - - '115'
+    - '4'
+    - '199'
+    - The 600 for "James family", which is coded as a family name, still converts
+      to bf:Person, when bf:Family is available according to the vocabulary.
+    - '2015-04-24 19:45:08.827122'
+    - '2015-04-24 19:45:08.827122'
+    - '17'
+  - - '116'
+    - '4'
+    - '214'
+    - The relationship designator 'recipient' (in the 700 field Gray, John Chipman,
+      1793-1881, recipient) is stripped from the Bibframe version.
+    - '2015-04-24 19:48:05.96811'
+    - '2015-04-24 19:48:05.96811'
+    - '17'
+  - - '117'
+    - '4'
+    - '210'
+    - The 656 fields (a more esoteric topical heading, to be sure) converted to bf:Topic.
+      I don't see 'occupation' in a quick scan of the BF vocabulary.
+    - '2015-04-24 20:04:37.311644'
+    - '2015-04-24 20:04:37.311644'
+    - '17'
+  - - '118'
+    - '4'
+    - '1'
+    - The bf:descriptionConventions for dacs is correct, but as noted on other records,
+      the AACR2 coding (from LDR 18 'a') now converts to "nonisbd".
+    - '2015-04-24 20:28:52.027913'
+    - '2015-04-24 20:28:52.027913'
+    - '17'
+
+---
+issues:
+  columns:
+  - id
+  - issue_tag
+  - created_at
+  - updated_at
+  records: 
+  - - '1'
+    - LEADER
+    - '2015-01-29 17:43:53'
+    - '2015-01-29 17:43:53'
+  - - '2'
+    - 001 - CONTROL NUMBER (NR)
+    - '2015-01-29 17:43:53'
+    - '2015-01-29 17:43:53'
+  - - '3'
+    - 003 - CONTROL NUMBER IDENTIFIER (NR)
+    - '2015-01-29 17:43:53'
+    - '2015-01-29 17:43:53'
+  - - '4'
+    - 005 - DATE AND TIME OF LATEST TRANSACTION (NR)
+    - '2015-01-29 17:43:53'
+    - '2015-01-29 17:43:53'
+  - - '5'
+    - 006 - FIXED-LENGTH DATA ELEMENTS--ADDITIONAL MATERIAL CHARACTERISTICS--GENERAL
+      INFORMATION (R)
+    - '2015-01-29 17:43:53'
+    - '2015-01-29 17:43:53'
+  - - '6'
+    - 007 - PHYSICAL DESCRIPTION FIXED FIELD--GENERAL INFORMATION (R)
+    - '2015-01-29 17:43:53'
+    - '2015-01-29 17:43:53'
+  - - '7'
+    - 008 - FIXED-LENGTH DATA ELEMENTS--GENERAL INFORMATION (NR)
+    - '2015-01-29 17:43:53'
+    - '2015-01-29 17:43:53'
+  - - '8'
+    - 009 - PHYSICAL DESCRIPTION FIXED-FIELD FOR ARCHIVAL COLLECTION (VM) - [OBSOLETE]
+    - '2015-01-29 17:43:53'
+    - '2015-01-29 17:43:53'
+  - - '9'
+    - 010 - LIBRARY OF CONGRESS CONTROL NUMBER (NR)
+    - '2015-01-29 17:43:53'
+    - '2015-01-29 17:43:53'
+  - - '10'
+    - 011 - LINKING LIBRARY OF CONGRESS CONTROL NUMBER (NR) [OBSOLETE]
+    - '2015-01-29 17:43:54'
+    - '2015-01-29 17:43:54'
+  - - '11'
+    - 013 - PATENT CONTROL INFORMATION (R)
+    - '2015-01-29 17:43:54'
+    - '2015-01-29 17:43:54'
+  - - '12'
+    - 015 - NATIONAL BIBLIOGRAPHY NUMBER (R)
+    - '2015-01-29 17:43:54'
+    - '2015-01-29 17:43:54'
+  - - '13'
+    - 016 - NATIONAL BIBLIOGRAPHIC AGENCY CONTROL NUMBER (R)
+    - '2015-01-29 17:43:54'
+    - '2015-01-29 17:43:54'
+  - - '14'
+    - 017 - COPYRIGHT OR LEGAL DEPOSIT NUMBER (R)
+    - '2015-01-29 17:43:54'
+    - '2015-01-29 17:43:54'
+  - - '15'
+    - 018 - COPYRIGHT ARTICLE-FEE CODE (NR)
+    - '2015-01-29 17:43:54'
+    - '2015-01-29 17:43:54'
+  - - '16'
+    - 020 - INTERNATIONAL STANDARD BOOK NUMBER (R)
+    - '2015-01-29 17:43:54'
+    - '2015-01-29 17:43:54'
+  - - '17'
+    - 022 - INTERNATIONAL STANDARD SERIAL NUMBER (R)
+    - '2015-01-29 17:43:54'
+    - '2015-01-29 17:43:54'
+  - - '18'
+    - 024 - OTHER STANDARD IDENTIFIER (R)
+    - '2015-01-29 17:43:54'
+    - '2015-01-29 17:43:54'
+  - - '19'
+    - 025 - OVERSEAS ACQUISITION NUMBER (R)
+    - '2015-01-29 17:43:54'
+    - '2015-01-29 17:43:54'
+  - - '20'
+    - 026 - FINGERPRINT IDENTIFIER (R)
+    - '2015-01-29 17:43:54'
+    - '2015-01-29 17:43:54'
+  - - '21'
+    - 027 - STANDARD TECHNICAL REPORT NUMBER (R)
+    - '2015-01-29 17:43:55'
+    - '2015-01-29 17:43:55'
+  - - '22'
+    - 028 - PUBLISHER NUMBER (R)
+    - '2015-01-29 17:43:55'
+    - '2015-01-29 17:43:55'
+  - - '23'
+    - '030 - CODEN DESIGNATION (R) '
+    - '2015-01-29 17:43:55'
+    - '2015-01-29 17:43:55'
+  - - '24'
+    - '031 - MUSICAL INCIPITS INFORMATION (R) '
+    - '2015-01-29 17:43:55'
+    - '2015-01-29 17:43:55'
+  - - '25'
+    - 032 - POSTAL REGISTRATION NUMBER (R)
+    - '2015-01-29 17:43:55'
+    - '2015-01-29 17:43:55'
+  - - '26'
+    - 033 - DATE/TIME AND PLACE OF AN EVENT (R)
+    - '2015-01-29 17:43:55'
+    - '2015-01-29 17:43:55'
+  - - '27'
+    - 034 - CODED CARTOGRAPHIC MATHEMATICAL DATA (R)
+    - '2015-01-29 17:43:55'
+    - '2015-01-29 17:43:55'
+  - - '28'
+    - 035 - SYSTEM CONTROL NUMBER (R)
+    - '2015-01-29 17:43:55'
+    - '2015-01-29 17:43:55'
+  - - '29'
+    - 036 - ORIGINAL STUDY NUMBER FOR COMPUTER DATA FILES (NR)
+    - '2015-01-29 17:43:55'
+    - '2015-01-29 17:43:55'
+  - - '30'
+    - 037 - SOURCE OF ACQUISITION (R)
+    - '2015-01-29 17:43:55'
+    - '2015-01-29 17:43:55'
+  - - '31'
+    - 038 - RECORD CONTENT LICENSOR (NR)
+    - '2015-01-29 17:43:56'
+    - '2015-01-29 17:43:56'
+  - - '32'
+    - 040 - CATALOGING SOURCE (NR)
+    - '2015-01-29 17:43:56'
+    - '2015-01-29 17:43:56'
+  - - '33'
+    - 041 - LANGUAGE CODE (R)
+    - '2015-01-29 17:43:56'
+    - '2015-01-29 17:43:56'
+  - - '34'
+    - 042 - AUTHENTICATION CODE (NR)
+    - '2015-01-29 17:43:56'
+    - '2015-01-29 17:43:56'
+  - - '35'
+    - 043 - GEOGRAPHIC AREA CODE (NR)
+    - '2015-01-29 17:43:56'
+    - '2015-01-29 17:43:56'
+  - - '36'
+    - 044 - COUNTRY OF PUBLISHING/PRODUCING ENTITY CODE (NR)
+    - '2015-01-29 17:43:56'
+    - '2015-01-29 17:43:56'
+  - - '37'
+    - 045 - TIME PERIOD OF CONTENT (NR)
+    - '2015-01-29 17:43:56'
+    - '2015-01-29 17:43:56'
+  - - '38'
+    - 046 - SPECIAL CODED DATES (R)
+    - '2015-01-29 17:43:56'
+    - '2015-01-29 17:43:56'
+  - - '39'
+    - 047 - FORM OF MUSICAL COMPOSITION CODE (R)
+    - '2015-01-29 17:43:56'
+    - '2015-01-29 17:43:56'
+  - - '40'
+    - 048 - NUMBER OF MUSICAL INSTRUMENTS OR VOICES CODE (R)
+    - '2015-01-29 17:43:56'
+    - '2015-01-29 17:43:56'
+  - - '41'
+    - 050 - LIBRARY OF CONGRESS CALL NUMBER (R)
+    - '2015-01-29 17:43:56'
+    - '2015-01-29 17:43:56'
+  - - '42'
+    - 051 - LIBRARY OF CONGRESS COPY, ISSUE, OFFPRINT STATEMENT (R)
+    - '2015-01-29 17:43:57'
+    - '2015-01-29 17:43:57'
+  - - '43'
+    - 052 - GEOGRAPHIC CLASSIFICATION (R)
+    - '2015-01-29 17:43:57'
+    - '2015-01-29 17:43:57'
+  - - '44'
+    - 055 - CLASSIFICATION NUMBERS ASSIGNED IN CANADA (R)
+    - '2015-01-29 17:43:57'
+    - '2015-01-29 17:43:57'
+  - - '45'
+    - 060 - NATIONAL LIBRARY OF MEDICINE CALL NUMBER (R)
+    - '2015-01-29 17:43:57'
+    - '2015-01-29 17:43:57'
+  - - '46'
+    - 061 - NATIONAL LIBRARY OF MEDICINE COPY STATEMENT (R)
+    - '2015-01-29 17:43:57'
+    - '2015-01-29 17:43:57'
+  - - '47'
+    - 066 - CHARACTER SETS PRESENT (NR)
+    - '2015-01-29 17:43:57'
+    - '2015-01-29 17:43:57'
+  - - '48'
+    - 070 - NATIONAL AGRICULTURAL LIBRARY CALL NUMBER (R)
+    - '2015-01-29 17:43:57'
+    - '2015-01-29 17:43:57'
+  - - '49'
+    - 071 - NATIONAL AGRICULTURAL LIBRARY COPY STATEMENT (R)
+    - '2015-01-29 17:43:57'
+    - '2015-01-29 17:43:57'
+  - - '50'
+    - 072 - SUBJECT CATEGORY CODE (R)
+    - '2015-01-29 17:43:57'
+    - '2015-01-29 17:43:57'
+  - - '51'
+    - 074 - GPO ITEM NUMBER (R)
+    - '2015-01-29 17:43:57'
+    - '2015-01-29 17:43:57'
+  - - '52'
+    - 080 - UNIVERSAL DECIMAL CLASSIFICATION NUMBER (R)
+    - '2015-01-29 17:43:58'
+    - '2015-01-29 17:43:58'
+  - - '53'
+    - 082 - DEWEY DECIMAL CLASSIFICATION NUMBER (R)
+    - '2015-01-29 17:43:58'
+    - '2015-01-29 17:43:58'
+  - - '54'
+    - 083 - ADDITIONAL DEWEY DECIMAL CLASSIFICATION NUMBER (R)
+    - '2015-01-29 17:43:58'
+    - '2015-01-29 17:43:58'
+  - - '55'
+    - 084 - OTHER CLASSIFICATION NUMBER (R)
+    - '2015-01-29 17:43:58'
+    - '2015-01-29 17:43:58'
+  - - '56'
+    - 085 - SYNTHESIZED CLASSIFICATION NUMBER COMPONENTS (R)
+    - '2015-01-29 17:43:58'
+    - '2015-01-29 17:43:58'
+  - - '57'
+    - 086 - GOVERNMENT DOCUMENT CLASSIFICATION NUMBER (R)
+    - '2015-01-29 17:43:58'
+    - '2015-01-29 17:43:58'
+  - - '58'
+    - 088 - REPORT NUMBER (R)
+    - '2015-01-29 17:43:58'
+    - '2015-01-29 17:43:58'
+  - - '59'
+    - 090 - LOCAL CALL NUMBER (BK AM CF MP MU VM SE) [OBSOLETE]
+    - '2015-01-29 17:43:58'
+    - '2015-01-29 17:43:58'
+  - - '60'
+    - 090 - SHELF LOCATION (AM)[OBSOLETE]
+    - '2015-01-29 17:43:58'
+    - '2015-01-29 17:43:58'
+  - - '61'
+    - 091 - MICROFILM SHELF LOCATION (AM) [OBSOLETE]
+    - '2015-01-29 17:43:58'
+    - '2015-01-29 17:43:58'
+  - - '62'
+    - 100 - MAIN ENTRY--PERSONAL NAME (NR)
+    - '2015-01-29 17:43:58'
+    - '2015-01-29 17:43:58'
+  - - '63'
+    - 110 - MAIN ENTRY--CORPORATE NAME (NR)
+    - '2015-01-29 17:43:59'
+    - '2015-01-29 17:43:59'
+  - - '64'
+    - 111 - MAIN ENTRY--MEETING NAME (NR)
+    - '2015-01-29 17:43:59'
+    - '2015-01-29 17:43:59'
+  - - '65'
+    - 130 - MAIN ENTRY--UNIFORM TITLE (NR)
+    - '2015-01-29 17:43:59'
+    - '2015-01-29 17:43:59'
+  - - '66'
+    - 210 - ABBREVIATED TITLE (R)
+    - '2015-01-29 17:43:59'
+    - '2015-01-29 17:43:59'
+  - - '67'
+    - 211 - ACRONYM OR SHORTENED TITLE (R) [OBSOLETE]
+    - '2015-01-29 17:43:59'
+    - '2015-01-29 17:43:59'
+  - - '68'
+    - 212 - VARIANT ACCESS TITLE (R) [OBSOLETE]
+    - '2015-01-29 17:43:59'
+    - '2015-01-29 17:43:59'
+  - - '69'
+    - 214 - AUGMENTED TITLE (R) [OBSOLETE]
+    - '2015-01-29 17:43:59'
+    - '2015-01-29 17:43:59'
+  - - '70'
+    - 222 - KEY TITLE (R)
+    - '2015-01-29 17:43:59'
+    - '2015-01-29 17:43:59'
+  - - '71'
+    - 240 - UNIFORM TITLE (NR)
+    - '2015-01-29 17:43:59'
+    - '2015-01-29 17:43:59'
+  - - '72'
+    - 241 - ROMANIZED TITLE (BK AM CF MP MU VM) (NR) [OBSOLETE]
+    - '2015-01-29 17:43:59'
+    - '2015-01-29 17:43:59'
+  - - '73'
+    - 242 - TRANSLATION OF TITLE BY CATALOGING AGENCY (R)
+    - '2015-01-29 17:43:59'
+    - '2015-01-29 17:43:59'
+  - - '74'
+    - 243 - COLLECTIVE UNIFORM TITLE (NR)
+    - '2015-01-29 17:44:00'
+    - '2015-01-29 17:44:00'
+  - - '75'
+    - 245 - TITLE STATEMENT (NR)
+    - '2015-01-29 17:44:00'
+    - '2015-01-29 17:44:00'
+  - - '76'
+    - 246 - VARYING FORM OF TITLE (R)
+    - '2015-01-29 17:44:00'
+    - '2015-01-29 17:44:00'
+  - - '77'
+    - 247 - FORMER TITLE (R)
+    - '2015-01-29 17:44:00'
+    - '2015-01-29 17:44:00'
+  - - '78'
+    - 250 - EDITION STATEMENT (R)
+    - '2015-01-29 17:44:00'
+    - '2015-01-29 17:44:00'
+  - - '79'
+    - 254 - MUSICAL PRESENTATION STATEMENT (NR)
+    - '2015-01-29 17:44:00'
+    - '2015-01-29 17:44:00'
+  - - '80'
+    - 255 - CARTOGRAPHIC MATHEMATICAL DATA (R)
+    - '2015-01-29 17:44:00'
+    - '2015-01-29 17:44:00'
+  - - '81'
+    - 256 - COMPUTER FILE CHARACTERISTICS (NR)
+    - '2015-01-29 17:44:00'
+    - '2015-01-29 17:44:00'
+  - - '82'
+    - 257 - COUNTRY OF PRODUCING ENTITY (R)
+    - '2015-01-29 17:44:00'
+    - '2015-01-29 17:44:00'
+  - - '83'
+    - 258 - PHILATELIC ISSUE DATE (R)
+    - '2015-01-29 17:44:00'
+    - '2015-01-29 17:44:00'
+  - - '84'
+    - 260 - PUBLICATION, DISTRIBUTION, ETC. (IMPRINT) (R)
+    - '2015-01-29 17:44:00'
+    - '2015-01-29 17:44:00'
+  - - '85'
+    - 261 - IMPRINT STATEMENT FOR FILMS (Pre-AACR 1 Revised) (NR) [LOCAL]
+    - '2015-01-29 17:44:01'
+    - '2015-01-29 17:44:01'
+  - - '86'
+    - 262 - IMPRINT STATEMENT FOR SOUND RECORDINGS (Pre-AACR 2) (NR) [LOCAL]
+    - '2015-01-29 17:44:01'
+    - '2015-01-29 17:44:01'
+  - - '87'
+    - 263 - PROJECTED PUBLICATION DATE (NR)
+    - '2015-01-29 17:44:01'
+    - '2015-01-29 17:44:01'
+  - - '88'
+    - 264 - PRODUCTION, PUBLICATION, DISTRIBUTION, MANUFACTURE, AND COPYRIGHT NOTICE
+      (R)
+    - '2015-01-29 17:44:01'
+    - '2015-01-29 17:44:01'
+  - - '89'
+    - 265 - SOURCE FOR ACQUISITION/SUBSCRIPTION ADDRESS (NR) [OBSOLETE]
+    - '2015-01-29 17:44:01'
+    - '2015-01-29 17:44:01'
+  - - '90'
+    - 270 - ADDRESS (R)
+    - '2015-01-29 17:44:01'
+    - '2015-01-29 17:44:01'
+  - - '91'
+    - 300 - PHYSICAL DESCRIPTION (R)
+    - '2015-01-29 17:44:01'
+    - '2015-01-29 17:44:01'
+  - - '92'
+    - 301 - PHYSICAL DESCRIPTION FOR FILMS (PRE-AACR 2) (VM) [OBSOLETE]
+    - '2015-01-29 17:44:01'
+    - '2015-01-29 17:44:01'
+  - - '93'
+    - 302 - PAGE OR ITEM COUNT (BK AM) [OBSOLETE]
+    - '2015-01-29 17:44:01'
+    - '2015-01-29 17:44:01'
+  - - '94'
+    - 303 - UNIT COUNT (AM) [OBSOLETE]
+    - '2015-01-29 17:44:01'
+    - '2015-01-29 17:44:01'
+  - - '95'
+    - 304 - LINEAR FOOTAGE (AM) [OBSOLETE]
+    - '2015-01-29 17:44:02'
+    - '2015-01-29 17:44:02'
+  - - '96'
+    - 305 - PHYSICAL DESCRIPTION FOR SOUND RECORDINGS (Pre-AACR 2) (MU) [OBSOLETE]
+    - '2015-01-29 17:44:02'
+    - '2015-01-29 17:44:02'
+  - - '97'
+    - 306 - PLAYING TIME (NR)
+    - '2015-01-29 17:44:02'
+    - '2015-01-29 17:44:02'
+  - - '98'
+    - 307 - HOURS, ETC. (R)
+    - '2015-01-29 17:44:02'
+    - '2015-01-29 17:44:02'
+  - - '99'
+    - 308 - PHYSICAL DESCRIPTION FOR FILMS (ARCHIVAL) (VM) [OBSOLETE]
+    - '2015-01-29 17:44:02'
+    - '2015-01-29 17:44:02'
+  - - '100'
+    - 310 - CURRENT PUBLICATION FREQUENCY (NR)
+    - '2015-01-29 17:44:02'
+    - '2015-01-29 17:44:02'
+  - - '101'
+    - 315 - FREQUENCY (NR) (CF MP) [OBSOLETE]
+    - '2015-01-29 17:44:02'
+    - '2015-01-29 17:44:02'
+  - - '102'
+    - 321 - FORMER PUBLICATION FREQUENCY (R)
+    - '2015-01-29 17:44:02'
+    - '2015-01-29 17:44:02'
+  - - '103'
+    - 336 - CONTENT TYPE (R)
+    - '2015-01-29 17:44:02'
+    - '2015-01-29 17:44:02'
+  - - '104'
+    - 337 - MEDIA TYPE (R)
+    - '2015-01-29 17:44:03'
+    - '2015-01-29 17:44:03'
+  - - '105'
+    - 338 - CARRIER TYPE (R)
+    - '2015-01-29 17:44:03'
+    - '2015-01-29 17:44:03'
+  - - '106'
+    - 340 - PHYSICAL MEDIUM (R)
+    - '2015-01-29 17:44:03'
+    - '2015-01-29 17:44:03'
+  - - '107'
+    - 342 - GEOSPATIAL REFERENCE DATA (R)
+    - '2015-01-29 17:44:03'
+    - '2015-01-29 17:44:03'
+  - - '108'
+    - 343 - PLANAR COORDINATE DATA (R)
+    - '2015-01-29 17:44:03'
+    - '2015-01-29 17:44:03'
+  - - '109'
+    - 344 - SOUND CHARACTERISTICS (R)
+    - '2015-01-29 17:44:03'
+    - '2015-01-29 17:44:03'
+  - - '110'
+    - 345 - PROJECTION CHARACTERISTICS OF MOVING IMAGE (R)
+    - '2015-01-29 17:44:03'
+    - '2015-01-29 17:44:03'
+  - - '111'
+    - 346 - VIDEO CHARACTERISTICS (R)
+    - '2015-01-29 17:44:03'
+    - '2015-01-29 17:44:03'
+  - - '112'
+    - 347 - DIGITAL FILE CHARACTERISTICS (R)
+    - '2015-01-29 17:44:03'
+    - '2015-01-29 17:44:03'
+  - - '113'
+    - '350 - PRICE (NR) (BK AM CF MU VM SE) [OBSOLETE] '
+    - '2015-01-29 17:44:03'
+    - '2015-01-29 17:44:03'
+  - - '114'
+    - 351 - ORGANIZATION AND ARRANGEMENT OF MATERIALS (R)
+    - '2015-01-29 17:44:03'
+    - '2015-01-29 17:44:03'
+  - - '115'
+    - 352 - DIGITAL GRAPHIC REPRESENTATION (R)
+    - '2015-01-29 17:44:04'
+    - '2015-01-29 17:44:04'
+  - - '116'
+    - 355 - SECURITY CLASSIFICATION CONTROL (R)
+    - '2015-01-29 17:44:04'
+    - '2015-01-29 17:44:04'
+  - - '117'
+    - 357 - ORIGINATOR DISSEMINATION CONTROL (NR)
+    - '2015-01-29 17:44:04'
+    - '2015-01-29 17:44:04'
+  - - '118'
+    - 359 - RENTAL PRICE (VM) [OBSOLETE]
+    - '2015-01-29 17:44:04'
+    - '2015-01-29 17:44:04'
+  - - '119'
+    - 362 - DATES OF PUBLICATION AND/OR SEQUENTIAL DESIGNATION (R)
+    - '2015-01-29 17:44:04'
+    - '2015-01-29 17:44:04'
+  - - '120'
+    - 363 - NORMALIZED DATE AND SEQUENTIAL DESIGNATION (R)
+    - '2015-01-29 17:44:04'
+    - '2015-01-29 17:44:04'
+  - - '121'
+    - 365 - TRADE PRICE (R)
+    - '2015-01-29 17:44:04'
+    - '2015-01-29 17:44:04'
+  - - '122'
+    - 366 - TRADE AVAILABILITY INFORMATION (R)
+    - '2015-01-29 17:44:04'
+    - '2015-01-29 17:44:04'
+  - - '123'
+    - 370 - ASSOCIATED PLACE (R)
+    - '2015-01-29 17:44:04'
+    - '2015-01-29 17:44:04'
+  - - '124'
+    - 377 - ASSOCIATED LANGUAGE (R)
+    - '2015-01-29 17:44:04'
+    - '2015-01-29 17:44:04'
+  - - '125'
+    - 380 - FORM OF WORK (R)
+    - '2015-01-29 17:44:05'
+    - '2015-01-29 17:44:05'
+  - - '126'
+    - 381 - OTHER DISTINGUISHING CHARACTERISTICS OF WORK OR EXPRESSION (R)
+    - '2015-01-29 17:44:05'
+    - '2015-01-29 17:44:05'
+  - - '127'
+    - 382 - MEDIUM OF PERFORMANCE (R)
+    - '2015-01-29 17:44:05'
+    - '2015-01-29 17:44:05'
+  - - '128'
+    - 383 - NUMERIC DESIGNATION OF MUSICAL WORK (R)
+    - '2015-01-29 17:44:05'
+    - '2015-01-29 17:44:05'
+  - - '129'
+    - 384 - KEY (NR)
+    - '2015-01-29 17:44:05'
+    - '2015-01-29 17:44:05'
+  - - '130'
+    - 385 - AUDIENCE CHARACTERISTICS (R)
+    - '2015-01-29 17:44:05'
+    - '2015-01-29 17:44:05'
+  - - '131'
+    - 386 - CREATOR/CONTRIBUTOR CHARACTERISTICS (R)
+    - '2015-01-29 17:44:05'
+    - '2015-01-29 17:44:05'
+  - - '132'
+    - 388 - TIME PERIOD OF CREATION (R)
+    - '2015-01-29 17:44:05'
+    - '2015-01-29 17:44:05'
+  - - '133'
+    - 400 - SERIES STATEMENT/ADDED ENTRY--PERSONAL NAME  (R) [US-LOCAL]
+    - '2015-01-29 17:44:05'
+    - '2015-01-29 17:44:05'
+  - - '134'
+    - 410 - SERIES STATEMENT/ADDED ENTRY--CORPORATE NAME (R) [US-LOCAL]
+    - '2015-01-29 17:44:06'
+    - '2015-01-29 17:44:06'
+  - - '135'
+    - 411 - SERIES STATEMENT/ADDED ENTRY--MEETING NAME (R) [US-LOCAL]
+    - '2015-01-29 17:44:06'
+    - '2015-01-29 17:44:06'
+  - - '136'
+    - 440 - SERIES STATEMENT/ADDED ENTRY--TITLE (R) [OBSOLETE]
+    - '2015-01-29 17:44:06'
+    - '2015-01-29 17:44:06'
+  - - '137'
+    - 490 - SERIES STATEMENT (R)
+    - '2015-01-29 17:44:06'
+    - '2015-01-29 17:44:06'
+  - - '138'
+    - 500 - GENERAL NOTE (R)
+    - '2015-01-29 17:44:06'
+    - '2015-01-29 17:44:06'
+  - - '139'
+    - 501 - WITH NOTE (R)
+    - '2015-01-29 17:44:06'
+    - '2015-01-29 17:44:06'
+  - - '140'
+    - 502 - DISSERTATION NOTE (R)
+    - '2015-01-29 17:44:06'
+    - '2015-01-29 17:44:06'
+  - - '141'
+    - 503 - BIBLIOGRAPHIC HISTORY NOTE (R) (BK CF MU) [OBSOLETE]
+    - '2015-01-29 17:44:06'
+    - '2015-01-29 17:44:06'
+  - - '142'
+    - 504 - BIBLIOGRAPHY, ETC. NOTE (R)
+    - '2015-01-29 17:44:06'
+    - '2015-01-29 17:44:06'
+  - - '143'
+    - 505 - FORMATTED CONTENTS NOTE (R)
+    - '2015-01-29 17:44:07'
+    - '2015-01-29 17:44:07'
+  - - '144'
+    - 506 - RESTRICTIONS ON ACCESS NOTE (R)
+    - '2015-01-29 17:44:07'
+    - '2015-01-29 17:44:07'
+  - - '145'
+    - 507 - SCALE NOTE FOR GRAPHIC MATERIAL (NR)
+    - '2015-01-29 17:44:07'
+    - '2015-01-29 17:44:07'
+  - - '146'
+    - 508 - CREATION/PRODUCTION CREDITS NOTE (R)
+    - '2015-01-29 17:44:07'
+    - '2015-01-29 17:44:07'
+  - - '147'
+    - 510 - CITATION/REFERENCES NOTE (R)
+    - '2015-01-29 17:44:07'
+    - '2015-01-29 17:44:07'
+  - - '148'
+    - 511 - PARTICIPANT OR PERFORMER NOTE (R)
+    - '2015-01-29 17:44:07'
+    - '2015-01-29 17:44:07'
+  - - '149'
+    - 512 - EARLIER OR LATER VOLUMES SEPARATELY CATALOGED NOTE (SE) (R) [OBSOLETE]
+    - '2015-01-29 17:44:07'
+    - '2015-01-29 17:44:07'
+  - - '150'
+    - 513 - TYPE OF REPORT AND PERIOD COVERED NOTE (R)
+    - '2015-01-29 17:44:07'
+    - '2015-01-29 17:44:07'
+  - - '151'
+    - 514 - DATA QUALITY NOTE (NR)
+    - '2015-01-29 17:44:07'
+    - '2015-01-29 17:44:07'
+  - - '152'
+    - 515 - NUMBERING PECULIARITIES NOTE (R)
+    - '2015-01-29 17:44:07'
+    - '2015-01-29 17:44:07'
+  - - '153'
+    - 516 - TYPE OF COMPUTER FILE OR DATA NOTE (R)
+    - '2015-01-29 17:44:08'
+    - '2015-01-29 17:44:08'
+  - - '154'
+    - 517 - CATEGORIES OF FILMS NOTE (ARCHIVAL) (VM) (NR) [OBSOLETE]
+    - '2015-01-29 17:44:08'
+    - '2015-01-29 17:44:08'
+  - - '155'
+    - 518 - DATE/TIME AND PLACE OF AN EVENT NOTE (R)
+    - '2015-01-29 17:44:08'
+    - '2015-01-29 17:44:08'
+  - - '156'
+    - 520 - SUMMARY, ETC. (R)
+    - '2015-01-29 17:44:08'
+    - '2015-01-29 17:44:08'
+  - - '157'
+    - 521 - TARGET AUDIENCE NOTE (R)
+    - '2015-01-29 17:44:08'
+    - '2015-01-29 17:44:08'
+  - - '158'
+    - 522 - GEOGRAPHIC COVERAGE NOTE (R)
+    - '2015-01-29 17:44:08'
+    - '2015-01-29 17:44:08'
+  - - '159'
+    - 523 - TIME PERIOD OF CONTENT NOTE (NR) (CF) [OBSOLETE]
+    - '2015-01-29 17:44:08'
+    - '2015-01-29 17:44:08'
+  - - '160'
+    - 524 - PREFERRED CITATION OF DESCRIBED MATERIALS NOTE (R)
+    - '2015-01-29 17:44:08'
+    - '2015-01-29 17:44:08'
+  - - '161'
+    - 525 - SUPPLEMENT NOTE (R)
+    - '2015-01-29 17:44:08'
+    - '2015-01-29 17:44:08'
+  - - '162'
+    - 526 - STUDY PROGRAM INFORMATION NOTE (R)
+    - '2015-01-29 17:44:08'
+    - '2015-01-29 17:44:08'
+  - - '163'
+    - 527 - CENSORSHIP NOTE (VM) (R) [OBSOLETE]
+    - '2015-01-29 17:44:08'
+    - '2015-01-29 17:44:08'
+  - - '164'
+    - 530 - ADDITIONAL PHYSICAL FORM AVAILABLE NOTE (R)
+    - '2015-01-29 17:44:09'
+    - '2015-01-29 17:44:09'
+  - - '165'
+    - 533 - REPRODUCTION NOTE (R)
+    - '2015-01-29 17:44:09'
+    - '2015-01-29 17:44:09'
+  - - '166'
+    - 534 - ORIGINAL VERSION NOTE (R)
+    - '2015-01-29 17:44:09'
+    - '2015-01-29 17:44:09'
+  - - '167'
+    - 535 - LOCATION OF ORIGINALS/DUPLICATES NOTE (R)
+    - '2015-01-29 17:44:09'
+    - '2015-01-29 17:44:09'
+  - - '168'
+    - 536 - FUNDING INFORMATION NOTE (R)
+    - '2015-01-29 17:44:09'
+    - '2015-01-29 17:44:09'
+  - - '169'
+    - 537 - SOURCE OF DATA NOTE (NR) (CF) [OBSOLETE]
+    - '2015-01-29 17:44:09'
+    - '2015-01-29 17:44:09'
+  - - '170'
+    - 538 - SYSTEM DETAILS NOTE (R)
+    - '2015-01-29 17:44:09'
+    - '2015-01-29 17:44:09'
+  - - '171'
+    - 540 - TERMS GOVERNING USE AND REPRODUCTION NOTE (R)
+    - '2015-01-29 17:44:09'
+    - '2015-01-29 17:44:09'
+  - - '172'
+    - 541 - IMMEDIATE SOURCE OF ACQUISITION NOTE (R)
+    - '2015-01-29 17:44:09'
+    - '2015-01-29 17:44:09'
+  - - '173'
+    - 542 - INFORMATION RELATING TO COPYRIGHT STATUS (R)
+    - '2015-01-29 17:44:09'
+    - '2015-01-29 17:44:09'
+  - - '174'
+    - 543 - SOLICITATION INFORMATION NOTE (AM) (R) [OBSOLETE]
+    - '2015-01-29 17:44:10'
+    - '2015-01-29 17:44:10'
+  - - '175'
+    - 544 - LOCATION OF OTHER ARCHIVAL MATERIALS NOTE (R)
+    - '2015-01-29 17:44:10'
+    - '2015-01-29 17:44:10'
+  - - '176'
+    - 545 - BIOGRAPHICAL OR HISTORICAL DATA (R)
+    - '2015-01-29 17:44:10'
+    - '2015-01-29 17:44:10'
+  - - '177'
+    - 546 - LANGUAGE NOTE (R)
+    - '2015-01-29 17:44:10'
+    - '2015-01-29 17:44:10'
+  - - '178'
+    - 547 - FORMER TITLE COMPLEXITY NOTE (R)
+    - '2015-01-29 17:44:10'
+    - '2015-01-29 17:44:10'
+  - - '179'
+    - 550 - ISSUING BODY NOTE (R)
+    - '2015-01-29 17:44:10'
+    - '2015-01-29 17:44:10'
+  - - '180'
+    - 552 - ENTITY AND ATTRIBUTE INFORMATION NOTE (R)
+    - '2015-01-29 17:44:10'
+    - '2015-01-29 17:44:10'
+  - - '181'
+    - 555 - CUMULATIVE INDEX/FINDING AIDS NOTE (R)
+    - '2015-01-29 17:44:10'
+    - '2015-01-29 17:44:10'
+  - - '182'
+    - 556 - INFORMATION ABOUT DOCUMENTATION NOTE (R)
+    - '2015-01-29 17:44:10'
+    - '2015-01-29 17:44:10'
+  - - '183'
+    - 561 - OWNERSHIP AND CUSTODIAL HISTORY (R)
+    - '2015-01-29 17:44:10'
+    - '2015-01-29 17:44:10'
+  - - '184'
+    - 562 - COPY AND VERSION IDENTIFICATION NOTE (R)
+    - '2015-01-29 17:44:10'
+    - '2015-01-29 17:44:10'
+  - - '185'
+    - 563 - BINDING INFORMATION (R)
+    - '2015-01-29 17:44:11'
+    - '2015-01-29 17:44:11'
+  - - '186'
+    - 565 - CASE FILE CHARACTERISTICS NOTE (R)
+    - '2015-01-29 17:44:11'
+    - '2015-01-29 17:44:11'
+  - - '187'
+    - 567 - METHODOLOGY NOTE (R)
+    - '2015-01-29 17:44:11'
+    - '2015-01-29 17:44:11'
+  - - '188'
+    - 570 - EDITOR NOTE (SE) (R) [OBSOLETE]
+    - '2015-01-29 17:44:11'
+    - '2015-01-29 17:44:11'
+  - - '189'
+    - 580 - LINKING ENTRY COMPLEXITY NOTE (R)
+    - '2015-01-29 17:44:11'
+    - '2015-01-29 17:44:11'
+  - - '190'
+    - 581 - PUBLICATIONS ABOUT DESCRIBED MATERIALS NOTE (R)
+    - '2015-01-29 17:44:11'
+    - '2015-01-29 17:44:11'
+  - - '191'
+    - 582 - RELATED COMPUTER FILES NOTE (R) (CF) [OBSOLETE]
+    - '2015-01-29 17:44:11'
+    - '2015-01-29 17:44:11'
+  - - '192'
+    - 583 - ACTION NOTE (R)
+    - '2015-01-29 17:44:11'
+    - '2015-01-29 17:44:11'
+  - - '193'
+    - 584 - ACCUMULATION AND FREQUENCY OF USE NOTE (R)
+    - '2015-01-29 17:44:11'
+    - '2015-01-29 17:44:11'
+  - - '194'
+    - 585 - EXHIBITIONS NOTE (R)
+    - '2015-01-29 17:44:11'
+    - '2015-01-29 17:44:11'
+  - - '195'
+    - 586 - AWARDS NOTE (R)
+    - '2015-01-29 17:44:11'
+    - '2015-01-29 17:44:11'
+  - - '196'
+    - 588 - SOURCE OF DESCRIPTION NOTE (R)
+    - '2015-01-29 17:44:12'
+    - '2015-01-29 17:44:12'
+  - - '197'
+    - 590 - LOCAL NOTE (BK CF MP MU SE VM MX) [OBSOLETE]
+    - '2015-01-29 17:44:12'
+    - '2015-01-29 17:44:12'
+  - - '198'
+    - 590 - RECEIPT DATE NOTE (VM) [OBSOLETE]
+    - '2015-01-29 17:44:12'
+    - '2015-01-29 17:44:12'
+  - - '199'
+    - 600 - SUBJECT ADDED ENTRY--PERSONAL NAME (R)
+    - '2015-01-29 17:44:12'
+    - '2015-01-29 17:44:12'
+  - - '200'
+    - 610 - SUBJECT ADDED ENTRY--CORPORATE NAME (R)
+    - '2015-01-29 17:44:12'
+    - '2015-01-29 17:44:12'
+  - - '201'
+    - 611 - SUBJECT ADDED ENTRY--MEETING NAME (R)
+    - '2015-01-29 17:44:12'
+    - '2015-01-29 17:44:12'
+  - - '202'
+    - 630 - SUBJECT ADDED ENTRY--UNIFORM TITLE (R)
+    - '2015-01-29 17:44:12'
+    - '2015-01-29 17:44:12'
+  - - '203'
+    - 648 - SUBJECT ADDED ENTRY--CHRONOLOGICAL TERM (R)
+    - '2015-01-29 17:44:12'
+    - '2015-01-29 17:44:12'
+  - - '204'
+    - 650 - SUBJECT ADDED ENTRY--TOPICAL TERM (R)
+    - '2015-01-29 17:44:12'
+    - '2015-01-29 17:44:12'
+  - - '205'
+    - 651 - SUBJECT ADDED ENTRY--GEOGRAPHIC NAME (R)
+    - '2015-01-29 17:44:12'
+    - '2015-01-29 17:44:12'
+  - - '206'
+    - '652 - SUBJECT ADDED ENTRY--REVERSED GEOGRAPHIC (BK MP SE) [OBSOLETE] '
+    - '2015-01-29 17:44:13'
+    - '2015-01-29 17:44:13'
+  - - '207'
+    - 653 - INDEX TERM--UNCONTROLLED (R)
+    - '2015-01-29 17:44:13'
+    - '2015-01-29 17:44:13'
+  - - '208'
+    - 654 - SUBJECT ADDED ENTRY--FACETED TOPICAL TERMS (R)
+    - '2015-01-29 17:44:13'
+    - '2015-01-29 17:44:13'
+  - - '209'
+    - 655 - INDEX TERM--GENRE/FORM (R)
+    - '2015-01-29 17:44:13'
+    - '2015-01-29 17:44:13'
+  - - '210'
+    - 656 - INDEX TERM--OCCUPATION (R)
+    - '2015-01-29 17:44:13'
+    - '2015-01-29 17:44:13'
+  - - '211'
+    - 657 - INDEX TERM--FUNCTION (R)
+    - '2015-01-29 17:44:13'
+    - '2015-01-29 17:44:13'
+  - - '212'
+    - 658 - INDEX TERM--CURRICULUM OBJECTIVE (R)
+    - '2015-01-29 17:44:13'
+    - '2015-01-29 17:44:13'
+  - - '213'
+    - 662 - SUBJECT ADDED ENTRY--HIERARCHICAL PLACE NAME (R)
+    - '2015-01-29 17:44:13'
+    - '2015-01-29 17:44:13'
+  - - '214'
+    - 700 - ADDED ENTRY--PERSONAL NAME (R)
+    - '2015-01-29 17:44:13'
+    - '2015-01-29 17:44:13'
+  - - '215'
+    - 705 - ADDED ENTRY--PERSONAL NAME (PERFORMER) (MU) [OBSOLETE]
+    - '2015-01-29 17:44:13'
+    - '2015-01-29 17:44:13'
+  - - '216'
+    - 710 - ADDED ENTRY--CORPORATE NAME (R)
+    - '2015-01-29 17:44:13'
+    - '2015-01-29 17:44:13'
+  - - '217'
+    - 711 - ADDED ENTRY--MEETING NAME (R)
+    - '2015-01-29 17:44:14'
+    - '2015-01-29 17:44:14'
+  - - '218'
+    - 715 - ADDED ENTRY--CORPORATE NAME (PERFORMING GROUP) (MU) [OBSOLETE]
+    - '2015-01-29 17:44:14'
+    - '2015-01-29 17:44:14'
+  - - '219'
+    - 720 - ADDED ENTRY--UNCONTROLLED NAME (R)
+    - '2015-01-29 17:44:14'
+    - '2015-01-29 17:44:14'
+  - - '220'
+    - 730 - ADDED ENTRY--UNIFORM TITLE (R)
+    - '2015-01-29 17:44:14'
+    - '2015-01-29 17:44:14'
+  - - '221'
+    - 740 - ADDED ENTRY--UNCONTROLLED RELATED/ANALYTICAL TITLE (R)
+    - '2015-01-29 17:44:14'
+    - '2015-01-29 17:44:14'
+  - - '222'
+    - 751 - ADDED ENTRY--GEOGRAPHIC NAME (R)
+    - '2015-01-29 17:44:14'
+    - '2015-01-29 17:44:14'
+  - - '223'
+    - 752 - ADDED ENTRY--HIERARCHICAL PLACE NAME (R)
+    - '2015-01-29 17:44:14'
+    - '2015-01-29 17:44:14'
+  - - '224'
+    - 753 - SYSTEM DETAILS ACCESS TO COMPUTER FILES (R)
+    - '2015-01-29 17:44:14'
+    - '2015-01-29 17:44:14'
+  - - '225'
+    - 754 - ADDED ENTRY--TAXONOMIC IDENTIFICATION (R)
+    - '2015-01-29 17:44:14'
+    - '2015-01-29 17:44:14'
+  - - '226'
+    - 755 - ADDED ENTRY--PHYSICAL CHARACTERISTICS (R) [OBSOLETE]
+    - '2015-01-29 17:44:14'
+    - '2015-01-29 17:44:14'
+  - - '227'
+    - 760 - MAIN SERIES ENTRY (R)
+    - '2015-01-29 17:44:15'
+    - '2015-01-29 17:44:15'
+  - - '228'
+    - 762 - SUBSERIES ENTRY (R)
+    - '2015-01-29 17:44:15'
+    - '2015-01-29 17:44:15'
+  - - '229'
+    - 765 - ORIGINAL LANGUAGE ENTRY (R)
+    - '2015-01-29 17:44:15'
+    - '2015-01-29 17:44:15'
+  - - '230'
+    - 767 - TRANSLATION ENTRY (R)
+    - '2015-01-29 17:44:15'
+    - '2015-01-29 17:44:15'
+  - - '231'
+    - 770 - SUPPLEMENT/SPECIAL ISSUE ENTRY (R)
+    - '2015-01-29 17:44:15'
+    - '2015-01-29 17:44:15'
+  - - '232'
+    - 772 - SUPPLEMENT PARENT ENTRY (R)
+    - '2015-01-29 17:44:15'
+    - '2015-01-29 17:44:15'
+  - - '233'
+    - 773 - HOST ITEM ENTRY (R)
+    - '2015-01-29 17:44:15'
+    - '2015-01-29 17:44:15'
+  - - '234'
+    - 774 - CONSTITUENT UNIT ENTRY (R)
+    - '2015-01-29 17:44:15'
+    - '2015-01-29 17:44:15'
+  - - '235'
+    - 775 - OTHER EDITION ENTRY (R)
+    - '2015-01-29 17:44:15'
+    - '2015-01-29 17:44:15'
+  - - '236'
+    - 776 - ADDITIONAL PHYSICAL FORM ENTRY (R)
+    - '2015-01-29 17:44:15'
+    - '2015-01-29 17:44:15'
+  - - '237'
+    - 777 - ISSUED WITH ENTRY (R)
+    - '2015-01-29 17:44:15'
+    - '2015-01-29 17:44:15'
+  - - '238'
+    - 780 - PRECEDING ENTRY (R)
+    - '2015-01-29 17:44:16'
+    - '2015-01-29 17:44:16'
+  - - '239'
+    - 785 - SUCCEEDING ENTRY (R)
+    - '2015-01-29 17:44:16'
+    - '2015-01-29 17:44:16'
+  - - '240'
+    - 786 - DATA SOURCE ENTRY (R)
+    - '2015-01-29 17:44:16'
+    - '2015-01-29 17:44:16'
+  - - '241'
+    - 787 - OTHER RELATIONSHIP ENTRY (R)
+    - '2015-01-29 17:44:16'
+    - '2015-01-29 17:44:16'
+  - - '242'
+    - 800 - SERIES ADDED ENTRY--PERSONAL NAME (R)
+    - '2015-01-29 17:44:16'
+    - '2015-01-29 17:44:16'
+  - - '243'
+    - 810 - SERIES ADDED ENTRY--CORPORATE NAME (R)
+    - '2015-01-29 17:44:16'
+    - '2015-01-29 17:44:16'
+  - - '244'
+    - 811 - SERIES ADDED ENTRY--MEETING NAME (R)
+    - '2015-01-29 17:44:16'
+    - '2015-01-29 17:44:16'
+  - - '245'
+    - 830 - SERIES ADDED ENTRY--UNIFORM TITLE (R)
+    - '2015-01-29 17:44:16'
+    - '2015-01-29 17:44:16'
+  - - '246'
+    - 840 - SERIES ADDED ENTRY--TITLE (R) [OBSOLETE]
+    - '2015-01-29 17:44:16'
+    - '2015-01-29 17:44:16'
+  - - '247'
+    - 841 - HOLDINGS CODED DATA VALUES (NR)
+    - '2015-01-29 17:44:16'
+    - '2015-01-29 17:44:16'
+  - - '248'
+    - 842 - TEXTUAL PHYSICAL FORM DESIGNATOR (NR)
+    - '2015-01-29 17:44:17'
+    - '2015-01-29 17:44:17'
+  - - '249'
+    - 843 - REPRODUCTION NOTE (R)
+    - '2015-01-29 17:44:17'
+    - '2015-01-29 17:44:17'
+  - - '250'
+    - 844 - NAME OF UNIT (NR)
+    - '2015-01-29 17:44:17'
+    - '2015-01-29 17:44:17'
+  - - '251'
+    - 845 - TERMS GOVERNING USE AND REPRODUCTION NOTE (R)
+    - '2015-01-29 17:44:17'
+    - '2015-01-29 17:44:17'
+  - - '252'
+    - 850 - HOLDING INSTITUTION (R)
+    - '2015-01-29 17:44:17'
+    - '2015-01-29 17:44:17'
+  - - '253'
+    - 851 - LOCATION (R) [OBSOLETE]
+    - '2015-01-29 17:44:17'
+    - '2015-01-29 17:44:17'
+  - - '254'
+    - 852 - LOCATION (R)
+    - '2015-01-29 17:44:17'
+    - '2015-01-29 17:44:17'
+  - - '255'
+    - 853 - CAPTIONS AND PATTERN--BASIC BIBLIOGRAPHIC UNIT (R)
+    - '2015-01-29 17:44:17'
+    - '2015-01-29 17:44:17'
+  - - '256'
+    - 854 - CAPTIONS AND PATTERN--SUPPLEMENTARY MATERIAL (R)
+    - '2015-01-29 17:44:17'
+    - '2015-01-29 17:44:17'
+  - - '257'
+    - 855 - CAPTIONS AND PATTERN--INDEXES (R)
+    - '2015-01-29 17:44:17'
+    - '2015-01-29 17:44:17'
+  - - '258'
+    - 856 - ELECTRONIC LOCATION AND ACCESS (R)
+    - '2015-01-29 17:44:17'
+    - '2015-01-29 17:44:17'
+  - - '259'
+    - 863 - ENUMERATION AND CHRONOLOGY--BASIC BIBLIOGRAPHIC UNIT (R)
+    - '2015-01-29 17:44:18'
+    - '2015-01-29 17:44:18'
+  - - '260'
+    - 864 - ENUMERATION AND CHRONOLOGY--SUPPLEMENTARY MATERIAL (R)
+    - '2015-01-29 17:44:18'
+    - '2015-01-29 17:44:18'
+  - - '261'
+    - 865 - ENUMERATION AND CHRONOLOGY--INDEXES (R)
+    - '2015-01-29 17:44:18'
+    - '2015-01-29 17:44:18'
+  - - '262'
+    - 866 - TEXTUAL HOLDINGS--BASIC BIBLIOGRAPHIC UNIT (R)
+    - '2015-01-29 17:44:18'
+    - '2015-01-29 17:44:18'
+  - - '263'
+    - 867 - TEXTUAL HOLDINGS--SUPPLEMENTARY MATERIAL (R)
+    - '2015-01-29 17:44:18'
+    - '2015-01-29 17:44:18'
+  - - '264'
+    - 868 - TEXTUAL HOLDINGS--INDEXES (R)
+    - '2015-01-29 17:44:18'
+    - '2015-01-29 17:44:18'
+  - - '265'
+    - 870 - VARIANT PERSONAL NAME (SE) [OBSOLETE]
+    - '2015-01-29 17:44:18'
+    - '2015-01-29 17:44:18'
+  - - '266'
+    - 871 - VARIANT CORPORATE NAME (SE) [OBSOLETE]
+    - '2015-01-29 17:44:18'
+    - '2015-01-29 17:44:18'
+  - - '267'
+    - 872 - VARIANT CONFERENCE OR MEETING NAME (SE) [OBSOLETE]
+    - '2015-01-29 17:44:18'
+    - '2015-01-29 17:44:18'
+  - - '268'
+    - 873 - VARIANT UNIFORM TITLE HEADING (SE) [OBSOLETE]
+    - '2015-01-29 17:44:18'
+    - '2015-01-29 17:44:18'
+  - - '269'
+    - 876 - ITEM INFORMATION--BASIC BIBLIOGRAPHIC UNIT (R)
+    - '2015-01-29 17:44:18'
+    - '2015-01-29 17:44:18'
+  - - '270'
+    - 877 - ITEM INFORMATION--SUPPLEMENTARY MATERIAL (R)
+    - '2015-01-29 17:44:19'
+    - '2015-01-29 17:44:19'
+  - - '271'
+    - 878 - ITEM INFORMATION--INDEXES (R)
+    - '2015-01-29 17:44:19'
+    - '2015-01-29 17:44:19'
+  - - '272'
+    - 880 - ALTERNATE GRAPHIC REPRESENTATION (R)
+    - '2015-01-29 17:44:19'
+    - '2015-01-29 17:44:19'
+  - - '273'
+    - 882 - REPLACEMENT RECORD INFORMATION (NR)
+    - '2015-01-29 17:44:19'
+    - '2015-01-29 17:44:19'
+  - - '274'
+    - 883 - MACHINE-GENERATED METADATA PROVENANCE (R)
+    - '2015-01-29 17:44:19'
+    - '2015-01-29 17:44:19'
+  - - '275'
+    - 886 - FOREIGN MARC INFORMATION FIELD (R)
+    - '2015-01-29 17:44:19'
+    - '2015-01-29 17:44:19'
+  - - '276'
+    - 887 - NON-MARC INFORMATION FIELD (R)
+    - '2015-01-29 17:44:19'
+    - '2015-01-29 17:44:19'
+  - - '288'
+    - Conversion successful
+    - '2015-02-13 18:52:08'
+    - '2015-02-13 18:52:08'
 
 ---
 conversions:
@@ -17536,6 +19136,369 @@ conversions:
     - 009953935
     - ' Connecticut history.'
     - 20150116_c37c08d
+  - - '43'
+    - |
+      <record xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim   http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+        <leader> njm 2200193Ia 4500</leader>
+        <controlfield tag='001'>010597928-7</controlfield>
+        <controlfield tag='005'>20090903132728.0</controlfield>
+        <controlfield tag='008'>070612p20071954xxkuun^^^^^^^^^^^^^^eng^d</controlfield>
+        <datafield ind1='0' ind2='2' tag='028'>
+          <subfield code='a'>0946 3 82230 2 3</subfield>
+          <subfield code='b'>Classics For Pleasure</subfield>
+        </datafield>
+        <datafield ind1='0' ind2=' ' tag='035'>
+          <subfield code='a'>ocn144192739</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='040'>
+          <subfield code='a'>CUS</subfield>
+          <subfield code='c'>CUS</subfield>
+          <subfield code='d'>HMU</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='048'>
+          <subfield code='a'>vn01</subfield>
+          <subfield code='a'>oa</subfield>
+        </datafield>
+        <datafield ind1='1' ind2=' ' tag='100'>
+          <subfield code='a'>Prokofiev, Sergey,</subfield>
+          <subfield code='d'>1891-1953.</subfield>
+        </datafield>
+        <datafield ind1='1' ind2='0' tag='240'>
+          <subfield code='a'>Peti͡a i volk.</subfield>
+          <subfield code='l'>English</subfield>
+        </datafield>
+        <datafield ind1='1' ind2='0' tag='245'>
+          <subfield code='a'>Peter and the wolf</subfield>
+          <subfield code='h'>[sound recording] /</subfield>
+          <subfield code='c'>Prokofiev. Practical cats / Rawsthorne. The young person's guide / Britten.</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='260'>
+          <subfield code='a'>[United Kingdom] :</subfield>
+          <subfield code='b'>Classics for Pleasure,</subfield>
+          <subfield code='c'>p2007.</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='300'>
+          <subfield code='a'>1 sound disc :</subfield>
+          <subfield code='b'>digital, stereo., mono. ;</subfield>
+          <subfield code='c'>4 3/4 in.</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='500'>
+          <subfield code='a'>Works for narrator and orchestra.</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='500'>
+          <subfield code='a'>
+            Text to Peter and the wolf by the composer; text to Practical cats by T.S.
+            Eliot; text to The young person's guide by Eric Crozier.
+          </subfield>
+        </datafield>
+        <datafield ind1='0' ind2=' ' tag='511'>
+          <subfield code='a'>
+            Robert Donat (Practical cats), Richard Baker (Peter and the wolf, The
+            young person's guide), speaker ; Philharmonia Orchestra, Alan Rawsthorne,
+            conductor (Practical cats) ; New Philharmonia Orchestra, Raymond Leppard,
+            conductor (Peter and the wolf, The young person's guide).
+          </subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='518'>
+          <subfield code='a'>
+            Recorded in London in Kingsway Hall, Sept. 24, 29, 1954 and No. 3 Studio,
+            Abbey Road, Dec. 12, 23, 1954 (Practical cats); remaining works recorded
+            at All Hallows, Gospel Oak, Aug. 27-28, 1971.
+          </subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='500'>
+          <subfield code='a'>Compact disc.</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='500'>
+          <subfield code='a'>Durations: 23:45; 28:02; 19:48.</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='500'>
+          <subfield code='a'>Order of works differs from presentation on disc.</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='500'>
+          <subfield code='a'>Includes program notes on insert.</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2='0' tag='650'>
+          <subfield code='a'>Monologues with music (Orchestra)</subfield>
+        </datafield>
+        <datafield ind1='1' ind2=' ' tag='700'>
+          <subfield code='a'>Donat, Robert,</subfield>
+          <subfield code='d'>1905-1958.</subfield>
+          <subfield code='4'>nrt</subfield>
+        </datafield>
+        <datafield ind1='1' ind2=' ' tag='700'>
+          <subfield code='a'>Baker, Richard,</subfield>
+          <subfield code='d'>1925-</subfield>
+          <subfield code='4'>nrt</subfield>
+        </datafield>
+        <datafield ind1='1' ind2=' ' tag='700'>
+          <subfield code='a'>Rawsthorne, Alan,</subfield>
+          <subfield code='d'>1905-1971.</subfield>
+          <subfield code='4'>cnd</subfield>
+        </datafield>
+        <datafield ind1='1' ind2=' ' tag='700'>
+          <subfield code='a'>Leppard, Raymond.</subfield>
+          <subfield code='4'>cnd</subfield>
+        </datafield>
+        <datafield ind1='1' ind2='2' tag='700'>
+          <subfield code='a'>Rawsthorne, Alan,</subfield>
+          <subfield code='d'>1905-1971.</subfield>
+          <subfield code='t'>Practical cats.</subfield>
+        </datafield>
+        <datafield ind1='1' ind2='2' tag='700'>
+          <subfield code='a'>Britten, Benjamin,</subfield>
+          <subfield code='d'>1913-1976.</subfield>
+          <subfield code='t'>Young person's guide to the orchestra.</subfield>
+        </datafield>
+        <datafield ind1='2' ind2=' ' tag='710'>
+          <subfield code='a'>Philharmonia Orchestra (London, England)</subfield>
+          <subfield code='4'>prf</subfield>
+        </datafield>
+        <datafield ind1='2' ind2=' ' tag='710'>
+          <subfield code='a'>New Philharmonia Orchestra.</subfield>
+          <subfield code='4'>prf</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='OWN'>
+          <subfield code='a'>MUS</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='XPR'>
+          <subfield code='a'>OCLC</subfield>
+          <subfield code='b'>20090903</subfield>
+        </datafield>
+        <datafield ind1='0' ind2=' ' tag='079'>
+          <subfield code='a'>ocn144192739</subfield>
+        </datafield>
+        <datafield ind1='2' ind2=' ' tag='079'>
+          <subfield code='a'>ocn436088437</subfield>
+        </datafield>
+        <datafield ind1='8' ind2=' ' tag='852'>
+          <subfield code='b'>MUS</subfield>
+          <subfield code='c'>RECCO</subfield>
+          <subfield code='h'>CD 33032</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='H08'>
+          <subfield code='a'>c</subfield>
+          <subfield code='b'>20090903</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='H09'>
+          <subfield code='k'>er cc 2010</subfield>
+        </datafield>
+      </record>
+    - |-
+      <?xml version="1.0" encoding="UTF-8"?>
+      <rdf:RDF xmlns:relators="http://id.loc.gov/vocabulary/relators/"
+               xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#"
+               xmlns:bf="http://bibframe.org/vocab/"
+               xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+               xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+         <bf:Work rdf:about="http://ld4l.harvard.edu/010597928-7">
+            <bf:authorizedAccessPoint>Prokofiev, Sergey, 1891-1953. Peti͡a i volk</bf:authorizedAccessPoint>
+            <madsrdf:authoritativeLabel>Peti͡a i volk. English</madsrdf:authoritativeLabel>
+            <bf:workTitle rdf:resource="http://ld4l.harvard.edu/010597928-7title5"/>
+            <bf:language rdf:resource="http://id.loc.gov/vocabulary/languages/eng"/>
+            <bf:translationOf rdf:resource="http://ld4l.harvard.edu/010597928-7work7"/>
+            <bf:creator rdf:resource="http://ld4l.harvard.edu/010597928-7person8"/>
+            <relators:nrt rdf:resource="http://ld4l.harvard.edu/010597928-7person9"/>
+            <relators:nrt rdf:resource="http://ld4l.harvard.edu/010597928-7person10"/>
+            <relators:cnd rdf:resource="http://ld4l.harvard.edu/010597928-7person11"/>
+            <relators:cnd rdf:resource="http://ld4l.harvard.edu/010597928-7person12"/>
+            <relators:prf rdf:resource="http://ld4l.harvard.edu/010597928-7organization13"/>
+            <relators:prf rdf:resource="http://ld4l.harvard.edu/010597928-7organization14"/>
+            <bf:note>Recorded in London in Kingsway Hall, Sept. 24, 29, 1954 and No. 3 Studio, Abbey Road, Dec. 12, 23, 1954 (Practical cats); remaining works recorded at All Hallows, Gospel Oak, Aug. 27-28, 1971.</bf:note>
+            <bf:language rdf:resource="http://id.loc.gov/vocabulary/languages/eng"/>
+            <bf:subject rdf:resource="http://ld4l.harvard.edu/010597928-7topic17"/>
+            <bf:hasPart rdf:resource="http://ld4l.harvard.edu/010597928-7work18"/>
+            <bf:hasPart rdf:resource="http://ld4l.harvard.edu/010597928-7work19"/>
+            <bf:derivedFrom rdf:resource="http://ld4l.harvard.edu/010597928-7.marcxml.xml"/>
+            <bf:authorizedAccessPoint xml:lang="x-bf-hash">donatrobert19051958bakerrichard1925rawsthornealan19051971leppardraymondrawsthornealan19051971brittenbenjamin19131976philharmoniaorchestralondonenglandnewphilharmoniaorchestraprokofievsergey18911953peti͡aivolkenglishengwork</bf:authorizedAccessPoint>
+         </bf:Work>
+         <bf:Work rdf:about="http://ld4l.harvard.edu/010597928-7work18">
+            <bf:title>Practical cats.</bf:title>
+            <bf:authorizedAccessPoint>Rawsthorne, Alan, 1905-1971. Practical cats.</bf:authorizedAccessPoint>
+            <bf:contributor rdf:resource="http://ld4l.harvard.edu/010597928-7person22"/>
+         </bf:Work>
+         <bf:Work rdf:about="http://ld4l.harvard.edu/010597928-7work19">
+            <bf:title>Young person's guide to the orchestra.</bf:title>
+            <bf:authorizedAccessPoint>Britten, Benjamin, 1913-1976. Young person's guide to the orchestra.</bf:authorizedAccessPoint>
+            <bf:contributor rdf:resource="http://ld4l.harvard.edu/010597928-7person23"/>
+         </bf:Work>
+         <bf:Work rdf:about="http://ld4l.harvard.edu/010597928-7work7">
+            <bf:title>Peti͡a i volk.</bf:title>
+            <madsrdf:authoritativeLabel>Peti͡a i volk.</madsrdf:authoritativeLabel>
+            <bf:authorizedAccessPoint>Peti͡a i volk.</bf:authorizedAccessPoint>
+            <bf:creator rdf:resource="http://ld4l.harvard.edu/010597928-7agent12"/>
+         </bf:Work>
+         <bf:Instance rdf:about="http://ld4l.harvard.edu/010597928-7instance23">
+            <bf:instanceTitle rdf:resource="http://ld4l.harvard.edu/010597928-7title25"/>
+            <bf:publication>
+               <bf:Provider>
+                  <bf:providerName>
+                     <bf:Organization>
+                        <bf:label>Classics for Pleasure</bf:label>
+                     </bf:Organization>
+                  </bf:providerName>
+                  <bf:providerPlace>
+                     <bf:Place>
+                        <bf:label>United Kingdom </bf:label>
+                     </bf:Place>
+                  </bf:providerPlace>
+                  <bf:providerDate>p2007</bf:providerDate>
+               </bf:Provider>
+            </bf:publication>
+            <bf:extent>1 sound disc :</bf:extent>
+            <bf:dimensions>4 3/4 in.</bf:dimensions>
+            <bf:illustrationNote>digital, stereo., mono. ;</bf:illustrationNote>
+            <bf:titleStatement>Peter and the wolf</bf:titleStatement>
+            <bf:formDesignation>sound recording</bf:formDesignation>
+            <bf:providerStatement>United Kingdom : Classics for Pleasure, p2007.</bf:providerStatement>
+            <bf:performerNote>Robert Donat (Practical cats), Richard Baker (Peter and the wolf, The young person's guide), speaker ; Philharmonia Orchestra, Alan Rawsthorne, conductor (Practical cats) ; New Philharmonia Orchestra, Raymond Leppard, conductor (Peter and the wolf, The young person's guide).</bf:performerNote>
+            <bf:note>Works for narrator and orchestra.</bf:note>
+            <bf:note>
+            Text to Peter and the wolf by the composer; text to Practical cats by T.S.
+            Eliot; text to The young person's guide by Eric Crozier.
+          </bf:note>
+            <bf:note>Compact disc.</bf:note>
+            <bf:note>Durations: 23:45; 28:02; 19:48.</bf:note>
+            <bf:note>Order of works differs from presentation on disc.</bf:note>
+            <bf:note>Includes program notes on insert.</bf:note>
+            <bf:systemNumber>
+               <bf:Identifier>
+                  <bf:identifierValue>ocn144192739</bf:identifierValue>
+                  <bf:identifierScheme rdf:resource="http://id.loc.gov/vocabulary/identifiers/systemNumber"/>
+               </bf:Identifier>
+            </bf:systemNumber>
+            <bf:issueNumber>
+               <bf:Identifier>
+                  <bf:identifierScheme rdf:resource="http://id.loc.gov/vocabulary/identifiers/issueNumber"/>
+                  <bf:identifierValue>0946 3 82230 2 3</bf:identifierValue>
+                  <bf:identifierAssigner>Classics For Pleasure</bf:identifierAssigner>
+               </bf:Identifier>
+            </bf:issueNumber>
+            <bf:derivedFrom rdf:resource="http://ld4l.harvard.edu/010597928-7.marcxml.xml"/>
+            <bf:instanceOf rdf:resource="http://ld4l.harvard.edu/010597928-7"/>
+         </bf:Instance>
+         <bf:Annotation rdf:about="http://ld4l.harvard.edu/010597928-7annotation22">
+            <bf:derivedFrom rdf:resource="http://ld4l.harvard.edu/010597928-7.marcxml.xml"/>
+            <bf:descriptionSource rdf:resource="http://id.loc.gov/vocabulary/organizations/cus"/>
+            <bf:descriptionModifier rdf:resource="http://id.loc.gov/vocabulary/organizations/hmu"/>
+            <bf:generationProcess>DLC transform-tool:2015-01-16-T11:00:00</bf:generationProcess>
+            <bf:changeDate>2009-09-03T13:27</bf:changeDate>
+            <bf:annotates rdf:resource="http://ld4l.harvard.edu/010597928-7"/>
+         </bf:Annotation>
+         <bf:HeldItem rdf:about="http://ld4l.harvard.edu/010597928-7helditem44">
+            <bf:label/>
+            <bf:subLocation>MUS</bf:subLocation>
+            <bf:shelfMark>CD 33032</bf:shelfMark>
+            <bf:holdingFor rdf:resource="http://ld4l.harvard.edu/010597928-7instance23"/>
+         </bf:HeldItem>
+         <bf:Title rdf:about="http://ld4l.harvard.edu/010597928-7title5">
+            <bf:titleValue>Peti͡a i volk.</bf:titleValue>
+         </bf:Title>
+         <bf:Agent rdf:about="http://ld4l.harvard.edu/010597928-7agent12">
+            <bf:label>Prokofiev, Sergey,</bf:label>
+         </bf:Agent>
+         <bf:Person rdf:about="http://ld4l.harvard.edu/010597928-7person8">
+            <bf:label>Prokofiev, Sergey, 1891-1953.</bf:label>
+            <bf:authorizedAccessPoint>Prokofiev, Sergey, 1891-1953.</bf:authorizedAccessPoint>
+            <bf:hasAuthority>
+               <madsrdf:Authority>
+                  <madsrdf:authoritativeLabel>Prokofiev, Sergey, 1891-1953.</madsrdf:authoritativeLabel>
+               </madsrdf:Authority>
+            </bf:hasAuthority>
+         </bf:Person>
+         <bf:Person rdf:about="http://ld4l.harvard.edu/010597928-7person9">
+            <bf:label>Donat, Robert, 1905-1958.</bf:label>
+            <bf:authorizedAccessPoint>Donat, Robert, 1905-1958.</bf:authorizedAccessPoint>
+            <bf:hasAuthority>
+               <madsrdf:Authority>
+                  <madsrdf:authoritativeLabel>Donat, Robert, 1905-1958.</madsrdf:authoritativeLabel>
+               </madsrdf:Authority>
+            </bf:hasAuthority>
+         </bf:Person>
+         <bf:Person rdf:about="http://ld4l.harvard.edu/010597928-7person10">
+            <bf:label>Baker, Richard, 1925-</bf:label>
+            <bf:authorizedAccessPoint>Baker, Richard, 1925-</bf:authorizedAccessPoint>
+            <bf:hasAuthority>
+               <madsrdf:Authority>
+                  <madsrdf:authoritativeLabel>Baker, Richard, 1925-</madsrdf:authoritativeLabel>
+               </madsrdf:Authority>
+            </bf:hasAuthority>
+         </bf:Person>
+         <bf:Person rdf:about="http://ld4l.harvard.edu/010597928-7person11">
+            <bf:label>Rawsthorne, Alan, 1905-1971.</bf:label>
+            <bf:authorizedAccessPoint>Rawsthorne, Alan, 1905-1971.</bf:authorizedAccessPoint>
+            <bf:hasAuthority>
+               <madsrdf:Authority>
+                  <madsrdf:authoritativeLabel>Rawsthorne, Alan, 1905-1971.</madsrdf:authoritativeLabel>
+               </madsrdf:Authority>
+            </bf:hasAuthority>
+         </bf:Person>
+         <bf:Person rdf:about="http://ld4l.harvard.edu/010597928-7person12">
+            <bf:label>Leppard, Raymond.</bf:label>
+            <bf:authorizedAccessPoint>Leppard, Raymond.</bf:authorizedAccessPoint>
+            <bf:hasAuthority>
+               <madsrdf:Authority>
+                  <madsrdf:authoritativeLabel>Leppard, Raymond.</madsrdf:authoritativeLabel>
+               </madsrdf:Authority>
+            </bf:hasAuthority>
+         </bf:Person>
+         <bf:Organization rdf:about="http://ld4l.harvard.edu/010597928-7organization13">
+            <bf:label>Philharmonia Orchestra (London, England)</bf:label>
+            <bf:authorizedAccessPoint>Philharmonia Orchestra (London, England)</bf:authorizedAccessPoint>
+            <bf:hasAuthority>
+               <madsrdf:Authority>
+                  <madsrdf:authoritativeLabel>Philharmonia Orchestra (London, England)</madsrdf:authoritativeLabel>
+               </madsrdf:Authority>
+            </bf:hasAuthority>
+         </bf:Organization>
+         <bf:Organization rdf:about="http://ld4l.harvard.edu/010597928-7organization14">
+            <bf:label>New Philharmonia Orchestra.</bf:label>
+            <bf:authorizedAccessPoint>New Philharmonia Orchestra.</bf:authorizedAccessPoint>
+            <bf:hasAuthority>
+               <madsrdf:Authority>
+                  <madsrdf:authoritativeLabel>New Philharmonia Orchestra.</madsrdf:authoritativeLabel>
+               </madsrdf:Authority>
+            </bf:hasAuthority>
+         </bf:Organization>
+         <bf:Topic rdf:about="http://ld4l.harvard.edu/010597928-7topic17">
+            <bf:authorizedAccessPoint>Monologues with music (Orchestra)</bf:authorizedAccessPoint>
+            <bf:label>Monologues with music (Orchestra)</bf:label>
+            <bf:hasAuthority>
+               <madsrdf:Authority>
+                  <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+                  <madsrdf:authoritativeLabel>Monologues with music (Orchestra)</madsrdf:authoritativeLabel>
+                  <madsrdf:isMemberOfMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+               </madsrdf:Authority>
+            </bf:hasAuthority>
+         </bf:Topic>
+         <bf:Person rdf:about="http://ld4l.harvard.edu/010597928-7person22">
+            <bf:label>Rawsthorne, Alan, 1905-1971.</bf:label>
+            <bf:authorizedAccessPoint>Rawsthorne, Alan, 1905-1971.</bf:authorizedAccessPoint>
+            <bf:hasAuthority>
+               <madsrdf:Authority>
+                  <madsrdf:authoritativeLabel>Rawsthorne, Alan, 1905-1971.</madsrdf:authoritativeLabel>
+               </madsrdf:Authority>
+            </bf:hasAuthority>
+         </bf:Person>
+         <bf:Person rdf:about="http://ld4l.harvard.edu/010597928-7person23">
+            <bf:label>Britten, Benjamin, 1913-1976.</bf:label>
+            <bf:authorizedAccessPoint>Britten, Benjamin, 1913-1976.</bf:authorizedAccessPoint>
+            <bf:hasAuthority>
+               <madsrdf:Authority>
+                  <madsrdf:authoritativeLabel>Britten, Benjamin, 1913-1976.</madsrdf:authoritativeLabel>
+               </madsrdf:Authority>
+            </bf:hasAuthority>
+         </bf:Person>
+         <bf:Title rdf:about="http://ld4l.harvard.edu/010597928-7title25">
+            <bf:titleValue>Peter and the wolf</bf:titleValue>
+         </bf:Title>
+      </rdf:RDF>
+    - '2015-05-03 23:39:45'
+    - '2015-05-03 23:39:45'
+    - 010597928
+    - ' Peter and the wolf [sound recording] / Prokofiev. Practical cats / Rawsthorne.
+      The young person''s guide / Britten.'
+    - 20150116_c37c08d
 
 ---
 evaluators:
@@ -17636,1122 +19599,13 @@ evaluators:
     - Alison
     - '2015-02-12 16:30:53'
     - '2015-02-12 16:30:53'
-
----
-issues:
-  columns:
-  - id
-  - issue_tag
-  - created_at
-  - updated_at
-  records: 
-  - - '1'
-    - LEADER
-    - '2015-01-29 17:43:53'
-    - '2015-01-29 17:43:53'
-  - - '2'
-    - 001 - CONTROL NUMBER (NR)
-    - '2015-01-29 17:43:53'
-    - '2015-01-29 17:43:53'
-  - - '3'
-    - 003 - CONTROL NUMBER IDENTIFIER (NR)
-    - '2015-01-29 17:43:53'
-    - '2015-01-29 17:43:53'
-  - - '4'
-    - 005 - DATE AND TIME OF LATEST TRANSACTION (NR)
-    - '2015-01-29 17:43:53'
-    - '2015-01-29 17:43:53'
-  - - '5'
-    - 006 - FIXED-LENGTH DATA ELEMENTS--ADDITIONAL MATERIAL CHARACTERISTICS--GENERAL
-      INFORMATION (R)
-    - '2015-01-29 17:43:53'
-    - '2015-01-29 17:43:53'
-  - - '6'
-    - 007 - PHYSICAL DESCRIPTION FIXED FIELD--GENERAL INFORMATION (R)
-    - '2015-01-29 17:43:53'
-    - '2015-01-29 17:43:53'
-  - - '7'
-    - 008 - FIXED-LENGTH DATA ELEMENTS--GENERAL INFORMATION (NR)
-    - '2015-01-29 17:43:53'
-    - '2015-01-29 17:43:53'
-  - - '8'
-    - 009 - PHYSICAL DESCRIPTION FIXED-FIELD FOR ARCHIVAL COLLECTION (VM) - [OBSOLETE]
-    - '2015-01-29 17:43:53'
-    - '2015-01-29 17:43:53'
-  - - '9'
-    - 010 - LIBRARY OF CONGRESS CONTROL NUMBER (NR)
-    - '2015-01-29 17:43:53'
-    - '2015-01-29 17:43:53'
-  - - '10'
-    - 011 - LINKING LIBRARY OF CONGRESS CONTROL NUMBER (NR) [OBSOLETE]
-    - '2015-01-29 17:43:54'
-    - '2015-01-29 17:43:54'
-  - - '11'
-    - 013 - PATENT CONTROL INFORMATION (R)
-    - '2015-01-29 17:43:54'
-    - '2015-01-29 17:43:54'
-  - - '12'
-    - 015 - NATIONAL BIBLIOGRAPHY NUMBER (R)
-    - '2015-01-29 17:43:54'
-    - '2015-01-29 17:43:54'
-  - - '13'
-    - 016 - NATIONAL BIBLIOGRAPHIC AGENCY CONTROL NUMBER (R)
-    - '2015-01-29 17:43:54'
-    - '2015-01-29 17:43:54'
-  - - '14'
-    - 017 - COPYRIGHT OR LEGAL DEPOSIT NUMBER (R)
-    - '2015-01-29 17:43:54'
-    - '2015-01-29 17:43:54'
-  - - '15'
-    - 018 - COPYRIGHT ARTICLE-FEE CODE (NR)
-    - '2015-01-29 17:43:54'
-    - '2015-01-29 17:43:54'
-  - - '16'
-    - 020 - INTERNATIONAL STANDARD BOOK NUMBER (R)
-    - '2015-01-29 17:43:54'
-    - '2015-01-29 17:43:54'
-  - - '17'
-    - 022 - INTERNATIONAL STANDARD SERIAL NUMBER (R)
-    - '2015-01-29 17:43:54'
-    - '2015-01-29 17:43:54'
-  - - '18'
-    - 024 - OTHER STANDARD IDENTIFIER (R)
-    - '2015-01-29 17:43:54'
-    - '2015-01-29 17:43:54'
   - - '19'
-    - 025 - OVERSEAS ACQUISITION NUMBER (R)
-    - '2015-01-29 17:43:54'
-    - '2015-01-29 17:43:54'
+    - Evaluator
+    - Test
+    - '2015-04-08 14:24:55.297189'
+    - '2015-04-10 18:57:21.267827'
   - - '20'
-    - 026 - FINGERPRINT IDENTIFIER (R)
-    - '2015-01-29 17:43:54'
-    - '2015-01-29 17:43:54'
-  - - '21'
-    - 027 - STANDARD TECHNICAL REPORT NUMBER (R)
-    - '2015-01-29 17:43:55'
-    - '2015-01-29 17:43:55'
-  - - '22'
-    - 028 - PUBLISHER NUMBER (R)
-    - '2015-01-29 17:43:55'
-    - '2015-01-29 17:43:55'
-  - - '23'
-    - '030 - CODEN DESIGNATION (R) '
-    - '2015-01-29 17:43:55'
-    - '2015-01-29 17:43:55'
-  - - '24'
-    - '031 - MUSICAL INCIPITS INFORMATION (R) '
-    - '2015-01-29 17:43:55'
-    - '2015-01-29 17:43:55'
-  - - '25'
-    - 032 - POSTAL REGISTRATION NUMBER (R)
-    - '2015-01-29 17:43:55'
-    - '2015-01-29 17:43:55'
-  - - '26'
-    - 033 - DATE/TIME AND PLACE OF AN EVENT (R)
-    - '2015-01-29 17:43:55'
-    - '2015-01-29 17:43:55'
-  - - '27'
-    - 034 - CODED CARTOGRAPHIC MATHEMATICAL DATA (R)
-    - '2015-01-29 17:43:55'
-    - '2015-01-29 17:43:55'
-  - - '28'
-    - 035 - SYSTEM CONTROL NUMBER (R)
-    - '2015-01-29 17:43:55'
-    - '2015-01-29 17:43:55'
-  - - '29'
-    - 036 - ORIGINAL STUDY NUMBER FOR COMPUTER DATA FILES (NR)
-    - '2015-01-29 17:43:55'
-    - '2015-01-29 17:43:55'
-  - - '30'
-    - 037 - SOURCE OF ACQUISITION (R)
-    - '2015-01-29 17:43:55'
-    - '2015-01-29 17:43:55'
-  - - '31'
-    - 038 - RECORD CONTENT LICENSOR (NR)
-    - '2015-01-29 17:43:56'
-    - '2015-01-29 17:43:56'
-  - - '32'
-    - 040 - CATALOGING SOURCE (NR)
-    - '2015-01-29 17:43:56'
-    - '2015-01-29 17:43:56'
-  - - '33'
-    - 041 - LANGUAGE CODE (R)
-    - '2015-01-29 17:43:56'
-    - '2015-01-29 17:43:56'
-  - - '34'
-    - 042 - AUTHENTICATION CODE (NR)
-    - '2015-01-29 17:43:56'
-    - '2015-01-29 17:43:56'
-  - - '35'
-    - 043 - GEOGRAPHIC AREA CODE (NR)
-    - '2015-01-29 17:43:56'
-    - '2015-01-29 17:43:56'
-  - - '36'
-    - 044 - COUNTRY OF PUBLISHING/PRODUCING ENTITY CODE (NR)
-    - '2015-01-29 17:43:56'
-    - '2015-01-29 17:43:56'
-  - - '37'
-    - 045 - TIME PERIOD OF CONTENT (NR)
-    - '2015-01-29 17:43:56'
-    - '2015-01-29 17:43:56'
-  - - '38'
-    - 046 - SPECIAL CODED DATES (R)
-    - '2015-01-29 17:43:56'
-    - '2015-01-29 17:43:56'
-  - - '39'
-    - 047 - FORM OF MUSICAL COMPOSITION CODE (R)
-    - '2015-01-29 17:43:56'
-    - '2015-01-29 17:43:56'
-  - - '40'
-    - 048 - NUMBER OF MUSICAL INSTRUMENTS OR VOICES CODE (R)
-    - '2015-01-29 17:43:56'
-    - '2015-01-29 17:43:56'
-  - - '41'
-    - 050 - LIBRARY OF CONGRESS CALL NUMBER (R)
-    - '2015-01-29 17:43:56'
-    - '2015-01-29 17:43:56'
-  - - '42'
-    - 051 - LIBRARY OF CONGRESS COPY, ISSUE, OFFPRINT STATEMENT (R)
-    - '2015-01-29 17:43:57'
-    - '2015-01-29 17:43:57'
-  - - '43'
-    - 052 - GEOGRAPHIC CLASSIFICATION (R)
-    - '2015-01-29 17:43:57'
-    - '2015-01-29 17:43:57'
-  - - '44'
-    - 055 - CLASSIFICATION NUMBERS ASSIGNED IN CANADA (R)
-    - '2015-01-29 17:43:57'
-    - '2015-01-29 17:43:57'
-  - - '45'
-    - 060 - NATIONAL LIBRARY OF MEDICINE CALL NUMBER (R)
-    - '2015-01-29 17:43:57'
-    - '2015-01-29 17:43:57'
-  - - '46'
-    - 061 - NATIONAL LIBRARY OF MEDICINE COPY STATEMENT (R)
-    - '2015-01-29 17:43:57'
-    - '2015-01-29 17:43:57'
-  - - '47'
-    - 066 - CHARACTER SETS PRESENT (NR)
-    - '2015-01-29 17:43:57'
-    - '2015-01-29 17:43:57'
-  - - '48'
-    - 070 - NATIONAL AGRICULTURAL LIBRARY CALL NUMBER (R)
-    - '2015-01-29 17:43:57'
-    - '2015-01-29 17:43:57'
-  - - '49'
-    - 071 - NATIONAL AGRICULTURAL LIBRARY COPY STATEMENT (R)
-    - '2015-01-29 17:43:57'
-    - '2015-01-29 17:43:57'
-  - - '50'
-    - 072 - SUBJECT CATEGORY CODE (R)
-    - '2015-01-29 17:43:57'
-    - '2015-01-29 17:43:57'
-  - - '51'
-    - 074 - GPO ITEM NUMBER (R)
-    - '2015-01-29 17:43:57'
-    - '2015-01-29 17:43:57'
-  - - '52'
-    - 080 - UNIVERSAL DECIMAL CLASSIFICATION NUMBER (R)
-    - '2015-01-29 17:43:58'
-    - '2015-01-29 17:43:58'
-  - - '53'
-    - 082 - DEWEY DECIMAL CLASSIFICATION NUMBER (R)
-    - '2015-01-29 17:43:58'
-    - '2015-01-29 17:43:58'
-  - - '54'
-    - 083 - ADDITIONAL DEWEY DECIMAL CLASSIFICATION NUMBER (R)
-    - '2015-01-29 17:43:58'
-    - '2015-01-29 17:43:58'
-  - - '55'
-    - 084 - OTHER CLASSIFICATION NUMBER (R)
-    - '2015-01-29 17:43:58'
-    - '2015-01-29 17:43:58'
-  - - '56'
-    - 085 - SYNTHESIZED CLASSIFICATION NUMBER COMPONENTS (R)
-    - '2015-01-29 17:43:58'
-    - '2015-01-29 17:43:58'
-  - - '57'
-    - 086 - GOVERNMENT DOCUMENT CLASSIFICATION NUMBER (R)
-    - '2015-01-29 17:43:58'
-    - '2015-01-29 17:43:58'
-  - - '58'
-    - 088 - REPORT NUMBER (R)
-    - '2015-01-29 17:43:58'
-    - '2015-01-29 17:43:58'
-  - - '59'
-    - 090 - LOCAL CALL NUMBER (BK AM CF MP MU VM SE) [OBSOLETE]
-    - '2015-01-29 17:43:58'
-    - '2015-01-29 17:43:58'
-  - - '60'
-    - 090 - SHELF LOCATION (AM)[OBSOLETE]
-    - '2015-01-29 17:43:58'
-    - '2015-01-29 17:43:58'
-  - - '61'
-    - 091 - MICROFILM SHELF LOCATION (AM) [OBSOLETE]
-    - '2015-01-29 17:43:58'
-    - '2015-01-29 17:43:58'
-  - - '62'
-    - 100 - MAIN ENTRY--PERSONAL NAME (NR)
-    - '2015-01-29 17:43:58'
-    - '2015-01-29 17:43:58'
-  - - '63'
-    - 110 - MAIN ENTRY--CORPORATE NAME (NR)
-    - '2015-01-29 17:43:59'
-    - '2015-01-29 17:43:59'
-  - - '64'
-    - 111 - MAIN ENTRY--MEETING NAME (NR)
-    - '2015-01-29 17:43:59'
-    - '2015-01-29 17:43:59'
-  - - '65'
-    - 130 - MAIN ENTRY--UNIFORM TITLE (NR)
-    - '2015-01-29 17:43:59'
-    - '2015-01-29 17:43:59'
-  - - '66'
-    - 210 - ABBREVIATED TITLE (R)
-    - '2015-01-29 17:43:59'
-    - '2015-01-29 17:43:59'
-  - - '67'
-    - 211 - ACRONYM OR SHORTENED TITLE (R) [OBSOLETE]
-    - '2015-01-29 17:43:59'
-    - '2015-01-29 17:43:59'
-  - - '68'
-    - 212 - VARIANT ACCESS TITLE (R) [OBSOLETE]
-    - '2015-01-29 17:43:59'
-    - '2015-01-29 17:43:59'
-  - - '69'
-    - 214 - AUGMENTED TITLE (R) [OBSOLETE]
-    - '2015-01-29 17:43:59'
-    - '2015-01-29 17:43:59'
-  - - '70'
-    - 222 - KEY TITLE (R)
-    - '2015-01-29 17:43:59'
-    - '2015-01-29 17:43:59'
-  - - '71'
-    - 240 - UNIFORM TITLE (NR)
-    - '2015-01-29 17:43:59'
-    - '2015-01-29 17:43:59'
-  - - '72'
-    - 241 - ROMANIZED TITLE (BK AM CF MP MU VM) (NR) [OBSOLETE]
-    - '2015-01-29 17:43:59'
-    - '2015-01-29 17:43:59'
-  - - '73'
-    - 242 - TRANSLATION OF TITLE BY CATALOGING AGENCY (R)
-    - '2015-01-29 17:43:59'
-    - '2015-01-29 17:43:59'
-  - - '74'
-    - 243 - COLLECTIVE UNIFORM TITLE (NR)
-    - '2015-01-29 17:44:00'
-    - '2015-01-29 17:44:00'
-  - - '75'
-    - 245 - TITLE STATEMENT (NR)
-    - '2015-01-29 17:44:00'
-    - '2015-01-29 17:44:00'
-  - - '76'
-    - 246 - VARYING FORM OF TITLE (R)
-    - '2015-01-29 17:44:00'
-    - '2015-01-29 17:44:00'
-  - - '77'
-    - 247 - FORMER TITLE (R)
-    - '2015-01-29 17:44:00'
-    - '2015-01-29 17:44:00'
-  - - '78'
-    - 250 - EDITION STATEMENT (R)
-    - '2015-01-29 17:44:00'
-    - '2015-01-29 17:44:00'
-  - - '79'
-    - 254 - MUSICAL PRESENTATION STATEMENT (NR)
-    - '2015-01-29 17:44:00'
-    - '2015-01-29 17:44:00'
-  - - '80'
-    - 255 - CARTOGRAPHIC MATHEMATICAL DATA (R)
-    - '2015-01-29 17:44:00'
-    - '2015-01-29 17:44:00'
-  - - '81'
-    - 256 - COMPUTER FILE CHARACTERISTICS (NR)
-    - '2015-01-29 17:44:00'
-    - '2015-01-29 17:44:00'
-  - - '82'
-    - 257 - COUNTRY OF PRODUCING ENTITY (R)
-    - '2015-01-29 17:44:00'
-    - '2015-01-29 17:44:00'
-  - - '83'
-    - 258 - PHILATELIC ISSUE DATE (R)
-    - '2015-01-29 17:44:00'
-    - '2015-01-29 17:44:00'
-  - - '84'
-    - 260 - PUBLICATION, DISTRIBUTION, ETC. (IMPRINT) (R)
-    - '2015-01-29 17:44:00'
-    - '2015-01-29 17:44:00'
-  - - '85'
-    - 261 - IMPRINT STATEMENT FOR FILMS (Pre-AACR 1 Revised) (NR) [LOCAL]
-    - '2015-01-29 17:44:01'
-    - '2015-01-29 17:44:01'
-  - - '86'
-    - 262 - IMPRINT STATEMENT FOR SOUND RECORDINGS (Pre-AACR 2) (NR) [LOCAL]
-    - '2015-01-29 17:44:01'
-    - '2015-01-29 17:44:01'
-  - - '87'
-    - 263 - PROJECTED PUBLICATION DATE (NR)
-    - '2015-01-29 17:44:01'
-    - '2015-01-29 17:44:01'
-  - - '88'
-    - 264 - PRODUCTION, PUBLICATION, DISTRIBUTION, MANUFACTURE, AND COPYRIGHT NOTICE
-      (R)
-    - '2015-01-29 17:44:01'
-    - '2015-01-29 17:44:01'
-  - - '89'
-    - 265 - SOURCE FOR ACQUISITION/SUBSCRIPTION ADDRESS (NR) [OBSOLETE]
-    - '2015-01-29 17:44:01'
-    - '2015-01-29 17:44:01'
-  - - '90'
-    - 270 - ADDRESS (R)
-    - '2015-01-29 17:44:01'
-    - '2015-01-29 17:44:01'
-  - - '91'
-    - 300 - PHYSICAL DESCRIPTION (R)
-    - '2015-01-29 17:44:01'
-    - '2015-01-29 17:44:01'
-  - - '92'
-    - 301 - PHYSICAL DESCRIPTION FOR FILMS (PRE-AACR 2) (VM) [OBSOLETE]
-    - '2015-01-29 17:44:01'
-    - '2015-01-29 17:44:01'
-  - - '93'
-    - 302 - PAGE OR ITEM COUNT (BK AM) [OBSOLETE]
-    - '2015-01-29 17:44:01'
-    - '2015-01-29 17:44:01'
-  - - '94'
-    - 303 - UNIT COUNT (AM) [OBSOLETE]
-    - '2015-01-29 17:44:01'
-    - '2015-01-29 17:44:01'
-  - - '95'
-    - 304 - LINEAR FOOTAGE (AM) [OBSOLETE]
-    - '2015-01-29 17:44:02'
-    - '2015-01-29 17:44:02'
-  - - '96'
-    - 305 - PHYSICAL DESCRIPTION FOR SOUND RECORDINGS (Pre-AACR 2) (MU) [OBSOLETE]
-    - '2015-01-29 17:44:02'
-    - '2015-01-29 17:44:02'
-  - - '97'
-    - 306 - PLAYING TIME (NR)
-    - '2015-01-29 17:44:02'
-    - '2015-01-29 17:44:02'
-  - - '98'
-    - 307 - HOURS, ETC. (R)
-    - '2015-01-29 17:44:02'
-    - '2015-01-29 17:44:02'
-  - - '99'
-    - 308 - PHYSICAL DESCRIPTION FOR FILMS (ARCHIVAL) (VM) [OBSOLETE]
-    - '2015-01-29 17:44:02'
-    - '2015-01-29 17:44:02'
-  - - '100'
-    - 310 - CURRENT PUBLICATION FREQUENCY (NR)
-    - '2015-01-29 17:44:02'
-    - '2015-01-29 17:44:02'
-  - - '101'
-    - 315 - FREQUENCY (NR) (CF MP) [OBSOLETE]
-    - '2015-01-29 17:44:02'
-    - '2015-01-29 17:44:02'
-  - - '102'
-    - 321 - FORMER PUBLICATION FREQUENCY (R)
-    - '2015-01-29 17:44:02'
-    - '2015-01-29 17:44:02'
-  - - '103'
-    - 336 - CONTENT TYPE (R)
-    - '2015-01-29 17:44:02'
-    - '2015-01-29 17:44:02'
-  - - '104'
-    - 337 - MEDIA TYPE (R)
-    - '2015-01-29 17:44:03'
-    - '2015-01-29 17:44:03'
-  - - '105'
-    - 338 - CARRIER TYPE (R)
-    - '2015-01-29 17:44:03'
-    - '2015-01-29 17:44:03'
-  - - '106'
-    - 340 - PHYSICAL MEDIUM (R)
-    - '2015-01-29 17:44:03'
-    - '2015-01-29 17:44:03'
-  - - '107'
-    - 342 - GEOSPATIAL REFERENCE DATA (R)
-    - '2015-01-29 17:44:03'
-    - '2015-01-29 17:44:03'
-  - - '108'
-    - 343 - PLANAR COORDINATE DATA (R)
-    - '2015-01-29 17:44:03'
-    - '2015-01-29 17:44:03'
-  - - '109'
-    - 344 - SOUND CHARACTERISTICS (R)
-    - '2015-01-29 17:44:03'
-    - '2015-01-29 17:44:03'
-  - - '110'
-    - 345 - PROJECTION CHARACTERISTICS OF MOVING IMAGE (R)
-    - '2015-01-29 17:44:03'
-    - '2015-01-29 17:44:03'
-  - - '111'
-    - 346 - VIDEO CHARACTERISTICS (R)
-    - '2015-01-29 17:44:03'
-    - '2015-01-29 17:44:03'
-  - - '112'
-    - 347 - DIGITAL FILE CHARACTERISTICS (R)
-    - '2015-01-29 17:44:03'
-    - '2015-01-29 17:44:03'
-  - - '113'
-    - '350 - PRICE (NR) (BK AM CF MU VM SE) [OBSOLETE] '
-    - '2015-01-29 17:44:03'
-    - '2015-01-29 17:44:03'
-  - - '114'
-    - 351 - ORGANIZATION AND ARRANGEMENT OF MATERIALS (R)
-    - '2015-01-29 17:44:03'
-    - '2015-01-29 17:44:03'
-  - - '115'
-    - 352 - DIGITAL GRAPHIC REPRESENTATION (R)
-    - '2015-01-29 17:44:04'
-    - '2015-01-29 17:44:04'
-  - - '116'
-    - 355 - SECURITY CLASSIFICATION CONTROL (R)
-    - '2015-01-29 17:44:04'
-    - '2015-01-29 17:44:04'
-  - - '117'
-    - 357 - ORIGINATOR DISSEMINATION CONTROL (NR)
-    - '2015-01-29 17:44:04'
-    - '2015-01-29 17:44:04'
-  - - '118'
-    - 359 - RENTAL PRICE (VM) [OBSOLETE]
-    - '2015-01-29 17:44:04'
-    - '2015-01-29 17:44:04'
-  - - '119'
-    - 362 - DATES OF PUBLICATION AND/OR SEQUENTIAL DESIGNATION (R)
-    - '2015-01-29 17:44:04'
-    - '2015-01-29 17:44:04'
-  - - '120'
-    - 363 - NORMALIZED DATE AND SEQUENTIAL DESIGNATION (R)
-    - '2015-01-29 17:44:04'
-    - '2015-01-29 17:44:04'
-  - - '121'
-    - 365 - TRADE PRICE (R)
-    - '2015-01-29 17:44:04'
-    - '2015-01-29 17:44:04'
-  - - '122'
-    - 366 - TRADE AVAILABILITY INFORMATION (R)
-    - '2015-01-29 17:44:04'
-    - '2015-01-29 17:44:04'
-  - - '123'
-    - 370 - ASSOCIATED PLACE (R)
-    - '2015-01-29 17:44:04'
-    - '2015-01-29 17:44:04'
-  - - '124'
-    - 377 - ASSOCIATED LANGUAGE (R)
-    - '2015-01-29 17:44:04'
-    - '2015-01-29 17:44:04'
-  - - '125'
-    - 380 - FORM OF WORK (R)
-    - '2015-01-29 17:44:05'
-    - '2015-01-29 17:44:05'
-  - - '126'
-    - 381 - OTHER DISTINGUISHING CHARACTERISTICS OF WORK OR EXPRESSION (R)
-    - '2015-01-29 17:44:05'
-    - '2015-01-29 17:44:05'
-  - - '127'
-    - 382 - MEDIUM OF PERFORMANCE (R)
-    - '2015-01-29 17:44:05'
-    - '2015-01-29 17:44:05'
-  - - '128'
-    - 383 - NUMERIC DESIGNATION OF MUSICAL WORK (R)
-    - '2015-01-29 17:44:05'
-    - '2015-01-29 17:44:05'
-  - - '129'
-    - 384 - KEY (NR)
-    - '2015-01-29 17:44:05'
-    - '2015-01-29 17:44:05'
-  - - '130'
-    - 385 - AUDIENCE CHARACTERISTICS (R)
-    - '2015-01-29 17:44:05'
-    - '2015-01-29 17:44:05'
-  - - '131'
-    - 386 - CREATOR/CONTRIBUTOR CHARACTERISTICS (R)
-    - '2015-01-29 17:44:05'
-    - '2015-01-29 17:44:05'
-  - - '132'
-    - 388 - TIME PERIOD OF CREATION (R)
-    - '2015-01-29 17:44:05'
-    - '2015-01-29 17:44:05'
-  - - '133'
-    - 400 - SERIES STATEMENT/ADDED ENTRY--PERSONAL NAME  (R) [US-LOCAL]
-    - '2015-01-29 17:44:05'
-    - '2015-01-29 17:44:05'
-  - - '134'
-    - 410 - SERIES STATEMENT/ADDED ENTRY--CORPORATE NAME (R) [US-LOCAL]
-    - '2015-01-29 17:44:06'
-    - '2015-01-29 17:44:06'
-  - - '135'
-    - 411 - SERIES STATEMENT/ADDED ENTRY--MEETING NAME (R) [US-LOCAL]
-    - '2015-01-29 17:44:06'
-    - '2015-01-29 17:44:06'
-  - - '136'
-    - 440 - SERIES STATEMENT/ADDED ENTRY--TITLE (R) [OBSOLETE]
-    - '2015-01-29 17:44:06'
-    - '2015-01-29 17:44:06'
-  - - '137'
-    - 490 - SERIES STATEMENT (R)
-    - '2015-01-29 17:44:06'
-    - '2015-01-29 17:44:06'
-  - - '138'
-    - 500 - GENERAL NOTE (R)
-    - '2015-01-29 17:44:06'
-    - '2015-01-29 17:44:06'
-  - - '139'
-    - 501 - WITH NOTE (R)
-    - '2015-01-29 17:44:06'
-    - '2015-01-29 17:44:06'
-  - - '140'
-    - 502 - DISSERTATION NOTE (R)
-    - '2015-01-29 17:44:06'
-    - '2015-01-29 17:44:06'
-  - - '141'
-    - 503 - BIBLIOGRAPHIC HISTORY NOTE (R) (BK CF MU) [OBSOLETE]
-    - '2015-01-29 17:44:06'
-    - '2015-01-29 17:44:06'
-  - - '142'
-    - 504 - BIBLIOGRAPHY, ETC. NOTE (R)
-    - '2015-01-29 17:44:06'
-    - '2015-01-29 17:44:06'
-  - - '143'
-    - 505 - FORMATTED CONTENTS NOTE (R)
-    - '2015-01-29 17:44:07'
-    - '2015-01-29 17:44:07'
-  - - '144'
-    - 506 - RESTRICTIONS ON ACCESS NOTE (R)
-    - '2015-01-29 17:44:07'
-    - '2015-01-29 17:44:07'
-  - - '145'
-    - 507 - SCALE NOTE FOR GRAPHIC MATERIAL (NR)
-    - '2015-01-29 17:44:07'
-    - '2015-01-29 17:44:07'
-  - - '146'
-    - 508 - CREATION/PRODUCTION CREDITS NOTE (R)
-    - '2015-01-29 17:44:07'
-    - '2015-01-29 17:44:07'
-  - - '147'
-    - 510 - CITATION/REFERENCES NOTE (R)
-    - '2015-01-29 17:44:07'
-    - '2015-01-29 17:44:07'
-  - - '148'
-    - 511 - PARTICIPANT OR PERFORMER NOTE (R)
-    - '2015-01-29 17:44:07'
-    - '2015-01-29 17:44:07'
-  - - '149'
-    - 512 - EARLIER OR LATER VOLUMES SEPARATELY CATALOGED NOTE (SE) (R) [OBSOLETE]
-    - '2015-01-29 17:44:07'
-    - '2015-01-29 17:44:07'
-  - - '150'
-    - 513 - TYPE OF REPORT AND PERIOD COVERED NOTE (R)
-    - '2015-01-29 17:44:07'
-    - '2015-01-29 17:44:07'
-  - - '151'
-    - 514 - DATA QUALITY NOTE (NR)
-    - '2015-01-29 17:44:07'
-    - '2015-01-29 17:44:07'
-  - - '152'
-    - 515 - NUMBERING PECULIARITIES NOTE (R)
-    - '2015-01-29 17:44:07'
-    - '2015-01-29 17:44:07'
-  - - '153'
-    - 516 - TYPE OF COMPUTER FILE OR DATA NOTE (R)
-    - '2015-01-29 17:44:08'
-    - '2015-01-29 17:44:08'
-  - - '154'
-    - 517 - CATEGORIES OF FILMS NOTE (ARCHIVAL) (VM) (NR) [OBSOLETE]
-    - '2015-01-29 17:44:08'
-    - '2015-01-29 17:44:08'
-  - - '155'
-    - 518 - DATE/TIME AND PLACE OF AN EVENT NOTE (R)
-    - '2015-01-29 17:44:08'
-    - '2015-01-29 17:44:08'
-  - - '156'
-    - 520 - SUMMARY, ETC. (R)
-    - '2015-01-29 17:44:08'
-    - '2015-01-29 17:44:08'
-  - - '157'
-    - 521 - TARGET AUDIENCE NOTE (R)
-    - '2015-01-29 17:44:08'
-    - '2015-01-29 17:44:08'
-  - - '158'
-    - 522 - GEOGRAPHIC COVERAGE NOTE (R)
-    - '2015-01-29 17:44:08'
-    - '2015-01-29 17:44:08'
-  - - '159'
-    - 523 - TIME PERIOD OF CONTENT NOTE (NR) (CF) [OBSOLETE]
-    - '2015-01-29 17:44:08'
-    - '2015-01-29 17:44:08'
-  - - '160'
-    - 524 - PREFERRED CITATION OF DESCRIBED MATERIALS NOTE (R)
-    - '2015-01-29 17:44:08'
-    - '2015-01-29 17:44:08'
-  - - '161'
-    - 525 - SUPPLEMENT NOTE (R)
-    - '2015-01-29 17:44:08'
-    - '2015-01-29 17:44:08'
-  - - '162'
-    - 526 - STUDY PROGRAM INFORMATION NOTE (R)
-    - '2015-01-29 17:44:08'
-    - '2015-01-29 17:44:08'
-  - - '163'
-    - 527 - CENSORSHIP NOTE (VM) (R) [OBSOLETE]
-    - '2015-01-29 17:44:08'
-    - '2015-01-29 17:44:08'
-  - - '164'
-    - 530 - ADDITIONAL PHYSICAL FORM AVAILABLE NOTE (R)
-    - '2015-01-29 17:44:09'
-    - '2015-01-29 17:44:09'
-  - - '165'
-    - 533 - REPRODUCTION NOTE (R)
-    - '2015-01-29 17:44:09'
-    - '2015-01-29 17:44:09'
-  - - '166'
-    - 534 - ORIGINAL VERSION NOTE (R)
-    - '2015-01-29 17:44:09'
-    - '2015-01-29 17:44:09'
-  - - '167'
-    - 535 - LOCATION OF ORIGINALS/DUPLICATES NOTE (R)
-    - '2015-01-29 17:44:09'
-    - '2015-01-29 17:44:09'
-  - - '168'
-    - 536 - FUNDING INFORMATION NOTE (R)
-    - '2015-01-29 17:44:09'
-    - '2015-01-29 17:44:09'
-  - - '169'
-    - 537 - SOURCE OF DATA NOTE (NR) (CF) [OBSOLETE]
-    - '2015-01-29 17:44:09'
-    - '2015-01-29 17:44:09'
-  - - '170'
-    - 538 - SYSTEM DETAILS NOTE (R)
-    - '2015-01-29 17:44:09'
-    - '2015-01-29 17:44:09'
-  - - '171'
-    - 540 - TERMS GOVERNING USE AND REPRODUCTION NOTE (R)
-    - '2015-01-29 17:44:09'
-    - '2015-01-29 17:44:09'
-  - - '172'
-    - 541 - IMMEDIATE SOURCE OF ACQUISITION NOTE (R)
-    - '2015-01-29 17:44:09'
-    - '2015-01-29 17:44:09'
-  - - '173'
-    - 542 - INFORMATION RELATING TO COPYRIGHT STATUS (R)
-    - '2015-01-29 17:44:09'
-    - '2015-01-29 17:44:09'
-  - - '174'
-    - 543 - SOLICITATION INFORMATION NOTE (AM) (R) [OBSOLETE]
-    - '2015-01-29 17:44:10'
-    - '2015-01-29 17:44:10'
-  - - '175'
-    - 544 - LOCATION OF OTHER ARCHIVAL MATERIALS NOTE (R)
-    - '2015-01-29 17:44:10'
-    - '2015-01-29 17:44:10'
-  - - '176'
-    - 545 - BIOGRAPHICAL OR HISTORICAL DATA (R)
-    - '2015-01-29 17:44:10'
-    - '2015-01-29 17:44:10'
-  - - '177'
-    - 546 - LANGUAGE NOTE (R)
-    - '2015-01-29 17:44:10'
-    - '2015-01-29 17:44:10'
-  - - '178'
-    - 547 - FORMER TITLE COMPLEXITY NOTE (R)
-    - '2015-01-29 17:44:10'
-    - '2015-01-29 17:44:10'
-  - - '179'
-    - 550 - ISSUING BODY NOTE (R)
-    - '2015-01-29 17:44:10'
-    - '2015-01-29 17:44:10'
-  - - '180'
-    - 552 - ENTITY AND ATTRIBUTE INFORMATION NOTE (R)
-    - '2015-01-29 17:44:10'
-    - '2015-01-29 17:44:10'
-  - - '181'
-    - 555 - CUMULATIVE INDEX/FINDING AIDS NOTE (R)
-    - '2015-01-29 17:44:10'
-    - '2015-01-29 17:44:10'
-  - - '182'
-    - 556 - INFORMATION ABOUT DOCUMENTATION NOTE (R)
-    - '2015-01-29 17:44:10'
-    - '2015-01-29 17:44:10'
-  - - '183'
-    - 561 - OWNERSHIP AND CUSTODIAL HISTORY (R)
-    - '2015-01-29 17:44:10'
-    - '2015-01-29 17:44:10'
-  - - '184'
-    - 562 - COPY AND VERSION IDENTIFICATION NOTE (R)
-    - '2015-01-29 17:44:10'
-    - '2015-01-29 17:44:10'
-  - - '185'
-    - 563 - BINDING INFORMATION (R)
-    - '2015-01-29 17:44:11'
-    - '2015-01-29 17:44:11'
-  - - '186'
-    - 565 - CASE FILE CHARACTERISTICS NOTE (R)
-    - '2015-01-29 17:44:11'
-    - '2015-01-29 17:44:11'
-  - - '187'
-    - 567 - METHODOLOGY NOTE (R)
-    - '2015-01-29 17:44:11'
-    - '2015-01-29 17:44:11'
-  - - '188'
-    - 570 - EDITOR NOTE (SE) (R) [OBSOLETE]
-    - '2015-01-29 17:44:11'
-    - '2015-01-29 17:44:11'
-  - - '189'
-    - 580 - LINKING ENTRY COMPLEXITY NOTE (R)
-    - '2015-01-29 17:44:11'
-    - '2015-01-29 17:44:11'
-  - - '190'
-    - 581 - PUBLICATIONS ABOUT DESCRIBED MATERIALS NOTE (R)
-    - '2015-01-29 17:44:11'
-    - '2015-01-29 17:44:11'
-  - - '191'
-    - 582 - RELATED COMPUTER FILES NOTE (R) (CF) [OBSOLETE]
-    - '2015-01-29 17:44:11'
-    - '2015-01-29 17:44:11'
-  - - '192'
-    - 583 - ACTION NOTE (R)
-    - '2015-01-29 17:44:11'
-    - '2015-01-29 17:44:11'
-  - - '193'
-    - 584 - ACCUMULATION AND FREQUENCY OF USE NOTE (R)
-    - '2015-01-29 17:44:11'
-    - '2015-01-29 17:44:11'
-  - - '194'
-    - 585 - EXHIBITIONS NOTE (R)
-    - '2015-01-29 17:44:11'
-    - '2015-01-29 17:44:11'
-  - - '195'
-    - 586 - AWARDS NOTE (R)
-    - '2015-01-29 17:44:11'
-    - '2015-01-29 17:44:11'
-  - - '196'
-    - 588 - SOURCE OF DESCRIPTION NOTE (R)
-    - '2015-01-29 17:44:12'
-    - '2015-01-29 17:44:12'
-  - - '197'
-    - 590 - LOCAL NOTE (BK CF MP MU SE VM MX) [OBSOLETE]
-    - '2015-01-29 17:44:12'
-    - '2015-01-29 17:44:12'
-  - - '198'
-    - 590 - RECEIPT DATE NOTE (VM) [OBSOLETE]
-    - '2015-01-29 17:44:12'
-    - '2015-01-29 17:44:12'
-  - - '199'
-    - 600 - SUBJECT ADDED ENTRY--PERSONAL NAME (R)
-    - '2015-01-29 17:44:12'
-    - '2015-01-29 17:44:12'
-  - - '200'
-    - 610 - SUBJECT ADDED ENTRY--CORPORATE NAME (R)
-    - '2015-01-29 17:44:12'
-    - '2015-01-29 17:44:12'
-  - - '201'
-    - 611 - SUBJECT ADDED ENTRY--MEETING NAME (R)
-    - '2015-01-29 17:44:12'
-    - '2015-01-29 17:44:12'
-  - - '202'
-    - 630 - SUBJECT ADDED ENTRY--UNIFORM TITLE (R)
-    - '2015-01-29 17:44:12'
-    - '2015-01-29 17:44:12'
-  - - '203'
-    - 648 - SUBJECT ADDED ENTRY--CHRONOLOGICAL TERM (R)
-    - '2015-01-29 17:44:12'
-    - '2015-01-29 17:44:12'
-  - - '204'
-    - 650 - SUBJECT ADDED ENTRY--TOPICAL TERM (R)
-    - '2015-01-29 17:44:12'
-    - '2015-01-29 17:44:12'
-  - - '205'
-    - 651 - SUBJECT ADDED ENTRY--GEOGRAPHIC NAME (R)
-    - '2015-01-29 17:44:12'
-    - '2015-01-29 17:44:12'
-  - - '206'
-    - '652 - SUBJECT ADDED ENTRY--REVERSED GEOGRAPHIC (BK MP SE) [OBSOLETE] '
-    - '2015-01-29 17:44:13'
-    - '2015-01-29 17:44:13'
-  - - '207'
-    - 653 - INDEX TERM--UNCONTROLLED (R)
-    - '2015-01-29 17:44:13'
-    - '2015-01-29 17:44:13'
-  - - '208'
-    - 654 - SUBJECT ADDED ENTRY--FACETED TOPICAL TERMS (R)
-    - '2015-01-29 17:44:13'
-    - '2015-01-29 17:44:13'
-  - - '209'
-    - 655 - INDEX TERM--GENRE/FORM (R)
-    - '2015-01-29 17:44:13'
-    - '2015-01-29 17:44:13'
-  - - '210'
-    - 656 - INDEX TERM--OCCUPATION (R)
-    - '2015-01-29 17:44:13'
-    - '2015-01-29 17:44:13'
-  - - '211'
-    - 657 - INDEX TERM--FUNCTION (R)
-    - '2015-01-29 17:44:13'
-    - '2015-01-29 17:44:13'
-  - - '212'
-    - 658 - INDEX TERM--CURRICULUM OBJECTIVE (R)
-    - '2015-01-29 17:44:13'
-    - '2015-01-29 17:44:13'
-  - - '213'
-    - 662 - SUBJECT ADDED ENTRY--HIERARCHICAL PLACE NAME (R)
-    - '2015-01-29 17:44:13'
-    - '2015-01-29 17:44:13'
-  - - '214'
-    - 700 - ADDED ENTRY--PERSONAL NAME (R)
-    - '2015-01-29 17:44:13'
-    - '2015-01-29 17:44:13'
-  - - '215'
-    - 705 - ADDED ENTRY--PERSONAL NAME (PERFORMER) (MU) [OBSOLETE]
-    - '2015-01-29 17:44:13'
-    - '2015-01-29 17:44:13'
-  - - '216'
-    - 710 - ADDED ENTRY--CORPORATE NAME (R)
-    - '2015-01-29 17:44:13'
-    - '2015-01-29 17:44:13'
-  - - '217'
-    - 711 - ADDED ENTRY--MEETING NAME (R)
-    - '2015-01-29 17:44:14'
-    - '2015-01-29 17:44:14'
-  - - '218'
-    - 715 - ADDED ENTRY--CORPORATE NAME (PERFORMING GROUP) (MU) [OBSOLETE]
-    - '2015-01-29 17:44:14'
-    - '2015-01-29 17:44:14'
-  - - '219'
-    - 720 - ADDED ENTRY--UNCONTROLLED NAME (R)
-    - '2015-01-29 17:44:14'
-    - '2015-01-29 17:44:14'
-  - - '220'
-    - 730 - ADDED ENTRY--UNIFORM TITLE (R)
-    - '2015-01-29 17:44:14'
-    - '2015-01-29 17:44:14'
-  - - '221'
-    - 740 - ADDED ENTRY--UNCONTROLLED RELATED/ANALYTICAL TITLE (R)
-    - '2015-01-29 17:44:14'
-    - '2015-01-29 17:44:14'
-  - - '222'
-    - 751 - ADDED ENTRY--GEOGRAPHIC NAME (R)
-    - '2015-01-29 17:44:14'
-    - '2015-01-29 17:44:14'
-  - - '223'
-    - 752 - ADDED ENTRY--HIERARCHICAL PLACE NAME (R)
-    - '2015-01-29 17:44:14'
-    - '2015-01-29 17:44:14'
-  - - '224'
-    - 753 - SYSTEM DETAILS ACCESS TO COMPUTER FILES (R)
-    - '2015-01-29 17:44:14'
-    - '2015-01-29 17:44:14'
-  - - '225'
-    - 754 - ADDED ENTRY--TAXONOMIC IDENTIFICATION (R)
-    - '2015-01-29 17:44:14'
-    - '2015-01-29 17:44:14'
-  - - '226'
-    - 755 - ADDED ENTRY--PHYSICAL CHARACTERISTICS (R) [OBSOLETE]
-    - '2015-01-29 17:44:14'
-    - '2015-01-29 17:44:14'
-  - - '227'
-    - 760 - MAIN SERIES ENTRY (R)
-    - '2015-01-29 17:44:15'
-    - '2015-01-29 17:44:15'
-  - - '228'
-    - 762 - SUBSERIES ENTRY (R)
-    - '2015-01-29 17:44:15'
-    - '2015-01-29 17:44:15'
-  - - '229'
-    - 765 - ORIGINAL LANGUAGE ENTRY (R)
-    - '2015-01-29 17:44:15'
-    - '2015-01-29 17:44:15'
-  - - '230'
-    - 767 - TRANSLATION ENTRY (R)
-    - '2015-01-29 17:44:15'
-    - '2015-01-29 17:44:15'
-  - - '231'
-    - 770 - SUPPLEMENT/SPECIAL ISSUE ENTRY (R)
-    - '2015-01-29 17:44:15'
-    - '2015-01-29 17:44:15'
-  - - '232'
-    - 772 - SUPPLEMENT PARENT ENTRY (R)
-    - '2015-01-29 17:44:15'
-    - '2015-01-29 17:44:15'
-  - - '233'
-    - 773 - HOST ITEM ENTRY (R)
-    - '2015-01-29 17:44:15'
-    - '2015-01-29 17:44:15'
-  - - '234'
-    - 774 - CONSTITUENT UNIT ENTRY (R)
-    - '2015-01-29 17:44:15'
-    - '2015-01-29 17:44:15'
-  - - '235'
-    - 775 - OTHER EDITION ENTRY (R)
-    - '2015-01-29 17:44:15'
-    - '2015-01-29 17:44:15'
-  - - '236'
-    - 776 - ADDITIONAL PHYSICAL FORM ENTRY (R)
-    - '2015-01-29 17:44:15'
-    - '2015-01-29 17:44:15'
-  - - '237'
-    - 777 - ISSUED WITH ENTRY (R)
-    - '2015-01-29 17:44:15'
-    - '2015-01-29 17:44:15'
-  - - '238'
-    - 780 - PRECEDING ENTRY (R)
-    - '2015-01-29 17:44:16'
-    - '2015-01-29 17:44:16'
-  - - '239'
-    - 785 - SUCCEEDING ENTRY (R)
-    - '2015-01-29 17:44:16'
-    - '2015-01-29 17:44:16'
-  - - '240'
-    - 786 - DATA SOURCE ENTRY (R)
-    - '2015-01-29 17:44:16'
-    - '2015-01-29 17:44:16'
-  - - '241'
-    - 787 - OTHER RELATIONSHIP ENTRY (R)
-    - '2015-01-29 17:44:16'
-    - '2015-01-29 17:44:16'
-  - - '242'
-    - 800 - SERIES ADDED ENTRY--PERSONAL NAME (R)
-    - '2015-01-29 17:44:16'
-    - '2015-01-29 17:44:16'
-  - - '243'
-    - 810 - SERIES ADDED ENTRY--CORPORATE NAME (R)
-    - '2015-01-29 17:44:16'
-    - '2015-01-29 17:44:16'
-  - - '244'
-    - 811 - SERIES ADDED ENTRY--MEETING NAME (R)
-    - '2015-01-29 17:44:16'
-    - '2015-01-29 17:44:16'
-  - - '245'
-    - 830 - SERIES ADDED ENTRY--UNIFORM TITLE (R)
-    - '2015-01-29 17:44:16'
-    - '2015-01-29 17:44:16'
-  - - '246'
-    - 840 - SERIES ADDED ENTRY--TITLE (R) [OBSOLETE]
-    - '2015-01-29 17:44:16'
-    - '2015-01-29 17:44:16'
-  - - '247'
-    - 841 - HOLDINGS CODED DATA VALUES (NR)
-    - '2015-01-29 17:44:16'
-    - '2015-01-29 17:44:16'
-  - - '248'
-    - 842 - TEXTUAL PHYSICAL FORM DESIGNATOR (NR)
-    - '2015-01-29 17:44:17'
-    - '2015-01-29 17:44:17'
-  - - '249'
-    - 843 - REPRODUCTION NOTE (R)
-    - '2015-01-29 17:44:17'
-    - '2015-01-29 17:44:17'
-  - - '250'
-    - 844 - NAME OF UNIT (NR)
-    - '2015-01-29 17:44:17'
-    - '2015-01-29 17:44:17'
-  - - '251'
-    - 845 - TERMS GOVERNING USE AND REPRODUCTION NOTE (R)
-    - '2015-01-29 17:44:17'
-    - '2015-01-29 17:44:17'
-  - - '252'
-    - 850 - HOLDING INSTITUTION (R)
-    - '2015-01-29 17:44:17'
-    - '2015-01-29 17:44:17'
-  - - '253'
-    - 851 - LOCATION (R) [OBSOLETE]
-    - '2015-01-29 17:44:17'
-    - '2015-01-29 17:44:17'
-  - - '254'
-    - 852 - LOCATION (R)
-    - '2015-01-29 17:44:17'
-    - '2015-01-29 17:44:17'
-  - - '255'
-    - 853 - CAPTIONS AND PATTERN--BASIC BIBLIOGRAPHIC UNIT (R)
-    - '2015-01-29 17:44:17'
-    - '2015-01-29 17:44:17'
-  - - '256'
-    - 854 - CAPTIONS AND PATTERN--SUPPLEMENTARY MATERIAL (R)
-    - '2015-01-29 17:44:17'
-    - '2015-01-29 17:44:17'
-  - - '257'
-    - 855 - CAPTIONS AND PATTERN--INDEXES (R)
-    - '2015-01-29 17:44:17'
-    - '2015-01-29 17:44:17'
-  - - '258'
-    - 856 - ELECTRONIC LOCATION AND ACCESS (R)
-    - '2015-01-29 17:44:17'
-    - '2015-01-29 17:44:17'
-  - - '259'
-    - 863 - ENUMERATION AND CHRONOLOGY--BASIC BIBLIOGRAPHIC UNIT (R)
-    - '2015-01-29 17:44:18'
-    - '2015-01-29 17:44:18'
-  - - '260'
-    - 864 - ENUMERATION AND CHRONOLOGY--SUPPLEMENTARY MATERIAL (R)
-    - '2015-01-29 17:44:18'
-    - '2015-01-29 17:44:18'
-  - - '261'
-    - 865 - ENUMERATION AND CHRONOLOGY--INDEXES (R)
-    - '2015-01-29 17:44:18'
-    - '2015-01-29 17:44:18'
-  - - '262'
-    - 866 - TEXTUAL HOLDINGS--BASIC BIBLIOGRAPHIC UNIT (R)
-    - '2015-01-29 17:44:18'
-    - '2015-01-29 17:44:18'
-  - - '263'
-    - 867 - TEXTUAL HOLDINGS--SUPPLEMENTARY MATERIAL (R)
-    - '2015-01-29 17:44:18'
-    - '2015-01-29 17:44:18'
-  - - '264'
-    - 868 - TEXTUAL HOLDINGS--INDEXES (R)
-    - '2015-01-29 17:44:18'
-    - '2015-01-29 17:44:18'
-  - - '265'
-    - 870 - VARIANT PERSONAL NAME (SE) [OBSOLETE]
-    - '2015-01-29 17:44:18'
-    - '2015-01-29 17:44:18'
-  - - '266'
-    - 871 - VARIANT CORPORATE NAME (SE) [OBSOLETE]
-    - '2015-01-29 17:44:18'
-    - '2015-01-29 17:44:18'
-  - - '267'
-    - 872 - VARIANT CONFERENCE OR MEETING NAME (SE) [OBSOLETE]
-    - '2015-01-29 17:44:18'
-    - '2015-01-29 17:44:18'
-  - - '268'
-    - 873 - VARIANT UNIFORM TITLE HEADING (SE) [OBSOLETE]
-    - '2015-01-29 17:44:18'
-    - '2015-01-29 17:44:18'
-  - - '269'
-    - 876 - ITEM INFORMATION--BASIC BIBLIOGRAPHIC UNIT (R)
-    - '2015-01-29 17:44:18'
-    - '2015-01-29 17:44:18'
-  - - '270'
-    - 877 - ITEM INFORMATION--SUPPLEMENTARY MATERIAL (R)
-    - '2015-01-29 17:44:19'
-    - '2015-01-29 17:44:19'
-  - - '271'
-    - 878 - ITEM INFORMATION--INDEXES (R)
-    - '2015-01-29 17:44:19'
-    - '2015-01-29 17:44:19'
-  - - '272'
-    - 880 - ALTERNATE GRAPHIC REPRESENTATION (R)
-    - '2015-01-29 17:44:19'
-    - '2015-01-29 17:44:19'
-  - - '273'
-    - 882 - REPLACEMENT RECORD INFORMATION (NR)
-    - '2015-01-29 17:44:19'
-    - '2015-01-29 17:44:19'
-  - - '274'
-    - 883 - MACHINE-GENERATED METADATA PROVENANCE (R)
-    - '2015-01-29 17:44:19'
-    - '2015-01-29 17:44:19'
-  - - '275'
-    - 886 - FOREIGN MARC INFORMATION FIELD (R)
-    - '2015-01-29 17:44:19'
-    - '2015-01-29 17:44:19'
-  - - '276'
-    - 887 - NON-MARC INFORMATION FIELD (R)
-    - '2015-01-29 17:44:19'
-    - '2015-01-29 17:44:19'
-  - - '288'
-    - Conversion successful
-    - '2015-02-13 18:52:08'
-    - '2015-02-13 18:52:08'
+    - Wendler
+    - Robin
+    - '2015-04-08 14:26:36.085392'
+    - '2015-04-08 14:26:36.085392'
