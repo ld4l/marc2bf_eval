@@ -1,11 +1,14 @@
 class ConversionIssuesController < ApplicationController
   before_action :set_conversion_issue, only: [:show, :edit, :update, :destroy]
 
+  helper_method :sort_column, :sort_direction
+
   # GET /conversion_issues
   # GET /conversion_issues.json
   def index
     #@conversion_issues = ConversionIssue.all
-    @conversion_issues = ConversionIssue.order(params[:sort])
+    #@conversion_issues = ConversionIssue.order(params[:sort])
+    @conversion_issues = ConversionIssue.order(sort_column + " " + sort_direction)
   end
 
   # GET /conversion_issues/1
@@ -76,4 +79,15 @@ class ConversionIssuesController < ApplicationController
     def conversion_issue_params
       params.require(:conversion_issue).permit(:conversion_id, :issue_id, :comment, :evaluator_id)
     end
+
+    def sort_column
+      # Check for valid values to prevent SQL injection
+      %w[conversion_issues.issue_id].include?(params[:sort]) ? params[:sort] : "conversion_issues.issue_id"
+    end
+
+    def sort_direction
+      # Check for valid values to prevent SQL injection
+      %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
+    end
+
 end
