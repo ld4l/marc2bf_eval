@@ -4,7 +4,8 @@ class ConversionIssuesController < ApplicationController
   # GET /conversion_issues
   # GET /conversion_issues.json
   def index
-    @conversion_issues = ConversionIssue.all
+    #@conversion_issues = ConversionIssue.all
+    @conversion_issues = ConversionIssue.order(params[:sort])
   end
 
   # GET /conversion_issues/1

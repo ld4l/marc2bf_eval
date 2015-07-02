@@ -1,7 +1,5 @@
 class ConversionsController < ApplicationController
 
-  before_filter :authenticate
-
   before_action :set_conversion, only: [:show, :edit, :update, :destroy]
 
   # GET /conversions
@@ -79,12 +77,6 @@ class ConversionsController < ApplicationController
   end
 
   protected
-
-  def authenticate
-    authenticate_or_request_with_http_basic do |username, password|
-      username == "bibframe" && password == "letsdoit"
-    end
-  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
