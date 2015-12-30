@@ -28,7 +28,7 @@ class ConversionsController < ApplicationController
   def create
     # Parameters: {"utf8"=>"✓", "authenticity_token"=>"ef4sRGjgtt5FOSgGKqXhJeFyzzIk1mY1JgnU2EeIZfi6lnL/s8f6z3b88jUJIbsinIynmBuZKstpSX8nx3qiIQ==", "conversion_issue"=>{"conversion_id"=>"6", "issue_id"=>"7", "comment"=>"Some comment about 008 field in Halle's work.", "evaluator_id"=>"1"}, "commit"=>"Create Conversion issue"}
     
-    # @conversion = Conversion.new(conversion_params)
+    @conversion = Conversion.new(conversion_params)
     # @conversion.conversion_issues.build(:issue_id => params[:conversion_issue][:issue_id])
 
     respond_to do |format|
@@ -65,10 +65,10 @@ class ConversionsController < ApplicationController
     @conversion.destroy
 
     # Delete associated issue records
-    conversion_id = @@conversion.id
-    ConversionIssue.where(conversion_id: conversion_id).find_each do |associated_issue|
-      assocated_issue.destroy
-    end
+    #conversion_id = @@conversion.id
+    #ConversionIssue.where(conversion_id: conversion_id).find_each do |associated_issue|
+    #  assocated_issue.destroy
+    #end
 
     respond_to do |format|
       format.html { redirect_to conversions_url, notice: 'Conversion was successfully destroyed.' }
@@ -86,6 +86,6 @@ class ConversionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def conversion_params
-      params.require(:conversion).permit(:marc, :bf)
+      params.require(:conversion).permit(:marc, :bf, :local_system_id, :title, :converter_version)
     end
 end

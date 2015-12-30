@@ -17,6 +17,22 @@
     <%= f.label(:local_system_id, "Local System ID") %><br>
     <%= f.text_field :local_system_id, :class => "form-control-40" %><br />
   </div>
+  <br /><div class="field">
+    <%= f.label(:title, "Title") %><br>
+    <%= f.text_field :title, :class => "form-control-40" %><br />
+  </div>
+  <br /><div class="field">
+    <%= f.label(:converter_version, "Converter Version") %><br>
+    <%= f.text_field :converter_version, :class => "form-control-40" %><br />
+  </div>
+  <br /><div class="field">
+    <%= f.label(:marc, "MARC") %><br>
+    <%= f.text_area :marc, :class => "form-control", :rows => "20" %><br />
+  </div>
+  <br /><div class="field">
+    <%= f.label(:bf, "BIBFRAME") %><br>
+    <%= f.text_area :bf, :class => "form-control", :rows => "20" %><br />
+  </div>
   <div class="actions">
     <%= f.submit :value => "Submit", :class => "btn btn-default" %>
   </div>

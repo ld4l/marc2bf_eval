@@ -3,6 +3,10 @@ Rails.application.routes.draw do
   root "pages#home"
   get "about" => "pages#about"
 
+	# Expose URL-only deletion
+  get 'conversion_issues/:id/delete(.:format)' => 'conversion_issues#destroy'
+  get 'conversions/:id/delete(.:format)' => 'conversions#destroy'
+
   resources :conversion_issues
 
   resources :evaluators
@@ -10,7 +14,7 @@ Rails.application.routes.draw do
   resources :issues
 
   resources :conversions
-
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

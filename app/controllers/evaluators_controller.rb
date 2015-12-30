@@ -1,4 +1,5 @@
 class EvaluatorsController < ApplicationController
+  
   before_action :set_evaluator, only: [:show, :edit, :update, :destroy]
 
   # GET /evaluators
