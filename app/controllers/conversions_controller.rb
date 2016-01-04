@@ -1,12 +1,15 @@
 class ConversionsController < ApplicationController
 
   before_action :set_conversion, only: [:show, :edit, :update, :destroy]
+  
+  helper_method :sort_column, :sort_direction
 
   # GET /conversions
   # GET /conversions.json
   def index
     # @converions = Conversion.search(params[:search])
-    @conversions = Conversion.all
+    #@conversions = Conversion.all
+    @conversions = Conversion.order(sort_column + " " + sort_direction)
   end
 
   # GET /conversions/1
@@ -87,5 +90,15 @@ class ConversionsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def conversion_params
       params.require(:conversion).permit(:marc, :bf, :local_system_id, :title, :converter_version)
+    end
+    
+    def sort_column
+      # Check for valid values to prevent SQL injection
+      %w[conversions.converter_version].include?(params[:sort]) ? params[:sort] : "conversions.converter_version"
+    end
+
+    def sort_direction
+      # Check for valid values to prevent SQL injection
+      %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
     end
 end
